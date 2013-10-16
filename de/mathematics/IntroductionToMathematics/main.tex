@@ -1,0 +1,58 @@
+\documentclass[graybox,envcountchap,sectrefs,deutsch]{svmono}
+
+\usepackage[utf8]{inputenc}
+
+% choose options for [] as required from the list
+% in the Reference Guide
+
+\usepackage{mathptmx}
+
+\usepackage{type1cm}         
+
+\usepackage{booktabs}
+\usepackage{needspace}
+
+\usepackage{makeidx}         % allows index generation
+\usepackage{graphicx}        % standard LaTeX graphics tool
+                             % when including figure files
+\usepackage{multicol}        % used for the two-column index
+\usepackage[bottom]{footmisc}% places footnotes at page bottom
+
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+
+%\usepackage{cmbright}
+\usepackage{amssymb}
+
+\makeindex
+
+\begin{document}
+
+
+\author{Stephan Kesper}
+\title{Einführung in die Mathematik}
+\subtitle{}
+\maketitle
+
+\frontmatter
+
+\include{preface}
+
+\tableofcontents
+
+\mainmatter
+
+\part{Arithmetik}
+
+\include{./arithmetik}
+
+\part{Algebra}
+
+\include{./algebra}
+
+\part{Analysis}
+
+\backmatter
+% bibliography, glossary and index would go here.
+
+\end{document}
