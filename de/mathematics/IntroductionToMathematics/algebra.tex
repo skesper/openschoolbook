@@ -1,11 +1,13 @@
-\chapter{Grundlagen}
+\chapter{Lineare Algebra}
+
+\section{Grundlagen}
 
 Die Algebra konzentriert sich -- im Gegensatz zur Arithmetik -- auf die Verallgemeinerung der Begriffe der Analyse bestimmter Sachverhalte. Der Arithmetik Teil dieses Buches begann mit Berechnungen auf Basis von Äpfeln. Diese geben einen unmittelbaren Zugang zu den Begriffen des Rechnens. In der Algebra wird es solches nicht geben. Die Ansätze hier sind rein abstrakt zu verstehen. Auch wenn direkte, anschauliche Beispiele zu bestimmten algebraischen Sachverhalten existieren, so sollte der Lernende versuchen, nicht anhand dieser sein Verständnis auszubilden, sondern rein in der Sache selbst. Das führt letztlich dazu, dass er vollständig ohne konkrete Anschauung Sachverhalte analysieren und Probleme lösen kann. Vollständig unabhängig davon, ob diese Probleme einen realen, abstrakten oder mit dem Verstand nicht nachvollziehbaren Hintergrund haben. Wenn z.B. im Raum der Polynome zwei Funktionen die Bedingung erfüllen
 \[f^2(x) + g^2(x) = 1 \]
 so stellt dies genauso den Satz des Pytagoras dar, als wenn ein Dreieck betrachtet würde. 
 \[a^2 +b^2 = c^2\]
 
-\section{Zeichen}
+\subsection{Zeichen}
 
 In der Algebra verwendet man anstelle von Zahlen im allgemeinen Buchstaben. Es immer vom Kontext abhängig, welcher Buchstabe was bedeutet. Aber es haben sich bestimmte Dinge eingebürgert. So sind Konstanten meistens mit den Buchstaben
 \[a, b, c, \dots \]
@@ -48,31 +50,105 @@ $\omega $ & $\Omega $ & Omega \\
 \hline
 \end{tabular}
 
-\section{Gesetze}
 
-Da diese im Arithmetikteil nicht abstrakt definiert wurden, seien sie hier noch einmal wiederholt:
-
-\bigskip
-
-\noindent \textsl{Kommutativgesetz}
-\begin{eqnarray*}
-a+b &=& b+a \\
-a\cdot b &=& b\cdot a
-\end{eqnarray*}
-
-\noindent \textsl{Assoziativgesetz}
-\begin{eqnarray*}
-a+(b+c) &=& (a+b)+c \\
-a\cdot (b\cdot c) &=& (a\cdot b)\cdot c
-\end{eqnarray*}
-
-\noindent \textsl{Distributivgesetz}
-\begin{eqnarray*}
-a\cdot (b+c) &=& a\cdot b+ a\cdot c
-\end{eqnarray*}
+\section{Mengen}
 
 
-\chapter{Mengen, Gruppen, Ringe, Körper}
+Kategorisierung spielt in der (Linearen) Algebra eine sehr wichtige Rolle. Kennt man die Eigenschaften eines Dinges, so kann man damit umgehen. Daher ist es nicht verwunderlich, dass Mathematiker versuchen, Dinge, die identische Eigenschaften besitzen zu Mengen zusammenzustellen. Und -- soweit möglich -- Operationen und Eigenschaften mit dem Namen dieser Zusammenstellung zu verbinden. Die bereits im Arithmetik Teil vorgekommene Menge der natürlichen Zahlen $\mathbb{N}$ bildet da ein gutes Beispiel für den Einstieg. 
 
-Kategorisierung spielt in der Algebra eine sehr wichtige Rolle. Kennt man die Eigenschaften eines Dinges, so kann man damit umgehen.
+Im Folgenden werden wir immer mehr Vorgehensweisen kennenlernen, mit denen man Mengen untersuchen kann. Kann man bestimmte Eigenschaften an einer Menge feststellen, so wird sie zur Gruppe. Hat man weitere Eigenschaften an der Gruppe, so wird sie zum Ring. Und eine letzte Eigenschaft macht einen Ring zu einem Körper. Der Körper ist das, was unserer üblichen Vorstellung von Zahlen am nächsten kommt. Für viele Objekte der Mathematik kann man aber z.B. nur Gruppenstruktur nachweisen. 
+
+\begin{svgraybox}
+HINWEIS: Der hier verwendete Begriff "`Menge"' hat nichts mit der Anzahl zu tun, wie er im Arithmetik Teil verwendet wurde. Hier bezeichnet "`Menge"' eine Ansammlung von gleichartigen Objekten.
+\end{svgraybox}
+
+Mengen werden in der Mathematik in geschweiften Klammern $\{\dots \}$ dargestellt. Also könnte man die natürlichen Zahlen wie folgt definieren:
+\[\mathbb{N} := \{ 1,2,3,4,5, \dots \} \]
+Die Punkte "`$\dots$"' symbolisieren dabei, dass die Reihe nicht enden soll. Dementsprechend gehört $\infty$ "`Unendlich"' zu den natürlichen Zahlen.
+\[\mathbb{N} := \{ 1,2,3,4,5, \dots, \infty \} \]
+
+Zusammengefasst sind Mengen einfache Ansammlungen von im allgemeinen gleichartigen Dingen. Die folgende Zeichenfolge bedeutet, dass $x$ ein Element der Menge $M$ ist:
+\[x \in M \]
+So ist zum Beispiel
+\[7 \in \mathbb{N} \]
+
+\subsection{Abbildung}
+
+Eine Abbildung bildet Elemente aus einer Menge auf Elemente einer anderen Menge ab. Seien $X,Y$ Mengen. Dann ordnet die Abbildung
+\[ f : X \longrightarrow Y \]
+das Element $x\in X$ auf $y\in Y$ ab. Das wird so ausgedrückt:
+\[ f(x) = y\]
+
+Die Addition ist ebenfalls eine Abbildung. Sie bildet zwei Elemente einer Menge auf Elemente der selben Menge ab:
+\[ + : X \times X \longrightarrow X \]
+Also kann man die Summe 
+\[ x+y = z\]
+auch in Funktionenform schreiben:
+\[ +(x,y) = z\]
+
+\subsection{Gruppen, Ringe, Körper}
+Im Folgenden bezeichenen $X,Y$ und $Z$ immer Mengen.
+
+\begin{definition}
+Eine Funktion
+\[ \circ : X \times X \longrightarrow X \]
+wird als Verknüpfung auf $X$ bezeichnet. Die Operationen $+$ und $\cdot$ sind Verknüpfungen. 
+\end{definition}
+
+\begin{definition}
+Eine Verknüpfung wird \textsl{assoziativ} genannt, wenn gilt:
+\[ a \circ (b \circ c) = (a \circ b) \circ c \]
+\end{definition}
+\begin{definition}
+Sie wird \textsl{kommutativ} genannt, wenn gilt: 
+\[ a \circ b = b \circ a \]
+\end{definition}
+Für alle $a,b,c \in X$
+
+\begin{definition}
+Ein Element $e\in X$ wird als \textsl{neutrales Element} bezüglich einer Verknüpfung bezeichnet, wenn 
+\[ e\circ a = a \circ e = a \]
+für alle $a\in X$ gilt.
+\end{definition}
+
+\begin{claim}
+Falls es in $X$ ein neutrales Element gibt, so ist es eindeutig. 
+\end{claim}
+\begin{proof}
+\smartqed
+Seien $e_1$ und $e_2$ neutrale Element bezüglich $\circ$, dann gilt: 
+\[ e_1 = e_1\circ e_2 = e_2 \] \qed
+\end{proof}
+
+\begin{definition}
+Eine Menge $X$ mit assoziativer Verknüpfung und zugehörigem neutralem Element heißt \textsl{Monoid}.
+\end{definition}
+
+\begin{definition}
+Sei $X$ ein Monoid mit der Verknüpfung $\circ$ und zugehörigem neutralen Element $e$. Wenn gilt
+\[ a\circ b = e \]
+für $a,b \in X$, so wird $a$ das \textsl{Linksinverse} von $b$ genannt, sowie $b$ das \textsl{Rechtsinverse} von a. Gilt zudem
+\[ a\circ b = b \circ a = e \]
+Dann sind $a$ und $b$ jeweils ihre \textsl{Inversen}.
+\end{definition}
+
+\begin{definition}
+Ist in einem Monoid jedes Element invertierbar, so nennt man dies eine \textsl{Gruppe}.
+\end{definition}
+
+\begin{definition}
+Eine Gruppe, deren Verknüpfung kommutativ ist, nennt man eine \textsl{abelsche Gruppe}.
+\end{definition}
+
+\begin{definition}
+Ein \textsl{Ring} $R$ ist eine Menge mit zwei Verknüpfungen $+$ und $\cdot$. Wobei $R$ bezüglich der Addition eine abelsche Gruppe ist und bezüglich der Multiplikation ein Monoid. Des Weiteren muss das Distributivgesetz gelten
+\[ a\cdot (b+c) = a\cdot b + a\cdot c \]
+für alle $a,b,c \in R$. Ist $R$ bezüglich $\cdot$ kommutativ, so ist $R$ ein \textsl{kommutativer Ring}.
+\end{definition}
+
+\begin{definition}
+Sei $K$ ein kommutativer Ring, dessen neutrales Element bezüglich der Addition $0$ ist. Falls alle Elemente von $K\backslash \{0\}$ invertierbar sind, heißt $K$ ein \textsl{Körper}.
+\end{definition}
+
+
 
