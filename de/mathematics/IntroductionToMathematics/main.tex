@@ -1,39 +1,37 @@
 \documentclass[graybox,envcountchap,sectrefs,deutsch]{svmono}
 
 \usepackage[utf8]{inputenc}
-
-% choose options for [] as required from the list
-% in the Reference Guide
-
 \usepackage{mathptmx}
-
 \usepackage{type1cm}         
-
 \usepackage{booktabs}
 \usepackage{needspace}
-
-\usepackage{makeidx}         % allows index generation
-\usepackage{graphicx}        % standard LaTeX graphics tool
-                             % when including figure files
-\usepackage{multicol}        % used for the two-column index
-\usepackage[bottom]{footmisc}% places footnotes at page bottom
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage[bottom]{footmisc}
 
 \usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel}
 
-%\usepackage{cmbright}
-\usepackage{amssymb}
+\usepackage{color}
+\usepackage{tikz}
 
-%\usepackage[a4, center, cam]{crop}
+% Farben für Konstruktionen
+\definecolor{colPkt}{rgb}{0,0,1} % für gegebene Punkte
+\definecolor{colPktKon}{rgb}{0.49,0.49,1} % für konstruierte Punkte
+\definecolor{colWin}{rgb}{1,0,0} % für Winkel
+
+
+\usepackage{amssymb}
 
 \makeindex
 
-\begin{document}
-
-
 \author{Stephan Kesper}
 \title{Einführung in die Mathematik}
-\subtitle{}
+\subtitle{Zum Selbststudium oder als Grundlage für den Unterricht}
+
+\begin{document}
+
 \maketitle
 
 \frontmatter
@@ -51,6 +49,10 @@
 \part{Algebra}
 
 \include{./algebra}
+
+\part{Geometrie}
+
+\include{./geometrie}
 
 \part{Analysis}
 

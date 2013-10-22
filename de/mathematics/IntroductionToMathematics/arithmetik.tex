@@ -1,5 +1,5 @@
 
-\chapter{Natürliche Zahlen}
+\chapter{Ganze Zahlen}
 
 \section{Was sind natürliche Zahlen?}
 
@@ -17,7 +17,7 @@ Die folgenden Symbole bezeichnen die ersten neun natürlichen Zahlen.
 
 Sie bilden den Grundstock aller folgenden Zahlen, die aus diesen zusammengesetzt sind. Wie diese zusammen gesetzt werden, erfahren wir gleich.
 
-\section{Operationen}
+\section{Grundrechenarten}
 
 \subsection{Gleichheit, Ungleichheit, Vergleiche}
 
@@ -36,6 +36,16 @@ Während das folgende falsch ist:
 \end{eqnarray*}
 
 Es liegt in der Verantwortung desjenigen, der die Gleichung aufstellt, dafür zu garantieren, dass die Gleichheit auch wirklich erfüllt ist. Papier ist geduldig! Man kann hinschreiben, was man will, ob ein hingeschriebenes Gleichheitszeichen auch wirklich Gleichheit bedeutet, kann nur der Hinschreibende wissen.
+
+Für Gleichungen gilt im allgemeinen, dass Gleichheit erhalten bleibt, wenn auf beiden Seiten der Gleichung die selben Operationen ausgeführt werden. Multipliziert man beide Seiten mit der selben Zahl, oder addiert auf beiden Seiten die selbe Zahl, so bleibt die Gleichheit erhalten.
+
+\begin{eqnarray*}
+5 &=& 5  \hspace{1cm}| +1\\
+5+1 &=& 5+1 \\
+6 &=& 6
+\end{eqnarray*}
+
+Das, was man auf beiden Seiten einer Gleichung macht, kann durch einen abgesetzten senkrechten Strich dargestellt werden. Alles, was auf der rechten Seite des Strichs steht, wird auf beiden Seiten der Gleichung angewendet. Hier also jeweils eine 1 addiert.
 
 Möchte man ausdrücken, dass die linke und rechte Seite nicht übereinstimmt, so verwendet man das Symbol "`$\neq $"'. So werden oben angegebene Falschaussagen wieder korrekt indem man das Ungleichzeichen verwendet:
 \begin{eqnarray*}
@@ -69,6 +79,7 @@ Das Symbol "`$\le$"' wird "`kleiner oder gleich"' ausgesprochen und das Symbol "
 
 Wenn für beiden Seiten einer Ungleichung sowohl das $\le$ als auch das $\ge$ korrekt ist, so gilt $=$ Gleichheit. Dies sollte im Kopf behalten werden, denn es gibt einige Beweise in der Mathematik, die genau dies ausnutzen.
 
+Auch für Ungleichungen gilt, dass Operationen, die auf beiden Seiten ausgeführt werden, die Ungleichung erhalten. Das gilt bei Ungleichungen allerdings nur in etwas eingeschränkter Form, nämlich die Multiplikation mit einer negativen Zahl ($<0$) führt dazu, dass sich das Ungleichzeichen umdreht. Aber dazu später mehr.
 
 \subsection{Addition und Multiplikation}
 
@@ -119,7 +130,7 @@ dass wir die 1 von $1+4$ wegnehmen und zu $9+1$ hinzufügen dürfen ist in der A
 Die nächste Operation, die wir kennenlernen, ist die Multiplikation:
 \[3\cdot 4 = ?\]
 Diese entspricht ebenfalls der Anschauung. Lägen in drei Körben jeweils vier Äpfel, so hätte man insgesamt
-\[\underbrace{4+4+4}_{3 \, \mathrm{mal}} = 12\]
+\[\underbrace{4+4+4}_{3 \, \textnormal{mal}} = 12\]
 Äpfel. Also sind 
 \[3\cdot 4 = 12\]
 Das Ergebnis bliebe gleich, wenn man vier Körbe mit jeweils drei Äpfeln hätte:
@@ -135,7 +146,7 @@ grüne Äpfel,
 rote Äpfel und somit
 \[6+12 = 18\]
 Äpfel insgesamt. Dabei haben wir zunächst nur die Anzahl der grünen, dann die der roten Äpfel berechnet. Wir haben also folgendes gemacht:
-\[3\cdot \underbrace{(2+4)}_{\mathrm{Inhalt\ eines\ Korbes}} = 3\cdot 2 + 3\cdot 4 = 18\]
+\[3\cdot \underbrace{(2+4)}_{\textnormal{Inhalt eines Korbes}} = 3\cdot 2 + 3\cdot 4 = 18\]
 Zur Berechnung der Gesamtsumme hätten wir aber auch gleich die roten und grünen Äpfel pro Korb summieren können:
 \[3\cdot (2+4) = 3\cdot (6) = 3\cdot 6 = 18 \]
 
@@ -143,21 +154,59 @@ Dass wir zuerst die Anzahlen aller grünen Äpfel und dann die aller roten Äpfe
 
 \subsection{Subtraktion und Division}
 
+Der Grund warum Subtraktion und Division ein eigenes Unter-Kapitel bilden liegt darin begründet, dass sie nicht das Kommutativgesetz beachten, wie wir gleich sehen werden.
+
 Wenn Hans drei Äpfel besitzt und zwei davon isst, bleibt ihm nur einer übrig. Die Frage, die sich der Lernende stellen sollte ist:
 
 \textsl{Welche Zahl erfüllt folgende Gleichung?}
 
 \[3 + ? = 1\]
 
+Die Zahl, die diese Gleichung erfüllt, muss kleiner als 0 sein, denn $3+0 > 1$. Was also ist kleiner als 0? Solche Zahlen werden als negative Zahlen bezeichnet. Addiert man eine natürliche Zahl mit einer negativen Zahl, so ist das Ergebnis kleiner, als die natürliche Zahl selbst. 
+
+\begin{definition}
+Eine negative Zahl ist eine natürliche Zahl, die mit einem "`$-$"' Zeichen als negativ gekennzeichnet wird. 
+\end{definition}
+
+Zur Vereinfachung der Darstellung gilt:
+
+\begin{eqnarray*}
+3 + -2 &=& 1 \hspace{1cm}\textnormal{falsch}\\
+3 + (-2) &=& 1 \hspace{1cm}\textnormal{richtig, aber umständlich}\\
+3 - 2  &=& 1 \hspace{1cm}\textnormal{ok}
+\end{eqnarray*}
+
+Die Menge aller negativen Zahlen wird mit dem Zeichen $-\mathbb{N} $ dargestellt. Die Vereinigung der Mengen $-\mathbb{N} $ und $\mathbb{N}_0$ wird als die Menge der \textbf{ganzen Zahlen} bezeichnet und $\mathbb{Z}$ genannt. Also ist 
+
+\[
+\mathbb{Z} = -\mathbb{N} \cup \mathbb{N}_0 =  \{ -\infty, \dots, -3, -2, -1, 0, 1, 2, 3, \dots, \infty \}
+\]
 
 
+\chapter{Zahlen}
+
+In diesem Kapitel wird der Begriff der Zahl erweitert. Im letzten Kapitel haben wir die ganzen Zahlen kennengelernt. Diese sind aber nur ein Teil der Zahlen, mit denen wir täglich umgehen. Beim Einkaufen zum Beispiel besorgen wir zwar Äpfel und Milchtüten in ganzen Einheiten, aber schon beim Brot lassen wir uns oft nur die "`Hälfte"' geben. 
+
+\section{Bruchrechnung}
+
+$\mathbb{Q}$
+
+\section{Rationale und irrationale Zahlen}
+
+$\mathbb{R}, e, \pi, \dots $
+
+\section{Potenzrechnung}
+
+positive, negative und rationale Exponenten
 
 
+\begin{example}
 
+\end{example}
+\begin{question}
 
-Der Grund warum Subtraktion und Division ein eigenes Unter-Kapitel bilden liegt darin begründet, dass sie nicht das Kommutativgesetz beachten. 
+\end{question}
+\begin{solution}
 
-\subsection{Bruchrechnung}
-
-\subsection{Potenzrechnung}
+\end{solution}
 
