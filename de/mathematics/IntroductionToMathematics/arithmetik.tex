@@ -1,13 +1,18 @@
 
 \chapter{Ganze Zahlen}
 
-\section{Was sind natürliche Zahlen?}
-
 Der Mengenbegriff (im Sinne von Anzahl) birgt ein natürliches Verständnis dafür, was eine Zahl ist. Im Verständnis der meisten Menschen ist eine Zahl unmittelbar mit dem Begriff der Anzahl von Dingen verbunden --- zum Beispiel drei Äpfel oder fünf Orangen.
 
 Um einem Obsthändler zu erklären, wie viele Äpfel man haben möchte, ist die Nutzung von Zahlen durchaus praktisch. Genauso wie beim Metzger Zahlen etwas abstrakter verwendet werden. So möchte man 500 Gramm Hackfleisch. Das Hackfleisch besteht nicht aus 500 Einzelteilen, sondern die Zahl bezeichnet das Gewicht dessen, was man bestellt.
 
-Diese Zahlen werden in der Mathematik als \textbf{natürliche} Zahlen bezeichnet. Ihre Gesamtheit, d.h. alle natürlichen Zahlen inklusive etwas, das als "`unendlich"' bezeichnet wird -- darauf kommen wir später zurück -- wird mit dem Zeichen $\mathbb{N}$ abgekürzt.
+\section{Natürliche Zahlen}
+
+Dem Ziel, zu erklären, was ganze Zahlen sind, nähern wir uns über den Umweg der natürlichen Zahlen, die einen wesentlichen Bestandteil der ganzen Zahlen bilden. 
+
+
+\begin{definition}
+Zahlen -- im Sinne von Anzahl -- werden in der Mathematik als \textbf{natürliche} Zahlen bezeichnet. Ihre Gesamtheit, d.h. alle natürlichen Zahlen inklusive etwas, das als "`unendlich"' bezeichnet wird -- darauf kommen wir später zurück -- wird mit dem Zeichen $\mathbb{N}$ abgekürzt.
+\end{definition}
 
 Die folgenden Symbole bezeichnen die ersten neun natürlichen Zahlen. 
 
@@ -17,11 +22,14 @@ Die folgenden Symbole bezeichnen die ersten neun natürlichen Zahlen.
 
 Sie bilden den Grundstock aller folgenden Zahlen, die aus diesen zusammengesetzt sind. Wie diese zusammen gesetzt werden, erfahren wir gleich.
 
-\section{Grundrechenarten}
+\section{Grundlagen}
 
 \subsection{Gleichheit, Ungleichheit, Vergleiche}
 
-Mit dem Symbol "`="' wird die Anforderung beschrieben, dass alles, was auf der linken Seite des Symbols steht den selben Wert hat wie das, was auf der rechten Seite des Symbols steht. Folgendes ist demnach korrekt:
+\begin{definition}
+Mit dem Symbol "`="' wird die Anforderung beschrieben, dass alles, was auf der linken Seite des Symbols steht den selben Wert hat wie das, was auf der rechten Seite des Symbols steht. 
+\end{definition}
+Folgendes ist demnach korrekt:
 
 \begin{eqnarray*}
 1 &=& 1 \\
@@ -47,19 +55,22 @@ Für Gleichungen gilt im allgemeinen, dass Gleichheit erhalten bleibt, wenn auf 
 
 Das, was man auf beiden Seiten einer Gleichung macht, kann durch einen abgesetzten senkrechten Strich dargestellt werden. Alles, was auf der rechten Seite des Strichs steht, wird auf beiden Seiten der Gleichung angewendet. Hier also jeweils eine 1 addiert.
 
-Möchte man ausdrücken, dass die linke und rechte Seite nicht übereinstimmt, so verwendet man das Symbol "`$\neq $"'. So werden oben angegebene Falschaussagen wieder korrekt indem man das Ungleichzeichen verwendet:
+\begin{definition}
+Möchte man ausdrücken, dass die linke und rechte Seite nicht übereinstimmt, so verwendet man das Symbol "`$\neq $"'. 
+\end{definition}
+So werden oben angegebene Falschaussagen wieder korrekt indem man das Ungleichzeichen verwendet:
 \begin{eqnarray*}
 1 &\neq & 7 \\
 5 &\neq & 3 \\
 7 &\neq & 1
 \end{eqnarray*}
 
-Der Ungleichheit stehen noch qualifizierende Ungleichzeichen zur Seite. Dass 1 nicht gleich 7 ist stimmt zwar, ist aber weniger interessant, als die Aussage, dass 1 kleiner als 7 ist. Wenn Hans einen Apfel besitzt und Peter zwei, dann hat Hans weniger Äpfel als Peter, wie Peter mehr Äpfel hat als Hans. Die drückt man durch die folgenden Symbole aus:
+Der Ungleichheit stehen noch qualifizierende Ungleichzeichen zur Seite. Dass 1 nicht gleich 7 ist stimmt zwar, ist aber weniger interessant, als die Aussage, dass 1 kleiner als 7 ist. Wenn Hans einen Apfel besitzt und Peter zwei, dann hat Hans weniger Äpfel als Peter, wie Peter mehr Äpfel hat als Hans. Dies drückt man durch die folgenden Symbole aus:
 
 \begin{eqnarray*}
 1 & < & 7 \\
-5 & > & 3 \\
-7 & > & 1
+1 & < & 2 \\
+2 & > & 1
 \end{eqnarray*}
 
 Hat man eine Ungleichung aufzustellen, bei der es akzeptabel ist, dass beide Seite auch den gleichen Wert haben können, so verwendet man die selben Symbole mit einem Unterstrich:
@@ -83,7 +94,9 @@ Auch für Ungleichungen gilt, dass Operationen, die auf beiden Seiten ausgeführ
 
 \subsection{Addition und Multiplikation}
 
-Um mit natürlichen Zahlen rechnen zu können, definieren wir zwei Operationen. Die Multiplikation, dargestellt durch das Zeichen "`$\cdot$"' und die Addition, dargestellt durch das Zeichen "`$+$"'.
+\begin{definition}
+Um mit natürlichen Zahlen rechnen zu können, definieren wir zwei Operationen. Die Multiplikation, dargestellt durch das Zeichen "`$\cdot$"' und die Addition, dargestellt durch das Zeichen "`$+$"'. Diese Operationen werden als \textbf{Verknüpfung} bezeichnet, weil sie zwei Zahlen miteinander "`verknüpfen"' zu einer neuen Zahl.
+\end{definition}
 
 Mit der Addition fügen wir einzelne Mengen zu größeren Mengen zusammen. Hat Hans $2$ Äpfel und Peter $3$ Äpfel, so haben sie zusammen $5$ Äpfel, oder einfacher formuliert:
 \[
@@ -92,7 +105,18 @@ Mit der Addition fügen wir einzelne Mengen zu größeren Mengen zusammen. Hat H
 
 \noindent Hätte Peter keinen Apfel
 \[2+?=2\]
-dann wäre eine Zahl hinzuzuzählen, die keinen Wert besitzt. Eine solche Zahl wird mit dem Symbol "`0"' bezeichnet. Sie ist eine Invariante bezüglich der Addition -- d.h. Additionen mit dieser Zahl ändern nicht den Wert der ursprünglichen Zahl. Man nennt sie "`Null"'. Demnach erweitern sich die Symbole der ersten zehn natürlichen Zahlen auf diese Weise:
+dann wäre eine Zahl hinzuzuzählen, die keinen Wert besitzt. 
+\begin{definition}
+Eine Zahl ohne Wert wird mit dem Symbol "`0"' dargestellt.
+\end{definition}
+
+Sie ist eine Invariante bezüglich der Addition -- d.h. Additionen mit dieser Zahl ändern nicht den Wert der ursprünglichen Zahl. Man nennt sie "`Null"'. 
+
+\begin{definition}
+Etwas wird als Invariante einer Verknüpfung bezeichnet, wenn sie den Wert einer Zahl mit der sie Verknüpft wird, nicht verändert.
+\end{definition}
+
+Demnach erweitern sich die Symbole der ersten zehn natürlichen Zahlen auf diese Weise:
 
 \[0,1,2,3,4,5,6,7,8,9\]
 
@@ -110,6 +134,8 @@ Das ist eine Definition die bedeutet, dass wenn einem die Symbole ausgehen, kann
 999+1 &=& 1000 \\
 \cdots
 \end{eqnarray*}
+
+Interessant an der Zehn ist, dass sie aus einer 1 sowie der 0 zusammengesetzt ist. Also hatten die Menschen früher kein Problem mit der 0, solange sie als Teil einer anderen Zahl auftrat. Nur wenn sie alleine stand, wurde sie als verwirrend angesehen.
 
 \noindent \textsl{Wie werden aber dann Zahlen zusammengesetzt?}
 
@@ -182,6 +208,32 @@ Die Menge aller negativen Zahlen wird mit dem Zeichen $-\mathbb{N} $ dargestellt
 \mathbb{Z} = -\mathbb{N} \cup \mathbb{N}_0 =  \{ -\infty, \dots, -3, -2, -1, 0, 1, 2, 3, \dots, \infty \}
 \]
 
+\section{Aufgaben}
+\begin{prob}
+\label{arith.1.1}
+
+Welche der folgenden Gleichungen und Ungleichungen sind richtig oder falsch?
+\begin{center}
+\begin{tabular}{C{2cm}C{2cm}C{2cm}C{2cm}}
+$1=2$ & $3<5$ & $9<10$ & $10>9$ \\
+$8=8$ & $3<6$ & $10<10$ & $11>10$ \\
+$5=5$ & $10<10$ & $10<11$ & $999 \ge 1000$ 
+\end{tabular}
+\end{center}
+\end{prob}
+
+\begin{prob}
+\label{arith.1.2}
+Ausgehend von der Gleichung $2+3=5$ führe folgende Operationen auf beiden Seiten der Gleichung durch:
+\begin{enumerate}
+\item addiere auf beiden Seiten eine 2
+\item multipliziere mit 3
+\item wende das Distributiv Gesetz auf beiden Seiten der Gleichung an
+\item vereinfache soweit, bis auf beiden Seiten nur noch eine Zahl steht.
+\end{enumerate}
+\end{prob}
+
+
 
 \chapter{Zahlen}
 
@@ -200,13 +252,5 @@ $\mathbb{R}, e, \pi, \dots $
 positive, negative und rationale Exponenten
 
 
-\begin{example}
-
-\end{example}
-\begin{question}
-
-\end{question}
-\begin{solution}
-
-\end{solution}
+\section{Aufgaben}
 

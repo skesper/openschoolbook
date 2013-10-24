@@ -4,6 +4,7 @@
 \usepackage{mathptmx}
 \usepackage{type1cm}         
 \usepackage{booktabs}
+\usepackage{array}
 \usepackage{needspace}
 \usepackage{makeidx}
 \usepackage{graphicx}
@@ -21,6 +22,9 @@
 \definecolor{colPktKon}{rgb}{0.49,0.49,1} % für konstruierte Punkte
 \definecolor{colWin}{rgb}{1,0,0} % für Winkel
 
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
 \usepackage{amssymb}
 
@@ -55,6 +59,11 @@
 \include{./geometrie}
 
 \part{Analysis}
+
+\appendix
+\part{Anhang}
+
+\include{./problemsolutions}
 
 \backmatter
 % bibliography, glossary and index would go here.
