@@ -1,4 +1,7 @@
 
+\part{Arithmetik}
+
+
 \chapter{Ganze Zahlen}
 
 Der Mengenbegriff (im Sinne von Anzahl) birgt ein natürliches Verständnis dafür, was eine Zahl ist. Im Verständnis der meisten Menschen ist eine Zahl unmittelbar mit dem Begriff der Anzahl von Dingen verbunden --- zum Beispiel drei Äpfel oder fünf Orangen.
@@ -191,7 +194,14 @@ Wenn Hans drei Äpfel besitzt und zwei davon isst, bleibt ihm nur einer übrig. 
 Die Zahl, die diese Gleichung erfüllt, muss kleiner als 0 sein, denn $3+0 > 1$. Was also ist kleiner als 0? Solche Zahlen werden als negative Zahlen bezeichnet. Addiert man eine natürliche Zahl mit einer negativen Zahl, so ist das Ergebnis kleiner, als die natürliche Zahl selbst. 
 
 \begin{definition}
-Eine negative Zahl ist eine natürliche Zahl, die mit einem "`$-$"' Zeichen als negativ gekennzeichnet wird. 
+Eine negative Zahl ist eine natürliche Zahl, die mit einem "`$-$"' Zeichen als negativ gekennzeichnet wird. Sie ist identisch zu einer Zahl, die mit $-1$ multipliziert wird:
+\[ -4 = (-1) \cdot 4 \]
+Des Weiteren gilt
+\begin{eqnarray*}
+(-1)\cdot 1 &=& 1\cdot (-1) = -1 \\
+(-1)\cdot (-1) &=& 1
+\end{eqnarray*}
+
 \end{definition}
 
 Zur Vereinfachung der Darstellung gilt:
@@ -208,7 +218,52 @@ Die Menge aller negativen Zahlen wird mit dem Zeichen $-\mathbb{N} $ dargestellt
 \mathbb{Z} = -\mathbb{N} \cup \mathbb{N}_0 =  \{ -\infty, \dots, -3, -2, -1, 0, 1, 2, 3, \dots, \infty \}
 \]
 
+Bei der Multiplikation mit negativen Zahlen, muss man das Assoziativgesetz anwenden:
+
+\[ (-3)\cdot 6 = ((-1)\cdot 3) \cdot 6 = (-1)\cdot (3\cdot 6) = (-1)\cdot (18) = -18 \]
+
+In dem gleichen Sinn, wie sich die Subtraktion umgekehrt zur Addition verhält, versuchen wir uns nun vorzustellen, dass es auch zur Multiplikation eine Zahl gibt, die sich umgekehrt zu dieser verhält. Kommen wir auf das vorher erwähnte Beispiel zurück, dass wir 3 Körbe mit jeweils 4 Äpfeln haben. Insgesamt haben wir also 12 Äpfel, wie wir festgestellt hatten. Ständen wir vor dem Problem, 12 Äpfel auf drei Körbe gleichmäßig zu verteilen, wüssten wir also sofort, dass wir 4 Äpfel in jeden Korb legen müssten. Wir haben also die 12 Äpfel in drei Körbe aufgeteilt und etwas zu teilen ist Gegenstand der Division. Sie wird in der folgenden Form dargestellt:
+
+\[ {12\over 3} = 4 \] 
+Manchmal (z.B. wenn nicht so viel Platz ist) auch
+\[ 12 / 3 = 4 \]
+oder
+\[ 12 \div 3 = 4 \]
+Diese Gleichungen bedeuten alle das selbe, auch wenn für die Division hier drei verschiedene Zeichen (---, /, $\div$) verwendet wurden. Leider hat sich keins davon als Standard durchgesetzt, es werden in verschiedenen Situationen immer wieder diese Zeichen auftauchen. Das sollte den Lernenden nicht verwirren, denn alle bedeuten dasselbe. Wir werden hier in der Regel nur den waagerechten Stich verwenden, bis auf wenige Ausnahmen. Das $\div$ Zeichen nur beim Umformen von Gleichungen um anzuzeigen, dass durch eine Zahl geteilt werden soll.
+
+Division ist in diesem Kapitel nur unzureichend zu erklären, da es nur in bestimmten Sonderfällen möglich ist, eine Zahl durch eine andere Zahl zu dividieren, um dann wieder eine ganze Zahl herauszubekommen. In solchen Fällen spricht man davon, dass eine Zahl ein \textbf{Teiler} einer anderen Zahl ist. In obigem Beispiel ist 3 ein Teiler von 12, da 3 die Anzahl der Körbe ist, auf die wir unsere Äpfel aufteilen. Genauso wie 4 ein Teiler von 12 ist, da dies die Anzahl der Äpfel ist, die wir in die Körbe aufteilen. Wir werden im nächsten Kapitel darauf eingehen, was passiert, wenn wir z.B. nur 11 Äpfel hätten, aber trotzdem diese auf 3 Körbe aufteilen möchten. 
+
+Wir hatten vorher gesehen, dass es für die Multiplikation keine Rolle spielt, ob in vier Körben jeweils drei Äpfel liegen, oder in drei Körben jeweils vier Äpfel. In beiden Fällen ist die Gesamtanzahl der Äpfel zwölf. 
+
+Bei der Division ist dem nicht so. Wenden wir das Kommutativgesetz auf eine Division an, passiert das Folgende:
+\[ 12 / 3 = 3/12 \]
+Diese Gleichung würde bedeuten, dass wenn man zwölf Äpfel auf drei Körbe aufteilt, in jedem Korb genauso viele Äpfel lägen, als würde man drei Äpfel auf zwölf Körbe aufteilen, was offensichtlich falsch ist. Richtig ist:
+\[ 12 / 3 \ne 3/12 \]
+Also gilt das Kommutativgesetz \textbf{\underline{nicht}} für die Division. Bei der Subtraktion gilt es "`fast"':
+
+\[ 3-2 \ne 2-3 \]
+aber
+\[ 3-2 = 3+(-1)\cdot 2 = \underbrace{(-1)\cdot ((-1)\cdot 3}_{\textsl{weil $(-1)\cdot (-1)=1$}} + 2) = (-1)\cdot(2-3) = -(2-3)\]
+also
+\[ 3-2 = -(2-3) \]
+
+Bei der Subtraktion gilt das Kommutativgesetz, bis auf das sogenannte Vorzeichen.
+\begin{definition}
+Als \textbf{Vorzeichen} wird entweder das $+$ oder das $-$ bezeichnet, das vor eine Zahl steht. Es bestimmt, ob die Zahl positiv ($+$) oder negativ ($-$) ist.
+\end{definition}
+
+Spätestens hier sollte es dem Lernenden klar sein, dass die Subtraktion identisch ist mit der Addition bei umgekehrtem Vorzeichen.
+\[ 3-2 = 3+(-1)\cdot 2 = 3+(-2) \]
+
+\begin{svgraybox}
+Eine Randbemerkung: Im Grunde wird hier das Kommutativgesetz der Addition angewendet, denn
+\[ 3-2 = 3+(-1)\cdot 2 = (-1)\cdot 2+3 = -2+3 \]
+Demnach ist $-(2-3) = -2+3$, dies wird in den Aufgaben nachgewiesen.
+\end{svgraybox}
+
+
 \section{Aufgaben}
+
 \begin{prob}
 \label{arith.1.1}
 
@@ -233,24 +288,192 @@ Ausgehend von der Gleichung $2+3=5$ führe folgende Operationen auf beiden Seite
 \end{enumerate}
 \end{prob}
 
+\begin{prob}
+\label{arith.1.3}
+
+Bestimme die rechten Seiten der folgenden Aufgaben:
+\begin{center}
+\begin{tabular}{C{2cm}C{2cm}C{2cm}C{2cm}}
+$8+9=$ & $8-9=$ & $3\cdot 4=$ & ${8/ 2}=$ \\
+$13+5=$ & $13-5=$ & $13\cdot 5=$ & ${27/ 3}=$ \\
+$17+3=$ & $17-3=$ & $17 \cdot 3=$ & ${25/ 5}=$ 
+\end{tabular}
+\end{center}
+\end{prob}
+
+\begin{prob}
+\label{arith.1.4}
+Warum ist folgende Gleichung richtig?
+\[ -(2-3) = -2+3 \]
+\end{prob}
 
 
-\chapter{Zahlen}
+\chapter{Rationale und Reelle Zahlen}
 
 In diesem Kapitel wird der Begriff der Zahl erweitert. Im letzten Kapitel haben wir die ganzen Zahlen kennengelernt. Diese sind aber nur ein Teil der Zahlen, mit denen wir täglich umgehen. Beim Einkaufen zum Beispiel besorgen wir zwar Äpfel und Milchtüten in ganzen Einheiten, aber schon beim Brot lassen wir uns oft nur die "`Hälfte"' geben. Die Preise der Dinge, die wir im Supermarkt kaufen, haben -- im allgemeinen absichtlich -- nie einen ganzzahligen Preis, da \currency 1,99 vermeintlich "`viel billiger"' klingt, denn \currency 2,00.
 
+Wir werden uns im Besonderen mit der Teilbarkeit von Zahlen auseinander setzten, wie auch der Unteilbarkeit (Primzahlen), als auch mit den irrationalen und den komplexen Zahlen.
 
-\section{Bruchrechnung und Rationale Zahlen}
+\section{Rationale Zahlen}
 
-$\mathbb{Q}$
+Wir hatten im vorhergehenden Kapitel immer wieder das Beispiel der drei Körbe mit den vier Äpfeln erwähnt und auch gleich die Frage gestellt, was passiert, wenn man nicht zwölf, sondern nur elf Äpfel hätte.
+\[ {11 \over 3} = ? \]
+Versuchen wir uns zunächst dem Problem zu nähern, indem wir solange Äpfel in Körbe legen, bis wir zu wenig Äpfel haben, um dies gleichmäßig zu tun. Es ist klar, dass wir in jeden Korb drei Äpfel legen können und danach zwei übrig haben. Wenn wir die Äpfel nicht zerschneiden wollten, würden wir sagen, dass wir drei Äpfel in die Körbe legen konnten und zwei übrig behalten haben. 
+
+\begin{definition}
+Dies bezeichnen wir als \textbf{Division mit Rest}. 
+\end{definition}
+In unserem Beispiel würden man sagen:
+\[ {11\over 3} = 3 \textsl{ Rest } 2 \]
+
+Aber ist das wirklich einfacher? Sicher nicht. Das Ergebnis $11/3$ ist, vom mathematischen Standpunkt aus betrachtet, ein vollkommen korrektes Ergebnis und benötigt keine andere Darstellung. Daher tendiert man dazu, solche Ergebnisse in der Teilerform zu behalten und nicht weiter umzuformen. 
+\begin{definition}
+Eine Teilerform nennt man einen \textbf{Bruch}, sowie das Rechnen mit Brüchen \textbf{Bruchrechnung}.
+\end{definition}
+
+\subsection{Bruchrechnung}
+
+\begin{definition}
+Ein Bruch besteht aus drei Teilen. Oben steht eine Zahl, die als \textbf{Zähler} bezeichnet wird, unten eine Zahl, die \textbf{Nenner} genannt wird und dazwischen ist der \textbf{Bruchstrich}:
+\[ \textsl{Zähler} \over \textsl{Nenner} \]
+\end{definition}
+
+Brüche können, wie andere Zahlen auch, addiert, subtrahiert, multipliziert und dividiert werden. Dies geschieht nach folgenden Regeln:
+
+\begin{definition}
+Brüche können nur dann addiert oder subtrahiert werden, wenn ihr Nenner übereinstimmt. 
+\end{definition}
+
+Das liegt daran, dass man eine Gleichung einfach mit dem Nenner multiplizieren kann, um so die bekannten Operationen der ganzen Zahlen zu verwenden. Beispiel:
+
+\begin{eqnarray*}
+{3\over 8}+{5\over 8} &=& {3\over 8}+{5\over 8} \hskip 1cm | \cdot 8 \\
+3 +5 &=& 3+5 \\
+3+5 &=& 8 \hskip 1cm | \div 8\\
+{3\over 8}+{5\over 8} &=& {8\over 8} \\
+{3\over 8}+{5\over 8} &=& 1
+\end{eqnarray*}
+Auf der rechten Seite haben wir uns in der vorletzten Zeile zunutze gemacht, dass ein Bruch seinen Wert nicht ändert, falls Nenner und Zähler mit der selben Zahl multipliziert werden. So ist 
+
+\[ 1 = {a \over a} \textsl{ für alle } a\in \mathbb{Z} \]
+wie auch 
+\begin{equation}
+\label{relation}
+{x\over y} = {a\cdot x \over a\cdot y} \textsl{ für alle } a\in \mathbb{Z}
+\end{equation}
+
+\begin{definition}
+Wir bezeichnen Zahlen der Form 
+
+\[ {a\over b} \textsl{ für alle } a,b \in \mathbb{Z}, b\ne 0\]
+als \textbf{Rationale Zahlen} und stellen sie mit dem Symbol $\mathbb{Q}$ dar. 
+\end{definition}
+Also ist 
+
+\[ \mathbb{Q} = \left\{ {a\over b} \vert a,b \in \mathbb{Z}, b\ne 0 \right\} \]
+Die rationalen Zahlen beinhalten die ganzen Zahlen auf eine natürliche Weise, da für $n,a\in \mathbb{Z}$ gilt
+\[ n = {n \over 1} = {n \cdot a \over 1\cdot a}\]
+In diesem Fall ist $a$ ein Teiler der Zahl $n\cdot a$. 
+
+\begin{svgraybox}
+Gleichung (\ref{relation}) zeigt, dass nicht nur ein Bruch eine bestimmte Zahl darstellt, sondern unendlich viele. Es gibt Mathematiker, die bei der Definition der rationalen Zahlen einen axiomatischen Ansatz wählen, der die rationalen Zahlen auf Basis von Äquivalenzrelationen definieren. So wäre dann eine rationale Zahl immer durch genau eine Äquivalenzklasse dargestellt. Da Äquivalenzklassen im allgemeinen durch ihr Erzeugendes Element dargestellt werden, würden nach diesem Ansatz nur diejenigen Brüche zu den rationalen Zahlen gehören, die die Erzeugenden Elemente ihrer Äquivalenzklasse wären. Der Autor hält dies für sehr verwirrend und kaum vermittelbar, warum der Bruch 
+\[ {3\over 11}\]
+zu den rationalen Zahlen zählen soll, der Bruch
+\[ 9\over 33\]
+aber nicht, sondern nur zur Äquivalenzklasse von $3\over 11$.
+\end{svgraybox}
+
+Rationale Zahlen besitzen zu ihrer Darstellung als Bruch auch eine \textbf{Dezimalbruchentwicklung}. Zur Erläuterung betrachten wir zunächst die Zahlen zwischen 0 und 1. Dies sind die Zahlen 
+\[ 1 \over n\]
+für alle $n\in \mathbb{N}$.
 
 \section{Irrationale Zahlen}
+
+\subsection{Vollständigkeit}
 
 $\mathbb{R}, e, \pi, \dots $
 
 \section{Potenzrechnung}
 
-positive, negative und rationale Exponenten
+positive, negative, rationale und irrationale Exponenten.
+
+\section{Aufgaben}
+
+
+\chapter{Komplexe Zahlen}
+
+Um die komplexen Zahlen zu erklären, wollen wir uns zunächst eine Gleichung ansehen. 
+
+\[ ?^2 +1 = 0 \]
+Welche Zahl kann diese Gleichung erfüllen? Wir formen um:
+\begin{eqnarray*}
+?^2 +1 &=& 0 \hskip 1cm | -1 \\
+?^2 +1 -1 &=& -1 \hskip 1cm | \sqrt{.} \\
+\sqrt{?^2} &=& \sqrt{-1} \\
+? &=& \sqrt{-1}
+\end{eqnarray*}
+Stimmt das? Wir setzen ein:
+\begin{eqnarray*}
+\sqrt{-1}^2 +1 &=& 0 \\
+(-1)^{{1 \over 2}\cdot 2} +1 &=& 0 \\
+(-1)^{{2 \over 2}} +1 &=& 0 \\
+(-1)^{1} +1 &=& 0 \\
+-1+1 &=& 0 \\
+0 &=& 0
+\end{eqnarray*}
+Die Gleichung stimmt offensichtlich, doch hatten wir gelernt, dass Wurzeln aus negativen Zahlen nicht definiert sind. Kann man also einfach mit dem Quadrieren einer negativen Zahl rechnen und erwarten, dass etwas sinnvolles dabei heraus kommt? Die einfache Antwort ist: "`Ja"', man kann. Denn Fakt ist: Als wir die Gleichung mit einem $?$ umgeformt hatten, wussten wir noch nicht, dass das Fragezeichen für die Wurzel aus $-1$ steht. Wendet man also die Rechenschritte korrekt auf eine Zahl (oder Variable, wie wir im späteren sehen werden) an, so bleibt das Resultat korrekt. 
+
+Die Definition der komplexen Zahlen fußt auf dieser Erkenntnis. Sie verwendet die negativen Wurzeln indem ein Buchstabe $i$ den Wert $\sqrt{-1}$ annimmt und so zum Rechenelement wird.
+\begin{eqnarray*}
+\sqrt{-17} &=& \sqrt{-1\cdot 17}\\
+&=& \sqrt{-1}\cdot \sqrt{17}\\
+&=& i \cdot \sqrt{17}
+\end{eqnarray*}
+oder allgemein:
+
+\begin{eqnarray*}
+\sqrt{-x^2} &=& \sqrt{-1\cdot x^2}\\
+&=& \sqrt{-1}\cdot \sqrt{x^2}\\
+&=& i \cdot x
+\end{eqnarray*}
+wobei $x$ jede reelle Zahl sein kann, also $x\in \mathbb{R}$. Allgemein werden die komplexen Zahlen definiert als 
+
+\[ \mathbb{C} = \{ a+i\cdot b \ |\ a,b \in \mathbb{R} \} = \mathbb{R}+i\mathbb{R} \]
+Das bedeutet, dass komplexe Zahlen aus zwei reellen Zahlen bestehen. Sie können nicht miteinander addiert werden, da das $i$ dies verhindert. Weil die komplexen Zahlen dadurch aus zwei reellen Komponenten gebildet werden, nennt man sie auch oft zweidimensionale Zahlen. Als Ausblick sei erwähnt, dass in der linearen Algebra die komplexen Zahlen mit einem zwei dimensionalen reellen Vektorraum identifiziert werden können.
+
+\section{Die Grundrechenarten der komplexen Zahlen}
+
+Der Einfachheit halber wird im Folgenden $i\cdot b$ durch $ib$ ersetzt. Der Multiplikationspunkt kann weggelassen werden. Und alle $a,b,c,d \in \mathbb{R}$ sowie alle $p,q \in \mathbb{C}$ mit $p = a+ib$ und $q = c+id$. Beachte, dass $i^2=\sqrt{-1}^2 = -1$.
+
+\begin{definition} Addition
+\[ p+q = (a+c)+i(b+d)\]
+\end{definition}
+
+\begin{definition} Subtraktion
+\[ p-q = (a-c)+i(b-d)\]
+\end{definition}
+
+\begin{definition} Multiplikation
+\[ p\cdot q = a(c+id)+ib(c+id) = (ac-bd)+i(ad+bc)  \]
+\end{definition}
+
+\begin{definition} Division
+\[ {p\over q} = {a+ib \over c+id} = {(a+ib)(c-id) \over (c+id)(c-id)} = {ac+bd\over c^2+d^2} + i{bc-ad \over c^2+d^2}\]
+\end{definition}
+
+\section{Historische Bemerkung} 
+
+Gerolamo Cardano (1501-1576) behandelte in seinem 1545 erschienen Buch \textit{Artis magnae sive de regulis algebraicis liber unus} die Aufgabe zwei Zahlen zu finden, deren Produkt 40 und deren Summe 10 sei. Er setzte dafür die Gleichung an:
+
+\[ x^2-10x+40=0 \]
+
+Er erkannte, dass diese Gleichung keine Lösung hat, fügte aber die Bemerkung hinzu, dass falls die entsprechenden Umformungen sinnvoll und erlaubt wären, dass dann $5+\sqrt{-15}$ sowie $5-\sqrt{-15} $ in der Tat Lösungen der Gleichung wären. 
+
+In diesem Sinne hatte Cardano bereits den ersten Schritt in die richtige Richtung getan. Doch dauerte es noch eine ganze Weile, bis komplexe Zahlen sich durchsetzten.
+
+\section{Polarkoordinaten der Komplexen Zahlen}
+
+\section{Riemannsche Zahlenkugel}
 
 
 \section{Aufgaben}
