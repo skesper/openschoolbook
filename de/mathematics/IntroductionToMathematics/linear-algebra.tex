@@ -9,7 +9,6 @@ So gilt z.B. der Satz des Pythagoras
 \[\lVert a\rVert ^2 +\lVert b\rVert ^2 = \lVert c\rVert^2\]
 in jedem Vektorraum der ein Skalarprodukt $\langle .,.\rangle $ besitzt, mit einer induzierten Norm $\lVert a \rVert = \sqrt{\langle a,a\rangle} $, sowie $a+b=c$ gilt und $\langle a,b\rangle = 0 $. Unabhängig davon, ob dieser ein euklidischer Raum ist, ein Raum der Polynome oder der Raum der unendlich oft differenzierbaren Funktionen.
 
-
 \section{Zeichen}
 
 In der Algebra verwendet man anstelle von Zahlen im allgemeinen Buchstaben. Es immer vom Kontext abhängig, welcher Buchstabe was bedeutet. Aber es haben sich bestimmte Dinge eingebürgert. So sind Konstanten meistens mit den Buchstaben
@@ -56,6 +55,56 @@ $\omega $ & $\Omega $ & Omega \\
 \end{center}
 
 
+\section{Summen und Produkte}
+
+In den folgenden Kapiteln werden wir öfter auf Summen- und Produktreihen von Funktionen treffen. Um diese möglichst einfach und gut verständlich darzustellen hat man sich in der Mathematik auf die Summen- und Produktnotation geeinigt. Summen werden mit einem griechischen, großen "`Sigma"' dargestellt $\Sigma$ und Produkte durch ein großes "`Pi"' $\Pi$.
+
+Will man z.B. die Zahlen 1 bis 10 summieren, so kann man dies so darstellen:
+\[ \text{Summe } = \sum_{n=1}^{10} n = 1+2+3+4+5+6+7+8+9+10 \]
+Durch die Grenzen oberhalb und unterhalb weiß man, welche Werte $n$ annimmt. Alternativ gibt es auch folgende Möglichkeit. Sei $N = \{ 1,2, \dots ,10 \}$, dann wird die Summe so dargestellt:
+\[ \text{Summe} = \sum_{n\in N} n \]
+Beide Möglichkeiten werden verwendet. 
+Für die Multiplikation gilt das selbe:
+\[ \text{Produkt } = \prod_{n=1}^{10} n = 1\cdot 2\cdot 3\cdot 4\cdot 5\cdot 6\cdot 7\cdot 8\cdot 9\cdot 10 \]
+Sowie
+\[ \text{Produkt} = \prod_{n\in N} n  \]
+Es werden auch andere Operationen, wie z.B. die Vereinigung oder der Schnitt von Mengen auf diese Weise dargestellt. 
+\begin{definition}
+Die Schreibweise ein großes Symbol zu verwenden mit darunter, wie darüber befindlichen Einschränkungen wird \textsl{Operatorschreibweise} genannt und folgt dem Schema:
+\text{Wert } = \[ \bigbox_{\dots}^{\dots}\left( \dots \right) \]
+\end{definition}
+wobei $\bigbox$ jeder beliebige Operator sein kann und die Punkte darüber und darunter die Grenzen angeben, über die eben dieser Operator angewendet wird. Und schließlich das Argument in Klammern stellt ebenjenes dar, auf das der Operator angewandt wird. 
+
+\section{Aussagelogik}
+
+\subsection{Quantor}
+
+Im Folgenden werden wir zwei sogenannte \textsl{Quantoren} kennen lernen. Sie sind wichtig um Aussagen unzweideutig und in kurzer Art zu formulieren. Der erste ist $\forall$ und bedeutet "`für alle"' oder "`für jedes"'. Man benutzt ihn zum Beispiel, um Aussagen "`für alle"' Elemente einer Menge zu definieren.
+
+\[ \forall x\in \mathbb{N} \]
+bedeutet für alle $x$ in den natürlichen Zahlen.
+
+Der zweite ist $\exists$, dieser bedeutet "`es gibt"' oder "`gibt es"'. So wäre 
+\[ \forall x\in \mathbb{N}\ \exists y\in \mathbb{Q},\text{ mit }  y={x\over 1} \]
+gleichbedeutend mit dem Satz: "`\textbf{Für alle} $x$ in den natürlichen Zahlen \textbf{gibt es} ein $y$ in den rationalen Zahlen mit $y={x \over 1}$"'.
+
+Der $\exists$ Quantor kann mit einem Ausrufezeichen (!) verbunden werden um auszudrücken, dass es "`genau eins gibt"', also bedeutet
+\[ \forall x\in \mathbb{N}\ \exists! y\in \mathbb{Q},\text{ mit }  y={x\over 1} \]
+folgendes: "`\textbf{Für alle} $x$ in den natürlichen Zahlen \textbf{gibt es genau ein} $y$ in den rationalen Zahlen mit $y={x \over 1}$"'.
+
+\subsection{Junktor}
+
+Junktoren verknüpfen Aussagen zu einer Gesamtaussage.
+
+\begin{enumerate}
+\item $\wedge $ ist der "`und"' Junktor. Z.B. seien $a\in \mathbb{N} \wedge b\in \mathbb{Q} $
+\item $\vee$ ist der "`oder"' Junktor. Z.B. sei $x\in \mathbb{R} \vee x\in \mathbb{Q}$.
+\item $\Rightarrow$ ist der Implikations-Junktor. Z.B. $A\Rightarrow B$ bedeutet, aus $A$ folgt $B$ oder $x\in \mathbb{N} \Rightarrow -x \in -\mathbb{N}$
+\item $\Leftrightarrow$ ist der Bikonditional-Junktor. $A\Leftrightarrow B$ bedeutet $A$ gilt genau dann, wenn $B$ gilt.
+\item $\neg$ negiert eine Aussage, z.B. bedeutet $\neg(x\in \mathbb{R})$, dass $x$ eben nicht aus den reellen Zahlen ist, oder $\neg \exists y\in \mathbb{Q}$ bedeutet, dass es kein $y$ in den rationalen Zahlen gibt.
+\end{enumerate}
+
+
 \section{Mengen}
 
 
@@ -79,7 +128,32 @@ Zusammengefasst sind Mengen einfache Ansammlungen von im allgemeinen gleichartig
 So ist zum Beispiel
 \[7 \in \mathbb{N} \]
 
-\subsection{Abbildung}
+\subsection{Definitionssprint!}
+Im Folgenden seien $A$ und $B$ immer Mengen.
+
+\begin{definition}
+Wenn für alle $a\in A$ gilt $a\in B$, dann ist $A$ eine \textsl{Teilmenge} von $B$.
+\end{definition}
+
+\begin{definition}
+Eine leere Menge wird mit $\emptyset$ oder $\{\}$ dargestellt.
+\end{definition}
+
+\begin{definition}
+Die Vereinigung von Mengen wird definiert als
+\[A \cup B = \{ x | x\in A \vee x\in B \}\]
+\end{definition}
+
+\begin{definition}
+Die Schnittmenge wird definiert als 
+\[A \cap B = \{x| x\in A \wedge x\in B \} \]
+\end{definition}
+
+\begin{definition}
+
+\end{definition}
+
+\section{Abbildung}
 
 Eine Abbildung bildet Elemente aus einer Menge auf Elemente einer anderen Menge ab. Seien $X,Y$ Mengen. Dann ordnet die Abbildung
 \[ f : X \longrightarrow Y \]
@@ -93,8 +167,10 @@ Also kann man die Summe
 auch in Funktionenform schreiben:
 \[ +(x,y) = z\]
 
-\subsection{Gruppen, Ringe, Körper}
+\section{Gruppen, Ringe, Körper}
 Im Folgenden bezeichen $X,Y$ und $Z$ immer Mengen.
+
+\subsection{Definitionssprint!}
 
 \begin{definition}
 Eine Funktion
@@ -159,11 +235,13 @@ Sei $K$ ein kommutativer Ring, dessen neutrales Element bezüglich der Addition 
 
 \section{Vektorraum}
 
-Sei $K$ ein Körper und $(V,+,\cdot)$ eine Menge mit zwei Verknüpfungen:
+Sei $(K,+,\cdot )$ ein Körper und $(V,\oplus ,\odot)$ eine Menge mit zwei Verknüpfungen:
 \begin{eqnarray*}
-+: V\times V &\longrightarrow& V \\
-\cdot: K \times V &\longrightarrow& V 
+\oplus : V\times V &\longrightarrow& V \\
+\odot : K \times V &\longrightarrow& V 
 \end{eqnarray*}
+
+
 
 \chapter{Beweisführung}
 
@@ -199,7 +277,41 @@ Dies sollte für den Lernenden nicht entscheidend sein. Der Inhalt von Theorem u
 
 \section{Beweisarten}
 
+Es gibt einige Standard Schemata, mit deren Hilfe Beweise zu führen sind. Zwei der prominentesten Vertreten wollen wir hier kennen lernen.
+
 \subsection{Vollständige Induktion}
+
+Die \textsl{Vollständige Induktion} bezieht sich auf Aussagen über natürliche Zahlen. Die Induktion vollzieht sich in zwei Schritten. Man versucht zunächst die Aussage für eine natürliche Zahl -- wenn möglich eine kleine -- zu beweisen. Im zweiten Schritt versucht man die Aussage für die natürliche Zahl $n+1$ zu beweisen, indem man voraussetzt, dass die Aussage für $n$ richtig ist. Gelingt dies, ist der volle Beweis erbracht, denn man hat den Anfang der Kette ja im ersten Schritt nachgewiesen und für jede weitere natürliche Zahl folgt die Richtigkeit aus der Richtigkeit der um eins kleineren Zahl.
+
+Ein Beispiel soll dies verdeutlichen: Carl Friedrich Gauss soll als neunjähriger die folgende Formel hergeleitet haben:
+
+\begin{theorem}
+Summenformel von Carl Friedrich Gauss
+\begin{claim}
+Für alle $n\in \mathbb{N}$ gilt:
+\[ 1+2+3+ \dots +n = \sum_{k=1}^{n}k = {n(n+1)\over 2} \]
+\end{claim}
+\begin{proof}
+Für $n=2$ ist
+
+\[ {n(n+1)\over 2} = {2(2+1)\over 2} = {6\over 2} = 3 \]
+
+Sei die Behauptung für $n$ bewiesen, so prüfe für $n+1$:
+\begin{eqnarray*}
+\sum_{k=1}^{n+1} k &=& \sum_{k=1}^{n} k  + (n+1) = {n(n+1)\over 2} +(n+1) \\
+ &=& {n(n+1)\over 2} +{2(n+1)\over 2} = {n(n+1)+2(n+1) \over 2} \\
+ &=& {(n+1)(n+2) \over 2}
+\end{eqnarray*}
+\qed
+\end{proof}
+
+\end{theorem}
+
+
+
+
+
+
 
 \subsection{Beweis durch Widerspruch}
 
