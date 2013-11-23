@@ -235,85 +235,38 @@ Sei $K$ ein kommutativer Ring, dessen neutrales Element bezüglich der Addition 
 
 \section{Vektorraum}
 
-Sei $(K,+,\cdot )$ ein Körper und $(V,\oplus ,\odot)$ eine Menge mit zwei Verknüpfungen:
+Sei $(K,+,\cdot )$ ein Körper und $(V,+ ,\cdot)$ eine Menge mit zwei Verknüpfungen:
 \begin{eqnarray*}
-\oplus : V\times V &\longrightarrow& V \\
-\odot : K \times V &\longrightarrow& V 
++ : V\times V &\longrightarrow& V \\
+\cdot : K \times V &\longrightarrow& V 
 \end{eqnarray*}
+Hierbei ist zu beachten, dass das "`+"' einmal auf $K$ und einmal auf $V$ definiert wurde. Man könnte hier zwei verschiedene Zeichen zur Unterscheidung der Additionen einführen. Dies ist im allgemeinen aber unüblich, sodass hier vom Lernenden verlangt wird, den Unterschied selbst zu erkennen. 
 
+Man nennt $(V,+ ,\cdot)$ einen \textsl{Vektorraum} über dem Körper $K$, oder auch \textsl{K-Vektorraum}, wenn folgende Eigenschaften erfüllt sind, es seien $u,v,w \in V$ und $a,b \in K$:
 
+Die hier folgenden Definitionen sind angelehnt an das grundlegende Werk von Egbert Brieskorn \cite{Brieskorn1}:
 
-\chapter{Beweisführung}
+\begin{description}
+\item[(A1)] $u+(v+w) = (u+v)+w$
+\item[(A2)] $\exists 0\in V$ mit $v+0=0+v=v$
+\item[(A3)] $\forall v\in V \ \exists -v\in V$ mit $v+(-v) = -v+v = 0$
+\item[(A4)] $u+v = v+u$
+\end{description}
 
-Dieses Kapitel ist nicht speziell für die Lineare Algebra gedacht, aber da wir im Folgenden die ersten ernsthaften Beweise führen werden, sollte hier auf die Grundlagen der Beweisführung in der Mathematik eingegangen werden.
+\begin{description}
+\item[(V1)] $(a \cdot b)\cdot v = a\cdot (b\cdot v)$
+\item[(V2)] $1\cdot v = v$
+\item[(V3)] $(a+b)\cdot v = a\cdot v + b\cdot v$
+\item[(V4)] $a\cdot(v+w) = a\cdot v + a\cdot w$
+\end{description}
 
-\section{Aussage-Typen}
+\begin{definition}
+Ein \textsl{Vektorraumhomomorphismus} -- auch verkürzt einfach Homomorphismus genannt -- von $V$ nach $W$ ist eine Abbildung $\phi : V \longrightarrow W$ mit folgenden Eigenschaften:
+\begin{enumerate}
+\item $\forall v,w \in V$ gilt $\phi(v+w) = \phi(v)+\phi(w)$
+\item $\forall a\in K$ und $\forall v\in V$ ist $\phi(av)=a\phi(v)$
+\end{enumerate}
 
-Die folgenden Definitionen von Begriffen sind -- soweit es im Wissensbereich des Autors liegt -- nicht im strengen Sinne definiert worden. Daher werden sie meist so eingesetzt, wie der Autor eines Textes sie interpretiert. Jedoch hat sich ein allgemeines Verständnis für diese Begriffe gebildet, das hier in kurzer Übersichtsform dargestellt werden soll.
-
-\subsection{Axiom}
-
-Ein \textsl{Axiom} ist eine Grundlage für eine Theorie. Innerhalb dieser Theorie wird das Axiom als richtig vorausgesetzt und bedarf keines Beweises. Ein Axiom kann also als eine Art Rand- oder Anfangsbedingung für eine Argumentationskette interpretiert werden.
-
-\subsection{Definition}
-
-Eine \textsl{Definition} ist eine Aussage, die einen bestimmten Sachverhalt darlegt. Eine Definition kann im allgemeinen nicht aus anderen Aussagen abgeleitet werden. Sie führt die Beschreibung des Sachverhalts auch meist durch Einführung eines Namens zu einem feststehenden Begriff zusammen. Durch die Definition bekommt also der Begriff seine Bedeutung.
-
-\subsection{Theorem oder Satz}
-
-Als \textsl{Theorem} oder \textsl{Satz} wird eine Aussage verstanden, deren Inhalt logisch aus den Axiomen einer Theorie abgeleitet werden kann. Diese Form von Aussagen wird am häufigsten da eingesetzt, wo die Fundamente einer Theorie erarbeitet werden. Mithilfe der Theoreme wird aus einer Idee eine mathematische Realität. Die Beweise von Theoremen innerhalb einer Theorie stellt den Grundstein der Arbeit eines Mathematikers dar. In den Beweisen findet die Mathematik statt.
-
-\subsection{Korollar}
-
-Ein \textsl{Korollar} bezeichnet eine Aussage, die sich aus einem bewiesenen Theorem, dem Beweis des Theorems oder aus einer Definition ohne Aufwand ergibt. Im allgemeinen müssen die Aussagen eines Korollars nicht bewiesen werden, weil der Beweis trivial wäre oder so eng mit dem Beweis des Theorems verbunden ist, dass die Beweisführung redundant wäre. In seltenen Einzelfällen kann es notwendig sein, die Aussage eines Korollars zu beweisen. Sollte dies notwendig sein, sollte der Mathematiker sich aber überlegen, ob er aus dem Korollar nicht einen Hilfssatz macht.
-
-\subsection{Lemma oder Hilfssatz}
-
-Als \textsl{Lemma} oder \textsl{Hilfssatz} wird eine zu beweisende Aussage bezeichnet, deren Inhalt für den Beweis eines Theorems notwendig ist. Daraus folgt, dass ein Lemma bewiesen werden muss und im allgemeinen im Kontext einer größeren Beweisführung auftaucht. 
-
-Die Unterscheidung, ob eine Aussage ein Lemma oder ein Theorem darstellt, ist oft nicht leicht zu treffen. Es wird passieren, dass eine Aussage in dem einen Buch über Mathematik als Theorem, in einem anderen "`nur"' als Lemma dargestellt wird -- als Beispiel sei hier der Fundamentalsatz der Algebra erwähnt, der eigentlich ein Satz der Analysis ist und dort nur eine eher geringe Wertschätzung erfährt. 
-
-Dies sollte für den Lernenden nicht entscheidend sein. Der Inhalt von Theorem und Lemma ist in aller Regel interessant und der Beweis von beiden sollte verstanden und nachvollziehbar sein. 
-
-\section{Beweisarten}
-
-Es gibt einige Standard Schemata, mit deren Hilfe Beweise zu führen sind. Zwei der prominentesten Vertreten wollen wir hier kennen lernen.
-
-\subsection{Vollständige Induktion}
-
-Die \textsl{Vollständige Induktion} bezieht sich auf Aussagen über natürliche Zahlen. Die Induktion vollzieht sich in zwei Schritten. Man versucht zunächst die Aussage für eine natürliche Zahl -- wenn möglich eine kleine -- zu beweisen. Im zweiten Schritt versucht man die Aussage für die natürliche Zahl $n+1$ zu beweisen, indem man voraussetzt, dass die Aussage für $n$ richtig ist. Gelingt dies, ist der volle Beweis erbracht, denn man hat den Anfang der Kette ja im ersten Schritt nachgewiesen und für jede weitere natürliche Zahl folgt die Richtigkeit aus der Richtigkeit der um eins kleineren Zahl.
-
-Ein Beispiel soll dies verdeutlichen: Carl Friedrich Gauss soll als neunjähriger die folgende Formel hergeleitet haben:
-
-\begin{theorem}
-Summenformel von Carl Friedrich Gauss
-\begin{claim}
-Für alle $n\in \mathbb{N}$ gilt:
-\[ 1+2+3+ \dots +n = \sum_{k=1}^{n}k = {n(n+1)\over 2} \]
-\end{claim}
-\begin{proof}
-Für $n=2$ ist
-
-\[ {n(n+1)\over 2} = {2(2+1)\over 2} = {6\over 2} = 3 \]
-
-Sei die Behauptung für $n$ bewiesen, so prüfe für $n+1$:
-\begin{eqnarray*}
-\sum_{k=1}^{n+1} k &=& \sum_{k=1}^{n} k  + (n+1) = {n(n+1)\over 2} +(n+1) \\
- &=& {n(n+1)\over 2} +{2(n+1)\over 2} = {n(n+1)+2(n+1) \over 2} \\
- &=& {(n+1)(n+2) \over 2}
-\end{eqnarray*}
-\qed
-\end{proof}
-
-\end{theorem}
-
-
-
-
-
-
-
-\subsection{Beweis durch Widerspruch}
-
+\end{definition}
 
 
