@@ -1,11 +1,9 @@
-\part{Lineare Algebra}
-
 
 \chapter{Grundlagen}
 
 Die Algebra konzentriert sich -- im Gegensatz zur Arithmetik -- auf die Verallgemeinerung der Begriffe zur Analyse bestimmter Sachverhalte. Der Arithmetik Teil dieses Buches begann mit Berechnungen auf Basis von Äpfeln. Diese geben einen unmittelbaren Zugang zu den Begriffen des Rechnens. In der Algebra wird es solches nicht geben. Die Ansätze hier sind rein abstrakt zu verstehen. Auch wenn direkte, anschauliche Beispiele zu bestimmten algebraischen Sachverhalten existieren, so sollte der Lernende versuchen, nicht anhand dieser sein Verständnis auszubilden, sondern rein in der Sache selbst. Das führt letztlich dazu, dass er ohne konkrete Anschauung Sachverhalte analysieren und Probleme lösen kann. Vollständig unabhängig davon, ob diese Probleme einen realen, abstrakten oder mit dem Verstand nicht nachvollziehbaren Hintergrund haben. 
 
-So gilt z.B. der Satz des Pythagoras 
+So gilt z.B. der Satz des Pythagoras \index{Pythagoras}
 \[\lVert a\rVert ^2 +\lVert b\rVert ^2 = \lVert c\rVert^2\]
 in jedem Vektorraum der ein Skalarprodukt $\langle .,.\rangle $ besitzt, mit einer induzierten Norm $\lVert a \rVert = \sqrt{\langle a,a\rangle} $, sowie $a+b=c$ gilt und $\langle a,b\rangle = 0 $. Unabhängig davon, ob dieser ein euklidischer Raum ist, ein Raum der Polynome oder der Raum der unendlich oft differenzierbaren Funktionen.
 
@@ -57,7 +55,7 @@ $\omega $ & $\Omega $ & Omega \\
 
 \section{Summen und Produkte}
 
-In den folgenden Kapiteln werden wir öfter auf Summen- und Produktreihen von Funktionen treffen. Um diese möglichst einfach und gut verständlich darzustellen hat man sich in der Mathematik auf die Summen- und Produktnotation geeinigt. Summen werden mit einem griechischen, großen "`Sigma"' dargestellt $\Sigma$ und Produkte durch ein großes "`Pi"' $\Pi$.
+In den folgenden Kapiteln werden wir öfter auf Summen- und Produktreihen von Funktionen treffen. Um diese möglichst einfach und gut verständlich darzustellen hat man sich in der Mathematik auf die Summen- und Produktnotation geeinigt. Summen werden mit einem griechischen, großen "`Sigma"' dargestellt $\Sigma$ \index{Summe $\Sigma$} und Produkte durch ein großes "`Pi"' $\Pi$. \index{Produkt $\Pi$}
 
 Will man z.B. die Zahlen 1 bis 10 summieren, so kann man dies so darstellen:
 \[ \text{Summe } = \sum_{n=1}^{10} n = 1+2+3+4+5+6+7+8+9+10 \]
@@ -71,7 +69,7 @@ Sowie
 Es werden auch andere Operationen, wie z.B. die Vereinigung oder der Schnitt von Mengen auf diese Weise dargestellt. 
 \begin{definition}
 Die Schreibweise ein großes Symbol zu verwenden mit darunter, wie darüber befindlichen Einschränkungen wird \textsl{Operatorschreibweise} genannt und folgt dem Schema:
-\text{Wert } = \[ \bigbox_{\dots}^{\dots}\left( \dots \right) \]
+ \[ \text{Wert } = \bigbox_{\dots}^{\dots}\left( \dots \right) \]
 \end{definition}
 wobei $\bigbox$ jeder beliebige Operator sein kann und die Punkte darüber und darunter die Grenzen angeben, über die eben dieser Operator angewendet wird. Und schließlich das Argument in Klammern stellt ebenjenes dar, auf das der Operator angewandt wird. 
 
@@ -79,12 +77,12 @@ wobei $\bigbox$ jeder beliebige Operator sein kann und die Punkte darüber und d
 
 \subsection{Quantor}
 
-Im Folgenden werden wir zwei sogenannte \textsl{Quantoren} kennen lernen. Sie sind wichtig um Aussagen unzweideutig und in kurzer Art zu formulieren. Der erste ist $\forall$ und bedeutet "`für alle"' oder "`für jedes"'. Man benutzt ihn zum Beispiel, um Aussagen "`für alle"' Elemente einer Menge zu definieren.
+Im Folgenden werden wir zwei sogenannte \textsl{Quantoren} \index{Quantor} kennen lernen. Sie sind wichtig um Aussagen unzweideutig und in kurzer Art zu formulieren. Der erste ist $\forall$ und bedeutet "`für alle"'\index{Für alle} oder "`für jedes"'. Man benutzt ihn zum Beispiel, um Aussagen "`für alle"' Elemente einer Menge zu definieren.
 
 \[ \forall x\in \mathbb{N} \]
 bedeutet für alle $x$ in den natürlichen Zahlen.
 
-Der zweite ist $\exists$, dieser bedeutet "`es gibt"' oder "`gibt es"'. So wäre 
+Der zweite ist $\exists$, dieser bedeutet "`es gibt"' \index{Es gibt, es existiert} oder "`gibt es"'. So wäre 
 \[ \forall x\in \mathbb{N}\ \exists y\in \mathbb{Q},\text{ mit }  y={x\over 1} \]
 gleichbedeutend mit dem Satz: "`\textbf{Für alle} $x$ in den natürlichen Zahlen \textbf{gibt es} ein $y$ in den rationalen Zahlen mit $y={x \over 1}$"'.
 
@@ -94,7 +92,7 @@ folgendes: "`\textbf{Für alle} $x$ in den natürlichen Zahlen \textbf{gibt es g
 
 \subsection{Junktor}
 
-Junktoren verknüpfen Aussagen zu einer Gesamtaussage.
+Junktoren verknüpfen Aussagen zu einer Gesamtaussage.\index{Junktor}
 
 \begin{enumerate}
 \item $\wedge $ ist der "`und"' Junktor. Z.B. seien $a\in \mathbb{N} \wedge b\in \mathbb{Q} $
@@ -107,7 +105,7 @@ Junktoren verknüpfen Aussagen zu einer Gesamtaussage.
 
 \section{Mengen}
 
-
+\index{Menge}
 Kategorisierung spielt in der (Linearen) Algebra eine sehr wichtige Rolle. Kennt man die Eigenschaften eines Dinges, so kann man damit umgehen. Daher ist es nicht verwunderlich, dass Mathematiker versuchen, Dinge, die identische Eigenschaften besitzen zu Mengen zusammenzustellen. Und -- soweit möglich -- Operationen und Eigenschaften mit dem Namen dieser Zusammenstellung zu verbinden. Die bereits im Arithmetik Teil vorgekommene Menge der natürlichen Zahlen $\mathbb{N}$ bildet da ein gutes Beispiel für den Einstieg. 
 
 Im Folgenden werden wir immer mehr Vorgehensweisen kennenlernen, mit denen man Mengen untersuchen kann. Kann man bestimmte Eigenschaften an einer Menge feststellen, so wird sie zur Gruppe. Hat man weitere Eigenschaften an der Gruppe, so wird sie zum Ring. Und eine letzte Eigenschaft macht einen Ring zu einem Körper. Der Körper ist das, was unserer üblichen Vorstellung von Zahlen am nächsten kommt. Für viele Objekte der Mathematik kann man aber z.B. nur Gruppenstruktur nachweisen. 
@@ -131,30 +129,26 @@ So ist zum Beispiel
 \subsection{Definitionssprint!}
 Im Folgenden seien $A$ und $B$ immer Mengen.
 
-\begin{definition}
+\begin{definition}\index{Teilmenge}
 Wenn für alle $a\in A$ gilt $a\in B$, dann ist $A$ eine \textsl{Teilmenge} von $B$.
 \end{definition}
 
-\begin{definition}
+\begin{definition}\index{Leere Menge}
 Eine leere Menge wird mit $\emptyset$ oder $\{\}$ dargestellt.
 \end{definition}
 
-\begin{definition}
-Die Vereinigung von Mengen wird definiert als
+\begin{definition}\index{Vereinigungsmenge}
+Die Vereinigung von Mengen (auch Vereinigungsmenge genannt) wird definiert als
 \[A \cup B = \{ x | x\in A \vee x\in B \}\]
 \end{definition}
 
-\begin{definition}
+\begin{definition}\index{Schnittmenge}
 Die Schnittmenge wird definiert als 
 \[A \cap B = \{x| x\in A \wedge x\in B \} \]
 \end{definition}
 
-\begin{definition}
-
-\end{definition}
-
 \section{Abbildung}
-
+\index{Abbildung}
 Eine Abbildung bildet Elemente aus einer Menge auf Elemente einer anderen Menge ab. Seien $X,Y$ Mengen. Dann ordnet die Abbildung
 \[ f : X \longrightarrow Y \]
 das Element $x\in X$ auf $y\in Y$ ab. Das wird so ausgedrückt:
@@ -173,22 +167,22 @@ Im Folgenden bezeichen $X,Y$ und $Z$ immer Mengen.
 \subsection{Definitionssprint!}
 
 \begin{definition}
-Eine Funktion
+Eine Funktion \index{Verknüpfung}
 \[ \circ : X \times X \longrightarrow X \]
 wird als Verknüpfung auf $X$ bezeichnet. Zum Beispiel sind die Operationen $+$ und $\cdot$ Verknüpfungen. 
 \end{definition}
 
-\begin{definition}
+\begin{definition} \index{assoziativ}
 Eine Verknüpfung wird \textsl{assoziativ} genannt, wenn gilt:
 \[ a \circ (b \circ c) = (a \circ b) \circ c \]
 \end{definition}
-\begin{definition}
+\begin{definition}\index{kommutativ}
 Sie wird \textsl{kommutativ} genannt, wenn gilt: 
 \[ a \circ b = b \circ a \]
 \end{definition}
 Für alle $a,b,c \in X$
 
-\begin{definition}
+\begin{definition}\index{Neutrales Element}
 Ein Element $e\in X$ wird als \textsl{neutrales Element} bezüglich einer Verknüpfung bezeichnet, wenn 
 \[ e\circ a = a \circ e = a \]
 für alle $a\in X$ gilt.
@@ -203,34 +197,34 @@ Seien $e_1$ und $e_2$ neutrale Element bezüglich $\circ$, dann gilt:
 \[ e_1 = e_1\circ e_2 = e_2 \] \qed
 \end{proof}
 
-\begin{definition}
+\begin{definition}\index{Monoid}
 Eine Menge $X$ mit assoziativer Verknüpfung und zugehörigem neutralem Element heißt \textsl{Monoid}.
 \end{definition}
 
 \begin{definition}
 Sei $X$ ein Monoid mit der Verknüpfung $\circ$ und zugehörigem neutralen Element $e$. Wenn gilt
 \[ a\circ b = e \]
-für $a,b \in X$, so wird $a$ das \textsl{Linksinverse} von $b$ genannt, sowie $b$ das \textsl{Rechtsinverse} von a. Gilt zudem
+für $a,b \in X$, so wird $a$ das \textsl{Linksinverse}\index{Linksinverse} von $b$ genannt, sowie $b$ das \textsl{Rechtsinverse}\index{Rechtsinverse} von a. Gilt zudem
 \[ a\circ b = b \circ a = e \]
-Dann sind $a$ und $b$ jeweils ihre \textsl{Inversen}.
+Dann sind $a$ und $b$ jeweils ihre \textsl{Inversen}. \index{Inverse}
 \end{definition}
 
-\begin{definition}
+\begin{definition}\index{Gruppe}
 Ist in einem Monoid jedes Element invertierbar, so nennt man dies eine \textsl{Gruppe}.
 \end{definition}
 
-\begin{definition}
+\begin{definition}\index{Gruppe, abelsch}
 Eine Gruppe, deren Verknüpfung kommutativ ist, nennt man eine \textsl{abelsche Gruppe}.
 \end{definition}
 
-\begin{definition}
+\begin{definition}\index{Ring}
 Ein \textsl{Ring} $R$ ist eine Menge mit zwei Verknüpfungen $+$ und $\cdot$. Wobei $R$ bezüglich der Addition eine abelsche Gruppe ist und bezüglich der Multiplikation ein Monoid. Des Weiteren muss das Distributivgesetz gelten
 \[ a\cdot (b+c) = a\cdot b + a\cdot c \]
-für alle $a,b,c \in R$. Ist $R$ bezüglich $\cdot$ kommutativ, so ist $R$ ein \textsl{kommutativer Ring}.
+für alle $a,b,c \in R$. Ist $R$ bezüglich $\cdot$ kommutativ, so ist $R$ ein \textsl{kommutativer Ring}.\index{Ring, kommutativer}
 \end{definition}
 
 \begin{definition}
-Sei $K$ ein kommutativer Ring, dessen neutrales Element bezüglich der Addition $0$ ist. Falls alle Elemente von $K\backslash \{0\}$ invertierbar sind, heißt $K$ ein \textsl{Körper}.
+Sei $K$ ein kommutativer Ring, dessen neutrales Element bezüglich der Addition $0$ ist. Falls alle Elemente von $K\backslash \{0\}$ invertierbar sind, heißt $K$ ein \textsl{Körper}.\index{Körper}
 \end{definition}
 
 \section{Vektorraum}
@@ -242,31 +236,42 @@ Sei $(K,+,\cdot )$ ein Körper und $(V,+ ,\cdot)$ eine Menge mit zwei Verknüpfu
 \end{eqnarray*}
 Hierbei ist zu beachten, dass das "`+"' einmal auf $K$ und einmal auf $V$ definiert wurde. Man könnte hier zwei verschiedene Zeichen zur Unterscheidung der Additionen einführen. Dies ist im allgemeinen aber unüblich, sodass hier vom Lernenden verlangt wird, den Unterschied selbst zu erkennen. 
 
-Man nennt $(V,+ ,\cdot)$ einen \textsl{Vektorraum} über dem Körper $K$, oder auch \textsl{K-Vektorraum}, wenn folgende Eigenschaften erfüllt sind, es seien $u,v,w \in V$ und $a,b \in K$:
+Man nennt $(V,+ ,\cdot)$ einen \textsl{Vektorraum}\index{Vektorraum} über dem Körper $K$, oder auch \textsl{K-Vektorraum}, wenn folgende Eigenschaften erfüllt sind, es seien $u,v,w \in V$ und $a,b \in K$:
 
-Die hier folgenden Definitionen sind angelehnt an das grundlegende Werk von Egbert Brieskorn \cite{Brieskorn1}:
+Die Anforderungen an den Vektorraum werden in solche, die an die Addition (A*) und solche, die an die Multiplikation (M*) gestellt werden unterschieden:
 
 \begin{description}
-\item[(A1)] $u+(v+w) = (u+v)+w$
-\item[(A2)] $\exists 0\in V$ mit $v+0=0+v=v$
-\item[(A3)] $\forall v\in V \ \exists -v\in V$ mit $v+(-v) = -v+v = 0$
-\item[(A4)] $u+v = v+u$
+\item[(A1)] Assoziativgesetz: $u+(v+w) = (u+v)+w$
+\item[(A2)] $0$ Element: $0\in V$ mit $v+0=0+v=v$
+\item[(A3)] Inverses Element zur Addition: Zu jedem $v\in V$ gibt es ein $-v\in V$ mit $v+(-v) = -v+v = 0$
+\item[(A4)] Kommutativgesetz: $u+v = v+u$
 \end{description}
 
 \begin{description}
-\item[(V1)] $(a \cdot b)\cdot v = a\cdot (b\cdot v)$
-\item[(V2)] $1\cdot v = v$
-\item[(V3)] $(a+b)\cdot v = a\cdot v + b\cdot v$
-\item[(V4)] $a\cdot(v+w) = a\cdot v + a\cdot w$
+\item[(M1)] Assoziativgesetz: $(a \cdot b)\cdot v = a\cdot (b\cdot v)$
+\item[(M2)] 1 Element: $1\cdot v = v$
+\item[(M3)] Distributivgesetz: $(a+b)\cdot v = a\cdot v + b\cdot v$
+\item[(M4)] Distributivgesetz: $a\cdot(v+w) = a\cdot v + a\cdot w$
 \end{description}
+
+Es ist wichtig zu verstehen, wo die Unterschiede zwischen (M3) und (M4) liegen. (M3) besagt, dass die Summe zweier Zahlen in $K$ auf den Vektor $v$ verteilt (distributiert) werden kann, während (M4) besagt, dass die Summe zweier Elemente aus $V$ auf $a$ verteilt werden kann. Das heißt: (M3) ist eine Eigenschaft der Addition in $K$ während (M4) eine Eigenschaft der Addition aus $V$ ist! 
+
+\begin{svgraybox}
+Zur Vertiefung der sei an dieser Stelle auf das grundlegende Werk von Egbert Brieskorn \cite{Brieskorn1} hingewiesen. 
+\end{svgraybox}
+
 
 \begin{definition}
-Ein \textsl{Vektorraumhomomorphismus} -- auch verkürzt einfach Homomorphismus genannt -- von $V$ nach $W$ ist eine Abbildung $\phi : V \longrightarrow W$ mit folgenden Eigenschaften:
+Ein \textsl{Vektorraumhomomorphismus}\index{Homomorphismus}\index{Vektorraumhomomorphismus} -- auch verkürzt einfach Homomorphismus genannt -- von $V$ nach $W$ ist eine Abbildung $\phi : V \longrightarrow W$ mit folgenden Eigenschaften:
+
 \begin{enumerate}
-\item $\forall v,w \in V$ gilt $\phi(v+w) = \phi(v)+\phi(w)$
-\item $\forall a\in K$ und $\forall v\in V$ ist $\phi(av)=a\phi(v)$
+\item Für alle $v,w \in V$ gilt: $\phi(v+w) = \phi(v)+\phi(w)$
+\item Für alle $a\in K$ und $v\in V$ ist $\phi(av)=a\phi(v)$
 \end{enumerate}
 
+
 \end{definition}
+
+
 
 

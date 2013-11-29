@@ -1,0 +1,156 @@
+
+
+\chapter{Rationale und Reelle Zahlen}
+
+In diesem Kapitel wird der Begriff der Zahl erweitert. Im letzten Kapitel haben wir die ganzen Zahlen kennengelernt. Diese sind aber nur ein Teil der Zahlen, mit denen wir täglich umgehen. Beim Einkaufen zum Beispiel besorgen wir zwar Äpfel und Milchtüten in ganzen Einheiten, aber schon beim Brot lassen wir uns oft nur die "`Hälfte"' geben. Die Preise der Dinge, die wir im Supermarkt kaufen, haben -- im allgemeinen absichtlich -- nie einen ganzzahligen Preis, da \currency 1,99 vermeintlich "`viel billiger"' klingt, denn \currency 2,00.
+
+Wir werden uns im Besonderen mit der Teilbarkeit von Zahlen auseinander setzten, wie auch der Unteilbarkeit (Primzahlen), als auch mit den irrationalen und den komplexen Zahlen.
+
+\section{Rationale Zahlen}
+
+Wir hatten im vorhergehenden Kapitel immer wieder das Beispiel der drei Körbe mit den vier Äpfeln erwähnt und auch gleich die Frage gestellt, was passiert, wenn man nicht zwölf, sondern nur elf Äpfel hätte.
+\[ \frac{11}{3} = ? \]
+Versuchen wir uns zunächst dem Problem zu nähern, indem wir solange Äpfel in Körbe legen, bis wir zu wenig Äpfel haben, um dies gleichmäßig zu tun. Es ist klar, dass wir in jeden Korb drei Äpfel legen können und danach zwei übrig haben. Wenn wir die Äpfel nicht zerschneiden wollten, würden wir sagen, dass wir drei Äpfel in die Körbe legen konnten und zwei übrig behalten haben. 
+
+\begin{definition}
+Dies bezeichnen wir als \textsl{Division mit Rest}. \index{Division mit Rest}
+\end{definition}
+In unserem Beispiel würden man sagen:
+\[ \frac{11}{3} = 3 \textsl{ Rest } 2 \]
+
+Aber ist das wirklich einfacher? Sicher nicht. Das Ergebnis $11/3$ ist, vom mathematischen Standpunkt aus betrachtet, ein vollkommen korrektes Ergebnis und benötigt keine andere Darstellung. Daher tendiert man dazu, solche Ergebnisse in der Teilerform zu behalten und nicht weiter umzuformen. Division mit Rest wurde in früheren Zeiten verwendet und entspricht sehr der Anschauung. Heute würden schwierigere Rechenaufgaben grundsätzlich mit einem Taschenrechner oder Computer durchgeführt. Diese rechnen nie mit Brüchen und schon gar nicht mit einer Division mit Rest. Sie verwenden Dezimalzahlen, die später erklärt werden. So hat die Division mit Rest ausgedient und soll hier nur der Vollständigkeit halber erwähnt sein.
+
+\begin{definition}
+Eine Teilerform nennt man einen \textsl{Bruch}\index{Bruch}, sowie das Rechnen mit Brüchen \textsl{Bruchrechnung}.\index{Bruchrechnung}
+\end{definition}
+
+\subsection{Bruchrechnung}
+
+\begin{definition}
+Ein Bruch besteht aus drei Teilen. Oben steht eine Zahl, die als \textsl{Zähler} bezeichnet wird, unten eine Zahl, die \textsl{Nenner} genannt wird und dazwischen ist der \textsl{Bruchstrich}:
+\[ \frac{\textsl{Zähler}}{\textsl{Nenner}} \]
+\end{definition}
+
+Brüche können, wie andere Zahlen auch, addiert, subtrahiert, multipliziert und dividiert werden. Dies geschieht nach folgenden Regeln:
+
+\begin{definition}
+Brüche können nur dann addiert oder subtrahiert werden, wenn ihr Nenner übereinstimmt. 
+\end{definition}
+
+Das liegt daran, dass man eine Gleichung einfach mit dem Nenner multiplizieren kann, um so die bekannten Operationen der ganzen Zahlen zu verwenden. Beispiel:
+
+\begin{eqnarray*}
+\frac{3}{8}+\frac{5}{8} &=& \frac{3}{8}+\frac{5}{8} \hskip 1cm | \cdot 8 \\
+3 +5 &=& 3+5 \\
+3+5 &=& 8 \hskip 1cm | \div 8\\
+\frac{3}{8}+\frac{5}{8} &=& \frac{8}{8} \\
+\frac{3}{8}+\frac{5}{8} &=& 1
+\end{eqnarray*}
+Auf der rechten Seite haben wir uns in der vorletzten Zeile zunutze gemacht, dass ein Bruch seinen Wert nicht ändert, falls Nenner und Zähler mit der selben Zahl multipliziert werden. So ist 
+
+\[ 1 = \frac{a}{a} \textsl{ für alle } a\in \mathbb{Z} \]
+wie auch 
+\begin{equation}
+\label{relation}
+\frac{x}{y} = \frac{a\cdot x}{a\cdot y} \textsl{ für alle } a\in \mathbb{Z}
+\end{equation}
+
+\begin{definition}
+Wir bezeichnen Zahlen der Form 
+
+\[ \frac{a}{b} \textsl{ für alle } a,b \in \mathbb{Z}, b\ne 0\]
+als \textsl{Rationale Zahlen} und stellen sie mit dem Symbol $\mathbb{Q}$ dar. 
+\end{definition}
+Also ist 
+
+\[ \mathbb{Q} = \left\{ \frac{a}{b} \vert a,b \in \mathbb{Z}, b\ne 0 \right\} \]
+Die rationalen Zahlen beinhalten die ganzen Zahlen auf eine natürliche Weise, da für $n,a\in \mathbb{Z}$ gilt
+\[ n = \frac{n}{1} = \frac{n \cdot a}{1\cdot a}\]
+In diesem Fall ist $a$ ein Teiler der Zahl $n\cdot a$. 
+
+\begin{svgraybox}
+\textsl{Hinweis für Lehrer:}
+
+Es gibt Mathematiker, die bei der Definition der rationalen Zahlen einen axiomatischen Ansatz wählen, der die rationalen Zahlen auf Basis von Äquivalenzrelationen definieren. So wäre dann eine rationale Zahl immer durch genau eine Äquivalenzklasse dargestellt. Da Äquivalenzklassen im allgemeinen durch ihr Erzeugendes Element dargestellt werden, würden nach diesem Ansatz nur diejenigen Brüche zu den rationalen Zahlen gehören, die die Erzeugenden Elemente ihrer Äquivalenzklasse wären. Der Autor hält dies für sehr verwirrend und kaum vermittelbar, warum der Bruch 
+\[ \frac{3}{11}\]
+zu den rationalen Zahlen zählen soll, der Bruch
+\[ \frac{9}{33}\]
+aber nicht, sondern nur zur Äquivalenzklasse von $\frac{3}{11}$.
+\end{svgraybox}
+
+\subsubsection{Dezimalzahlen}
+
+\begin{definition}
+Eine \textsl{Dezimalzahl} ist eine Zahl der folgenden Form:\index{Dezimalzahl}
+\[ z_m z_{m-1} \dots z_1 z_0, z_{-1} z_{-2} \dots z_{-n} \]
+\end{definition}
+Die $z_i$ sind Ziffern und somit Zahlen aus der Menge $\{0,1,2,3,4,5,6,7,8,9\}$.
+
+Zur Erläuterung betrachten wir zunächst die Zahlen zwischen 0 und 1. Dies sind die Zahlen 
+\[ \frac{1}{n}\] für alle $n\in \mathbb{N}$. 
+
+\begin{eqnarray*}
+1/2 &=& 0,5 \\
+1/4 &=& 0,25 \\
+1/5 &=& 0,2 \\
+1/8 &=& 0,125 \\
+\dots
+\end{eqnarray*}
+
+Die Brüche $1/3$, $1/6$ und $1/7$ haben eine besondere Eigenschaft, sie haben nämlich keine endliche Dezimaldarstellung:
+
+\begin{eqnarray*}
+1/3 &=& 0,3333333333\dots \\
+1/6 &=& 0,1666666666\dots \\
+1/7 &=& 0,142857142857142857142857142857\dots
+\end{eqnarray*}
+Die sich wiederholenden Teile der Nachkommastellen werden mit einem Strich darüber gekennzeichnet:
+
+\begin{eqnarray*}
+1/3 &=& 0,\overline{3} \\
+1/6 &=& 0,1\overline{6} \\
+1/7 &=& 0,\overline{142857}
+\end{eqnarray*}
+Natürlich gibt es auch Dezimalzahlen, die größer sind als 1:
+
+\begin{eqnarray*}
+97/3 &=& 32,\overline{3} \\
+21/5 &=& 4,2 \\
+177/7 &=& 25,\overline{285714}
+\end{eqnarray*}
+Dezimalzahlen treten immer wieder als Ergebnisse von Berechnungen von Taschenrechnern und Computern auf, daher sind sie sehr wichtig. 
+
+
+\section{Potenzrechnung}
+
+Einleitend sei hier bemerkt, dass sich das Potenzieren mit natürlichen Zahlen zur Multiplikation verhält, wie die Multiplikation zur Addition:
+
+\[ 4\cdot 3 = \underbrace{4+4+4}_{\text{3 mal}} = 12 \]
+
+\[ 4^3 = \underbrace{4\cdot 4\cdot 4}_{\text{3 mal}} = 64 \]
+
+\begin{definition}
+Die Zahl, die potenziert werden soll, nennt man \textsl{Grundzahl}\index{Grundzahl}, und die Zahl mit der potenziert werden soll \textsl{Hochzahl}\index{Hochzahl}, oder \textsl{Exponent}\index{Exponent}. Den Wert der Potenz einer Grundzahl ($a$) mit einer natürlichen Zahl ($n \in \mathbb{N}$) als Exponent erhält man durch:
+\[ a^n = 1\cdot \underbrace{a\cdot a \cdot \dots \cdot a}_{\text{n mal}} \]
+Den Wert einer Potenz mit einer negativen natürlichen Zahl durch:
+\[ a^{-n} = 1 \div \underbrace{a\div a \div \dots \div a}_{\text{n mal}} = \frac{1}{a^n} \]
+Des Weiteren gilt immer
+\[ a^0 = 1,\ a^1=a \]
+\end{definition}
+Das Kommutativgesetz gilt nicht:
+\[ 64 = 4^3 \ne 3^4 = 81 \]
+
+
+\section{Irrationale Zahlen}
+
+TODO
+
+
+\subsection{Vollständigkeit}
+
+TODO
+
+$\mathbb{R}, e, \pi, \dots $
+
+\section{Aufgaben}
+TODO

@@ -42,6 +42,7 @@
 \title{Einführung in die Mathematik}
 \subtitle{Zum Selbststudium oder als Grundlage für den Unterricht}
 
+
 \smartqed
 
 \begin{document}
@@ -58,12 +59,18 @@
 
 \include{./remarks}
 
-\include{./arithmetik}
+\include{./arithmetic/arithmetik}
+\include{./arithmetic/integer}
+\include{./arithmetic/real}
+\include{./arithmetic/complex}
 
-\include{./linear-algebra}
 
+\include{./linear-algebra/linear-algebra}
+\include{./linear-algebra/foundations}
+\include{./linear-algebra/exp-poly}
 % TODO: decide where to put the proof chapter!
-\include{./proofs}
+\include{./linear-algebra/proofs}
+
 
 \include{./geometrie}
 
@@ -80,5 +87,7 @@
 % bibliography, glossary and index would go here.
 
 \include{./bibliography}
+
+\printindex
 
 \end{document}

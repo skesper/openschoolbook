@@ -1,0 +1,158 @@
+
+\chapter{Komplexe Zahlen}
+
+Um die komplexen Zahlen zu erklären, wollen wir uns zunächst eine Gleichung ansehen. 
+
+\[ ?^2 +1 = 0 \]
+Welche Zahl kann diese Gleichung erfüllen? Wir formen um:
+\begin{eqnarray*}
+?^2 +1 &=& 0 \hskip 1cm | -1 \\
+?^2 +1 -1 &=& -1 \hskip 1cm | \sqrt{.} \\
+\sqrt{?^2} &=& \sqrt{-1} \\
+? &=& \sqrt{-1}
+\end{eqnarray*}
+Stimmt das? Wir setzen ein:
+\begin{eqnarray*}
+\sqrt{-1}^2 +1 &=& 0 \\
+(-1)^{\frac{1}{2}\cdot 2} +1 &=& 0 \\
+(-1)^{\frac{2}{2}} +1 &=& 0 \\
+(-1)^{1} +1 &=& 0 \\
+-1+1 &=& 0 \\
+0 &=& 0
+\end{eqnarray*}
+Die Gleichung stimmt offensichtlich, doch hatten wir gelernt, dass Wurzeln aus negativen Zahlen nicht definiert sind. Kann man also einfach mit dem Quadrieren einer negativen Zahl rechnen und erwarten, dass etwas sinnvolles dabei heraus kommt? Die einfache Antwort ist: "`Ja"', man kann. Denn Fakt ist: Als wir die Gleichung mit einem $?$ umgeformt hatten, wussten wir noch nicht, dass das Fragezeichen für die Wurzel aus $-1$ steht. Wendet man also die Rechenschritte korrekt auf eine Zahl (oder Variable, wie wir im späteren sehen werden) an, so bleibt das Resultat korrekt. 
+
+Die Definition der komplexen Zahlen fußt auf dieser Erkenntnis. Sie verwendet die negativen Wurzeln indem ein Buchstabe $i$ \index{$i = \sqrt{-1}$} den Wert $\sqrt{-1}$ annimmt und so zum Rechenelement wird.
+\begin{eqnarray*}
+\sqrt{-17} &=& \sqrt{-1\cdot 17}\\
+&=& \sqrt{-1}\cdot \sqrt{17}\\
+&=& i \cdot \sqrt{17}
+\end{eqnarray*}
+oder allgemein:
+
+\begin{eqnarray*}
+\sqrt{-x^2} &=& \sqrt{-1\cdot x^2}\\
+&=& \sqrt{-1}\cdot \sqrt{x^2}\\
+&=& i \cdot x
+\end{eqnarray*}
+wobei $x$ jede reelle Zahl sein kann, also $x\in \mathbb{R}$. Allgemein werden die komplexen Zahlen definiert als 
+
+\[ \mathbb{C} = \{ a+i\cdot b \ |\ a,b \in \mathbb{R} \} = \mathbb{R}+i\mathbb{R} \]
+Das bedeutet, dass komplexe Zahlen aus zwei reellen Zahlen bestehen. Sie können nicht miteinander addiert werden, da das $i$ dies verhindert. Weil die komplexen Zahlen dadurch aus zwei reellen Komponenten gebildet werden, nennt man sie auch oft zweidimensionale Zahlen. Als Ausblick sei erwähnt, dass in der linearen Algebra die komplexen Zahlen mit einem zwei dimensionalen reellen Vektorraum identifiziert werden können.
+
+\section{Die Grundrechenarten der komplexen Zahlen}
+
+Der Einfachheit halber wird im Folgenden $i\cdot b$ durch $ib$ ersetzt. Der Multiplikationspunkt kann weggelassen werden. Und alle $a,b,c,d \in \mathbb{R}$ sowie alle $p,q \in \mathbb{C}$ mit $p = a+ib$ und $q = c+id$. Beachte, dass $i^2=\sqrt{-1}^2 = -1$.
+
+\begin{definition} Addition
+\[ p+q = (a+c)+i(b+d)\]
+\end{definition}
+
+\begin{definition} Subtraktion
+\[ p-q = (a-c)+i(b-d)\]
+\end{definition}
+
+\begin{definition} Multiplikation
+\[ p\cdot q = a(c+id)+ib(c+id) = (ac-bd)+i(ad+bc)  \]
+\end{definition}
+
+\begin{definition} Division
+\[ \frac{p}{q} = \frac{a+ib}{c+id} = \frac{(a+ib)(c-id)}{(c+id)(c-id)} = \frac{ac+bd}{c^2+d^2} + i\frac{bc-ad}{c^2+d^2}\]
+\end{definition}
+
+\section{Historische Bemerkung} 
+
+Gerolamo Cardano\index{Cardano, Gerolamo} (1501-1576) behandelte in seinem 1545 erschienen Buch \textit{Artis magnae sive de regulis algebraicis liber unus} die Aufgabe zwei Zahlen zu finden, deren Produkt 40 und deren Summe 10 sei. Er setzte dafür die Gleichung an:
+
+\[ x^2-10x+40=0 \]
+
+Er erkannte, dass diese Gleichung keine Lösung hat, fügte aber die Bemerkung hinzu, dass falls die entsprechenden Umformungen sinnvoll und erlaubt wären, dass dann $5+\sqrt{-15}$ sowie $5-\sqrt{-15} $ in der Tat Lösungen der Gleichung wären. 
+
+In diesem Sinne hatte Cardano bereits den ersten Schritt in die richtige Richtung getan. Doch dauerte es noch eine ganze Weile, bis komplexe Zahlen sich durchsetzten.
+
+
+\section{Unendlich $\infty$}
+
+\index{Unendlich $\infty$}
+Der Begriff \textsl{Unendlich} bezeichnet keine Zahl, sondern im Grunde eher einen Zustand. Unendlich ist etwas -- wie der Begriff nahe legt --, wenn es kein Ende besitzt. So haben zum Beispiel die natürlichen Zahlen kein oberes Ende:
+
+\[
+\mathbb{N} = \left\lbrace 1,2,3, \dots \right\rbrace
+\]
+So unscheinbar die "`$\dots$"' auch sind, so bezeichnen sie den allergrößten Teil der Menge $\mathbb{N}$. Denn auch die Zahl 
+\[9.287.375.864.825.551.256.365.751.255\]
+ist eine natürliche Zahl, genauso wie 
+\[2^{9.287.375.864.825.551.256.365.751.255}\]
+oder
+\begin{equation} \label{eq:huge}
+10^{9.287.375.864.825.551.256.365.751.255}
+\end{equation}
+oder sogar
+\begin{equation}\label{eq:reallyhuge}
+9.287.375.864.825.551.256.365.751.255^{9.287.375.864.825.551.256.365.751.255}
+\end{equation}
+
+Es gibt Zahlen in der Mathematik, die so groß sind, dass selbst wenn man alle Atome im Universum in Papier und Tinte umwandelte, sie nicht ausreichen würden, um die Zahl aufzuschreiben. Die letzte oben angegebene Zahl ist ein gutes Beispiel dafür. Astronomen schätzen, dass es etwa $10^{77}$ Atome im Weltall gibt. Und das ist wesentlich weniger, als die in (\ref{eq:huge}) darstellte Zahl, geschweige denn (\ref{eq:reallyhuge}).
+
+Der Punkt ist: Es gibt keine größte natürliche Zahl. Immer wenn man glaubt, eine gefunden zu haben, gibt es eine noch größere. Dieser Zustand, nämlich dass es keine größte Zahl gibt, sondern immer weitere, wird mit dem Zeichen $\infty$ abgekürzt. 
+
+Dementsprechend ist es korrekter, wenn man die natürlichen Zahlen in dieser Form schreibt:
+\[
+\mathbb{N} = \left\lbrace 1,2,3, \dots, \infty \right\rbrace
+\]
+
+Aufgrund dessen, dass $\infty$ keine Zahl ist, gelten auch sämtliche Rechenregeln, die wir kennen gelernt haben, nicht für $\infty$. So ist zum Beispiel $\infty +1$ unsinnig, genauso wie $\infty-1$. Das selbe gilt für die Multiplikation und Division. Es gibt allerdings einige Regeln, die es zu wissen gilt. Denn es passiert, dass man beim Rechnen oder umformen auf $\infty$ stößt und dann damit umgehen können muss. 
+
+Für $a\in \mathbb{R}$ (beachte, dass $\mathbb{N} \subset \mathbb{Z} \subset \mathbb{R}$) mit $-\infty < a < \infty$ gilt
+
+\begin{eqnarray*}
+\infty + a &=& \infty \\
+\infty \cdot a &=& \infty \\
+\frac{a}{\infty} &=& 0
+\end{eqnarray*}
+
+Für $a=\infty$ oder $a=-\infty$ sind alle oben angegebenen Regeln hinfällig. Alle Operationen mit diesen Werten sind unzulässig und nicht definiert!
+
+Eine der erstaunlichsten und gleichzeitig verwirrendsten Eigenschaften von unendlich großen Mengen ist, dass sie echte Teilmengen besitzen, die ebenfalls wieder unendlich groß sind. Also "`gleich viele"' Elemente haben, nämlich unendlich viele. Betrachten wir die Primzahlen in $\mathbb{N}$:
+
+\begin{eqnarray*}
+1. & 2 \\
+2. & 3 \\
+3. & 5 \\
+4. & 7 \\
+5. & 11 \\
+\dots & \dots
+\end{eqnarray*}
+Dass es unendlich viele Primzahlen gibt, muss bewiesen werden, was wir hier tun wollen, auch wenn die Beweisführung erst später erklärt wird. Es wird dabei vorausgesetzt, dass jede Zahl, die größer als 1 ist und keine Primzahl, eine eindeutige Zerlegung in Primfaktoren besitzt. Dies müsste natürlich vorher auch bewiesen werden, aber die Beweise würden hier zu weit führen. Daher müssen wir uns darauf verlassen, dass dies richtig ist. 
+
+\begin{lemma}
+Es gibt unendlich viele Primzahlen.
+\end{lemma}
+\begin{proof}
+Der Beweis wird durch einen Widerspruch geführt. Behauptung: Es gibt nur endlich viele Primzahlen. Wenn dem so wäre, dann gäbe es eine größte Primzahl $N$. Sei
+
+\[ M = 2\cdot 3\cdot 5\dots \cdot N +1 \]
+eine Zahl gebildet aus dem Produkt aller Primzahlen (es gibt ja nur endlich viele) addiert mit 1.
+
+Wir wissen, dass $M$ eine eindeutige Zerlegung in Primfaktoren besitzt. Da aber $M$ bereits aus dem Produkt aller bekannten Primzahlen erzeugt wurde, und somit nicht durch eine davon teilbar ist (weil M um 1 größer ist, als das Produkt aller Primzahlen), bleiben nur zwei Möglichkeiten: a) $M$ ist selbst eine Primzahl, es ist aber $M>N$, was gegen die Voraussetzung verstößt, dass $N$ die größte Primzahl ist. Oder b) Die Zerlegung von $M$ in Primfaktoren enthält eine Primzahl, die größer ist, als $N$, was wiederum gegen die Voraussetzung verstößt. Also ist die Behauptung, dass es nur endlich viele Primzahlen gibt, falsch und somit stimmt die eigentliche Aussage, die wir beweisen wollten, nämlich dass es unendlich viele Primzahlen gibt. 
+
+\qed
+\end{proof}
+
+Somit hat die Aufzählung der Primzahlen kein Ende. Sie ist also in unserem vorher beschriebenen Sinne "`unendlich"'. Wenn also die Aufzählung unendlich ist, dann kann jeder natürlichen Zahl eine Primzahl zugewiesen werden. Daraus folgt, dass es genauso viele natürliche Zahlen gibt, wie es Primzahlen gibt. 
+
+Unserer Anschauung nach, ist dies natürlich falsch, denn wir denken immer in endlichen Mengen. Und für endliche Mengen, wie z.B. die Zahlen zwischen 1 und 100 oder zwischen 1000 und 2000, stimmt es sicher, dass sich in diesen weniger Primzahlen befinden, als natürliche Zahlen. Aber im Unendlichen wird es richtig, weil es keinen Mengenbegriff im Unendlichen mehr gibt. Unendlich ist Unendlich. Mengen
+
+\begin{definition}
+Eine unendliche Menge, deren Elemente durchgezählt werden können, also in denen jedem Element eine natürliche Zahl zugeordnet werden kann, nennt man \textsl{abzählbar unendlich}. 
+\end{definition}
+
+
+\section{Polarkoordinaten der Komplexen Zahlen}
+TODO
+
+\section{Riemannsche Zahlenkugel}
+TODO
+
+\section{Aufgaben}
+TODO
