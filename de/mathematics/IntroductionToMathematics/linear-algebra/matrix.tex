@@ -1,5 +1,202 @@
 
-\chapter{Matrix}
+\chapter{Vektor, Matrix, Tensor}
 
+
+
+\section{Vektorraum}\label{vectorspace}
+
+Sei $(K,+,\cdot )$ ein Körper und $(V,+ ,\cdot)$ eine Menge mit zwei Verknüpfungen:
+\begin{eqnarray*}
++ : V\times V &\longrightarrow& V \\
+\cdot : K \times V &\longrightarrow& V 
+\end{eqnarray*}
+Hierbei ist zu beachten, dass die Verknüpfungen einmal auf $K$ und einmal auf $V$ definiert wurden. Man könnte hier verschiedene Zeichen zur Unterscheidung der Additionen einführen. Dies ist im allgemeinen aber unüblich, sodass hier vom Lernenden verlangt wird, den Unterschied selbst zu erkennen. Auf $V$ wird die Addition als \textsl{Vektoraddition} bezeichnet, sowie die Multiplikation als \textsl{Skalare Multiplikation}, da sie nicht zwischen zwei Vektoren, sondern einem Element des zugrunde liegenden Körpers und einem Vektor definiert ist. 
+
+Man nennt $(V,+ ,\cdot)$ einen \textsl{Vektorraum}\index{Vektorraum} über dem Körper $K$, oder auch \textsl{K-Vektorraum}, wenn folgende Eigenschaften erfüllt sind:
+
+\noindent Es seien $u,v,w \in V$ und $a,b \in K$:
+
+Die Anforderungen an den Vektorraum werden in solche, die an die Addition (A*) und solche, die an die Multiplikation (M*) gestellt werden unterschieden:
+
+\begin{description}
+\item[(A1)] Assoziativgesetz: $u+(v+w) = (u+v)+w$
+\item[(A2)] $0$ Element: $0\in V$ mit $v+0=0+v=v$
+\item[(A3)] Inverses Element zur Addition: Zu jedem $v\in V$ gibt es ein $-v\in V$ mit $v+(-v) = -v+v = 0$
+\item[(A4)] Kommutativgesetz: $u+v = v+u$
+\end{description}
+
+\begin{description}
+\item[(M1)] Assoziativgesetz: $(a \cdot b)\cdot v = a\cdot (b\cdot v)$
+\item[(M2)] 1 Element: $1\cdot v = v$
+\item[(M3)] Distributivgesetz: $(a+b)\cdot v = a\cdot v + b\cdot v$
+\item[(M4)] Distributivgesetz: $a\cdot(v+w) = a\cdot v + a\cdot w$
+\end{description}
+
+Es ist wichtig zu verstehen, wo die Unterschiede zwischen (M3) und (M4) liegen. (M3) besagt, dass die Summe zweier Zahlen in $K$ auf den Vektor $v$ verteilt (distribuiert) werden kann, während (M4) besagt, dass die Summe zweier Elemente aus $V$ auf $a$ verteilt werden kann. Das heißt: (M3) ist eine Eigenschaft der Addition in $K$ während (M4) eine Eigenschaft der Addition aus $V$ ist! 
+
+\begin{svgraybox}
+Zur Vertiefung der sei an dieser Stelle auf das grundlegende Werk von Egbert Brieskorn \cite{Brieskorn1} hingewiesen. 
+\end{svgraybox}
+
+
+\subsection{Lineare Unabhängigkeit}
+
+\begin{definition}
+Die \textsl{linare Unabhängigkeit} \index{Unabhängigkeit, linear} von Vektoren wird definiert durch eine lineare Kombination, d.h. eine Summe von Vektoren mit konstanten Faktoren. Wenn diese lineare Kombination nur dadurch zu einem Null Vektor gemacht werden kann, dass alle Faktoren zu 0 werden, dann sind die Vektoren linear unabhängig. Seien $x_i$ aus einem K-Vektorraum und $\lambda_i $ aus dem zugrunde liegenden Körper. 
+
+\begin{equation}\label{eq:linunabh}
+\sum_{i=1}^{n} \lambda_i x_i = 0 \quad \text{dann, und nur dann, wenn} \quad \lambda_i = 0
+\end{equation}
+\end{definition}
+
+
+
+\subsection{Lineare Gleichungssysteme}
+
+Lineare Gleichungssysteme treten häufig in der Physik und den Ingenieurswissenschaften auf. Dabei handelt es sich um Probleme in mehreren Unbekannten, die durch eine Reihe von Randbedingungen -- in Form von Gleichungen -- spezifiziert werden.
+
+Bei diesen Problemen ist es notwendig, dass alle Unbekannte die Randbedingungen gleichzeitig erfüllen:
+
+\begin{equation}\label{eq:syseq}
+\begin{split}
+a_{1,1}x_1 + a_{1,2}x_2 + \dots + a_{1,n}x_n &= b_1 \\
+a_{2,1}x_1 + a_{2,2}x_2 + \dots + a_{2,n}x_n &= b_2 \\
+a_{3,1}x_1 + a_{3,2}x_2 + \dots + a_{3,n}x_n &= b_3 \\
+\vdots &= \vdots \\
+a_{m,1}x_1 + a_{m,2}x_2 + \dots + a_{m,n}x_n &= b_m 
+\end{split}
+\end{equation}
+Die Werte für $a_{i,j}$ und $b_{i}$ sind vorgegeben. Gesucht werden die $x_j$ Werte. 
+
+Gleichungssysteme werden nach der Anzahl ihrer Gleichungen in folgende Kategorien eingeteilt:
+
+\begin{description}
+\item[$m<n$] Solche Systeme bezeichnet man als \textsl{unterbestimmt}, es existieren weniger Gleichungen als Unbekannte. Die Lösung solcher Systeme ist im allgemeinen nicht eindeutig. Solche Gleichungssysteme treten in der linearen Optimierung auf. 
+\item[$m>n$] Solche Systeme bezeichnet man als \textsl{überbestimmt}, es existieren mehr Gleichungen als Unbekannte. Es ist im allgemeinen nicht möglich eine Lösung für solche Systeme anzugeben, da es möglich ist, sich widersprechende Randbedingungen in den Gleichungen zu formulieren. 
+\item[$m=n$] Auch als quadratische Gleichungssysteme bezeichnet. Sofern bestimmte Bedingungen von den $a_{i,j}$ Werten erfüllt werden, gibt es genau eine Lösung. Dies sind die Systeme, mit denen wir uns hier beschäftigen werden.
+\end{description}
+
+\subsubsection{Kompakte Notation}
+
+Mathematiker machen sich gerne das Leben einfacher, in dem sie ihre Formeln abkürzen. Das Gleichungssystem (\ref{eq:syseq}) ist sehr unhandlich. Daher führen wir folgende Schreibweisen ein:
+
+Wir schreiben die $x_j$ und $b_i$ Werte in einer Spaltenform: 
+
+\[
+x = \begin{pmatrix}
+x_1 \\
+x_2 \\
+\vdots \\
+x_n
+\end{pmatrix}, \quad b = \begin{pmatrix}
+b_1 \\
+b_2 \\
+\vdots \\
+b_m
+\end{pmatrix}
+\]
+Sowie für die $a_{i,j}$ Werte eine rechteckige Tabellenform:
+
+\[
+A = \begin{pmatrix}
+a_{1,1} & a_{1,2} & \cdots & a_{1,n} \\
+a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{m,1} & a_{m,2} & \cdots & a_{m,n}
+\end{pmatrix}
+\]
+
+Definieren wir nun eine Multiplikation zwischen der rechteckigen Tabellenform und einer Spaltenform auf diese Weise:
+\begin{equation*}
+a_{i,1}x_1 + a_{i,2}x_2 + \dots + a_{1,n}x_n = \sum_{j=1}^{n} a_{i,j}x_j
+\end{equation*}
+für jede Zeile $i$, so lässt sich das Gleichungssystem (\ref{eq:syseq}) schreiben als:
+
+\begin{equation*}
+\begin{pmatrix}
+a_{1,1} & a_{1,2} & \cdots & a_{1,n} \\
+a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{m,1} & a_{m,2} & \cdots & a_{m,n}
+\end{pmatrix} \cdot \begin{pmatrix}
+x_1 \\
+x_2 \\
+\vdots \\
+x_n
+\end{pmatrix} = \begin{pmatrix}
+b_1 \\
+b_2 \\
+\vdots \\
+b_m
+\end{pmatrix}
+\end{equation*}
+oder
+\begin{equation*}
+Ax=b
+\end{equation*}
+
+Hier haben wir uns noch keine Gedanken darüber gemacht, was diese Spalten und Tabellen eigentlich sind. Sie stellen für uns lediglich eine Vereinfachung der Schreibweise dar. Später werden wir erkennen, dass die Spalten Vektoren sind und die Tabelle eine Matrix.
+
+
+\subsection{Matrix}
+
+\begin{definition}
+Eine \textsl{Matrix} \index{Matrix} ist eine rechteckige Struktur von Elementen des Körpers, über dem sie gebildet werden. Hier werden im allgemeinen nur reelle Matrizen betrachtet. Somit sind diese Matrizen aus dem $\mathbb{R}^{m\times n}$:
+\end{definition}
+
+\begin{equation*}
+(A)_{i,j} = a_{i,j} \in \mathbb{R}
+\end{equation*}
+
+Mit der Matrix Addition und der Skalaren Multiplikation
+\begin{eqnarray*}
+A+B &=& (a_{i,j} + b_{i,j})_{i,j} \\
+\alpha A &=& (\alpha a_{i,j})_{i,j}
+\end{eqnarray*}
+wird der $\mathbb{R}^{m\times n}$ zu einem Vektorraum. Das Nachrechnen der A1-A4 und M1-M4 Eigenschaften aus Kapitel \ref{vectorspace} ist Teil der Aufgaben.
+
+Dabei ist zu beachten, dass $0 \in \mathbb{R}^{m\times n} = (0)_{i,j}$ die Null Matrix ist, und das neutrale Element der Multiplikation die Einsmatrix $\mathbf{1}$, oder auch Identität $I$ genannt:
+
+\[
+\mathbf{1} = I =
+\begin{pmatrix}
+1 & 0 & 0 & \cdots & 0 \\
+0 & 1 & 0 & \cdots & 0 \\
+0 & 0 & 1 & \cdots & 0 \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+0 & 0 & 0 & \cdots & 1
+\end{pmatrix}
+\]
+
+\subsubsection{Dimensionalität, Rang und Determinante}
+
+\subsection{Algebraische Strukturen}
+
+\subsubsection{Homomorphismen}
+
+\begin{definition}
+
+Ein \textsl{Vektorraumhomomorphismus}\index{Homomorphismus}\index{Vektorraumhomomorphismus} -- auch verkürzt einfach Homomorphismus genannt -- von $V$ nach $W$ ist eine Abbildung $\phi : V \longrightarrow W$ mit folgenden Eigenschaften:
+\begin{enumerate}
+\item Für alle $v,w \in V$ gilt: $\phi(v+w) = \phi(v)+\phi(w)$
+\item Für alle $a\in K$ und $v\in V$ ist $\phi(av)=a\phi(v)$
+\end{enumerate}
+\end{definition}
+
+\subsection{Linearformen}
+
+\subsection{Skalarprodukt-Räume}
+
+\subsubsection{Hilbert-Raum}
+
+
+\subsection{Aufgaben}
+
+\begin{prob}
+\label{matrix.1}
+
+Weise nach, dass der $\mathbb{R}^{m\times n}$ ein Vektorraum ist. 
+
+\end{prob}
 
 

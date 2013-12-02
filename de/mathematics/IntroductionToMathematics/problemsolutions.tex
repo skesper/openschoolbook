@@ -2,7 +2,7 @@
 \chapter{Lösungen}
 
 
-\section{Arithmetik}
+\section{Ganze Zahlen}
 \begin{sol}{arith.1.1}
 \begin{center}
 \begin{tabular}{C{2cm}C{2cm}C{2cm}C{2cm}}
@@ -40,4 +40,23 @@ $17+3=20$ & $17-3=14$ & $17\cdot 3=51$ & $25/5=5$
 \begin{sol}{arith.1.4}
 \[-(2-3) = (-1)\cdot (2-3) = (-1)\cdot 2 + (-1)\cdot (-1) \cdot 3 = -2+3\]
 Weil $(-1)\cdot (-1)=1$ und $1\cdot 3 = 3$.
+\end{sol}
+
+\section{Vektor, Matrix, Tensor}
+
+\begin{sol}{matrix.1}
+
+Seien $A,B,C\in \mathbb{R}^{m\times n}$ und $\alpha , \beta \in \mathbb{R}$. Der Nachweis wird ausschließlich auf den einzelnen Komponenten der Matrix geführt, da Addition und skalare Multiplikation ausschließlich auf den Komponenten der Matrix ausgeführt werden. Daraus folgt praktisch schon die Behauptung, dass $\mathbb{R}^{m\times n}$ ein Vektorraum ist. Aber hier sei der Nachweis noch vorgerechnet:
+
+\begin{description}
+\item[(A1)] $A+(B+C) = (a_{i,j}+(b_{i,j}+c_{i,j}))_{i,j} = ((a_{i,j}+b_{i,j})+c_{i,j})_{i,j} = (A+B)+C$. Hierbei wird die Assoziativität der reellen Zahlen verwendet.
+\item[(A2)] $ (a_{i,j}+0)_{i,j} = (0+a_{i,j})_{i,j} = (a_{i,j})_{i,j}$
+\item[(A3)] Da $\mathbb{R}$ ein Körper ist, gibt es zu jedem $a_{i,j}\in \mathbb{R}$ ein $ -a_{i,j}\in \mathbb{R}$, sodass $a_{i,j} +(-a_{i,j}) = -a_{i,j} + a_{i,j} = 0$ daraus folgt, dass $A+(-A) = -A +A = 0$.
+\item[(A4)] $ A+B = (a_{i,j}+b_{i,j})_{i,j} = (b_{i,j}+a_{i,j})_{i,j} = B+A$
+\item[(M1)] $ (\alpha \beta) A = ((\alpha \beta)a_{i,j})_{i,j} = (\alpha (\beta a_{i,j})_{i,j} = \alpha (\beta A) $
+\item[(M2)] $ I\cdot A = ( \sum_{k=1}^{n} I_{i,k}a_{k,j})_{i,j} $, da $I_{i,k}=0$ für alle $i\ne k$, bleibt als Ergebnis der Summe nur $I_{i,i}a_{i,j} = a_{i,j} $ und damit ist $I\cdot A = A$
+\item[(M3)] $ (\alpha +\beta )A = ((\alpha + \beta)a_{i,j})_{i,j} = (\alpha a_{i,j} + \beta a_{i,j})_{i,j} = \alpha A + \beta A $
+\item[(M4)] $ \alpha (A+B) = (\alpha(a_{i,j} + b_{i,j})_{i,j} = (\alpha a_{i,j} + \alpha b_{i,j})_{i,j} = \alpha A + \alpha B $
+\end{description}
+
 \end{sol}
