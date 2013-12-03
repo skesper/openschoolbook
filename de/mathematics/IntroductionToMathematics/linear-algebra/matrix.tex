@@ -275,12 +275,15 @@ In gleicher Weise wird die skalare Multiplikation realisiert
 Die Multiplikation von Matrizen $A,B$ ist in der Form definiert, dass der Eintrag an der Stelle $i,j$ definiert ist durch die Summe der Produkte der Einträge der $i$-ten Zeile von A mit den Einträgen der $j$-ten Spalte von B. Sei $A\in \mathbb{R}^{m\times n}$ und $B\in \mathbb{R}^{n\times o}$
 
 \begin{equation*}
-A \cdot B = \left( \sum_{k=1}^{n} a_{i,k} \cdot b_{k,j} \right)_{i,j} = \begin{pmatrix}
+\begin{split}
+A \cdot B & = \left( \sum_{k=1}^{n} a_{i,k} \cdot b_{k,j} \right)_{i,j} \\
+ &= \begin{pmatrix}
 \left( \sum_{k=1}^{n} a_{1,k} \cdot b_{k,1} \right) & \left( \sum_{k=1}^{n} a_{1,k} \cdot b_{k,2} \right) & \cdots & \left( \sum_{k=1}^{n} a_{1,k} \cdot b_{k,o} \right) \\
 \left( \sum_{k=1}^{n} a_{2,k} \cdot b_{k,1} \right) & \left( \sum_{k=1}^{n} a_{2,k} \cdot b_{k,2} \right) & \cdots & \left( \sum_{k=1}^{n} a_{2,k} \cdot b_{k,o} \right) \\
 \vdots & \vdots & \ddots & \vdots \\
 \left( \sum_{k=1}^{n} a_{m,k} \cdot b_{k,1} \right) & \left( \sum_{k=1}^{n} a_{m,k} \cdot b_{k,2} \right) & \cdots & \left( \sum_{k=1}^{n} a_{m,k} \cdot b_{k,o} \right) \\
 \end{pmatrix}
+\end{split}
 \end{equation*}
 
 Aus dieser Definition folgt, dass die Anzahl der Spalten der Matrizen links vom Multiplikationszeichen und die Anzahl der Zeilen der Matrix rechts vom Multiplikationszeichen identisch sein müssen. Sind sie nicht identisch, ist die Mulitplikation \textbf{nicht} definiert und die Matrizen können nicht miteinander multipliziert werden. Des Weiteren besitzt die resultierende Matrix soviel Zeilen, wie Matrix $A$ aber soviel Spalten wie Matrix $B$.
@@ -366,30 +369,59 @@ für $v,w\in V$ und $\alpha, \beta \in K$
 \subsubsection{Bilinearformen}
 
 \begin{definition}
-Eine \textsl{Bilinearform} $b$ ist eine lineare Funktion
+Seien $V,W$ K-Vektorräume. Eine \textsl{Bilinearform} $b$ ist eine lineare Funktion
 \[
-	b : V \times V \longrightarrow K
+	b : V \times W \longrightarrow K
 \]
 mit den Eigenschaften:
 \begin{eqnarray*}
 b(\alpha v + \beta w,x) &=& \alpha b(v,x) + \beta b(w,x) \\
 b(v,\alpha w + \beta x) &=& \alpha b(v,w) + \beta b(v,x) 
 \end{eqnarray*}
-für $v,w\in V$ und $\alpha, \beta \in K$. Um genau zu sein ist eine Bilinearform eine zwei Parametrige lineare Funktion, die sich in beiden Parametern wie eine Linearform verhält.
+für $v\in V$, $w\in W$ und $\alpha, \beta \in K$. Um genau zu sein ist eine Bilinearform eine zwei Parametrige lineare Funktion, die sich in beiden Parametern wie eine Linearform verhält.
+\end{definition}
 
 Jede Bilinearform hat eine Matrix-Darstellung, denn zu jeder Bilinearform $\beta(.,.)$ kann folgende Matrix definiert werden:
 \[
-B := (b_{i,j})_{i,j} = (\beta(e_i, e_j))_{i,j}
+B = (b_{i,j})_{i,j} := (\beta(e_i, e'_j))_{i,j}
 \]
-mit den Basisvektoren $e_i$.
+mit den Basisvektoren $e_i\in V$ und $e'_j\in W$.
 
-\subsubsection{Multilinearformen}
-
-
-
+\begin{definition}
+Eine spezielle Bilinearform $\langle .,.\rangle : V\times V \longrightarrow K$ wird \textsl{Skalarprodukt} oder auch \textsl{inneres Produkt} genannt. (Man darf dies nicht mit der Skalarmultiplikation verwechseln, also dem Produkt aus einer Zahl aus dem Körper mit einem Vektor). In reellen Vektorräumen nimmt es die folgende Form an:
+\[
+\langle u,v \rangle = \sum_{i=1}^{n} u_i\cdot v_i
+\]
+für $u,v \in V$
 \end{definition}
 
-\subsection{Dual-Raum}
+
+
+\subsubsection{Norm}
+
+\begin{definition}
+Sei $V$ ein K-Vektorraum mit einem Skalarprodukt $\langle .,.\rangle$. Die Linearform 
+\[
+\Vert u \Vert = \sqrt{\langle u,u \rangle}
+\]
+wird \textsl{Euklidische Norm} oder vom Skalarprodukt \textsl{induzierte Norm}. Sie ist hier separat definiert, da sie in diesem Kapitel eine zentrale Rolle spielt. 
+\end{definition}
+
+\begin{definition}
+Eine Norm \textsl{Norm} ist eine lineare Abbildung $\Vert . \Vert : V \longrightarrow \mathbb{R}_+$, vom Vektorraum in die positiven reellen Zahlen. Dabei gelten folgende Eigenschaften:
+\begin{description}
+\item[(1)] Aus $\Vert v\Vert = 0$ folgt $v=0$
+\item[(2)] $\Vert a\cdot v\Vert = \vert a\vert \cdot \Vert v\Vert$
+\item[(3)] $\Vert u+v\Vert \le \Vert u\Vert + \Vert v\Vert $
+\end{description}
+Mit $\vert a\vert$ dem Absolutbetrag des Skalars $a$.
+\end{definition}
+
+Dass die Euklidische Norm die Eigenschaften (1)-(3) erfüllt, soll in den Aufgaben nachgerechnet werden.
+
+Normen stellen ein wichtiges Werkzeug dar, denn mit ihnen können Längen von Vektoren gemessen werden. 
+
+\subsection{Dualraum}
 
 \begin{definition}
 Die Menge aller Linearformen eines K-Vektorraums werden \textsl{Dualraum} von V genannt. Der Dualraum wird meist mit einem Stern gekennzeichnet: $V^*$
@@ -408,6 +440,7 @@ Ein Beispiel für einen Skalarprodukt-Raum ist der $\mathbb{R}^n$, zusammen mit 
 \langle u,v \rangle = \sum_{i=1}^{n} u_i \cdot v_i
 \end{equation*}
 
+TODO identisch mit Euklidischem Raum?
 
 \section{Tensor}
 
