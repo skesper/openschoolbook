@@ -4,6 +4,7 @@
 
 
 \section{Vektorraum}\label{vectorspace}
+\index{Vektorraum}
 
 Sei $(K,+,\cdot )$ ein Körper und $(V,+ ,\cdot)$ eine Menge mit zwei Verknüpfungen:
 \begin{eqnarray*}
@@ -38,20 +39,96 @@ Es ist wichtig zu verstehen, wo die Unterschiede zwischen (M3) und (M4) liegen. 
 Zur Vertiefung der sei an dieser Stelle auf das grundlegende Werk von Egbert Brieskorn \cite{Brieskorn1} hingewiesen. 
 \end{svgraybox}
 
+\begin{definition}
+Ein Element eines Vektorraums wird \textsl{Vektor} genannt.
+\end{definition}
+
+\subsection{Linearkombination}
+
+\begin{definition}
+Eine beliebige Summe von $p$ Vektoren $v_i \in V$ mit Faktoren $a_i \in K$ wird als \textsl{Linearkombination} bezeichnet.
+\[
+l = \sum_{i=1}^{p} a_i \cdot v_i = a_1\cdot v_1 + a_2 \cdot v_2 + \dots + a_p \cdot v_p
+\]
+Die Summe ist wiederum ein Vektor in $V$.
+
+\end{definition}
+
+\subsection{Basis}
+
+Der Begriff der Basis ist an dieser Stelle noch nicht einführbar, ohne weitere Begriffe definiert zu haben, die aktuell von wenig Nutzen sind und den Lernenden eher verwirren. Daher beschränken wir uns aktuell nur auf eine Basis:
+
+\begin{definition}
+Als die \textsl{Standard-Basis} des $\mathbb{R}^n$ werden die Vektoren $e_i$ mit $i=1,\dots,n$ bezeichnet, deren Einträge überall null sind, bis auf den Eintrag $i$ und dieser ist 1. 
+\begin{equation}
+e_1 = \begin{pmatrix}
+1\\
+0\\
+\vdots \\
+0
+\end{pmatrix}, e_2 = \begin{pmatrix}
+0\\
+1\\
+\vdots \\
+0
+\end{pmatrix}, \dots, e_n = \begin{pmatrix}
+0\\
+0\\
+\vdots \\
+1
+\end{pmatrix}
+\end{equation}
+\end{definition}
+
+Jeder Vektor in $v\in V$ kann als Linearkombination dieser Basis geschrieben werden. Im Besonderen ist -- aufgrund der Wahl der Basisvektoren $e_i$ -- jeder Faktor dieser Linearkombination identisch mit dem $i$-ten Eintrag des Vektors. 
+
+\[
+v = \begin{pmatrix}
+v_1 \\
+v_2 \\
+\vdots \\
+v_n
+\end{pmatrix} = \sum_{i=1}^{n} v_i \cdot e_i
+\]
 
 \subsection{Lineare Unabhängigkeit}
 
 \begin{definition}
-Die \textsl{linare Unabhängigkeit} \index{Unabhängigkeit, linear} von Vektoren wird definiert durch eine lineare Kombination, d.h. eine Summe von Vektoren mit konstanten Faktoren. Wenn diese lineare Kombination nur dadurch zu einem Null Vektor gemacht werden kann, dass alle Faktoren zu 0 werden, dann sind die Vektoren linear unabhängig. Seien $x_i$ aus einem K-Vektorraum und $\lambda_i $ aus dem zugrunde liegenden Körper. 
+Die \textsl{linare Unabhängigkeit} \index{Unabhängigkeit, linear} von Vektoren wird definiert durch eine Linearkombination, d.h. eine Summe von Vektoren mit konstanten Faktoren. Wenn diese Linearkombination nur dadurch zu einem Null Vektor gemacht werden kann, dass alle Faktoren zu 0 werden, dann sind die Vektoren linear unabhängig. Seien $x_i$ aus einem K-Vektorraum und $\lambda_i $ aus dem zugrunde liegenden Körper. 
 
 \begin{equation}\label{eq:linunabh}
 \sum_{i=1}^{n} \lambda_i x_i = 0 \quad \text{dann, und nur dann, wenn} \quad \lambda_i = 0
 \end{equation}
 \end{definition}
 
+Dies sollte näher erklärt werden: Nehmen wir ein einfaches Beispiel und sehen uns zwei Vektoren in der Ebene an. 
+
+\bigskip
+
+\begin{center}
+\begin{tikzpicture}[>=stealth]
+\coordinate (A) at (0,0);
+\coordinate (B) at (3,1);
+\coordinate (C) at (1,3);
+\coordinate (D) at (-2,2);
+\tikzset{-}
+\draw[lightgray, step=1cm] (-3,-1) grid (4,4);
+\tikzset{-}
+\draw[lightgray, dashed] (D) -- (C);
+\draw[lightgray, dashed] (B) -- (C);
+\tikzset{->}
+\draw (A) -- (B) node[midway, sloped, above] {$\lambda_1 \cdot x_1$};
+\draw (A) -- (D) node[midway, sloped, above] {$\lambda_2 \cdot x_2$};
+\draw[line width=2] (A) -- (C) node[midway, sloped, above] {$\lambda_1 \cdot x_1+\lambda_2 \cdot x_2$};
+\end{tikzpicture}
+\end{center}
+
+\bigskip
+
+Per Definition der linearen Unabhängigkeit kann der dicke Pfeil nur dann die Länge 0 haben, wenn $\lambda_1$ und $\lambda_2$ beide 0 sind. Salopp gesprochen könnte man sagen: Der Durchmesser eines Parallelograms\footnote{Ein Viereck dessen gegenüberliegenden Seiten parallel zueinander sind, nennt man Parallelogramm.} -- wie das, welches die Vektoren aufspannen -- kann nur dann 0 sein, wenn die Seitenlängen 0 sind.
 
 
-\subsection{Lineare Gleichungssysteme}
+\section{Lineare Gleichungssysteme}
 
 Lineare Gleichungssysteme treten häufig in der Physik und den Ingenieurswissenschaften auf. Dabei handelt es sich um Probleme in mehreren Unbekannten, die durch eine Reihe von Randbedingungen -- in Form von Gleichungen -- spezifiziert werden.
 
@@ -76,7 +153,7 @@ Gleichungssysteme werden nach der Anzahl ihrer Gleichungen in folgende Kategorie
 \item[$m=n$] Auch als quadratische Gleichungssysteme bezeichnet. Sofern bestimmte Bedingungen von den $a_{i,j}$ Werten erfüllt werden, gibt es genau eine Lösung. Dies sind die Systeme, mit denen wir uns hier beschäftigen werden.
 \end{description}
 
-\subsubsection{Kompakte Notation}
+\subsection{Kompakte Notation}
 
 Mathematiker machen sich gerne das Leben einfacher, in dem sie ihre Formeln abkürzen. Das Gleichungssystem (\ref{eq:syseq}) ist sehr unhandlich. Daher führen wir folgende Schreibweisen ein:
 
@@ -168,11 +245,102 @@ Dabei ist zu beachten, dass $0 \in \mathbb{R}^{m\times n} = (0)_{i,j}$ die Null 
 \end{pmatrix}
 \]
 
+\subsubsection{Rechenregeln}
+
+\begin{definition}
+Die Zahlen in den einzelnen Zellen der Tabelle nennt man \textsl{Einträge} oder auch \textsl{Komponenten}. Das selbe gilt für einen Vektor, der als einspaltige Matrix interpretiert werden kann.
+\end{definition}
+
+Die Addition zweier Matrizen wird auf die einzelnen Einträge abgebildet. Als Abkürzung wird hier die Notation $(\dots)_{i,j}$ verwendet. Dies ist eine Darstellung des Eintrags an der $i$-ten Zeile und $j$-ten Spalte. Wenn keine Einschränkung an $i$ und $j$ gemacht werden, so gilt diese Abkürzung für jeden Eintrag der Matrix. Und somit bestimmt diese Abkürzung auch die gesamte Matrix.
+
+\begin{equation*}
+A + B = \left( a_{i,j} + b_{i,j} \right)_{i,j} = \begin{pmatrix}
+a_{1,1}+b_{1,1} & a_{1,2}+b_{1,2} & \cdots & a_{1,n}+b_{1,n} \\
+a_{2,1}+b_{2,1} & a_{2,2}+b_{2,2} & \cdots & a_{2,n}+b_{2,n} \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{m,1}+b_{m,1} & a_{m,2}+b_{m,2} & \cdots & a_{m,n}+b_{m,n}
+\end{pmatrix}
+\end{equation*}
+In gleicher Weise wird die skalare Multiplikation realisiert
+
+\begin{equation*}
+\alpha \cdot A = \left( \alpha \cdot a_{i,j} \right)_{i,j} = \begin{pmatrix}
+\alpha \cdot a_{1,1} & \alpha \cdot a_{1,2} & \cdots & \alpha \cdot a_{1,n} \\
+\alpha \cdot a_{2,1} & \alpha \cdot a_{2,2} & \cdots & \alpha \cdot a_{2,n} \\
+\vdots & \vdots & \ddots & \vdots \\
+\alpha \cdot a_{m,1} & \alpha \cdot a_{m,2} & \cdots & \alpha \cdot a_{m,n}
+\end{pmatrix}
+\end{equation*}
+
+Die Multiplikation von Matrizen $A,B$ ist in der Form definiert, dass der Eintrag an der Stelle $i,j$ definiert ist durch die Summe der Produkte der Einträge der $i$-ten Zeile von A mit den Einträgen der $j$-ten Spalte von B. Sei $A\in \mathbb{R}^{m\times n}$ und $B\in \mathbb{R}^{n\times o}$
+
+\begin{equation*}
+A \cdot B = \left( \sum_{k=1}^{n} a_{i,k} \cdot b_{k,j} \right)_{i,j} = \begin{pmatrix}
+\left( \sum_{k=1}^{n} a_{1,k} \cdot b_{k,1} \right) & \left( \sum_{k=1}^{n} a_{1,k} \cdot b_{k,2} \right) & \cdots & \left( \sum_{k=1}^{n} a_{1,k} \cdot b_{k,o} \right) \\
+\left( \sum_{k=1}^{n} a_{2,k} \cdot b_{k,1} \right) & \left( \sum_{k=1}^{n} a_{2,k} \cdot b_{k,2} \right) & \cdots & \left( \sum_{k=1}^{n} a_{2,k} \cdot b_{k,o} \right) \\
+\vdots & \vdots & \ddots & \vdots \\
+\left( \sum_{k=1}^{n} a_{m,k} \cdot b_{k,1} \right) & \left( \sum_{k=1}^{n} a_{m,k} \cdot b_{k,2} \right) & \cdots & \left( \sum_{k=1}^{n} a_{m,k} \cdot b_{k,o} \right) \\
+\end{pmatrix}
+\end{equation*}
+
+Aus dieser Definition folgt, dass die Anzahl der Spalten der Matrizen links vom Multiplikationszeichen und die Anzahl der Zeilen der Matrix rechts vom Multiplikationszeichen identisch sein müssen. Sind sie nicht identisch, ist die Mulitplikation \textbf{nicht} definiert und die Matrizen können nicht miteinander multipliziert werden. Des Weiteren besitzt die resultierende Matrix soviel Zeilen, wie Matrix $A$ aber soviel Spalten wie Matrix $B$.
+
+\begin{svgraybox}
+Hat Matrix $B$ nur eine Spalte -- ist also ein Vektor --, dann ist dadurch auch gleichzeitig die Matrix-Vektor Multiplikation definiert. 
+\end{svgraybox}
+
+Seien $A\in \mathbb{R}^{m\times n}$ und $b\in \mathbb{R}^n$, dann ist die Matrix-Vektor Multiplikation
+
+\begin{equation*}
+A \cdot b = \left( \sum_{k=1}^{n} a_{i,k} \cdot b_{k} \right)_{i} = \begin{pmatrix}
+\left( \sum_{k=1}^{n} a_{1,k} \cdot b_{k} \right) \\
+\left( \sum_{k=1}^{n} a_{2,k} \cdot b_{k} \right) \\
+\vdots \\
+\left( \sum_{k=1}^{n} a_{m,k} \cdot b_{k} \right) \\
+\end{pmatrix}
+\end{equation*}
+
+\subsubsection{Transposition}
+
+Die Transponierte einer Matrix erhält man durch vertauschen der Indizes. Sei $A \in \mathbb{R}^{m\times n} $ eine Matrix. 
+
+\begin{definition}
+Die Transponierte $A^T \in \mathbb{R}^{n\times m}$ ist definiert durch:
+\[
+	A^T = (a_{j,i})_{i=1,\dots, n; j=1,\dots, m}
+\]
+\end{definition}
+Das Transponieren gilt auch für Vektoren genauso, da diese ja einspaltige Matrizen sind. Sei $v\in \mathbb{R}^{m\times 1}$ ein Vektor. Der transponierte Vektor $v^T$ ist dann im aus dem Raum $\mathbb{R}^{1\times m}$
+
+\[
+v^T = \begin{pmatrix}
+v_1\\
+v_2\\
+\vdots \\
+v_m
+\end{pmatrix}^T = (v_1, v_2, \dots , v_n)
+\]
+
+Aufgrund der Regel, dass Matrizen nur dann miteinander multipliziert werden dürfen, wenn die Spalten-Anzahl der linken Matrix mit der Zeilen-Anzahl der rechten Matrix übereinstimmen muss, konnten Vektoren bisher nicht an Matrizen von links multipliziert werden. Mit dem transponierten Vektor geht dies, da er eine Spalten-Anzahl hat, die mit der Matrix übereinstimmen kann. Seien wieder $v\in \mathbb{R}^m$ und $A\in \mathbb{R}^{m\times n}$.
+
+\[
+v^T \cdot A = (\sum_{i=1}^{m}v_i\cdot a_{i,j})_{j} = \begin{pmatrix}
+\sum_{i=1}^{m}v_i\cdot a_{i,1} \\
+\sum_{i=1}^{m}v_i\cdot a_{i,2} \\
+\vdots \\
+\sum_{i=1}^{m}v_i\cdot a_{i,n}
+\end{pmatrix} \in \mathbb{R}^n
+\]
+
 \subsubsection{Dimensionalität, Rang und Determinante}
 
-\subsection{Algebraische Strukturen}
+TODO
 
-\subsubsection{Homomorphismen}
+\section{Algebraische Strukturen}
+
+TODO
+
+\subsection{Homomorphismen}
 
 \begin{definition}
 
@@ -185,12 +353,60 @@ Ein \textsl{Vektorraumhomomorphismus}\index{Homomorphismus}\index{Vektorraumhomo
 
 \subsection{Linearformen}
 
+\begin{definition}
+Eine \textsl{Linearform} \index{Linearform} ist eine lineare Abbildung von einem K-Vektorraum in seinen zugrundeliegenden Körper
+\[
+l : V \longrightarrow K
+\]
+mit der Eigenschaft
+\[l(\alpha v + \beta w) = \alpha l(v) + \beta l(w) \]
+für $v,w\in V$ und $\alpha, \beta \in K$
+\end{definition}
+
+\subsubsection{Bilinearformen}
+
+\begin{definition}
+Eine \textsl{Bilinearform} $b$ ist eine lineare Funktion
+\[
+	b : V \times V \longrightarrow K
+\]
+mit den Eigenschaften:
+\begin{eqnarray*}
+b(\alpha v + \beta w,x) &=& \alpha b(v,x) + \beta b(w,x) \\
+b(v,\alpha w + \beta x) &=& \alpha b(v,w) + \beta b(v,x) 
+\end{eqnarray*}
+für $v,w\in V$ und $\alpha, \beta \in K$. Um genau zu sein ist eine Bilinearform eine zwei Parametrige lineare Funktion, die sich in beiden Parametern wie eine Linearform verhält.
+
+Jede Bilinearform hat eine Matrix-Darstellung, denn zu jeder Bilinearform $\beta(.,.)$ kann folgende Matrix definiert werden:
+\[
+B := (b_{i,j})_{i,j} = (\beta(e_i, e_j))_{i,j}
+\]
+mit den Basisvektoren $e_i$.
+
+\subsubsection{Multilinearformen}
+
+
+
+\end{definition}
+
+\subsection{Dual-Raum}
+
+\begin{definition}
+Die Menge aller Linearformen eines K-Vektorraums werden \textsl{Dualraum} von V genannt. Der Dualraum wird meist mit einem Stern gekennzeichnet: $V^*$
+\end{definition}
+
+Aufgrund der Eigenschaften der Linearformen bilden diese einen eigenen Vektorraum. 
+
 \subsection{Skalarprodukt-Räume}
 
-\subsubsection{Hilbert-Raum}
+TODO
 
 
-\subsection{Aufgaben}
+\section{Tensor}
+
+
+
+\section{Aufgaben}
 
 \begin{prob}
 \label{matrix.1}
