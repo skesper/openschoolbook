@@ -289,10 +289,10 @@ A \cdot B & = \left( \sum_{k=1}^{n} a_{i,k} \cdot b_{k,j} \right)_{i,j} \\
 Aus dieser Definition folgt, dass die Anzahl der Spalten der Matrizen links vom Multiplikationszeichen und die Anzahl der Zeilen der Matrix rechts vom Multiplikationszeichen identisch sein müssen. Sind sie nicht identisch, ist die Mulitplikation \textbf{nicht} definiert und die Matrizen können nicht miteinander multipliziert werden. Des Weiteren besitzt die resultierende Matrix soviel Zeilen, wie Matrix $A$ aber soviel Spalten wie Matrix $B$.
 
 \begin{svgraybox}
-Hat Matrix $B$ nur eine Spalte -- ist also ein Vektor --, dann ist dadurch auch gleichzeitig die Matrix-Vektor Multiplikation definiert. 
+Hat Matrix $B$ nur eine Spalte ($B\in \mathbb{R}^{n\times 1}$) -- ist also ein Vektor --, dann ist dadurch auch gleichzeitig die Matrix-Vektor Multiplikation definiert. 
 \end{svgraybox}
 
-Seien $A\in \mathbb{R}^{m\times n}$ und $b\in \mathbb{R}^n$, dann ist die Matrix-Vektor Multiplikation
+Seien $A\in \mathbb{R}^{m\times n}$ und $b\in \mathbb{R}^{n\times 1}$, dann ist die Matrix-Vektor Multiplikation
 
 \begin{equation*}
 A \cdot b = \left( \sum_{k=1}^{n} a_{i,k} \cdot b_{k} \right)_{i} = \begin{pmatrix}
@@ -302,6 +302,8 @@ A \cdot b = \left( \sum_{k=1}^{n} a_{i,k} \cdot b_{k} \right)_{i} = \begin{pmatr
 \left( \sum_{k=1}^{n} a_{m,k} \cdot b_{k} \right) \\
 \end{pmatrix}
 \end{equation*}
+Im Weiteren ist der $\mathbb{R}^{n\times 1} = \mathbb{R}^n$.
+
 
 \subsubsection{Transposition}
 
@@ -390,57 +392,86 @@ mit den Basisvektoren $e_i\in V$ und $e'_j\in W$.
 \begin{definition}
 Eine spezielle Bilinearform $\langle .,.\rangle : V\times V \longrightarrow K$ wird \textsl{Skalarprodukt} oder auch \textsl{inneres Produkt} genannt. (Man darf dies nicht mit der Skalarmultiplikation verwechseln, also dem Produkt aus einer Zahl aus dem Körper mit einem Vektor). In reellen Vektorräumen nimmt es die folgende Form an:
 \[
-\langle u,v \rangle = \sum_{i=1}^{n} u_i\cdot v_i
+\langle u,v \rangle = \sum_{i=1}^{n} u_i\cdot v_i = u^T \cdot v
 \]
 für $u,v \in V$
 \end{definition}
 
 
 
-\subsubsection{Norm}
+\subsubsection{Norm und Abstände}
+
+\begin{definition}
+Eine \textsl{Norm}\index{Norm} ist eine lineare Abbildung $\Vert . \Vert : V \longrightarrow \mathbb{R}_+$, vom Vektorraum in die positiven reellen Zahlen. Dabei gelten folgende Eigenschaften:
+\begin{description}
+\item[(1)] Aus $\Vert v\Vert = 0$ folgt $v=0$
+\item[(2)] $\Vert a\cdot v\Vert = \vert a\vert \cdot \Vert v\Vert$
+\item[(3)] $\Vert u+v\Vert \le \Vert u\Vert + \Vert v\Vert $ (Dreiecksungleichung)
+\end{description}
+Mit $u,v\in V$, $a\in K$ und $\vert a\vert$ dem Absolutbetrag des Skalars $a$.
+\end{definition}
+Zu beachten ist, dass die Norm nicht in den zugrundeliegenden Körper abbildet. Falls $K=\mathbb{C}$, dann ist trotzdem das Ergebnis der Norm in den positiven reellen Zahlen. Ein Vektorraum, in dem eine Norm definiert ist, nennt man einen \textsl{normierten Raum}\index{Raum, normiert}, oder \textsl{normierter Vektorraum}.
 
 \begin{definition}
 Sei $V$ ein K-Vektorraum mit einem Skalarprodukt $\langle .,.\rangle$. Die Linearform 
 \[
 \Vert u \Vert = \sqrt{\langle u,u \rangle}
 \]
-wird \textsl{Euklidische Norm} oder vom Skalarprodukt \textsl{induzierte Norm}. Sie ist hier separat definiert, da sie in diesem Kapitel eine zentrale Rolle spielt. 
+wird \textsl{euklidische Norm}\index{Norm, euklidische} oder vom Skalarprodukt \textsl{induzierte Norm}\index{Norm, induziert}. Sie ist hier separat definiert, da sie in diesem Kapitel eine zentrale Rolle spielt. Die folgenden Definitionen sind ebenfalls korrekt:
+\begin{equation}\label{eq:2norm}
+\Vert u \Vert = \sqrt{u^T \cdot u} = \sqrt{\sum_{i=1}^{n} u_i^2}= \sqrt{\sum_{i=1}^{n} \vert u_i \vert^2}
+\end{equation}
+\end{definition}
+
+Dass die Euklidische Norm die Eigenschaften (1)-(3) erfüllt, soll in den Aufgaben nachgerechnet werden. Normen stellen ein wichtiges Werkzeug dar, denn mit ihnen können Längen von Vektoren gemessen werden. Einen Vektorraum, in dem ein Skalarprodukt definiert ist, nennt man einen \textsl{Skalarproduktraum}.\index{Skalarproduktraum}\index{Raum mit Skalarprodukt}
+
+\begin{definition}
+Eine Bilinearform $d : V\times V \longrightarrow \mathbb{R}_+$ heißt \textsl{Metrik}\index{Metrik}, falls folgende Eigenschaften erfüllt sind:
+\begin{description}
+\item[(1)] Aus $d(u,v) = 0$ folgt $u=v$
+\item[(2)] $d(u,v) = d(v,u)$, diese Eigenschaft wird auch als Symmetrie bezeichnet.
+\item[(3)] $d(u,w) \le d(u,v) + d(u,w)$ (Dreiecksungleichung)
+\end{description}
+\end{definition}
+
+Eine Metrik wird dazu benutzt einen Abstand zwischen zwei Vektoren zu messen. Ein Vektorraum, in dem eine Metrik definiert ist, nennt man \textsl{metrischen Raum}\index{Raum, metrisch}. 
+
+\begin{definition}
+Jeder normierte Raum kann zu einem metrischen Raum gemacht werden, indem eine Metrik auf Basis der Norm definiert wird:
+\[
+d(u,v) = \Vert u-v \Vert
+\]
 \end{definition}
 
 \begin{definition}
-Eine Norm \textsl{Norm} ist eine lineare Abbildung $\Vert . \Vert : V \longrightarrow \mathbb{R}_+$, vom Vektorraum in die positiven reellen Zahlen. Dabei gelten folgende Eigenschaften:
-\begin{description}
-\item[(1)] Aus $\Vert v\Vert = 0$ folgt $v=0$
-\item[(2)] $\Vert a\cdot v\Vert = \vert a\vert \cdot \Vert v\Vert$
-\item[(3)] $\Vert u+v\Vert \le \Vert u\Vert + \Vert v\Vert $
-\end{description}
-Mit $\vert a\vert$ dem Absolutbetrag des Skalars $a$.
+In Anlehnung an Formel (\ref{eq:2norm}) kann allgemein eine \textsl{p-Norm} definiert werden:
+\[
+\Vert u \Vert_p = \left( \sum_{i=1}^{n} \vert u_i \vert^p \right)^{\frac{1}{p}}
+\]
+für $p\in \mathbb{N}$. Nach dieser Definition ist die euklidische Norm eine 2-Norm. 
 \end{definition}
 
-Dass die Euklidische Norm die Eigenschaften (1)-(3) erfüllt, soll in den Aufgaben nachgerechnet werden.
-
-Normen stellen ein wichtiges Werkzeug dar, denn mit ihnen können Längen von Vektoren gemessen werden. 
+Für $p \longrightarrow \infty$ nähert sich die Norm immer weiter an den größten Wert der $\vert u_i \vert$ an, da dieser mit dem immer größer werdenden Exponenten die Summe immer weiter beherrscht. Es gilt also für $p=\infty$
+\[
+\Vert u \Vert_\infty = \max_{i=1,\dots, n}  \vert u_i\vert
+\]
+(Der Beweis, dass die $\infty -Norm$ gleich dem absoluten Maximum ist, wird nachgeliefert. Dafür ist eine Grenzwertbetrachtung notwendig, die bisher noch nicht erklärt wurde).
 
 \subsection{Dualraum}
 
 \begin{definition}
-Die Menge aller Linearformen eines K-Vektorraums werden \textsl{Dualraum} von V genannt. Der Dualraum wird meist mit einem Stern gekennzeichnet: $V^*$
+Die Menge aller Linearformen eines K-Vektorraums werden \textsl{Dualraum} von V genannt. Der Dualraum wird meist mit einem Stern gekennzeichnet
+\[V^* \]
 \end{definition}
 
 Aufgrund der Eigenschaften der Linearformen bilden diese einen eigenen Vektorraum. 
 
-\subsection{Skalarprodukt-Räume}
+\subsection{Skalarproduktraum}
 
 \begin{definition}
-Ein \textsl{Skalarprodukt-Raum} ist ein K-Vektorraum $(V,+,\cdot)$ zusammen mit einem Skalarprodukt $\langle .,. \rangle$.
+Ein \textsl{Skalarproduktraum} ist ein K-Vektorraum $(V,+,\cdot)$ zusammen mit einem Skalarprodukt $\langle .,. \rangle$.
 \end{definition}
 
-Ein Beispiel für einen Skalarprodukt-Raum ist der $\mathbb{R}^n$, zusammen mit dem Skalarprodukt
-\begin{equation*}
-\langle u,v \rangle = \sum_{i=1}^{n} u_i \cdot v_i
-\end{equation*}
-
-TODO identisch mit Euklidischem Raum?
 
 \section{Tensor}
 
