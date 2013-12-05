@@ -64,17 +64,20 @@ Als die \textsl{Standard-Basis} des $\mathbb{R}^n$ werden die Vektoren $e_i$ mit
 e_1 = \begin{pmatrix}
 1\\
 0\\
+0\\
 \vdots \\
 0
 \end{pmatrix}, e_2 = \begin{pmatrix}
 0\\
 1\\
+0\\
 \vdots \\
 0
 \end{pmatrix}, \dots, e_n = \begin{pmatrix}
 0\\
 0\\
 \vdots \\
+0\\
 1
 \end{pmatrix}
 \end{equation}
@@ -126,6 +129,12 @@ Dies sollte näher erklärt werden: Nehmen wir ein einfaches Beispiel und sehen 
 \bigskip
 
 Per Definition der linearen Unabhängigkeit kann der dicke Pfeil nur dann die Länge 0 haben, wenn $\lambda_1$ und $\lambda_2$ beide 0 sind. Salopp gesprochen könnte man sagen: Der Durchmesser eines Parallelograms\footnote{Ein Viereck dessen gegenüberliegenden Seiten parallel zueinander sind, nennt man Parallelogramm.} -- wie das, welches die Vektoren aufspannen -- kann nur dann 0 sein, wenn die Seitenlängen 0 sind.
+
+\subsection{Dimension}
+
+\begin{definition}
+Die maximale Anzahl von linear unabhängigen Basisvektoren eines Vektorraums wird \textsl{Dimension}\index{Dimension} genannt. Der $\mathbb{R}^n$ hat die Dimension $n$, da es genau $n$ Möglichkeiten gibt, Basisvektoren zu bilden, die aus $n-1$ Nullen und einer 1 bestehen.
+\end{definition}
 
 
 \section{Lineare Gleichungssysteme}
@@ -337,7 +346,7 @@ v^T \cdot A = (\sum_{i=1}^{m}v_i\cdot a_{i,j})_{j} = \begin{pmatrix}
 \end{pmatrix} \in \mathbb{R}^n
 \]
 
-\subsubsection{Dimensionalität, Rang und Determinante}
+\subsubsection{Rang und Determinante}
 
 TODO
 
@@ -345,7 +354,27 @@ TODO
 
 TODO
 
-\subsection{Homomorphismen}
+\subsection{Eigenschaften von Abbildungen}
+
+
+\begin{definition}
+Eine Abbildung $\phi : V \longrightarrow W$ wird als \textsl{injektiv}\index{injektiv} bezeichnet, wenn für $u,v \in V$ 
+\[ u\ne v \Rightarrow \phi(u) \ne \phi(v) \]
+\end{definition}
+Umgekehrt gilt: Aus $\phi(u)=\phi(v)$ folgt, dass $u=v$ ist. 
+
+\begin{definition}
+Eine Abbildung $\phi : V \longrightarrow W$ wird als \textsl{surjektiv}\index{surjektiv} bezeichnet, wenn für alle $w\in W$ mindestens ein $v\in V$ existiert mit 
+\[\phi(v) = w\]
+\end{definition}
+
+\begin{definition}
+Eine Abbildung $\phi : V \longrightarrow W$ wird als \textsl{bijektiv}\index{bijektiv} bezeichnet, wenn sie sowohl injektiv als auch surjektiv ist. 
+\end{definition}
+
+Aufgrund der Surjektivität gibt es zu $w\in W$ immer ein $v\in V$  mit $\phi(v)=w$ und dieses $v$ ist eindeutig aufgrund der Injektivität. Daher gilt eine bijektive Abbildung $\phi$ als \textsl{umkehrbar eindeutig}\index{umkehrbar eindeutig}. D.h. es gibt ein $\phi^{-1} : W \longrightarrow V$ mit $v = \phi^{-1}(w)$.
+
+\subsection{Morphologie}
 
 \begin{definition}
 
@@ -354,6 +383,15 @@ Ein \textsl{Vektorraumhomomorphismus}\index{Homomorphismus}\index{Vektorraumhomo
 \item Für alle $v,w \in V$ gilt: $\phi(v+w) = \phi(v)+\phi(w)$
 \item Für alle $a\in K$ und $v\in V$ ist $\phi(av)=a\phi(v)$
 \end{enumerate}
+Ist $V=W$, so wird $\phi : V\longrightarrow V$ als \textsl{Endomorphismus}\index{Endomorphismus} bezeichnet.
+\end{definition}
+
+\begin{definition}
+Ist $\phi : V\longrightarrow W$ ein bijektiver Homomorphismus, so wird $\phi$ als \textsl{Isomorphismus}\index{Isomorphismus} bezeichnet.
+\end{definition}
+
+\begin{definition}
+Ist $\phi : V\longrightarrow V$ ein bijektiver Endomorphismus,  so wird $\phi$ als \textsl{Automorphismus}\index{Automorphismus} bezeichnet.
 \end{definition}
 
 \subsection{Linearformen}
@@ -397,6 +435,28 @@ Eine spezielle Bilinearform $\langle .,.\rangle : V\times V \longrightarrow K$ w
 für $u,v \in V$
 \end{definition}
 
+\begin{definition}
+Seien $u,v \in V$ und $\langle .,.\rangle$ ein Skalarprodukt auf $V$. Seien $u\ne 0$ und $v\ne 0$. Falls 
+\[ \langle u,v \rangle = \langle v,u \rangle = 0\]
+ist, so bezeichnet man $u$ und $v$ als zueinander \textsl{orthogonal}. \index{orthogonal}
+\end{definition}
+
+
+\subsubsection{Definitheit}
+
+
+\begin{definition}
+Sei $b(.,.)$ eine Bilinearform. $b(.,.)$ ist
+
+\begin{enumerate}
+\item \textsl{positiv definit}, falls $b(v,v)>0$\index{positiv definit}
+\item \textsl{positiv semidefinit}, falls $b(v,v)\ge 0$\index{positiv semidefinit}
+\item \textsl{negativ definit}, falls $b(v,v) <0$\index{negativ definit}
+\item \textsl{negativ semidefinit}, falls $b(v,v)\le 0$\index{negativ semidefinit}
+\end{enumerate}
+für alle $v\in V $
+\end{definition}
+
 
 
 \subsubsection{Norm und Abstände}
@@ -413,11 +473,11 @@ Mit $u,v\in V$, $a\in K$ und $\vert a\vert$ dem Absolutbetrag des Skalars $a$.
 Zu beachten ist, dass die Norm nicht in den zugrundeliegenden Körper abbildet. Falls $K=\mathbb{C}$, dann ist trotzdem das Ergebnis der Norm in den positiven reellen Zahlen. Ein Vektorraum, in dem eine Norm definiert ist, nennt man einen \textsl{normierten Raum}\index{Raum, normiert}, oder \textsl{normierter Vektorraum}.
 
 \begin{definition}
-Sei $V$ ein K-Vektorraum mit einem Skalarprodukt $\langle .,.\rangle$. Die Linearform 
+Sei $V$ ein reeller Vektorraum $\mathbb{R}^n$ mit einem Skalarprodukt $\langle .,.\rangle$. Die Linearform 
 \[
 \Vert u \Vert = \sqrt{\langle u,u \rangle}
 \]
-wird \textsl{euklidische Norm}\index{Norm, euklidische} oder vom Skalarprodukt \textsl{induzierte Norm}\index{Norm, induziert}. Sie ist hier separat definiert, da sie in diesem Kapitel eine zentrale Rolle spielt. Die folgenden Definitionen sind ebenfalls korrekt:
+wird \textsl{euklidische Norm}\index{Norm, euklidische} oder vom Skalarprodukt \textsl{induzierte Norm}\index{Norm, induziert} genannt. Sie ist hier separat definiert, da sie in diesem Kapitel eine zentrale Rolle spielt. Die folgenden Definitionen sind ebenfalls korrekt:
 \begin{equation}\label{eq:2norm}
 \Vert u \Vert = \sqrt{u^T \cdot u} = \sqrt{\sum_{i=1}^{n} u_i^2}= \sqrt{\sum_{i=1}^{n} \vert u_i \vert^2}
 \end{equation}
@@ -472,10 +532,17 @@ Aufgrund der Eigenschaften der Linearformen bilden diese einen eigenen Vektorrau
 Ein \textsl{Skalarproduktraum} ist ein K-Vektorraum $(V,+,\cdot)$ zusammen mit einem Skalarprodukt $\langle .,. \rangle$.
 \end{definition}
 
+Jeder Skalarproduktraum wird mit 
+\[ \Vert u \Vert = \sqrt{\langle u,u \rangle} \]
+zu einem normierten Raum \index{Raum, normiert}. Sowie mit 
+\[ d(u,v) = \Vert u-v \Vert \]
+zu einem metrischen Raum. \index{Raum, metrisch} In diesem Sinne ist die Definition eines Skalarproduktes die erste Wahl zur Erweiterung eines Vektorraums. 
+
+
 
 \section{Tensor}
 
-
+TODO
 
 \section{Aufgaben}
 
