@@ -5,7 +5,110 @@ In diesem Kapitel beschäftigen wir uns ausschließlich mit den Anwendungen der 
 
 
 \section{Prozentrechnung}
-TODO
+
+\subsection{Beispiel Mehrwertsteuer}
+
+Ein Problem mit dem wir es täglich zu tun bekommen, ist die Mehrwertsteuer. Sie ist auf alle Handelswaren zu erheben und an das Finanzamt abzuführen. Sie beträgt allgemein 19\%, auf Lebensmittel 7\%. 
+
+Das Zeichen "`\%"' wird "`Prozentzeichen"' genannt. Der Begriff kommt aus dem lateinisch-italienischen "`per cento"', "`vom Hundert"', und erklärt bereits, worum es dabei geht. Man teilt eine beliebige Menge in 100 Teile und nimmt sich (das Finanzamt) 19 Teile davon. 
+
+Der aktuelle VW Golf\footnote{Preis von Dezember 2013} kostet 14.264,70 \officialeuro\  ohne Mehrwertsteuer. Dieser Preis in 100 Teile geteilt ergibt 142,647 \officialeuro, mit 19 multipliziert ergibt 2710,293 \officialeuro. Daher müssen Kunden, die den VW Golf kaufen möchten, 16.975,- \officialeuro\  bezahlen. Der Händler führt dann 2710,29 \officialeuro\  an das Finanzamt als Mehrwertsteuer ab.
+
+\subsection{Allgemeine Prozentrechnung}
+
+Sei im Folgenden $p$ der Prozentsatz, also z.B. $p=19\%$, und $w$ der Prozentwert, im obigen Beispiel die 2710,29 \officialeuro. Des Weiteren sei $K$ die Menge, von der uns die Prozent interessieren. Dann gilt:
+\[
+w = K\cdot \frac{p}{100}
+\]
+Interessiert nur der Gesamtwert $K' = K+w$, dann kann folgendes berechnet werden:
+\[
+K' = K+w = K+K\cdot \frac{p}{100} = K\cdot \left(1+\frac{p}{100}\right)
+\]
+Wenn $p=19\%$ weiterhin die Mehrwertsteuer ist, dann würde der letzte Teil der Gleichung ausgerechnet folgendes ergeben:
+\[
+K' = K\cdot 1,19
+\]
+Die 19\% tauchen also hinter dem Komma der Zahl auf. Dies ist die einfachste Möglichkeit, zu einer beliebigen Zahl einen beliebigen Prozentwert hinzu zurechnen.
+
+Betrachten wir den Fall eines Rabatt-Angebots. Hier werden vom Preis Prozente abgezogen. Das heißt, der Prozentwert $w$ ändert sich nicht. Nur wird er
+\[
+K' = K-w
+\]
+von der Menge abgezogen.
+\[
+K' = K-w = K-K\cdot \frac{p}{100} = K\cdot \left(1-\frac{p}{100}\right) 
+\]
+Gäbe ein Geschäft einen Rabatt von 30\%, so wäre 
+\[
+K' = K\cdot \left(1-\frac{30}{100}\right) = K\cdot (1-0,3) = K\cdot 0,7
+\]
+
+Um es noch etwas komplizierter zu machen gibt das Geschäft 30\% Rabatt auf den sogenannten Netto-Preis, d.h. der Preis ohne Mehrwertsteuer. Es sei nun $K$ der Preis der Ware ohne Mehrwertsteuer. Das bedeutet, wir ziehen zunächst 30\% ab und rechnen dann 19\% Mehrwertsteuer dazu, damit wir wissen, was wir endlich bezahlen müssen:
+\begin{eqnarray*}
+K' &=& (K-30\% ) + 19\% = \left( K\cdot \left( 1-\frac{30}{100} \right) \right)\cdot \left( 1+\frac{19}{100} \right)\\
+&=& K\cdot \left( 0,7 \cdot 1,19 \right)\\
+&=& K\cdot 0,833
+\end{eqnarray*}
+Das bedeutet, dass der Unterschied zwischen dem ursprünglichen Netto-Preis und dem, was wir bezahlen müssen, 16,7\% beträgt.
+
+\subsection{Prozentrechnung bei Krediten}
+
+Wenn wir einen Kredit nehmen, verschulden wir uns bei unserer Bank. Das bedeutet, die Bank gibt uns Geld, das wir in Raten wieder zurückzahlen müssen. Natürlich macht die Bank dies nicht kostenlos. Sie verlangt dafür Kreditzinsen in Form von Prozenten. Aktuell übliche Kreditzinsen liegen bei 8\% - 11\%. Aber worauf werden die Zinsen verlangt?
+
+Sehen wir uns das genauer an: Stellen wir uns vor, wir möchten einen Studien-Urlaub zu den verwunschenen Orten der Maya nach Süd-Amerika machen. Ein Reiseveranstalter verlangt für eine solche Reise \currency 5.000,-. Wir haben nicht genug Geld auf der Bank, möchten diese Reise aber unbedingt machen. Also fragen wir die Bank nach einem Kredit. Nach einer Prüfung willigt diese ein und leiht uns das Geld zu einem Zinssatz von 8\%. Das bedeutet, dass die Bank jeden Monat ein zwölftel dieses Zinssatzes auf das Geld aufschlägt, das wir zum Anfang des Monats der Bank noch schulden. Das bedeutet, die Bank erhöht den Betrag, den wir ihr schulden jeden Monat um $\frac{8}{12}$\%.
+
+Gleichzeitig tilgen\footnote{Tilgung = Rückzahlung} wir den Gesamtbetrag mit unseren Monatsraten um einen bestimmten Teilbetrag. Damit wir den Kredit überhaupt irgendwann zurückzahlen können, muss demnach der Teilbetrag, den wir jeden Monat zurückzahlen, höher sein, als der Betrag, der durch die Verzinsung dazu kommt.
+
+Die Berechnung dazu sieht folgendermaßen aus, es sei $p=\frac{8}{12}\% $, $q = 1+\frac{p}{100}$ und $t$ unsere Tilgung. Dann entspricht der Restbetrag unseres Kredits $K_i$ in Monat $i$ nach beginn der Rückzahlung der folgenden Berechnung:
+\[
+K_i = \dots ((((((K-t)\cdot q)-t)\cdot q)-t)\cdot q) \dots
+\]
+Die Punkte bedeuten, dass wir die Operation $(. -t)\cdot q$ genau $i$-Mal durchführen müssen.
+
+Die Bank gewährt uns diesen Kredit bei einer monatlichen Rate von \currency 220,-. Die Bank hat die Rate so gewählt, dass wir in 24 Monaten den Kredit abbezahlt haben. Der ersten zwei Monate berechnen sich wie folgt:
+
+\begin{eqnarray*}
+K_1 &=& (5000-t)\cdot q = (5000 -220)\cdot 1,00\bar{6} = 4.811,87 \\
+K_2 &=& (4.811,87 -t) \cdot q = (4.811,87 - 220)\cdot 1,00\bar{6} = 4.622,48
+\end{eqnarray*}
+und so weiter. 
+
+Der sogenannte Tilgungsplan, also die Aufstellung aller Restbeträge für jeden der 24 Monate, ist in der folgenden Tabelle dargestellt:
+
+\begin{tabular}{C{4cm}C{4cm}}
+\hline
+\textbf{Monat} & \textbf{Restbetrag} \\
+\hline
+1& 4.811,87 \currency  \\
+2&	 4.622,48 \currency  \\
+3&	 4.431,83 \currency  \\
+4&	 4.239,91 \currency  \\
+5&	 4.046,71 \currency  \\
+6&	 3.852,22 \currency  \\
+7&	 3.656,43 \currency  \\
+8&	 3.459,34 \currency  \\
+9&	 3.260,94 \currency  \\
+10&	 3.061,21 \currency  \\
+11&	 2.860,15 \currency  \\
+12&	 2.657,75 \currency  \\
+13&	 2.454,01 \currency  \\
+14&	 2.248,90 \currency  \\
+15&	 2.042,42 \currency  \\
+16&	 1.834,57 \currency  \\
+17&	 1.625,34 \currency  \\
+18&	 1.414,71 \currency  \\
+19&	 1.202,67 \currency  \\
+20&	 989,22 \currency  \\
+21&	 774,35 \currency  \\
+22&	 558,05 \currency  \\
+23&	 340,30 \currency  \\
+24&	 121,10 \currency  \\
+\hline
+\end{tabular}
+
+\bigskip
+
+Die Restrate beträgt nicht mehr die vollen \currency 220,-, sondern nur noch \currency 121,10.
 
 \section{Dreisatz}
 TODO
