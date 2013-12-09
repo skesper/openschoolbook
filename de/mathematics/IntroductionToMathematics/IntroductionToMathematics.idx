@@ -26,65 +26,70 @@
 \indexentry{Unendlich $\infty$}{23}
 \indexentry{abz\IeC {\"a}hlbar}{25}
 \indexentry{abz\IeC {\"a}hlbar unendlich}{25}
-\indexentry{Pythagoras}{33}
-\indexentry{Summe $\Sigma$}{34}
-\indexentry{Produkt $\Pi$}{34}
-\indexentry{Quantor}{35}
-\indexentry{F\IeC {\"u}r alle}{35}
-\indexentry{Es gibt, es existiert}{35}
-\indexentry{Junktor}{36}
-\indexentry{Menge}{36}
-\indexentry{Teilmenge}{37}
-\indexentry{Leere Menge}{37}
-\indexentry{Vereinigungsmenge}{37}
-\indexentry{Schnittmenge}{37}
-\indexentry{Abbildung}{38}
-\indexentry{Verkn\IeC {\"u}pfung}{38}
-\indexentry{assoziativ}{38}
-\indexentry{kommutativ}{39}
-\indexentry{Neutrales Element}{39}
-\indexentry{Monoid}{39}
-\indexentry{Linksinverse}{39}
-\indexentry{Rechtsinverse}{39}
-\indexentry{Inverse}{39}
-\indexentry{Gruppe}{39}
-\indexentry{Gruppe, abelsch}{39}
-\indexentry{Ring}{39}
-\indexentry{Ring, kommutativer}{39}
-\indexentry{K\IeC {\"o}rper}{39}
-\indexentry{Vektorraum}{41}
-\indexentry{Vektorraum}{41}
-\indexentry{Unabh\IeC {\"a}ngigkeit, linear}{43}
-\indexentry{Dimension}{44}
-\indexentry{Matrix}{46}
-\indexentry{injektiv}{48}
-\indexentry{surjektiv}{48}
-\indexentry{bijektiv}{49}
-\indexentry{umkehrbar eindeutig}{49}
-\indexentry{Homomorphismus}{49}
-\indexentry{Vektorraumhomomorphismus}{49}
-\indexentry{Endomorphismus}{49}
-\indexentry{Isomorphismus}{49}
-\indexentry{Automorphismus}{49}
-\indexentry{Linearform}{49}
-\indexentry{orthogonal}{50}
-\indexentry{positiv definit}{50}
-\indexentry{positiv semidefinit}{50}
-\indexentry{negativ definit}{50}
-\indexentry{negativ semidefinit}{50}
-\indexentry{Norm}{50}
-\indexentry{Raum, normiert}{51}
-\indexentry{Norm, euklidische}{51}
-\indexentry{Norm, induziert}{51}
-\indexentry{Skalarproduktraum}{51}
-\indexentry{Raum mit Skalarprodukt}{51}
-\indexentry{Metrik}{51}
-\indexentry{Raum, metrisch}{51}
-\indexentry{Raum, normiert}{52}
-\indexentry{Raum, metrisch}{52}
-\indexentry{Monom}{56}
-\indexentry{Polynom}{56}
-\indexentry{Leitkoeffizient}{57}
-\indexentry{Rang, Polynom}{57}
-\indexentry{normiert}{57}
-\indexentry{monisch}{57}
+\indexentry{Pythagoras}{35}
+\indexentry{Summe $\Sigma$}{36}
+\indexentry{Produkt $\Pi$}{36}
+\indexentry{Quantor}{37}
+\indexentry{F\IeC {\"u}r alle}{37}
+\indexentry{Es gibt, es existiert}{37}
+\indexentry{Junktor}{38}
+\indexentry{Menge}{38}
+\indexentry{Teilmenge}{39}
+\indexentry{Leere Menge}{39}
+\indexentry{Vereinigungsmenge}{39}
+\indexentry{Schnittmenge}{39}
+\indexentry{Abbildung}{40}
+\indexentry{Verkn\IeC {\"u}pfung}{40}
+\indexentry{assoziativ}{40}
+\indexentry{kommutativ}{41}
+\indexentry{Neutrales Element}{41}
+\indexentry{Monoid}{41}
+\indexentry{Linksinverse}{41}
+\indexentry{Rechtsinverse}{41}
+\indexentry{Inverse}{41}
+\indexentry{Gruppe}{41}
+\indexentry{Gruppe, abelsch}{41}
+\indexentry{Ring}{41}
+\indexentry{Ring, kommutativer}{41}
+\indexentry{K\IeC {\"o}rper}{41}
+\indexentry{Vektorraum}{43}
+\indexentry{Vektorraum}{43}
+\indexentry{Unabh\IeC {\"a}ngigkeit, linear}{45}
+\indexentry{Dimension}{46}
+\indexentry{Matrix}{48}
+\indexentry{injektiv}{50}
+\indexentry{surjektiv}{50}
+\indexentry{bijektiv}{51}
+\indexentry{umkehrbar eindeutig}{51}
+\indexentry{Homomorphismus}{51}
+\indexentry{Vektorraumhomomorphismus}{51}
+\indexentry{Endomorphismus}{51}
+\indexentry{Isomorphismus}{51}
+\indexentry{Automorphismus}{51}
+\indexentry{Linearform}{51}
+\indexentry{orthogonal}{52}
+\indexentry{positiv definit}{52}
+\indexentry{positiv semidefinit}{52}
+\indexentry{negativ definit}{52}
+\indexentry{negativ semidefinit}{52}
+\indexentry{Norm}{52}
+\indexentry{Raum, normiert}{53}
+\indexentry{Norm, euklidische}{53}
+\indexentry{Norm, induziert}{53}
+\indexentry{Skalarproduktraum}{53}
+\indexentry{Raum mit Skalarprodukt}{53}
+\indexentry{Metrik}{53}
+\indexentry{Raum, metrisch}{53}
+\indexentry{Raum, normiert}{54}
+\indexentry{Raum, metrisch}{54}
+\indexentry{Monom}{58}
+\indexentry{Polynom}{58}
+\indexentry{Leitkoeffizient}{59}
+\indexentry{Rang, Polynom}{59}
+\indexentry{normiert}{59}
+\indexentry{monisch}{59}
+\indexentry{Extremwert}{77}
+\indexentry{lokales Maximum}{77}
+\indexentry{lokales Minimum}{77}
+\indexentry{globales Maximum}{77}
+\indexentry{globales Minimum}{77}
