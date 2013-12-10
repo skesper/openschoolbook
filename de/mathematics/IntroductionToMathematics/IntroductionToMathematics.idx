@@ -14,82 +14,82 @@
 \indexentry{Distributivgesetz}{11}
 \indexentry{Subtraktion}{11}
 \indexentry{Division}{12}
-\indexentry{Division mit Rest}{15}
-\indexentry{Bruch}{16}
-\indexentry{Bruchrechnung}{16}
-\indexentry{Dezimalzahl}{17}
-\indexentry{Grundzahl}{19}
-\indexentry{Hochzahl}{19}
-\indexentry{Exponent}{19}
-\indexentry{$i = \sqrt{-1}$}{22}
-\indexentry{Cardano, Gerolamo}{23}
-\indexentry{Unendlich $\infty$}{23}
-\indexentry{abz\IeC {\"a}hlbar}{25}
-\indexentry{abz\IeC {\"a}hlbar unendlich}{25}
-\indexentry{Pythagoras}{35}
-\indexentry{Summe $\Sigma$}{36}
-\indexentry{Produkt $\Pi$}{36}
-\indexentry{Quantor}{37}
-\indexentry{F\IeC {\"u}r alle}{37}
-\indexentry{Es gibt, es existiert}{37}
-\indexentry{Junktor}{38}
-\indexentry{Menge}{38}
-\indexentry{Teilmenge}{39}
-\indexentry{Leere Menge}{39}
-\indexentry{Vereinigungsmenge}{39}
-\indexentry{Schnittmenge}{39}
-\indexentry{Abbildung}{40}
-\indexentry{Verkn\IeC {\"u}pfung}{40}
-\indexentry{assoziativ}{40}
-\indexentry{kommutativ}{41}
-\indexentry{Neutrales Element}{41}
-\indexentry{Monoid}{41}
-\indexentry{Linksinverse}{41}
-\indexentry{Rechtsinverse}{41}
-\indexentry{Inverse}{41}
-\indexentry{Gruppe}{41}
-\indexentry{Gruppe, abelsch}{41}
-\indexentry{Ring}{41}
-\indexentry{Ring, kommutativer}{41}
-\indexentry{K\IeC {\"o}rper}{41}
-\indexentry{Vektorraum}{43}
-\indexentry{Vektorraum}{43}
-\indexentry{Unabh\IeC {\"a}ngigkeit, linear}{45}
-\indexentry{Dimension}{46}
-\indexentry{Matrix}{48}
-\indexentry{injektiv}{50}
-\indexentry{surjektiv}{50}
-\indexentry{bijektiv}{51}
-\indexentry{umkehrbar eindeutig}{51}
-\indexentry{Homomorphismus}{51}
-\indexentry{Vektorraumhomomorphismus}{51}
-\indexentry{Endomorphismus}{51}
-\indexentry{Isomorphismus}{51}
-\indexentry{Automorphismus}{51}
-\indexentry{Linearform}{51}
-\indexentry{orthogonal}{52}
-\indexentry{positiv definit}{52}
-\indexentry{positiv semidefinit}{52}
-\indexentry{negativ definit}{52}
-\indexentry{negativ semidefinit}{52}
-\indexentry{Norm}{52}
-\indexentry{Raum, normiert}{53}
-\indexentry{Norm, euklidische}{53}
-\indexentry{Norm, induziert}{53}
-\indexentry{Skalarproduktraum}{53}
-\indexentry{Raum mit Skalarprodukt}{53}
-\indexentry{Metrik}{53}
-\indexentry{Raum, metrisch}{53}
-\indexentry{Raum, normiert}{54}
-\indexentry{Raum, metrisch}{54}
-\indexentry{Monom}{58}
-\indexentry{Polynom}{58}
-\indexentry{Leitkoeffizient}{59}
-\indexentry{Rang, Polynom}{59}
-\indexentry{normiert}{59}
-\indexentry{monisch}{59}
-\indexentry{Extremwert}{77}
-\indexentry{lokales Maximum}{77}
-\indexentry{lokales Minimum}{77}
-\indexentry{globales Maximum}{77}
-\indexentry{globales Minimum}{77}
+\indexentry{Division mit Rest}{17}
+\indexentry{Bruch}{18}
+\indexentry{Bruchrechnung}{18}
+\indexentry{Dezimalzahl}{19}
+\indexentry{Grundzahl}{21}
+\indexentry{Hochzahl}{21}
+\indexentry{Exponent}{21}
+\indexentry{$i = \sqrt{-1}$}{24}
+\indexentry{Cardano, Gerolamo}{25}
+\indexentry{Unendlich $\infty$}{25}
+\indexentry{abz\IeC {\"a}hlbar}{27}
+\indexentry{abz\IeC {\"a}hlbar unendlich}{27}
+\indexentry{Pythagoras}{37}
+\indexentry{Summe $\Sigma$}{38}
+\indexentry{Produkt $\Pi$}{38}
+\indexentry{Quantor}{39}
+\indexentry{F\IeC {\"u}r alle}{39}
+\indexentry{Es gibt, es existiert}{39}
+\indexentry{Junktor}{40}
+\indexentry{Menge}{40}
+\indexentry{Teilmenge}{41}
+\indexentry{Leere Menge}{41}
+\indexentry{Vereinigungsmenge}{41}
+\indexentry{Schnittmenge}{41}
+\indexentry{Abbildung}{42}
+\indexentry{Verkn\IeC {\"u}pfung}{42}
+\indexentry{assoziativ}{42}
+\indexentry{kommutativ}{43}
+\indexentry{Neutrales Element}{43}
+\indexentry{Monoid}{43}
+\indexentry{Linksinverse}{43}
+\indexentry{Rechtsinverse}{43}
+\indexentry{Inverse}{43}
+\indexentry{Gruppe}{43}
+\indexentry{Gruppe, abelsch}{43}
+\indexentry{Ring}{43}
+\indexentry{Ring, kommutativer}{43}
+\indexentry{K\IeC {\"o}rper}{44}
+\indexentry{Vektorraum}{45}
+\indexentry{Vektorraum}{45}
+\indexentry{Unabh\IeC {\"a}ngigkeit, linear}{47}
+\indexentry{Dimension}{48}
+\indexentry{Matrix}{50}
+\indexentry{injektiv}{52}
+\indexentry{surjektiv}{52}
+\indexentry{bijektiv}{53}
+\indexentry{umkehrbar eindeutig}{53}
+\indexentry{Homomorphismus}{53}
+\indexentry{Vektorraumhomomorphismus}{53}
+\indexentry{Endomorphismus}{53}
+\indexentry{Isomorphismus}{53}
+\indexentry{Automorphismus}{53}
+\indexentry{Linearform}{53}
+\indexentry{orthogonal}{54}
+\indexentry{positiv definit}{54}
+\indexentry{positiv semidefinit}{54}
+\indexentry{negativ definit}{54}
+\indexentry{negativ semidefinit}{54}
+\indexentry{Norm}{54}
+\indexentry{Raum, normiert}{55}
+\indexentry{Norm, euklidische}{55}
+\indexentry{Norm, induziert}{55}
+\indexentry{Skalarproduktraum}{55}
+\indexentry{Raum mit Skalarprodukt}{55}
+\indexentry{Metrik}{55}
+\indexentry{Raum, metrisch}{55}
+\indexentry{Raum, normiert}{56}
+\indexentry{Raum, metrisch}{56}
+\indexentry{Monom}{60}
+\indexentry{Polynom}{60}
+\indexentry{Leitkoeffizient}{61}
+\indexentry{Rang, Polynom}{61}
+\indexentry{normiert}{61}
+\indexentry{monisch}{61}
+\indexentry{Extremwert}{79}
+\indexentry{lokales Maximum}{79}
+\indexentry{lokales Minimum}{79}
+\indexentry{globales Maximum}{79}
+\indexentry{globales Minimum}{79}
