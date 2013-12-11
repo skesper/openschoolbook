@@ -55,10 +55,10 @@
 \indexentry{Vektorraum}{45}
 \indexentry{Vektorraum}{45}
 \indexentry{Unabh\IeC {\"a}ngigkeit, linear}{47}
-\indexentry{Dimension}{48}
+\indexentry{Dimension}{47}
 \indexentry{Matrix}{50}
-\indexentry{injektiv}{52}
-\indexentry{surjektiv}{52}
+\indexentry{injektiv}{53}
+\indexentry{surjektiv}{53}
 \indexentry{bijektiv}{53}
 \indexentry{umkehrbar eindeutig}{53}
 \indexentry{Homomorphismus}{53}
@@ -68,22 +68,27 @@
 \indexentry{Automorphismus}{53}
 \indexentry{Linearform}{53}
 \indexentry{orthogonal}{54}
-\indexentry{positiv definit}{54}
-\indexentry{positiv semidefinit}{54}
-\indexentry{negativ definit}{54}
-\indexentry{negativ semidefinit}{54}
-\indexentry{Norm}{54}
-\indexentry{Raum, normiert}{55}
-\indexentry{Norm, euklidische}{55}
-\indexentry{Norm, induziert}{55}
-\indexentry{Skalarproduktraum}{55}
-\indexentry{Raum mit Skalarprodukt}{55}
-\indexentry{Metrik}{55}
-\indexentry{Raum, metrisch}{55}
+\indexentry{positiv definit}{55}
+\indexentry{positiv semidefinit}{55}
+\indexentry{negativ definit}{55}
+\indexentry{negativ semidefinit}{55}
+\indexentry{Norm}{56}
 \indexentry{Raum, normiert}{56}
+\indexentry{Norm, euklidische}{56}
+\indexentry{Norm, induziert}{56}
+\indexentry{Skalarproduktraum}{56}
+\indexentry{Raum mit Skalarprodukt}{56}
+\indexentry{Metrik}{56}
 \indexentry{Raum, metrisch}{56}
-\indexentry{Monom}{60}
-\indexentry{Polynom}{60}
+\indexentry{Raum, normiert}{57}
+\indexentry{Raum, metrisch}{57}
+\indexentry{Dreieck, Pascal}{60}
+\indexentry{Dreieck, Tartaglia}{60}
+\indexentry{Dreieck, Yang-Hui}{60}
+\indexentry{Dreieck, Chayy\={a}m}{60}
+\indexentry{Pascal, Blaise}{60}
+\indexentry{Monom}{61}
+\indexentry{Polynom}{61}
 \indexentry{Leitkoeffizient}{61}
 \indexentry{Rang, Polynom}{61}
 \indexentry{normiert}{61}

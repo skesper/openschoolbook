@@ -59,21 +59,22 @@ Die Summe ist wiederum ein Vektor in $V$.
 Der Begriff der Basis ist an dieser Stelle noch nicht einführbar, ohne weitere Begriffe definiert zu haben, die aktuell von wenig Nutzen sind und den Lernenden eher verwirren. Daher beschränken wir uns aktuell nur auf eine Basis:
 
 \begin{definition}
-Als die \textsl{Standard-Basis} des $\mathbb{R}^n$ werden die Vektoren $e_i$ mit $i=1,\dots,n$ bezeichnet, deren Einträge überall null sind, bis auf den Eintrag $i$ und dieser ist 1. 
+Als die \textsl{Standard-Basis} des $\mathbb{R}^n$ werden die Vektoren $e^i$ mit $i=1,\dots,n$ bezeichnet, deren Einträge überall null sind, bis auf den Eintrag $i$ und dieser ist 1. An der "`hoch"' Position hatten wir bisher nur Exponenten, hier ist es ein Index, das heißt, $e^i$ ist der $i$-te Basisvektor und nicht $e$ hoch $i$. Wir verwenden einen hochgestellten Index, da wir später auf die einzelnen Komponenten der Einheitsvektoren zugreifen wollen, aber dabei nicht doppelte, tiefgestellte Indizes möchten, verwenden wir den hochgestellten Index. 
+
 \begin{equation}
-e_1 = \begin{pmatrix}
+e^1 = \begin{pmatrix}
 1\\
 0\\
 0\\
 \vdots \\
 0
-\end{pmatrix}, e_2 = \begin{pmatrix}
+\end{pmatrix}, e^2 = \begin{pmatrix}
 0\\
 1\\
 0\\
 \vdots \\
 0
-\end{pmatrix}, \dots, e_n = \begin{pmatrix}
+\end{pmatrix}, \dots, e^n = \begin{pmatrix}
 0\\
 0\\
 \vdots \\
@@ -83,7 +84,15 @@ e_1 = \begin{pmatrix}
 \end{equation}
 \end{definition}
 
-Jeder Vektor in $v\in V$ kann als Linearkombination dieser Basis geschrieben werden. Im Besonderen ist -- aufgrund der Wahl der Basisvektoren $e_i$ -- jeder Faktor dieser Linearkombination identisch mit dem $i$-ten Eintrag des Vektors. 
+Der $j$-te Eintrag des $i$-ten Basisvektors wird $e^i_j$ bezeichnet. Es gilt
+\begin{equation*}
+e^i_j = \begin{cases}
+1 & \text{falls } i=j \\
+0 & \text{sonst}
+\end{cases}
+\end{equation*}
+
+Jeder Vektor in $v\in V$ kann als Linearkombination dieser Basis geschrieben werden. Im Besonderen ist -- aufgrund der Wahl der Basisvektoren $e^i$ -- jeder Faktor dieser Linearkombination identisch mit dem $i$-ten Eintrag des Vektors. 
 
 \[
 v = \begin{pmatrix}
@@ -91,7 +100,7 @@ v_1 \\
 v_2 \\
 \vdots \\
 v_n
-\end{pmatrix} = \sum_{i=1}^{n} v_i \cdot e_i
+\end{pmatrix} = \sum_{i=1}^{n} v_i \cdot e^i
 \]
 
 \subsection{Lineare Unabhängigkeit}
@@ -246,7 +255,7 @@ wird der $\mathbb{R}^{m\times n}$ zu einem Vektorraum. Das Nachrechnen der A1-A4
 
 Dabei ist zu beachten, dass $0 \in \mathbb{R}^{m\times n} = (0)_{i,j}$ die Null Matrix ist, und das neutrale Element der Multiplikation die Einsmatrix $\mathbf{1}$, oder auch Identität $I$ genannt:
 
-\[
+\begin{equation}\label{matrixid}
 \mathbf{1} = I =
 \begin{pmatrix}
 1 & 0 & 0 & \cdots & 0 \\
@@ -255,7 +264,7 @@ Dabei ist zu beachten, dass $0 \in \mathbb{R}^{m\times n} = (0)_{i,j}$ die Null 
 \vdots & \vdots & \vdots & \ddots & \vdots \\
 0 & 0 & 0 & \cdots & 1
 \end{pmatrix}
-\]
+\end{equation}
 
 \subsubsection{Rechenregeln}
 
@@ -424,18 +433,23 @@ b(v,\alpha w + \beta x) &=& \alpha b(v,w) + \beta b(v,x)
 für $v\in V$, $w\in W$ und $\alpha, \beta \in K$. Um genau zu sein ist eine Bilinearform eine zwei Parametrige lineare Funktion, die sich in beiden Parametern wie eine Linearform verhält.
 \end{definition}
 
-Jede Bilinearform hat eine Matrix-Darstellung, denn zu jeder Bilinearform $\beta(.,.)$ kann folgende Matrix definiert werden:
+Ist $W=V$, so hat jede Bilinearform $\beta:V\times V\longrightarrow K$ eine Matrix-Darstellung, denn zu jeder Bilinearform $\beta(.,.)$ kann folgende Matrix definiert werden:
 \[
-B = (b_{i,j})_{i,j} := (\beta(e_i, e'_j))_{i,j}
+B = (b_{i,j})_{i,j} := (\beta(e^i, e^j))_{i,j}
 \]
-mit den Basisvektoren $e_i\in V$ und $e'_j\in W$.
+mit den Basisvektoren $e^i, e^j\in V$. Hat man die Matrix $B$ zur Bilinearform $\beta$ bestimmt, so gilt 
+
+\[
+\beta(u,v) = u^T B v
+\]
+
 
 \begin{definition}
 Eine spezielle Bilinearform $\langle .,.\rangle : V\times V \longrightarrow K$ wird \textsl{Skalarprodukt} oder auch \textsl{inneres Produkt} genannt. (Man darf dies nicht mit der Skalarmultiplikation verwechseln, also dem Produkt aus einer Zahl aus dem Körper mit einem Vektor). In reellen Vektorräumen nimmt es die folgende Form an:
 \[
-\langle u,v \rangle = \sum_{i=1}^{n} u_i\cdot v_i = u^T \cdot v
+\langle u,v \rangle = \sum_{i=1}^{n} u_i\cdot v_i = u^T \cdot v = u^T I v
 \]
-für $u,v \in V$
+für $u,v \in V$ und der Identität (\ref{matrixid}) $I$.
 \end{definition}
 
 \begin{definition}
@@ -444,12 +458,29 @@ Seien $u,v \in V$ und $\langle .,.\rangle$ ein Skalarprodukt auf $V$. Seien $u\n
 ist, so bezeichnet man $u$ und $v$ als zueinander \textsl{orthogonal}. \index{orthogonal}
 \end{definition}
 
+Die Vektoren $e^i$ der Standardbasis des $\mathbb{R}^n$ sind natürlicherweise orthogonal zueinander, sehen wir uns das genauer an: Seien $e^i$ und $e^j$ Basisvektoren und $i\ne j$. Da fast alle Einträge der Vektoren null sind, bleiben nur die beiden Faktoren zu beachten, die den Wert eins haben. 
+
+\begin{eqnarray*}
+e^i_i = 1, \quad e^j_i = 0 \\
+e^i_j = 0, \quad e^j_j = 1
+\end{eqnarray*}
+Also ist 
+\begin{eqnarray*}
+e^i_i \cdot e^j_i &=& 0 \\
+e^i_j \cdot e^j_j &=& 0 
+\end{eqnarray*}
+und damit die gesamte Summe 
+\[
+\langle e^i, e^j\rangle = \sum_{k=1}^{n} e^i_k \cdot e^j_k = 0
+\]
+Daraus folgt, dass alle Vektoren der Standardbasis orthogonal zueinander sind.
+
 
 \subsubsection{Definitheit}
 
 
 \begin{definition}
-Sei $b(.,.)$ eine Bilinearform. $b(.,.)$ ist
+Sei $b(.,.) : V\times V \longrightarrow K$ eine Bilinearform. $b(.,.)$ ist
 
 \begin{enumerate}
 \item \textsl{positiv definit}, falls $b(v,v)>0$\index{positiv definit}
@@ -460,7 +491,13 @@ Sei $b(.,.)$ eine Bilinearform. $b(.,.)$ ist
 für alle $v\in V $
 \end{definition}
 
+Sei $B$ die Matrix zur Bilinearform $b$, dann heißt $B$ genau dann positiv definit, wenn $b$ positiv definit ist. Das selbe gilt für negativ- und semidefinit. Die Klassifizierung einer Matrix in diese Kategorien basieren alle auf der dazu passenden Bilinearform. 
 
+Umgekehrt kann für jede Matrix $M$ auch eine Bilinearform $m :V\times V \longrightarrow K$ definiert werden, indem für je zwei Vektoren $u,v\in V$ der Wert der Form als 
+\[
+m(u,v) = u^T M v
+\]
+definiert wird. Das bedeutet, eine Bilinearform bestimmt ihre darstellende Matrix, wie auch die Matrix ihre zugehörige Bilinearform.
 
 \subsubsection{Norm und Abstände}
 
