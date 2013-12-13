@@ -115,11 +115,80 @@ Weil der monatliche Betrag, den wir abbezahlen immer konstant ist -- bis auf den
 
 
 \section{Dreisatz}
-TODO
 
+Der Dreisatz ist kein Mathematischer Satz, wie wir sie später kennenlernen werden. Er beschreibt eine Vorgehensweise zum Lösen von Verhältnisaufgaben. Diese Verhältnisse treten in zwei Variationen auf:
+
+\begin{enumerate}
+\item $a\div b = c\div x$, mit $a,b,c$ gegeben und $x$ gesucht.
+\item $a\cdot b = c\cdot x$ mit $a,b,c$ gegeben und $x$ gesucht.
+\end{enumerate}
+
+Als eindrucksvolles Beispiel sei hier das \textsl{Kartoffel-Paradoxon}\index{Kartoffel-Paradoxon} erwähnt, welches den Dreisatz mit der Prozentrechnung verbindet. 
+
+\begin{quote}
+Ein Bauer erntet 100kg Kartoffeln und lagert sie über den Winter ein. Zum Zeitpunkt der Ernte bestehen sie zu 99\% aus Wasser. Im Frühjahr möchte er sie verkaufen und bringt sie zum Markt. Zu diesem Zeitpunkt bestehen sie nur noch zu 98\% aus Wasser, während sich der Trockenanteil nicht verändert hat. Wieviel kg Kartoffeln bringt er zum Markt?
+\end{quote}
+
+Die meisten Menschen schätzen, wenn sie die Aufgabe zum ersten Mal hören, dass sich das Gesamtgewicht der Kartoffeln nicht wesentlich verändert hat. Also auf knapp 99kg. Sehen wir uns das genauer an und berechnen die Trockenmasse, also den Wert, der sich nicht verändert:
+
+\begin{equation}\label{eq:3satz1}
+\text{Trockenmasse: } 1\text{kg} = 100\text{kg} \cdot 1\% = 100\text{kg} \cdot \frac{1}{100}
+\end{equation}
+Die Trockenmasse der Kartoffeln kann sich über den Winter nicht ändern, also bleibt diese erhalten und wir suchen das Gesamtgewicht von dem 2\% gerade 1kg sind:
+\begin{equation}
+\text{Trockenmasse: } 1\text{kg} = ?\text{kg} \cdot 2\% = ?\text{kg} \cdot \frac{2}{100}
+\end{equation}
+Wir formen um zu 
+\begin{equation}\label{eq:3satz3}
+\frac{1\text{kg}\cdot 100}{2} = 50\text{kg}
+\end{equation}
+das bedeutet, dass sich das Gesamtgewicht der Kartoffeln halbiert hat, obwohl sich der Wasseranteil nur um ein Prozent verringert hat. Auf der anderen Seite wird es einsichtiger, wenn man bedenkt, dass sich der Anteil der Trockenmasse verdoppelt hat, obwohl das Gewicht der Trockenmasse gleich geblieben ist.
+
+Die Interpretation, warum der Dreisatz "`Drei"'-Satz heißt, sind uneinheitlich. Favorisierte Ideen sind, a) dass es drei Werte und eine Unbekannte gibt, und b) dass drei Schritte zur Lösung notwendig sind. Wir schließen uns hier der Interpretation b) an. Die Gleichungen (\ref{eq:3satz1}) bis (\ref{eq:3satz3}) stellen somit die drei Schritte des Dreisatzes dar. Hier ein einfacheres Beispiel zu einem Dreisatz erster Form:
+
+\begin{quote}
+Wir kaufen ein Netz mit 25 Orangen, es wiegt 5kg. Wie viele Orangen sind in einem Netz mit 3kg?
+\end{quote}
+Um die Anzahl der Orangen in einem 3kg Netz herauszubekommen, müssen wir wissen, wie viel eine Orange wiegt, denn wir haben nur das Gewicht 3kg als Anhaltspunkt. Deshalb müssen wir die 5kg durch die 25 Orangen teilen um das Gewicht einer Orange zu bestimmen. Haben wir dies, können wir die Gleichung aufstellen, dass 3kg geteilt durch eine uns unbekannte Anzahl von Orangen das gleiche ergeben muss, wie die Division von 5kg durch die 25 Orangen. Somit wird die Berechnung wieder in drei Schritten dar gestellt:
+\begin{equation*}
+\begin{split}
+\frac{5kg}{25} &=  200g \\
+\frac{3kg}{?} &= 200g \\
+\frac{3000g}{200g} &= 15
+\end{split}
+\end{equation*}
+
+Und noch ein Beispiel für einen Dreisatz zweiter Form:
+\begin{quote}
+Die Arbeiter in einer Fabrik für Autozubehör nehmen sich aus einem Regal Kisten mit Einzelteilen, die zu Armlehnen zusammengebaut werden. Die Zufuhr von Kisten ist nicht beschränkt, das bedeutet, es sind immer genug Kisten für alle Arbeiter vorhanden. 
+
+Zehn Arbeiter können eine vorgegebene Menge an Armlehnen innerhalb eines Arbeitstages (acht Stunden) zusammenbauen. Eines Tages meldet sich morgens bei Schichtbeginn der Kunde und möchte noch am selben Tag eine Tagesration an Armlehnen haben. Um die Armlehnen zum Kunden zu bringen, braucht ein LKW sechs Stunden. Wie viele Arbeiter muss der Zulieferer zusätzlich einsetzen, um den Kunden zufrieden zu stellen?
+\end{quote}
+Die Arbeitsleistung der Arbeiter ist nicht bekannt, wir können also nicht wie mit den Orangen vorgehen und zunächst die Arbeitsleistung eines einzelnen Arbeiters ausrechnen. Wir müssen die Gleichung sofort ansetzen. Erschwerend kommt hinzu, dass wir nicht wissen, wie lange Zeit den Arbeiten bleibt. Daher müssen wir uns überlegen, was die Länge des Tages beeinflusst. Es bleibt nur die Lieferung per LKW, die mit sechs Stunden zu Buche schlägt. Demnach bleiben nur zwei Stunden für die Herstellung von soviel Armlehnen, wie 10 Arbeiter sonst in acht Stunden herstellen.
+\begin{equation*}
+\begin{split}
+10\cdot 8 &= ? \cdot 2 \\
+\frac{10\cdot 8}{2} &= ? = 40
+\end{split}
+\end{equation*}
+In diesem Fall gibt es auch drei Gleichungen, nämlich die linke Seite und die rechte Seite der ersten Gleichung entsprechen den Schritten 1 und 2 des Dreisatzes. Und die zweite Gleichung dem Schritt 3. Das ergibt die Lösung 40, sprich der Zulieferer muss 40 Arbeiter einsetzen, damit diese in zwei Stunden vollbringen, was sonst 10 Arbeiter in acht Stunden erbringen.
+
+Allgemein geht man beim Dreisatz wie folgt vor:
+\begin{enumerate}
+\item Aufstellung der Gleichung mit den bekannten Werten.
+\item Aufstellung der Gleichung mit einem unbekannten Wert.
+\item Umformung und Lösung.
+\end{enumerate}
+Bei der Aufstellung der Gleichung gibt es keine allgemeine Vorgehensweise. Der Lernende muss erkennen können, ob der Dreisatz von erster oder zweiter Form ist. 
 
 \section{Textaufgaben}
 
 Textaufgaben spielen in der Schul-Mathematik eine sehr große Rolle. Anhand von textuell dargelegten Problemen soll Schülern ein intuitiver Einstieg in die Mathematik gegeben werden. Im Gegensatz dazu erwartet Studierende in der universitären Mathematik im allgemeinen keine Textaufgaben. Sie gelten somit lediglich als didaktisches Mittel zum Zweck der Motivation von Schülern. 
 
+Wie im vorhergehenden Abschnitt bereits gesehen, sind Dreisatzaufgaben oft in Form von Textaufgaben vorgegeben, sodass der Lernende sich mit Alltagsproblemen konfrontiert sieht. 
 
+Aufgrund der Tatsache, dass Textaufgaben keinen einheitlichen Lösungsweg haben und sie direkt von der Formulierung abhängen, ist in diesem Abschnitt auch nicht viel Weiteres darüber zu sagen, als dass sie existieren und Schüler sich damit auseinander setzen müssen. Beispielaufgaben sind im folgenden Abschnitt zu finden.
+
+\section{Aufgaben}
+
+TODO

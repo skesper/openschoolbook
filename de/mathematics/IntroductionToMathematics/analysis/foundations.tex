@@ -1,237 +1,124 @@
 
 \chapter{Grundlagen}
 
-Der Begriff einer Abbildung ist uns schon öfter untergekommen. Eine Funktion ist eine Abbildung, die zwei Mengen (hier $X$ und $Y$) in Beziehung setzt:
+Die Analysis, auch Infinitesimalrechnung genannt, wurde von Gottfried Wilhelm Leibnitz\footnote{\textbf{Gottfried Wilhelm Leibnitz}, *1. Juli 1646 in Leibzig; \ding{61}14. November 1716 in Hannover} und Isaac Newton\footnote{\textbf{Sir Isaac Newton}, *4. Januar 1643 in Woolsthorpe-by-Colsterworth in Lincolnshire; \ding{61}31. März 1727 in Kensington} unabhängig voneinander entwickelt. Sie behandelt Grenzwerte von Folgen und Reihen, Funktionen reeller Zahlen, deren Stetigkeit, Differenzierbarkeit und Integrierbarkeit. 
 
-\[ f: X \longrightarrow Y \]
-$f$ ordnet jedem Element $x\in X$ ein Element $y\in Y$ zu, indem
-\[f(x) =y\]
-gilt. Die Umkehrung gibt es allgemein nicht, aber wenn sie existiert, so wird sie als $f^{-1}$ bezeichnet und es gilt:
-\[ f^{-1}(y) =x\]
+\section{Folgen}
+
+Folgen sind ein zentraler Begriff in der Mathematik, im Besonderen der Analysis. Die Betrachtung von Folgen und ihrem Verhalten, hat viele Bereiche der Mathematik inspiriert, so wäre die Funktionentheorie ohne die Banach\footnote{\textbf{Stefan Banach}, polnischer Mathematiker,  *30. März 1892 in Krakau, \ding{61}31. August 1945 in Lemberg}-Räume kaum vorstellbar. \index{Banach Raum}\index{Banach, Stefan} Banachräume sind bestimmte Vektorräume, in denen jede Cauchy-Folge gegen einen im Raum enthaltenen Wert konvergiert.
 
 \begin{definition}
-Der Begriff \textsl{Funktion} ist identisch mit dem Begriff Abbildung. 
+Eine \textsl{Folge} ist eine -- wie der Name suggeriert -- Abfolge von Mathematischen Objekten. Dies können zum Beispiel Zahlen, Vektoren oder Funktionen sein, oder jedes andere Mathematische Objekt, solange sich diese in eine Reihenfolge bringen lassen. Bei Folgen ist eine Reihenfolge der Elemente festgelegt. Sind $a_i$ die Elemente einer Folge, so ist immer $a_{i-1}$ vor $a_i$ und diesem folgt immer $a_{i+1}$ -- sofern $a_{i\pm 1}$ existieren. Eine Folge wird in dieser Art dargestellt:
+\[
+(a_1, a_2, \dots)
+\]
 \end{definition}
 
+Folgen sind keine Mengen, in Folgen können Elemente mehrfach vorkommen, an unterschiedlichen Positionen in der Abfolge der Elemente! 
 
-\section{Polynome}
+Folgen haben unendlich viele Elemente. Sie sind mit den natürlichen Zahlen abzählbar unendlich (siehe Definition \ref{abzaehlbar}).
 
-Wir hatten in Kapitel \ref{chap:poly} Polynome bereits kennengelernt. Polynome -- wie wir sie hier betrachten -- sind Funktionen $p :\mathbb{R} \longrightarrow \mathbb{R}$. Wir betrachten also hier grundsätzlich reelle Polynome. Wenn wir Polynome auf dem komplexen Zahlen betrachten, wird dies extra angemerkt.
+\subsection{Charakterisierung}
 
-Im allgemeinen betrachten wir Polynome vom Rang $n$, das heißt Funktionen der Form
-\[
-p(x) = \sum_{i=0}^{n} a_i \cdot x^i
-\]
-wobei der Wert des Parameters $x$ in keiner Weise festgelegt wird. Wir betrachten also das Polynom in seiner Gesamtheit, ohne Einschränkung auf einen bestimmten Wert $x$. Mit der Abbildung 
-\[
-\phi(p,x) = \phi\left( \sum_{i=0}^{n} a_i \cdot x^i \right) = \begin{pmatrix}
-a_0\\ a_1 \\ a_2 \\ \vdots \\ a_n
-\end{pmatrix}
-\]
-identifizieren wir jedes Polynom mit einem Vektor aus dem $\mathbb{R}^{n+1}$. Für jeden beliebigen Vektor $v\in \mathbb{R}^{n+1}$ ist 
-\[ 
-\phi^{-1}(v,x) = \sum_{i=0}^{n} v_i \cdot x^i
-\]
-Daraus folgt, dass die Abbildung $\phi$ die Vektorraumstruktur des $\mathbb{R}^{n+1}$ auf den Raum aller Polynome mit Grad $\le n$ abbildet und somit diese ebenfalls einen Vektorraum bilden. Dieser wird 
-\[P_n =\left\lbrace p \ \middle\vert \  p(x) = \sum_{i=0}^{n} a_i \cdot x^i, \ (a_i)_i \in \mathbb{R}^{n+1} \right\rbrace  \]
-genannt. Zur Vertiefung seien die Anforderungen A1-A4 und M1-M4 aus Kapitel \ref{vectorspace} für $P_n$ nachgewiesen.
-
-
-\subsection{Ableitung von Polynomen}
-
-Der Begriff der Abteilung von Funktionen wird später erst formal eingeführt. Da die Ableitung für Polynome sehr einfach zu bestimmen ist, wird der Begriff hier vorab für Polynome definiert und für die Details sei auf Kapitel \ref{chap:diff} verwiesen.
-
-Es sei $v\in \mathbb{R}^{n+1}$ die Repräsentation im reellen Vektorraum des Polynoms $p\in P_n$. Es sei die folgende Abbildung $D: \mathbb{R}^{n+1} \longrightarrow \mathbb{R}^{n} $ definiert:
-
-\begin{equation}
-D(v) = D(v_i)_{i=0,\dots,n} = (i\cdot v_i)_{i=1,\dots,n}
-= \begin{pmatrix}
-1\cdot v_1 \\ 2\cdot v_2 \\ 3\cdot v_3 \\ \vdots \\ n\cdot v_n
-\end{pmatrix}
-\end{equation}
-
-$D$ ist mehrfach anwendbar:
-\[
-D^2(v) = D(D(v)) = \begin{pmatrix}
-1\cdot 2\cdot v_2 \\
-2\cdot 3\cdot v_3 \\
-\vdots \\
-(n-1)\cdot n \cdot v_n
-\end{pmatrix} \in \mathbb{R}^{n-1}
-\]
-usw. Aufgrund der Existenz der Umkehrung der Abbildung $\phi$ gibt es Polynome $D(p)$ mit 
-\[
-D(p(x)) = \sum_{i=1}^{n} i\cdot v_i \cdot x^{i-1}
-\]
-$D(p)$ wird die \textsl{erste Ableitung} von $p$ genannt, und
-\[
-D^2(p(x)) = \sum_{i=2}^{n} (i-1)\cdot i\cdot v_i \cdot x^{i-2}
-\]
-wird \textsl{zweite Ableitung} von $p$ genannt, usw.
-
-Diese recht abstrakte Definition der Ableitungen ist zwar unüblich, hat aber den Vorteil, dass die Ableitung hier als einfache Abbildung auf einem Vektorraum dargestellt werden kann. 
-
-Beispiel: Gegeben sei das Polynom 
-
-\[
-p(x) = x^3 + 2x^2 + 3x + 4
-\]
-Die erste Ableitung ist:
-\[
-D(p(x)) = 1\cdot 3\cdot x^2 + 2\cdot 2\cdot x + 1\cdot 3 = 3x^2 + 4x +3
-\]
-Die zweite Ableitung ist:
-\[
-D^2(p(x)) = D(3x^2 + 4x+3) = 2\cdot 3 x + 1\cdot 4 = 6x +4
-\]
-Was haben nun $D(p)$ und $D^2(p)$ mit $p$ zu tun? Das erschließt sich nicht einfach aus der Definition von $D$, aber wie wir im Kapitel über die Differentialrechnung sehen werden, ist $D(p)$ gerade die Funktion, deren Wert der Steigung von $p$ entspricht, wie $D^2(p)$ diejenige Funktion ist, deren Wert der Steigung von $D(p)$ entspricht. Wenn also, wie in Abbildung \ref{fig:polydiff} dargestellt, $D^2(p) = 0$ ist, so hat $D(p)$ an genau dieser Stelle einen sogenannten \textsl{Extremwert}, das bedeutet, alle Funktionswerte von $D(p)$ in einer Umgebung um diese Nullstelle von $D^2(p)$ sind größer oder kleiner als $D(p)$.
-
-
-\begin{figure}
-\begin{center}
-\begin{tikzpicture}[domain=-4:2.5]
-\draw[very thin,color=lightgray] (-3.9,-3.9) grid (3.9,3.9);
-
-\draw[->] (-4,0) -- (4.2,0) node[right] {$x$};
-\draw[->] (0,-4) -- (0,4.2) node[above] {$y$};
-
-\draw[color=red] plot (\x,\x*\x*\x/10+2*\x*\x/10+3*\x/10+4/10) node[right] {$p(x) $};
-\draw[color=blue] plot (\x,3*\x*\x/10+4*\x/10+3/10) node[right] {$D(p(x)) $};
-\draw[color=gray] plot (\x,6*\x/10+4/10) node[right] {$D^2(p(x)) $};
-\end{tikzpicture}
-\caption[Polynom mit Ableitungen]{Funktionen-Plot von $p(x)$, $D(p(x))$ und $D^2(p(x))$}
-\label{fig:polydiff}
-\end{center}
-\end{figure}
-
-\begin{definition}\index{Extremwert}
-Gibt es für eine Funktion $f:\mathbb{R} \longrightarrow \mathbb{R}$ an einer Stelle $x_0 \in \mathbb{R}$ eine Umgebung $I = [x_0-\epsilon, x_0+\epsilon]$ mit $\epsilon>0 $, in der  für alle $z\in I$ entweder $f(z)\le f(x_0)$, oder $f(z)\ge f(x_0)$ gilt, so wird $x_0$ \textsl{Extremwert} genannt.
+\begin{definition}
+Eine Folge heißt \textsl{monoton steigend}, wenn für alle $i\in \mathbb{N}$ gilt $a_i\le a_{i+1}$. Sie heißt \textsl{streng monoton steigend}, wenn $a_i < a_{i+1}$ gilt. Äquivalent heißt sie \textsl{monoton fallend}, wenn $a_i\ge a_{i+1}$ gilt, bzw. \textsl{streng monoton fallend}, wenn $a_i > a_{i+1}$ gilt.
 \end{definition}
 
-\begin{definition}\index{lokales Maximum}
-Gilt für $f,x_0,z,I$ wie oben, immer $f(z)\le f(x_0)$, so nennt man $x_0$ ein \textsl{lokales Maximum}.
-\end{definition}
+Monotonie kann auch erst ab einem gewissen $n\in \mathbb{N}, n>1$ nachweisbar sein. Die Folge wird dann als monoton ab dem Folgenglied $n$ bezeichnet.
 
-\begin{definition}\index{lokales Minimum}
-Gilt für $f,x_0,z,I$ wie oben, immer $f(z)\ge f(x_0)$, so nennt man $x_0$ ein \textsl{lokales Minimum}.
-\end{definition}
+\begin{definition}
+Eine reelle Folge ($a_i \in \mathbb{R}$) heißt \textsl{beschränkt}, wenn es ein $S\in \mathbb{R}$ gibt, sodass für alle $i\in \mathbb{N}$, $a_i \le S$ gilt. $S$ ist eine \textsl{obere Schranke} der Folge. Gibt es eine kleinste obere Schranke $S'$, so wird diese \textsl{Supremum} genannt. 
 
-\begin{definition}\index{globales Maximum}
-Gilt für $f,x_0$ wie oben, $f(z)\le f(x_0)$ für alle $z\in \mathbb{R}\backslash \{x_0\}$, so wird $x_0$ als \textsl{globales Maximum} bezeichnet.
-\end{definition}
-
-\begin{definition}\index{globales Minimum}
-Gilt für $f,x_0$ wie oben, $f(z)\ge f(x_0)$ für alle $z\in \mathbb{R}\backslash \{x_0\}$, so wird $x_0$ als \textsl{globales Minimum} bezeichnet.
+Gibt es ein $I\in \mathbb{R}$ mit $a_i \ge I$, so wird $I$ \textsl{untere Schranke} genannt. Die größte untere Schranke wird \textsl{Infimum} genannt.
 \end{definition}
 
 \begin{definition}
-Sei $p \in P_n$ und an $x_0$ sei $D^2(p(x_0))=0$. Gilt weiter $D^2(p(z))\ne 0$ für $z\in \mathbb{R}\backslash \{x_0\}$, so nennt man $x_0$ einen \textsl{Wendepunkt} von $p$.
+Eine Folge, deren Elemente alle identisch sind, wird \textsl{konstante Folge} genannt. Eine Folge, deren Elemente abwechselnd positiv und negativ sind, wird \textsl{alternierend} genannt. Eine Folge deren Elemente sich immer weiter der 0 annähern, wird \textsl{Nullfolge} genannt.
 \end{definition}
 
-In Abbildung \ref{fig:polydiff} sieht man im Grafen von $p(x)$, wie dieser mit hoher Steigung von links unten in die Zeichnung hinein kommt. Dann flacht die Kurve ab, und ab $D^2(p(x))=0$ wird sie wieder steiler. Dies ist die Charakteristik eines Wendepunktes. Denn die Krümmung der Kurve des Grafen $p(x)$ wechselt von negativ (wird immer flacher), zu positiv (wird immer steiler).
+\subsection{Konvergenz}
 
-Wie wir sehen, wird die Steigung von $p(x)$ direkt durch ihre erste und zweite Ableitung bestimmt.
+\begin{definition}\label{def:lim}
+Es sei $(a_i)$ eine Folge in den reellen Zahlen und $a\in \mathbb{R}$ eine \textsl{Grenzwert} genannte Zahl. Weiterhin sei $\epsilon>0$ eine beliebige reelle Zahl. Wenn es für jeden solchen Wert $\epsilon$ einen Folgenindex $n_\epsilon \in \mathbb{N}$ gibt, sodass $\vert a_i -a\vert <\epsilon$ für alle $i\ge n_\epsilon$ gilt, so heißt die Folge \textsl{kovergent}. Des Weiteren konvergiert diese Folge gegen $a$. 
+\end{definition}
 
-\section{Kurvendiskussion}
+Man sollte sich das $\epsilon$ als eine sehr kleine Zahl vorstellen. Für große Zahlen sind die Bedingungen der Konvergenz recht einfach zu erfüllen. Schwierig wird es erst, wenn $\epsilon\ll 1$ ist. ($\ll$ bedeutet "`wesentlich kleiner als"').
 
-Wie wir im vorherigen Abschnitt gesehen haben, sind die Nullstellen der ersten und zweiten Ableitung einer Funktion von besonderem Interesse, wenn uns die Form der Kurve interessiert. Eben diese ist Thema einer Kurvendiskussion.
+Die oben dargestellte Definition für Konvergenz beruht darauf, dass der Punkt $a$ bereits bekannt ist. Was ist aber, wenn wir $a$ nicht kennen? Gibt es dann auch ein Kriterium für die Konvergenz?
 
 \begin{definition}
-Eine \textsl{Kurvendiskussion} ist eine Vorgehensweise, wie aus Informationen über Nullstellen einer Funktion, ihrer ersten und zweiten Ableitung, sowie einiger, ausgewählter Funktionswerte, genug Eigenschaften gefolgert werden können, um eine Funktion näherungsweise in einem Koordinatensystem zu zeichnen.
+Es sei $(a_i)$ eine Folge. Es sei $\epsilon \ll 1$. Wenn es zu jedem $\epsilon$ ein $N\in \mathbb{N}$ gibt, sodass für $n,m > N$ gilt $\vert a_n -a_m \vert <\epsilon$, so ist auch diese Folge konvergent. Bemerkenswert dabei ist, dass wir nur die Abstände der Folgenelemente dafür betrachten und keinen Grenzwert. Eine solche Folge wird \textsl{Cauchy-Folge}\footnote{benannt nach dem französischen Mathematiker \textbf{Augustin-Louis Cauchy}, *21. August 1789, \ding{61}23. Mai 1857 in Sceaux} genannt.
 \end{definition}
 
-Die folgenden Unterabschnitte verdeutlichen anhand eines Beispiels, wie eine Kurvendiskussion durchgeführt wird. Danach werden wir erst die Definitionen kennenlernen. 
-
-Kurvendiskussionen sind heutzutage kaum noch notwendig. Üblicherweise nutzt man einen Computer zur Darstellung eines Funktionsgraphen. Ein "`raten"' seines Aussehens ist nicht notwendig. Da die Kurvendiskussion in Schulen aber noch seinen Platz hat, wird sie hier aufgezeigt. 
-
-\subsection{Voraussetzungen}
-
-Wir betrachten das Polynom $p(x) = x^3 -12x$. Es ist vom dritten Grad und seine Faktoren für das quadratische, sowie das konstante Monom sind 0. Wir berechnen
-
-\begin{eqnarray*}
-p(x) &=& x^3 -12x \\
-D(p(x)) &=& 3x^2 -12 \\
-D^2(p(x)) &=& 6x
-\end{eqnarray*}
+Cauchy-Folgen haben die positive Eigenschaft, dass man ihre Konvergenz nachweisen kann, ohne den Grenzwert zu kennen. Z.B. in den rationalen Zahlen $\mathbb{Q}$ gibt es Cauchy-Folgen, die keinen Grenzwert besitzen, weil dieser in den irrationalen Zahlen liegt.
 
 
-\subsection{Nullstellen von $p$}\label{sec:nsp}
+\begin{definition}
+Zu einer Folge $a_i$ heißt die Menge $\lbrace a_i \rbrace$ die \textsl{Menge der Folgenwerte}. Es wird der Einfachheit halber eine Folge auch oft mit der Menge ihrer Folgenwerte gleichgesetzt. Dies ist aber nicht vollständig korrekt, da eine Folge auch Informationen über die Reihenfolge ihrer Elemente enthält, die Menge der Folgenwerte aber nicht. 
+\end{definition}
 
-Das Polynom $p$ ist vom dritten Grad, also gibt es drei Nullstellen. Die erste kann geraten werden, denn sie liegt genau im Null-Punkt. Es gilt
-\begin{eqnarray*}
-0 &=& x^3 -12x \qquad \vert \div x \\
-0 &=& x^2 - 12 \qquad \vert +12 \\
-12 &=& x^2 \qquad \vert \sqrt{.} \\
-\pm \sqrt{12} &=& x
-\end{eqnarray*}
-Daraus folgt, dass $p$ folgende Nullstellen hat: $\{-\sqrt{12},0,+\sqrt{12}\}$.
+\section{Grenzwert}
 
-\subsection{Nullstellen von $D(p)$}\label{sec:nsd1}
+In Definition \ref{def:lim} wurde bereits der Begriff \textsl{Grenzwert} verwendet. Hier soll er noch einmal formal dargestellt werden. 
 
-Die Nullstellen von $D(p(x))=3x^2-12$ sind ebenfalls einfach zu raten, aber wir berechnen sie hier der Vollständigkeit halber:
-\begin{eqnarray*}
-0 &=& 3x^2-12 \\
-12 &=& 3x^2 \\
-4 &=& x^2 \\
-\pm \sqrt{4} &=& x \\
-\pm 2 &=& x
-\end{eqnarray*}
-Die Nullstellen sind also $\{-2,2\}$. 
-
-\subsection{Nullstellen von $D^2(p(x))$}\label{sec:nsd2}
-
-Als lineare Funktion hat 
+\begin{definition}
+Sei $(a_i)$ eine Folge in $A\subseteq \mathbb{R}$. Wenn die Folge gegen einen Wert $a\in A$ konvergiert, so heißt $a$ \textsl{Grenzwert}, oder auch \textsl{Limes}\footnote{Limes lat. "`Grenzweg"'} der Folge $(a_i)$. Dass $(a_i)$ den Grenzwert $a$ besitzt, wird wie folgt ausgedrückt:
 \[
-D^2(p(x)) = 6x
+\lim_{n\rightarrow \infty} a_n = a
 \]
-nur eine Nullstelle, und zwar bei $0$.
+\end{definition}
 
-\subsection{Folgerungen}
+\begin{definition}\label{def:voll}
+Wenn jede Cauchy-Folge mit $(a_n)\in A\subseteq \mathbb{R}$ konvergiert und ihr Grenzwert 
+\[\lim_{n\rightarrow \infty} a_n = a\in A\] 
+existiert, so heißt $A$ \textsl{vollständig}. 
 
-Wir können aus dem vorherigen folgende Informationen folgern:
-
-\begin{enumerate}
-\item Aufgrund von Abschnitt \ref{sec:nsd2} hat $p$ einen Wendepunkt an der Stelle 0.
-\item Sowie zwei Extremwerte an den Stellen $\{-2, +2\}$ aufgrund von Abschnitt \ref{sec:nsd1}.
-\item $p$ nimmt an den Stellen $\{-2,2\}$ die Werte $\{16,-16\}$ an. 
-\item $p$ hat Nullstellen in $\{-\sqrt{12},0,\sqrt{12}\}$.
-\end{enumerate}
+Die Vollständigkeit der reellen Zahlen in der Form, dass alle Cauchy-Folgen konvergieren und ihren Grenzwert annehmen, ist eine Konsequenz aus dem sogenannten \textsl{Vollständigkeitsaxiom}. Die Vollständigkeit folgert also nicht aus der Konvergenz der Cauchy-Folgen, sondern genau umgekehrt folgert die Konvergenz der Cauchy-Folgen aus der Vollständigkeit. 
+\end{definition}
 
 
+\section{Reihen}
 
+\begin{definition}
+Sei $(a_i)$ eine Folge, so ist 
+\[
+s_n = \sum_{i=1}^{n} a_i
+\]
+die $n$-te \textsl{Partialsumme}. Die Partialsummen bilden wiederum eine Folge $(s_i)$. Falls der Grenzwert 
+\[
+R(a) = \lim_{n\rightarrow \infty} s_n = \lim_{n\rightarrow \infty} \sum_{i=1}^{n} a_i
+\]
+existiert, so heißt $R(a)$ eine \textsl{Reihe}.
+\end{definition}
 
-\subsection{Zusammenfassung im Graph}
+Ob eine Reihe existiert, bestimmt die Partialsummen-Folge. Konvergiert diese, so existiert der Grenzwert, und damit auch die Reihe. Aus der Definition der Partialsummen folgt, dass wenn die Partialsummen-Folge konvergiert, $(a_n)$ eine Null-Folge sein muss. Falls $(a_n)$ keine Null-Folge ist, divergieren die Partialsummen und der Grenzwert  existiert nicht. Allerdings reicht es nicht aus $(a_n)$ als Null-Folge zu wählen, es gibt Null-Folgen, deren Partialsummen trotzdem divergieren. 
 
-\begin{figure}
-\begin{center}
-\begin{tikzpicture}[domain=-4:4]
-\draw[very thin,color=lightgray] (-3.9,-3.9) grid (3.9,3.9);
+Ein Beispiel für eine nicht konvergente Summe aus einer Null-Folge ist die Harmonische Reihe:
+\[
+H_n = \sum_{i=1}^{n} \frac{1}{i}
+\]
+Die Folge $\lbrace 1, \frac{1}{2}, \frac{1}{3}, \dots \rbrace$ ist eine Null-Folge, aber die $H_n$ sind divergent.
 
-\draw[->] (-4,0) -- (4.2,0) node[right] {$x$};
-\draw[->] (0,-4) -- (0,4.2) node[above] {$y$};
+\begin{definition}
+Eine Reihe heißt \textsl{absolut konvergent}, wenn 
+\[
+R'(a) = \lim_{n\rightarrow \infty} \sum_{i=1}^{n} \vert a_i \vert
+\]
+konvergiert.
+\end{definition}
 
-\draw[color=red] plot (\x,\x*\x*\x/10-12*\x/10) node[right] {$p(x) $};
-\end{tikzpicture}
-\caption[Polynom zur Kurvendiskussion]{Verlauf von $p(x)$ anhand der Kurvendiskussion}
-\label{fig:pkd}
-\end{center}
-\end{figure}
-
-
-\begin{figure}
-\begin{center}
-\begin{tikzpicture}[domain=-4:4]
-\draw[very thin,color=lightgray] (-3.9,-3.9) grid (3.9,3.9);
-
-\draw[->] (-4,0) -- (4.2,0) node[right] {$x$};
-\draw[->] (0,-4) -- (0,4.2) node[above] {$y$};
-
-\draw[color=red] plot (\x,\x*\x*\x/10-12*\x/10) node[right] {$p(x) $};
-\draw[color=blue] plot (\x,3*\x*\x/10-12/10) node[right] {$D(p(x)) $};
-\draw[color=gray] plot (\x,6*\x/10) node[right] {$D^2(p(x)) $};
-\end{tikzpicture}
-\caption[Vollständige Darstellung zur Kurvendiskussion]{Darstellung von $p(x)$, $D(p(x))$ und $D^2(p(x))$ zur Kurvendiskussion}
-\label{fig:kdvoll}
-\end{center}
-\end{figure}
+\begin{lemma}
+Falls zu jedem $\epsilon \ll 1$ ein Index $N$ existiert, sodass für alle $n>N$ gilt
+\[
+\left\vert \frac{a_{n+1}}{a_n} \right\vert \le \epsilon
+\]
+dann konvergiert die Reihe 
+\[
+\lim\limits_{n\rightarrow \infty} \sum_{i=1}^{n} \vert a_i \vert
+\]
+Sie ist also absolut konvergent. Dies wird als \textsl{Quotienten-Kriterium} bezeichnet.
+\end{lemma}
+\begin{proof}
+TODO
+\end{proof}
 

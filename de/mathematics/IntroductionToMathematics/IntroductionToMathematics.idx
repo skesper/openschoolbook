@@ -26,75 +26,71 @@
 \indexentry{Unendlich $\infty$}{25}
 \indexentry{abz\IeC {\"a}hlbar}{27}
 \indexentry{abz\IeC {\"a}hlbar unendlich}{27}
-\indexentry{Pythagoras}{37}
-\indexentry{Summe $\Sigma$}{38}
-\indexentry{Produkt $\Pi$}{38}
-\indexentry{Quantor}{39}
-\indexentry{F\IeC {\"u}r alle}{39}
-\indexentry{Es gibt, es existiert}{39}
-\indexentry{Junktor}{40}
-\indexentry{Menge}{40}
-\indexentry{Teilmenge}{41}
-\indexentry{Leere Menge}{41}
-\indexentry{Vereinigungsmenge}{41}
-\indexentry{Schnittmenge}{41}
-\indexentry{Abbildung}{42}
-\indexentry{Verkn\IeC {\"u}pfung}{42}
-\indexentry{assoziativ}{42}
-\indexentry{kommutativ}{43}
-\indexentry{Neutrales Element}{43}
-\indexentry{Monoid}{43}
-\indexentry{Linksinverse}{43}
-\indexentry{Rechtsinverse}{43}
-\indexentry{Inverse}{43}
-\indexentry{Gruppe}{43}
-\indexentry{Gruppe, abelsch}{43}
-\indexentry{Ring}{43}
-\indexentry{Ring, kommutativer}{43}
-\indexentry{K\IeC {\"o}rper}{44}
-\indexentry{Vektorraum}{45}
-\indexentry{Vektorraum}{45}
-\indexentry{Unabh\IeC {\"a}ngigkeit, linear}{47}
-\indexentry{Dimension}{47}
-\indexentry{Matrix}{50}
-\indexentry{injektiv}{53}
-\indexentry{surjektiv}{53}
-\indexentry{bijektiv}{53}
-\indexentry{umkehrbar eindeutig}{53}
-\indexentry{Homomorphismus}{53}
-\indexentry{Vektorraumhomomorphismus}{53}
-\indexentry{Endomorphismus}{53}
-\indexentry{Isomorphismus}{53}
-\indexentry{Automorphismus}{53}
-\indexentry{Linearform}{53}
-\indexentry{orthogonal}{54}
-\indexentry{positiv definit}{55}
-\indexentry{positiv semidefinit}{55}
-\indexentry{negativ definit}{55}
-\indexentry{negativ semidefinit}{55}
-\indexentry{Norm}{56}
-\indexentry{Raum, normiert}{56}
-\indexentry{Norm, euklidische}{56}
-\indexentry{Norm, induziert}{56}
-\indexentry{Skalarproduktraum}{56}
-\indexentry{Raum mit Skalarprodukt}{56}
-\indexentry{Metrik}{56}
-\indexentry{Raum, metrisch}{56}
-\indexentry{Raum, normiert}{57}
-\indexentry{Raum, metrisch}{57}
-\indexentry{Dreieck, Pascal}{60}
-\indexentry{Dreieck, Tartaglia}{60}
-\indexentry{Dreieck, Yang-Hui}{60}
-\indexentry{Dreieck, Chayy\={a}m}{60}
-\indexentry{Pascal, Blaise}{60}
-\indexentry{Monom}{61}
-\indexentry{Polynom}{61}
-\indexentry{Leitkoeffizient}{61}
-\indexentry{Rang, Polynom}{61}
-\indexentry{normiert}{61}
-\indexentry{monisch}{61}
-\indexentry{Extremwert}{79}
-\indexentry{lokales Maximum}{79}
-\indexentry{lokales Minimum}{79}
-\indexentry{globales Maximum}{79}
-\indexentry{globales Minimum}{79}
+\indexentry{Kartoffel-Paradoxon}{32}
+\indexentry{Pythagoras}{39}
+\indexentry{Summe $\Sigma$}{40}
+\indexentry{Produkt $\Pi$}{40}
+\indexentry{Quantor}{41}
+\indexentry{F\IeC {\"u}r alle}{41}
+\indexentry{Es gibt, es existiert}{42}
+\indexentry{Junktor}{42}
+\indexentry{Menge}{42}
+\indexentry{Teilmenge}{43}
+\indexentry{Leere Menge}{43}
+\indexentry{Vereinigungsmenge}{43}
+\indexentry{Schnittmenge}{43}
+\indexentry{Abbildung}{44}
+\indexentry{Verkn\IeC {\"u}pfung}{44}
+\indexentry{assoziativ}{44}
+\indexentry{kommutativ}{45}
+\indexentry{Neutrales Element}{45}
+\indexentry{Monoid}{45}
+\indexentry{Linksinverse}{45}
+\indexentry{Rechtsinverse}{45}
+\indexentry{Inverse}{45}
+\indexentry{Gruppe}{45}
+\indexentry{Gruppe, abelsch}{45}
+\indexentry{Ring}{45}
+\indexentry{Ring, kommutativer}{45}
+\indexentry{K\IeC {\"o}rper}{46}
+\indexentry{Vektorraum}{47}
+\indexentry{Vektorraum}{47}
+\indexentry{Unabh\IeC {\"a}ngigkeit, linear}{49}
+\indexentry{Dimension}{50}
+\indexentry{Matrix}{52}
+\indexentry{injektiv}{55}
+\indexentry{surjektiv}{55}
+\indexentry{bijektiv}{55}
+\indexentry{umkehrbar eindeutig}{55}
+\indexentry{Homomorphismus}{55}
+\indexentry{Vektorraumhomomorphismus}{55}
+\indexentry{Endomorphismus}{55}
+\indexentry{Isomorphismus}{55}
+\indexentry{Automorphismus}{55}
+\indexentry{Linearform}{55}
+\indexentry{orthogonal}{56}
+\indexentry{positiv definit}{57}
+\indexentry{positiv semidefinit}{57}
+\indexentry{negativ definit}{57}
+\indexentry{negativ semidefinit}{57}
+\indexentry{Norm}{58}
+\indexentry{Raum, normiert}{58}
+\indexentry{Norm, euklidische}{58}
+\indexentry{Norm, induziert}{58}
+\indexentry{Skalarproduktraum}{58}
+\indexentry{Raum mit Skalarprodukt}{58}
+\indexentry{Metrik}{58}
+\indexentry{Raum, metrisch}{58}
+\indexentry{Raum, normiert}{59}
+\indexentry{Raum, metrisch}{59}
+\indexentry{Dreieck, Pascal}{62}
+\indexentry{Dreieck, Yang-Hui}{62}
+\indexentry{Pascal, Blaise}{62}
+\indexentry{Monom}{63}
+\indexentry{Polynom}{63}
+\indexentry{Leitkoeffizient}{63}
+\indexentry{Rang, Polynom}{63}
+\indexentry{normiert}{63}
+\indexentry{monisch}{63}
+\indexentry{Banach Raum}{79}
+\indexentry{Banach, Stefan}{79}
