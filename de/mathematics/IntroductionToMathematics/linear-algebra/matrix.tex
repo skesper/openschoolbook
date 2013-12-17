@@ -525,14 +525,14 @@ wird \textsl{euklidische Norm}\index{Norm, euklidische} oder vom Skalarprodukt \
 \end{equation}
 \end{definition}
 
-Dass die Euklidische Norm die Eigenschaften (1)-(3) erfüllt, soll in den Aufgaben nachgerechnet werden. Normen stellen ein wichtiges Werkzeug dar, denn mit ihnen können Längen von Vektoren gemessen werden. Einen Vektorraum, in dem ein Skalarprodukt definiert ist, nennt man einen \textsl{Skalarproduktraum}.\index{Skalarproduktraum}\index{Raum mit Skalarprodukt}
+Dass die Euklidische Norm die Eigenschaften (1)-(3) erfüllt, soll in den Aufgaben nachgerechnet werden. Normen stellen ein wichtiges Werkzeug dar, denn mit ihnen können Längen von Vektoren gemessen werden. Einen Vektorraum, in dem ein Skalarprodukt definiert ist, nennt man einen \textsl{Skalarproduktraum}, aber das wird in Definition \ref{skpr} noch genauer dargelegt.\index{Skalarproduktraum}\index{Raum mit Skalarprodukt}
 
 \begin{definition}
 Eine Bilinearform $d : V\times V \longrightarrow \mathbb{R}_+$ heißt \textsl{Metrik}\index{Metrik}, falls folgende Eigenschaften erfüllt sind:
 \begin{description}
 \item[(1)] Aus $d(u,v) = 0$ folgt $u=v$
 \item[(2)] $d(u,v) = d(v,u)$, diese Eigenschaft wird auch als Symmetrie bezeichnet.
-\item[(3)] $d(u,w) \le d(u,v) + d(u,w)$ (Dreiecksungleichung)
+\item[(3)] $d(u,w) \le d(u,v) + d(v,w)$ (Dreiecksungleichung)
 \end{description}
 \end{definition}
 
@@ -570,14 +570,16 @@ Aufgrund der Eigenschaften der Linearformen bilden diese einen eigenen Vektorrau
 
 \subsection{Skalarproduktraum}
 
-\begin{definition}
+\begin{definition}\label{skpr}
 Ein \textsl{Skalarproduktraum} ist ein K-Vektorraum $(V,+,\cdot)$ zusammen mit einem Skalarprodukt $\langle .,. \rangle$.
 \end{definition}
 
 Jeder Skalarproduktraum wird mit 
 \[ \Vert u \Vert = \sqrt{\langle u,u \rangle} \]
 zu einem normierten Raum \index{Raum, normiert}. Sowie mit 
-\[ d(u,v) = \Vert u-v \Vert \]
+\[ 
+d(u,v) = \Vert u-v \Vert = \sqrt{\langle u-v,u-v \rangle}
+\]
 zu einem metrischen Raum. \index{Raum, metrisch} In diesem Sinne ist die Definition eines Skalarproduktes die erste Wahl zur Erweiterung eines Vektorraums. 
 
 
