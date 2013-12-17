@@ -2,22 +2,31 @@
 
 \chapter{Differentialrechnung}\label{chap:diff}
 
-TODO
+Es gibt sehr viele -- in erster Linie mathematische -- Gründe, warum die Steigung einer Funktion eine interessante und wissenswerte Information darstellt. Doch sehen wir uns zuerst eine Situation an, die in unserem täglichen Leben vorkommt.
+
+Der Tacho eines Autos ist etwas, dem wir ständig begegnen. Sei es als Autofahrer oder als Beifahrer, oder gar als Fahrradfahrer. Der Tacho ist ein Messinstrument und gibt die aktuelle Geschwindigkeit des Fahrzeugs an. Geschwindigkeit ist ein physikalischer Begriff. Physiker verwenden Mathematik zur Beschreibung ihrer Beobachtungen und zur Entwicklung ihrer Theorien. Sie haben zum Beispiel herausgefunden, dass wenn man den Weg, den ein Fahrzeug zurücklegt, durch die Zeit teilt, die es dafür brauchte, erhält man ein Maß für die Geschwindigkeit, bzw. ein Maß für die Änderung der zurückgelegten Strecke. Diese recht grobe Angabe stellt nur die Durchschnittsgeschwindigkeit dar. Aber man ist natürlich auch an der Geschwindigkeit interessiert, die das Fahrzeug zu jedem Zeitpunkt inne hat. Teilen wir die Strecke in $n$ gleich große Teile und messen die Zeit, die das Fahrzeug für jeden einzelnen dieser Abschnitte brauchte. Dann bekommen wir die Durchschnittsgeschwindigkeit auf jedem dieser Bereiche. Machen wir nun die Bereiche, und damit auch die Zeitabschnitte, immer kleiner ($n \rightarrow \infty$), dann nähert sich der Wert, den wir in den einzelnen Bereichen messen, immer mehr der zu diesem Zeitpunkt gefahrenen Geschwindigkeit. 
+
+Daraus folgt ein uns völlig bekannter Zusammenhang: Nämlich, dass der Fahrer über die Geschwindigkeit, direkte Kontrolle über die zurückgelegten Strecke besitzt. Fährt er schneller, so legt er in gleicher Zeit mehr Strecke zurück. 
+
+Eine ähnlich bekannte Situation betrifft die Beschleunigung. Werden wir in die Sitze des Autos gedrückt, so gibt der Fahrer Gas und das Fahrzeug fährt schneller. Werden wir in den Gurt gedrückt, bremst der Fahrer und das Fahrzeug wird langsamer. Die Beschleunigung ist also ein Maß für die Änderung der Geschwindigkeit -- sprich, die Beschleunigung ist die erste Ableitung der Geschwindigkeit, genauso wie die zweite Ableitung der zurückgelegten Strecke.
 
 
 \section{Überlegungen}
 
-Das langfristige Ziel dieses Kapitels ist es, zu einer Funktion $f$, die noch zu bestimmenden Anforderungen genügt, eine Funktion $f'$ zu bestimmen, die an jeder Stelle den Wert der Steigung von $f$ annimmt. 
 
-Es sei im folgenden $f : \mathbb{R} \longrightarrow \mathbb{R}$ immer eine Funktion. Wir betrachten eine Stelle $a\in \mathbb{R}$ und geben ein $0<\epsilon < 1$ vor. Die Sehne von $f$ zwischen Punkt $a$ und $a+\epsilon$ ist
+Die von uns im Folgenden betrachteten Funktionen müssen bestimmten Voraussetzungen genügen, damit sie für das Differenzieren und Integrieren in Betracht kommen. Sie müssen auf eine gewisse Weise "`harmlos"' sein. Die folgenden Definitionen sind als "`Harmlosigkeits"'-Eigenschaften zu verstehen.
+
+\begin{definition}
+Eine Funktion $f : A \subseteq \mathbb{R} \longrightarrow \mathbb{R}$ heißt \textsl{dehnungsbeschränkt}, wenn es zu beliebigen Werten $x,y\in A$ eine Konstante $K$ gibt, so dass
 \[
-S = \frac{f(a+\epsilon)-f(a)}{\epsilon}
+\left\vert f(x)-f(y)  \right\vert \le K\cdot \vert x-y \vert
 \]
-Wir suchen nun eine Funktion, die zumindest an der Stelle $a$ den Funktionswert $S$ annimmt. Die einfachsten Funktionen, die wir kennen, sind die linearen Funktionen.
+oder auch in dieser Form dargestellt:
+\[
+\left\vert \frac{f(x)-f(y)}{x-y}  \right\vert \le K
+\]
+\end{definition}
 
-
-
-\section{Stetigkeit}
 
 
 
