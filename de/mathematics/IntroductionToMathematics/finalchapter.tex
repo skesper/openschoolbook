@@ -1,0 +1,117 @@
+
+\chapter{Schlussbemerkungen}
+
+\section{Beweise}
+
+Wir haben in den diversen Kapiteln des Buches den einen oder anderen Beweis unterschlagen, weil seine Beweisführung an der Stelle, wo er aufgetaucht war, noch zu unverständlich gewesen wäre. Dies soll hier nun nachgeholt werden.
+
+
+\subsection{Es gibt unendlich viele Primzahlen}\label{chap:proofprime}
+Wir hatten in Abschnitt \ref{sec:infty} beweisen wollen, dass es unendlich viele Primzahlen gibt. Der Beweis brauchte noch einige Vorkenntnisse, die wir hier nun voraussetzen können und den Beweis angehen. Zuvor brauchen wir noch ein
+
+\begin{lemma}{(Lemma von Bézout\footnote{\textbf{Étienne Bézout}, französischer Mathematiker. *31. März 1730; \ding{61}27. September 1783 in Basses-Loges})}\index{Lemma von Bézout}
+Der größte gemeinsame Teiler $\text{ggT}(a,b) $ zweier ganzer Zahlen $a$ und $b$, von denen mindestens eine ungleich 0 ist, kann als Linearkombination von $a$ und $b$ mit ganzzahligen Koeffizienten $s,t\in \mathbb{Z}$ dargestellt werden. 
+\[
+\text{ggT}(a,b) = s\cdot a+t\cdot b
+\]
+Weiter gilt, dass wenn $a$ und $b$ teilerfremd sind, existieren $s,t \in \mathbb{Z}$, sodass
+\begin{equation}\label{eq:1}
+1 = s\cdot a+t\cdot b
+\end{equation}
+\end{lemma}
+\begin{proof}
+Es sei $d$ die kleinste aller Liniearkombinationen von $a$ und $b$, die größer als null ist:
+\[
+d = \min_x \left\lbrace x = s\cdot a+t\cdot b \mid x>0; s,t\in \mathbb{Z} \right\rbrace
+\]
+Dafür müssen nur die $s,t\in \mathbb{Z}$ entsprechend gewählt werden. Da $\text{ggT}(a,b)$ sowohl $a$ als auch $b$ teilt, teilt $\text{ggT}(a,b)$ auch $d$. Wäre $d=1$, wäre der Beweis fertig und Gleichung (\ref{eq:1}) gilt. Kümmern wir uns also um den Fall $d>1$. 
+
+Die Division mit Rest liefert uns:
+\[
+a = q\cdot d+r
+\]
+wobei $0\le r < d$. Wir setzen für $d$ die Linearkombination ein
+\[
+a = q\cdot(s\cdot a+t\cdot b)+r
+\]
+und formen nach $r$ um
+\[
+r = (1-q\cdot s)\cdot a+(-q\cdot t)\cdot b
+\]
+Wegen der Minimalität von $d$ muss $r=0$ sein. Also ist $d$ ein Teiler von $a$, also auch von $b$. Daraus folgt, dass $d\le \text{ggT}(a,b)$. Vorher hatten wir gesehen, dass $\text{ggT}(a,b)$ ein Teiler von $d$ ist, also gilt $d=\text{ggT}(a,b)$.
+\qed
+\end{proof}
+
+Das Lemma von Bézout stellt eine wichtige Erkenntnis in der Mathematik und im Besonderen der Zahlentheorie dar. Wir werden es hier verwenden, um das Lemma von Euklid zu beweisen:
+
+\begin{lemma}{(Lemma von Euklid\footnote{\textbf{Euklid}, griechischer Mathematiker, hat vermutlich im 3. Jahrhundert v. Chr. in Alexandria gelebt.})}\index{Lemma von Euklid}
+Teilt eine Primzahl $p$ ein Produkt $ab$, so auch einen (oder beide) der Faktoren.
+\end{lemma}
+\begin{proof}
+Es seien $a,b \in \mathbb{Z}$ beliebig und $p$ eine Primzahl. Würde die Primzahl $p$ das Produkt $ab$ teilen, aber nicht den Faktor $a$, dann ist zu zeigen, dass $p$ ein Teiler von $b$ ist. Aus der Annahme folgt, dass $a$ und $p$ teilerfremd sind. Mit dem Lemma von Bézout existieren dann zwei ganze Zahlen, sodass $1=sp+ta$ gilt. Multipliziert man diese Gleichung mit $b$ erhält man
+\[
+p(sb)+(ab)t=b
+\]
+Da $p$ ein Teiler von $ab$ ist, existiert ein $c\in \mathbb{Z}$ mit $ab=cp$. Also ist
+\[
+p(sb+ct) = b
+\]
+Damit ist $p$ ein Teiler von $b$.
+\qed
+\end{proof}
+
+\begin{lemma}\label{lem:prim}
+Jede natürliche Zahl $>1$ hat eine eindeutige Zerlegung in Primfaktoren.
+\end{lemma}
+\begin{proof}
+Der Beweis geschieht in zwei Schritten. Zunächst wird die Existenz der Zerlegung bewiesen und danach ihre Eindeutigkeit.
+
+\noindent\textsl{Schritt 1:}
+Für jede Primzahl $p$ ist die Behauptung trivialerweise richtig, denn sie ist ihre eigene Primfaktorzerlegung. 
+Wir nehmen an, dass es Zahlen gibt, die sich nicht in Primfaktoren zerlegen lassen. Es gibt eine kleinste solche Zahl $n$. Da $n>1$ und keine Primzahl ist, gibt es Teiler von $n=ab$. Für beide gilt $1<a,b<n$. Da $n$ die kleinste Zahl war, die keine Primfaktorzerlegung hat, gibt es Primfaktorzerlegungen für $a$ und $b$. Das bedeutet, $a = \Pi p_i$ und $b=\Pi q_j$ mit $p_i,q_j$ Primzahlen. Damit ist aber auch $\Pi p_i \cdot \Pi q_j$ eine Primfaktorzerlegung von $n$, was der Behauptung widerspricht, dass es Zahlen gäbe, die sich nicht in Primfaktoren zerlegen lassen.
+
+\noindent\textsl{Schritt 2:}
+Wir nehmen an, es gibt Zahlen mit unterschiedlichen Primfaktorzerlegungen. Es sei $n=p_1 p_2 \dots p_n = q_1 q_2 \dots q_m$ die kleinste dieser Zahlen mit zwei Zerlegungen in Primfaktoren. Die $p_i$ und $q_j$ müssen alle verschieden sein, denn gäbe es ein $p_k=q_l$, so teilte diese Zahl $n$ und $n/p_k$ hätte wiederum zwei unterschiedliche Zerlegungen, was gegen die Annahme verstößt, dass $n$ die kleinste solche Zahl ist.
+Es sei 
+\[
+n= p_i\cdot \prod_{k\ne i} p_k= q_j\cdot \prod_{k\ne j} q_k
+\]
+Das Lemma von Euklid besagt nun, dass wenn eine Primzahl ein Produkt teilt ($p_i$ teilt $n$ und somit auch $q_j\cdot \prod_{k\ne j} q_k$), dann auch einen seiner Faktoren. $q_j$ kann nicht durch $p_i$ geteilt werden, da sonst $q_j=p_i$ wäre, entgegen der Annahme. Also teilt $p_i$ den Rest $\prod_{k\ne j} q_k$. Das würde aber bedeuten, dass $p_i$ im $\prod_{k\ne j} q_k$ Produkt enthalten wäre, und das widerspricht wieder der Annahme, dass die Primfaktoren alle unterschiedlich sind. Daraus folgt, dass es keine unterschiedlichen Zerlegungen gibt.
+
+Mit den Schritten 1 und 2 ist nun bewiesen, dass die Zerlegung einer natürlichen Zahl $>1$ in Primfaktoren existiert und eindeutig ist. 
+\qed
+\end{proof}
+
+Nach diesen ganzen Vorbereitungen kommen wir nun endlich zu dem, was wir eigentlich beweisen wollten, nämlich:
+
+\begin{theorem}
+Es gibt unendlich viele Primzahlen.
+\end{theorem}
+\begin{proof}
+Der Beweis wird durch einen Widerspruch geführt. Wir behaupten, dass es nur endlich viele Primzahlen gibt. Wenn dem so wäre, dann gäbe es eine größte Primzahl $N$. Sei
+
+\[ M = 2\cdot 3\cdot 5\dots \cdot N +1 \]
+eine Zahl gebildet aus dem Produkt aller Primzahlen (es gibt ja nur endlich viele) addiert mit 1.
+
+Wir wissen, dass $M$ eine eindeutige Zerlegung in Primfaktoren besitzt, nach Lemma \ref{lem:prim}. Da aber $M$ bereits aus dem Produkt aller bekannten Primzahlen erzeugt wurde, und somit nicht durch eine davon teilbar ist (weil M um 1 größer ist, als das Produkt aller Primzahlen), bleiben nur zwei Möglichkeiten: 
+
+\begin{description}
+\item[a)] $M$ ist selbst eine Primzahl, es ist aber $M>N$, was gegen die Voraussetzung verstößt, dass $N$ die größte Primzahl ist. Oder
+\item[b)] Die Zerlegung von $M$ in Primfaktoren enthält eine Primzahl, die größer ist, als $N$, was wiederum gegen die Voraussetzung verstößt.
+\end{description}
+
+Also ist die Behauptung, dass es nur endlich viele Primzahlen gibt, falsch und somit stimmt die eigentliche Aussage, die wir beweisen wollten, nämlich dass es unendlich viele Primzahlen gibt. 
+
+\qed
+\end{proof}
+
+
+\section{Historische Anmerkungen}
+
+\subsection{Mathematiker im Nationalsozialismus}
+
+TODO:
+
+Liste der verfolgten Mathematiker. Aufstellung der Themen mit denen sie sich beschäftigten im Vergleich zu dem, womit sich die Nazis beschäftigten.
+
+Hausdorffs Selbstmord.

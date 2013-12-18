@@ -71,7 +71,7 @@ Er erkannte, dass diese Gleichung keine Lösung hat, fügte aber die Bemerkung h
 In diesem Sinne hatte Cardano bereits den ersten Schritt in die richtige Richtung getan. Doch dauerte es noch eine ganze Weile, bis komplexe Zahlen sich durchsetzten.
 
 
-\section{Unendlich $\infty$}
+\section{Unendlich $\infty$}\label{sec:infty}
 
 \index{Unendlich $\infty$}
 Der Begriff \textsl{Unendlich} bezeichnet keine Zahl, sondern im Grunde eher einen Zustand. Unendlich ist etwas -- wie der Begriff nahe legt --, wenn es kein Ende besitzt. So haben zum Beispiel die natürlichen Zahlen kein oberes Ende:
@@ -123,21 +123,7 @@ Eine der erstaunlichsten und gleichzeitig verwirrendsten Eigenschaften von unend
 5. & 11 \\
 \dots & \dots
 \end{eqnarray*}
-Dass es unendlich viele Primzahlen gibt, muss bewiesen werden, was wir hier tun wollen, auch wenn die Beweisführung erst später erklärt wird. Es wird dabei vorausgesetzt, dass jede Zahl, die größer als 1 ist und keine Primzahl, eine eindeutige Zerlegung in Primfaktoren besitzt. Dies müsste natürlich vorher auch bewiesen werden, aber die Beweise würden hier zu weit führen. Daher müssen wir uns darauf verlassen, dass dies richtig ist. 
-
-\begin{lemma}
-Es gibt unendlich viele Primzahlen.
-\end{lemma}
-\begin{proof}
-Der Beweis wird durch einen Widerspruch geführt. Behauptung: Es gibt nur endlich viele Primzahlen. Wenn dem so wäre, dann gäbe es eine größte Primzahl $N$. Sei
-
-\[ M = 2\cdot 3\cdot 5\dots \cdot N +1 \]
-eine Zahl gebildet aus dem Produkt aller Primzahlen (es gibt ja nur endlich viele) addiert mit 1.
-
-Wir wissen, dass $M$ eine eindeutige Zerlegung in Primfaktoren besitzt. Da aber $M$ bereits aus dem Produkt aller bekannten Primzahlen erzeugt wurde, und somit nicht durch eine davon teilbar ist (weil M um 1 größer ist, als das Produkt aller Primzahlen), bleiben nur zwei Möglichkeiten: a) $M$ ist selbst eine Primzahl, es ist aber $M>N$, was gegen die Voraussetzung verstößt, dass $N$ die größte Primzahl ist. Oder b) Die Zerlegung von $M$ in Primfaktoren enthält eine Primzahl, die größer ist, als $N$, was wiederum gegen die Voraussetzung verstößt. Also ist die Behauptung, dass es nur endlich viele Primzahlen gibt, falsch und somit stimmt die eigentliche Aussage, die wir beweisen wollten, nämlich dass es unendlich viele Primzahlen gibt. 
-
-\qed
-\end{proof}
+Dass es unendlich viele Primzahlen gibt, muss bewiesen werden, nur leider haben wir noch nicht genug Kenntnisse für den Beweis. Daher wird er nachgeliefert in Abschnitt \ref{chap:proofprime}. 
 
 Somit hat die Aufzählung der Primzahlen kein Ende. Sie ist also in unserem vorher beschriebenen Sinne "`unendlich"'. Wenn also die Aufzählung unendlich ist, dann kann jeder natürlichen Zahl eine Primzahl zugewiesen werden. Daraus folgt, dass es genauso viele natürliche Zahlen gibt, wie es Primzahlen gibt. 
 
