@@ -39,6 +39,7 @@ und formen nach $r$ um
 r = (1-q\cdot s)\cdot a+(-q\cdot t)\cdot b
 \]
 Wegen der Minimalität von $d$ muss $r=0$ sein. Also ist $d$ ein Teiler von $a$, also auch von $b$. Daraus folgt, dass $d\le \text{ggT}(a,b)$. Vorher hatten wir gesehen, dass $\text{ggT}(a,b)$ ein Teiler von $d$ ist, also gilt $d=\text{ggT}(a,b)$.
+
 \qed
 \end{proof}
 
@@ -57,6 +58,7 @@ Da $p$ ein Teiler von $ab$ ist, existiert ein $c\in \mathbb{Z}$ mit $ab=cp$. Als
 p(sb+ct) = b
 \]
 Damit ist $p$ ein Teiler von $b$.
+
 \qed
 \end{proof}
 
@@ -79,6 +81,7 @@ n= p_i\cdot \prod_{k\ne i} p_k= q_j\cdot \prod_{k\ne j} q_k
 Das Lemma von Euklid besagt nun, dass wenn eine Primzahl ein Produkt teilt ($p_i$ teilt $n$ und somit auch $q_j\cdot \prod_{k\ne j} q_k$), dann auch einen seiner Faktoren. $q_j$ kann nicht durch $p_i$ geteilt werden, da sonst $q_j=p_i$ wäre, entgegen der Annahme. Also teilt $p_i$ den Rest $\prod_{k\ne j} q_k$. Das würde aber bedeuten, dass $p_i$ im $\prod_{k\ne j} q_k$ Produkt enthalten wäre, und das widerspricht wieder der Annahme, dass die Primfaktoren alle unterschiedlich sind. Daraus folgt, dass es keine unterschiedlichen Zerlegungen gibt.
 
 Mit den Schritten 1 und 2 ist nun bewiesen, dass die Zerlegung einer natürlichen Zahl $>1$ in Primfaktoren existiert und eindeutig ist. 
+
 \qed
 \end{proof}
 
@@ -97,7 +100,7 @@ Wir wissen, dass $M$ eine eindeutige Zerlegung in Primfaktoren besitzt, nach Lem
 
 \begin{description}
 \item[a)] $M$ ist selbst eine Primzahl, es ist aber $M>N$, was gegen die Voraussetzung verstößt, dass $N$ die größte Primzahl ist. Oder
-\item[b)] Die Zerlegung von $M$ in Primfaktoren enthält eine Primzahl, die größer ist, als $N$, was wiederum gegen die Voraussetzung verstößt.
+\item[b)] die Zerlegung von $M$ in Primfaktoren enthält eine Primzahl, die größer ist, als $N$, was wiederum gegen die Voraussetzung verstößt.
 \end{description}
 
 Also ist die Behauptung, dass es nur endlich viele Primzahlen gibt, falsch und somit stimmt die eigentliche Aussage, die wir beweisen wollten, nämlich dass es unendlich viele Primzahlen gibt. 

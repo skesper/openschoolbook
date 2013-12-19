@@ -1,0 +1,80 @@
+
+\chapter{Trigonometrie}
+
+\section{Grundlegende Begriffe}
+
+Die Trigonometrie beschäftigt sich in erster Linie mit Dreiecken in der Ebene. Wie in Zeichnung \ref{fig:triangle} dargestellt, bezeichnen wir die Eckpunkte eines Dreiecks zunächst mit großen Buchstaben $A,B,C$. Die einem Punkt gegenüber befindliche Gerade bezeichnen wir analog dem gegenüberliegenden Punkt mit den Kleinbuchstaben $a,b,c$. 
+
+\begin{figure}\label{fig:triangle}
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,x=2.0cm,y=2.0cm]
+    \clip(-1,-0.25) rectangle (5.25,3);
+    \draw (0,0) coordinate (A);
+    \draw (5,0) coordinate (B);
+    \draw (3.2,2.4) coordinate (C);
+    \draw (A)--(B)--(C)--(A);
+    \filldraw  (A) circle (1.5pt) node[left] {$A$};
+    \filldraw  (B) circle (1.5pt) node[right] {$B$};
+    \filldraw  (C) circle (1.5pt) node[above] {$C$};
+    \draw [shift={(A)},color=colWin,fill=colWin,fill opacity=0.1] (0,0) -- (0:0.5)
+        arc (0:36.8699:0.5) -- cycle;
+    \draw [shift={(B)},color=colWin,fill=colWin,fill opacity=0.1] (0,0) -- (126.8699:0.5)
+        arc (126.8699:180:0.5) -- cycle;
+%    \draw [shift={(C)},color=colWin,fill=colWin,fill opacity=0.1] (0,0) -- (-143.1301:0.5)
+%        arc (-143.1301:-90:0.5) -- cycle;
+    \draw [shift={(C)},color=colWin,fill=colWin,fill opacity=0.1] (0,0) -- (-143.1301:0.5)
+        arc (-143.1301:-53.1301:0.5) -- cycle;
+    \draw [color=black] (0.35,0.1) node {$\alpha$};
+    \draw [color=black] (4.64,0.15) node {$\beta$};
+    \draw [color=black] (3.15,2.05) node {$\gamma$};
+    \draw (4.1,1.2) node[rotate=-53.1301, above] {$a$};
+    \draw (1.6,1.2) node[rotate=36.8698,above] {$b$};
+    \draw (2.5,0) node[below] {$c$};
+\end{tikzpicture}
+\caption[Dreieck]{Dreieck}
+\end{center}
+\end{figure}
+
+Den Punkten anliegende Winkel bezeichnen wir mit den Griechischen Buchstaben $\alpha, \beta, \gamma$ in den Ecken des Dreiecks $A,B,C$.
+
+
+\section{Kreis}
+
+Der Zusammenhang mit dieser Begriffe wird in einem Kreisdiagram\footnote{Diese Zeichnung basiert auf einem Beispiel aus Till Tantau's ausgezeichneter Dokumentation zu seiner \LaTeX \ Bibliothek Ti$kZ$ } in Abbildung \ref{fig:circle} näher dargestellt. 
+
+\begin{figure}\label{fig:circle}
+\begin{center}
+\begin{tikzpicture}
+[scale=3,line cap=round,
+% Styles
+axes/.style=,
+important line/.style={very thick},
+information text/.style={rounded corners,fill=red!10,inner sep=1ex}]
+% Local definitions
+\def\costhirty{0.8660256}
+\draw (0,0) circle (1cm);
+\begin{scope}[axes]
+\draw[->] (-1.5,0) -- (1.5,0) node[right] {$x$} coordinate(x axis);
+\draw[->] (0,-1.5) -- (0,1.5) node[above] {$y$} coordinate(y axis);
+\foreach \x/\xtext in {-1, -.5/-\frac{1}{2}, 1}
+\draw[xshift=\x cm] (0pt,1pt) -- (0pt,-1pt) node[below,fill=white] {$\xtext$};
+\foreach \y/\ytext in {-1, -.5/-\frac{1}{2}, .5/\frac{1}{2}, 1}
+\draw[yshift=\y cm] (1pt,0pt) -- (-1pt,0pt) node[left,fill=white] {$\ytext$};
+\end{scope}
+\filldraw[fill=black!20] (0,0) -- (3mm,0pt) arc(0:30:3mm);
+\draw (15:2mm) node[black] {$\alpha$};
+\draw[important line,black]
+(30:1cm) -- node[left=1pt,fill=white] {$\sin \alpha$} (30:1cm |- x axis);
+\draw[important line,black]
+(30:1cm |- x axis) -- node[below=2pt,fill=white] {$\cos \alpha$} (0,0);
+\path [name path=upward line] (1,0) -- (1,1);
+\path [name path=sloped line] (0,0) -- (30:1.5cm);
+\draw [name intersections={of=upward line and sloped line, by=t}]
+[very thick,black] (1,0) -- node [right=1pt,fill=white]
+{$\displaystyle \tan \alpha \color{black}=
+\frac{{\sin \alpha}}{\cos \alpha}$} (t);
+\draw (0,0) -- (t);
+\end{tikzpicture}
+\caption[Zusammenhang trigonometrischer Begriffe]{Darstellung des Zusammenhangs trigonometrischer Begriffe}
+\end{center}
+\end{figure}

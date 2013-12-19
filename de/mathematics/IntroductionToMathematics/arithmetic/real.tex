@@ -78,7 +78,23 @@ zu den rationalen Zahlen zählen soll, der Bruch
 aber nicht, sondern nur zur Äquivalenzklasse von $\frac{3}{11}$.
 \end{svgraybox}
 
-\subsubsection{Dezimalzahlen}
+\subsection{Weitere Begriffe}
+
+\begin{definition}
+Es seien Zähler $Z$ und Nenner $N$ eines Bruchs durch die selbe Zahl $a$ teilbar. Das bedeutet, $Z=a\cdot z$ sowie $N=a\cdot n$ mit $a,z,n\in \mathbb{Z}$. Also gilt:
+\[
+\frac{Z}{N} = \frac{a\cdot z}{a\cdot n} = \frac{a}{a}\cdot \frac{z}{n} = 1\cdot \frac{z}{n} = \frac{z}{n}
+\]
+In diesem Fall sagt man, dass man den Bruch um $a$ \textsl{kürzen}\index{kürzen} kann.
+\end{definition}
+
+Des Weiteren ist mit $Z$ und $N$ wie oben
+\[
+\frac{Z}{N} = \frac{\frac{Z}{a}}{\frac{N}{a}} = \frac{Z}{a\cdot \frac{N}{a}} = \frac{Z \cdot a}{a\cdot N}
+\]
+Das bedeutet, ist im Zähler ein Bruch, so kann dessen Nenner zum Nenner multipliziert werden. Steht im Nenner ein Bruch, so wird dessen Nenner zum Zähler multipliziert. 
+
+\subsection{Dezimalzahlen}
 
 \begin{definition}
 Eine \textsl{Dezimalzahl} ist eine Zahl der folgenden Form:\index{Dezimalzahl}
@@ -175,6 +191,37 @@ $\mathbb{R}, e, \pi, \dots $
 \section{Intervalle}
 
 TODO
+
+\section{Betrag und Vorzeichen}
+
+Jede Zahl in $r\in \mathbb{R}_+$ hat eine Entsprechung im Negativen $-r$. Das führt uns zu der Überlegung, dass der Wert einer Zahl unabhängig von ihrem Vorzeichen von Interesse sein könnte.
+
+\begin{definition}
+Der \textsl{Betrag}, oder \textsl{Absolutbetrag} ist eine Funktion $\vert . \vert : \mathbb{R} \longrightarrow \mathbb{R}_+$
+\begin{equation}
+\vert r \vert = \begin{cases}
+r & \text{falls } r\ge 0 \\
+-r & \text{falls } r<0
+\end{cases}
+\end{equation}
+Da $\mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R}$ sind, gilt diese Definition auch für die ganzen und rationalen Zahlen. Für die natürlichen Zahlen ist sie sinnlos, da es keine negativen natürlichen Zahlen gibt. Aber da $\mathbb{N} \subset \mathbb{Z}$, ist trivialer Weise $\vert n \vert = n$ für alle $n\in \mathbb{N}$.
+\end{definition}
+
+Das meist weggelassene $+$ vor den Zahlen, sowie das $-$ wird als \textsl{Vorzeichen} bezeichnet. Die folgende Definition ist daher naheliegend, wenn auch zu diesem Stadium noch nicht weiter von Interesse:
+
+\begin{definition}
+Die Funktion 
+\[
+\text{sign} : \mathbb{R} \longrightarrow \lbrace -1,1\rbrace
+\]
+bestimmt das Vorzeichen für jede reelle Zahl. Sei $x \in \mathbb{R}$
+\begin{equation}
+\text{sign}(x) = \begin{cases}
+1 & \text{falls } x\ge 0 \\
+-1 & \text{falls } x < 0
+\end{cases}
+\end{equation}
+\end{definition}
 
 \section{Aufgaben}
 TODO

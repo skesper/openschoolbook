@@ -14,32 +14,32 @@ Eine \textsl{Folge} ist eine -- wie der Name suggeriert -- Abfolge von Mathemati
 \]
 \end{definition}
 
-Folgen sind keine Mengen, in Folgen können Elemente mehrfach vorkommen, an unterschiedlichen Positionen in der Abfolge der Elemente! 
+Folgen sind keine Mengen, in Folgen können Elemente mehrfach vorkommen, an unterschiedlichen Positionen in der Abfolge der Elemente! Des Weiteren sind die Elemente von Folgen nicht notwendigerweise sortiert. Es gibt monoton steigende oder fallende Folgen. In diesen gelten Vergleichsoperationen. Aber allgemein ist dies nicht von den Elementen einer Folge zu erwarten und es sollte auch nicht davon ausgegangen werden. Das einzig entscheidende Ordnungskriterium ist der Index. Ist $i<j$, dann ist immer $a_i$ in der Folge \textbf{vor} $a_j$.
 
-Folgen haben unendlich viele Elemente. Sie sind mit den natürlichen Zahlen abzählbar unendlich (siehe Definition \ref{abzaehlbar}).
+Es gibt endliche Folgen, doch uns interessieren hier nur Folgen mit unendlich vielen Elementen. Diese sind mit den natürlichen Zahlen abzählbar unendlich (siehe Definition \ref{abzaehlbar}).
 
 \subsection{Charakterisierung}
 
 \begin{definition}
-Eine Folge heißt \textsl{monoton steigend}, wenn für alle $i\in \mathbb{N}$ gilt $a_i\le a_{i+1}$. Sie heißt \textsl{streng monoton steigend}, wenn $a_i < a_{i+1}$ gilt. Äquivalent heißt sie \textsl{monoton fallend}, wenn $a_i\ge a_{i+1}$ gilt, bzw. \textsl{streng monoton fallend}, wenn $a_i > a_{i+1}$ gilt.
+Eine Folge heißt \textsl{monoton steigend}\index{monoton steigend}, wenn für alle $i\in \mathbb{N}$ gilt $a_i\le a_{i+1}$. Sie heißt \textsl{streng monoton steigend}, wenn $a_i < a_{i+1}$ gilt. Äquivalent heißt sie \textsl{monoton fallend}\index{monoton fallend}, wenn $a_i\ge a_{i+1}$ gilt, bzw. \textsl{streng monoton fallend}, wenn $a_i > a_{i+1}$ gilt.
 \end{definition}
 
-Monotonie kann auch erst ab einem gewissen $n\in \mathbb{N}, n>1$ nachweisbar sein. Die Folge wird dann als monoton ab dem Folgenglied $n$ bezeichnet.
+Monotonie\index{Monotonie} kann auch erst ab einem gewissen $n\in \mathbb{N}, n>1$ nachweisbar sein. Die Folge wird dann als monoton ab dem Folgenglied $n$ bezeichnet.
 
 \begin{definition}
-Eine reelle Folge ($a_i \in \mathbb{R}$) heißt \textsl{beschränkt}, wenn es ein $S\in \mathbb{R}$ gibt, sodass für alle $i\in \mathbb{N}$, $a_i \le S$ gilt. $S$ ist eine \textsl{obere Schranke} der Folge. Gibt es eine kleinste obere Schranke $S'$, so wird diese \textsl{Supremum} genannt. 
+Eine reelle Folge ($a_i \in \mathbb{R}$) heißt \textsl{beschränkt}, wenn es ein $S\in \mathbb{R}$ gibt, sodass für alle $i\in \mathbb{N}$, $a_i \le S$ gilt. $S$ ist eine \textsl{obere Schranke}\index{Schranke, obere} der Folge. Gibt es eine kleinste obere Schranke $S'$, so wird diese \textsl{Supremum}\index{Supremum} genannt. 
 
-Gibt es ein $I\in \mathbb{R}$ mit $a_i \ge I$, so wird $I$ \textsl{untere Schranke} genannt. Die größte untere Schranke wird \textsl{Infimum} genannt.
+Gibt es ein $I\in \mathbb{R}$ mit $a_i \ge I$, so wird $I$ \textsl{untere Schranke}\index{Schranke, untere} genannt. Die größte untere Schranke wird \textsl{Infimum}\index{Infimum} genannt.
 \end{definition}
 
 \begin{definition}
-Eine Folge, deren Elemente alle identisch sind, wird \textsl{konstante Folge} genannt. Eine Folge, deren Elemente abwechselnd positiv und negativ sind, wird \textsl{alternierend} genannt. Eine Folge deren Elemente sich immer weiter der 0 annähern, wird \textsl{Nullfolge} genannt.
+Eine Folge, deren Elemente alle identisch sind, wird \textsl{konstante Folge}\index{konstante Folge} genannt. Eine Folge, deren Elemente abwechselnd positiv und negativ sind, wird \textsl{alternierend}\index{alternierend} genannt. Eine Folge deren Elemente sich immer weiter der 0 annähern, wird \textsl{Null-Folge}\index{Null-Folge} genannt.
 \end{definition}
 
 \subsection{Konvergenz}
 
 \begin{definition}\label{def:lim}
-Es sei $(a_i)$ eine Folge in den reellen Zahlen und $a\in \mathbb{R}$ eine \textsl{Grenzwert} genannte Zahl. Weiterhin sei $\epsilon>0$ eine beliebige reelle Zahl. Wenn es für jeden solchen Wert $\epsilon$ einen Folgenindex $n_\epsilon \in \mathbb{N}$ gibt, sodass $\vert a_i -a\vert <\epsilon$ für alle $i\ge n_\epsilon$ gilt, so heißt die Folge \textsl{kovergent}. Des Weiteren konvergiert diese Folge gegen $a$. 
+Es sei $(a_i)$ eine Folge in den reellen Zahlen und $a\in \mathbb{R}$ eine Zahl. Weiterhin sei $\epsilon>0$ eine beliebige reelle Zahl. Wenn es für jeden solchen Wert $\epsilon$ einen Folgenindex $n_\epsilon \in \mathbb{N}$ gibt, sodass $\vert a_i -a\vert <\epsilon$ für alle $i\ge n_\epsilon$ gilt, so heißt die Folge \textsl{kovergent}\index{konvergent}. Ist die Folge konvergent gegen $a$, so nennt man $a$ den \textsl{Grenzwert}\index{Grenzwert} der Folge $a_i$.
 \end{definition}
 
 Man sollte sich das $\epsilon$ als eine sehr kleine Zahl vorstellen. Für große Zahlen sind die Bedingungen der Konvergenz recht einfach zu erfüllen. Schwierig wird es erst, wenn $\epsilon\ll 1$ ist. ($\ll$ bedeutet "`wesentlich kleiner als"').
@@ -47,7 +47,7 @@ Man sollte sich das $\epsilon$ als eine sehr kleine Zahl vorstellen. Für große
 Die oben dargestellte Definition für Konvergenz beruht darauf, dass der Punkt $a$ bereits bekannt ist. Was ist aber, wenn wir $a$ nicht kennen? Gibt es dann auch ein Kriterium für die Konvergenz?
 
 \begin{definition}
-Es sei $(a_i)$ eine Folge. Es sei $\epsilon \ll 1$. Wenn es zu jedem $\epsilon$ ein $N\in \mathbb{N}$ gibt, sodass für $n,m > N$ gilt $\vert a_n -a_m \vert <\epsilon$, so ist auch diese Folge konvergent. Bemerkenswert dabei ist, dass wir nur die Abstände der Folgenelemente dafür betrachten und keinen Grenzwert. Eine solche Folge wird \textsl{Cauchy-Folge}\footnote{benannt nach dem französischen Mathematiker \textbf{Augustin-Louis Cauchy}, *21. August 1789, \ding{61}23. Mai 1857 in Sceaux} genannt.
+Es sei $(a_i)$ eine Folge. Es sei $\epsilon \ll 1$. Wenn es zu jedem $\epsilon$ ein $N_\epsilon \in \mathbb{N}$ gibt, sodass für $n,m > N_\epsilon $ gilt $\vert a_n -a_m \vert <\epsilon$, so ist auch diese Folge konvergent. Bemerkenswert dabei ist, dass wir nur die Abstände der Folgenelemente dafür betrachten und keinen Grenzwert. Eine solche Folge wird \textsl{Cauchy-Folge}\footnote{benannt nach dem französischen Mathematiker \textbf{Augustin-Louis Cauchy}, *21. August 1789, \ding{61}23. Mai 1857 in Sceaux}\index{Cauchy-Folge} genannt.
 \end{definition}
 
 Cauchy-Folgen haben die positive Eigenschaft, dass man ihre Konvergenz nachweisen kann, ohne den Grenzwert zu kennen. Z.B. in den rationalen Zahlen $\mathbb{Q}$ gibt es Cauchy-Folgen, die keinen Grenzwert besitzen, weil dieser in den irrationalen Zahlen liegt.
@@ -62,7 +62,7 @@ Zu einer Folge $a_i$ heißt die Menge $\lbrace a_i \rbrace$ die \textsl{Menge de
 In Definition \ref{def:lim} wurde bereits der Begriff \textsl{Grenzwert} verwendet. Hier soll er noch einmal formal dargestellt werden. 
 
 \begin{definition}
-Sei $(a_i)$ eine Folge in $A\subseteq \mathbb{R}$. Wenn die Folge gegen einen Wert $a\in A$ konvergiert, so heißt $a$ \textsl{Grenzwert}, oder auch \textsl{Limes}\footnote{Limes lat. "`Grenzweg"'} der Folge $(a_i)$. Dass $(a_i)$ den Grenzwert $a$ besitzt, wird wie folgt ausgedrückt:
+Sei $(a_i)$ eine Folge in $A\subseteq \mathbb{R}$. Wenn die Folge gegen einen Wert $a\in A$ konvergiert, so heißt $a$ \textsl{Grenzwert}, oder auch \textsl{Limes}\footnote{Limes lat. "`Grenzweg"'}\index{Limes}\index{lim} der Folge $(a_i)$. Dass $(a_i)$ den Grenzwert $a$ besitzt, wird wie folgt ausgedrückt:
 \[
 \lim_{n\rightarrow \infty} a_n = a
 \]
@@ -71,13 +71,13 @@ Sei $(a_i)$ eine Folge in $A\subseteq \mathbb{R}$. Wenn die Folge gegen einen We
 \begin{definition}\label{def:voll}
 Wenn jede Cauchy-Folge mit $(a_n)\in A\subseteq \mathbb{R}$ konvergiert und ihr Grenzwert 
 \[\lim_{n\rightarrow \infty} a_n = a\in A\] 
-existiert, so heißt $A$ \textsl{vollständig}. 
+existiert, so heißt $A$ \textsl{vollständig}\index{vollständig}. 
 
-Die Vollständigkeit der reellen Zahlen in der Form, dass alle Cauchy-Folgen konvergieren und ihren Grenzwert annehmen, ist eine Konsequenz aus dem sogenannten \textsl{Vollständigkeitsaxiom}. Die Vollständigkeit folgert also nicht aus der Konvergenz der Cauchy-Folgen, sondern genau umgekehrt folgert die Konvergenz der Cauchy-Folgen aus der Vollständigkeit. 
+Die Vollständigkeit der reellen Zahlen in der Form, dass alle Cauchy-Folgen konvergieren und ihren Grenzwert annehmen, ist eine Konsequenz aus dem sogenannten \textsl{Vollständigkeitsaxiom}\index{Vollständigkeitsaxiom}. Die Vollständigkeit folgert also nicht aus der Konvergenz der Cauchy-Folgen, sondern genau umgekehrt folgert die Konvergenz der Cauchy-Folgen aus der Vollständigkeit. 
 \end{definition}
 
 
-Der Begriff \textsl{Axiom} bezeichnet einen Satz oder eine Voraussetzung innerhalb einer Theorie, der/die beweislos als richtig angesehen wird. Er leitet sich vom griechischen "`\begin{greek}'axi'wmata\end{greek}"' -- "`axi\'omata"' her: Würdiger, anerkannter Satz.
+Der Begriff \textsl{Axiom}\index{Axiom} bezeichnet einen Satz oder eine Voraussetzung innerhalb einer Theorie, der/die beweislos als richtig angesehen wird. Er leitet sich vom griechischen "`\begin{greek}'axi'wmata\end{greek}"' -- "`axi\'omata"' her: Würdiger, anerkannter Satz.
 
 \section{Reihen}
 
@@ -86,11 +86,11 @@ Sei $(a_i)$ eine Folge, so ist
 \[
 s_n = \sum_{i=1}^{n} a_i
 \]
-die $n$-te \textsl{Partialsumme}. Die Partialsummen bilden wiederum eine Folge $(s_i)$. Falls der Grenzwert 
+die $n$-te \textsl{Partialsumme}\index{Partialsumme}. Die Partialsummen bilden wiederum eine Folge $(s_i)$. Falls der Grenzwert 
 \[
 R(a) = \lim_{n\rightarrow \infty} s_n = \lim_{n\rightarrow \infty} \sum_{i=1}^{n} a_i
 \]
-existiert, so heißt $R(a)$ eine \textsl{Reihe}.
+existiert, so heißt $R(a)$ eine \textsl{Reihe}\index{Reihe}.
 \end{definition}
 
 Ob eine Reihe existiert, bestimmt die Partialsummen-Folge. Konvergiert diese, so existiert der Grenzwert, und damit auch die Reihe. Aus der Definition der Partialsummen folgt, dass wenn die Partialsummen-Folge konvergiert, $(a_n)$ eine Null-Folge sein muss. Falls $(a_n)$ keine Null-Folge ist, divergieren die Partialsummen und der Grenzwert  existiert nicht. Allerdings reicht es nicht aus $(a_n)$ als Null-Folge zu wählen, es gibt Null-Folgen, deren Partialsummen trotzdem divergieren. 
