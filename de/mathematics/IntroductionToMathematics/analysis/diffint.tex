@@ -10,11 +10,9 @@ Daraus folgt ein uns völlig bekannter Zusammenhang: Nämlich, dass der Fahrer �
 
 Eine ähnlich bekannte Situation betrifft die Beschleunigung. Werden wir in die Sitze des Autos gedrückt, so gibt der Fahrer Gas und das Fahrzeug fährt schneller. Werden wir in den Gurt gedrückt, bremst der Fahrer und das Fahrzeug wird langsamer. Die Beschleunigung ist also ein Maß für die Änderung der Geschwindigkeit -- sprich, die Beschleunigung ist die erste Ableitung der Geschwindigkeit, genauso wie die zweite Ableitung der zurückgelegten Strecke.
 
+\section{Definitionen}
 
-\section{Überlegungen}
-
-
-Die von uns im Folgenden betrachteten Funktionen müssen bestimmten Voraussetzungen genügen, damit sie für das Differenzieren und Integrieren in Betracht kommen. Sie müssen auf eine gewisse Weise "`harmlos"' sein. Die folgenden Definitionen sind als "`Harmlosigkeits"'-Eigenschaften zu verstehen.
+\subsection{Dehnungsbeschränktheit}
 
 \begin{definition}
 Eine Funktion $f : A \subseteq \mathbb{R} \longrightarrow \mathbb{R}$ heißt \textsl{dehnungsbeschränkt}, wenn es zu beliebigen Werten $x,y\in A$ eine Konstante $K$ gibt, so dass
@@ -25,7 +23,89 @@ oder auch in dieser Form dargestellt:
 \[
 \left\vert \frac{f(x)-f(y)}{x-y}  \right\vert \le K
 \]
+Diese Definition ist auch als \textsl{Lipschitz-Stetigkeit}\footnote{benannt nach \textbf{Rudolf Otto Sigismund Lipschitz}, *14. Mai 1832 in Königsberg i. Pr.; \ding{61}7. Oktober 1903 in Bonn} bekannt.
 \end{definition}
+
+
+\section{Überlegungen}
+
+
+\subsection{Kritik an Zeichnungen}
+
+Im Folgenden werden wir öfters anschaulich argumentieren, gegebenenfalls unterstützt durch eine Zeichnung. Solche Zeichnungen benötigen etwas Interpretation. Die Funktionen, die wir in diesem Teil untersuchen werden, sofern nicht ausdrücklich anders angegeben, sind immer reellwertige Funktionen, also $f:\mathbb{R} \longrightarrow \mathbb{R}$. Ihre Funktionswerte sind eindimensional. Ein Diagramm mit $x$ und $y$-Achse ist aber eine zweidimensionale Darstellung. Was also in diesem Moment gemacht wird ist, wir wandeln die Funktion $f$ in eine \textsl{Kurve} im $\mathbb{R}^2$ um:
+\[
+k : \mathbb{R} \longrightarrow \mathbb{R}^2
+\]
+indem wir 
+\[
+k(f,x) = \begin{pmatrix}
+x \\
+f(x)
+\end{pmatrix}
+\]
+setzen. $k$ ist eine Vektor-wertige Funktion. Wir argumentieren also auf Basis einer ganz anderen Funktion $k$. Man muss also vorsichtig sein und überprüfen, ob die Argumente nicht nur aufgrund der Darstellung funktionieren, oder ob sie Darstellungsunabhängig sind und wirkliche Informationen über $f$ offenlegen. 
+
+Es ist also immer eine gute Idee, rein formal zu argumentieren. Sobald man sich eine bildliche Vorstellung von einem mathematischen Sachverhalt macht, ist man oft schon in der Situation, dass die Abbildung nicht mehr viel mit der "`mathematischen Realität"' zu tun hat. Dieser Abschnitt soll erneut eine Motivation für die Lernenden sein, auf Basis der Formalismen zu argumentieren und mit Zeichnungen vorsichtig zu sein.
+
+\subsection{Linearisierung}
+
+Unser Begriff von der Steigung ist direkt an das Verständnis gebunden, dass die Steigung einer Funktion an einem gewissen Punkt direkte Information darüber gibt, wie sich die Funktion in der Nähe dieses Punktes verhält. Der Fehler zwischen der Funktion und einer linearen Annäherung sollte also kontrollierbar sein durch den Abstand zum Punkt, an dem wir die Steigung kennen. Wir definieren eine lineare Funktion, die im Punkt $a$ den Funktionswert von $f$ besitzt und eine Steigung $s$:
+\[
+l(x) = s\cdot (x-a)+f(a)
+\]
+Dann ist der Abstand von $f$ zu $l$:
+\begin{equation}\label{eq:lin}
+\begin{split}
+|f(x)-l(x)| &= |f(x)-(s(x-a)+f(a))| \\
+&= |f(x)-f(a) -s\cdot (x-a)| \\
+&\le |f(x)-f(a)| + |s||x-a| \quad \text{mit der Dreiecksungleichung} \\
+&\le K\cdot |x-a| + |s||x-a| \quad \text{mit der Lipschitz-Stetigkeit von }f \\
+&= \underbrace{(K+|s|)}_{=K_1}\cdot |x-a| \\
+&= K_1\cdot |x-a|
+\end{split}
+\end{equation}
+
+Das ist schon ein recht gutes Ergebnis. Es besagt, dass die Funktion $f$ und die \textbf{lineare} Funktion $l$ sich nicht schlimmer als ein Vielfaches des Abstandes von $|x-a|$ verhalten. Und das haben wir ohne ernsthaften Aufwand unter Ausnutzung der Lipschitz-Stetigkeit und Einsatz der Dreiecks-Ungleichung erfahren.
+
+Betrachten wir die Sehne von $f$
+\begin{equation*}
+S_f(x,a) = \frac{f(x)-f(a)}{x-a}
+\end{equation*}
+Eine Sehne schneidet den Graphen der Funktion $f$ in mindestens zwei Punkten, nämlich
+\[
+\begin{pmatrix}
+x\\
+f(x)
+\end{pmatrix} \text{ und }
+\begin{pmatrix}
+a\\
+f(a)
+\end{pmatrix}
+\]
+Es ist nicht verwunderlich, dass wir uns für den Grenzwert $\lim\limits_{x\rightarrow a} S_f(x,a)$ interessieren. Denn dieser sollte die Tangente im Punkt $a$ sein und damit die beste Wahl für die Steigung $s$ der Funktion $l$. Nennen wir 
+\[
+\lim\limits_{x\rightarrow a} S_f(x,a) = S_f
+\]
+und fordern gleichzeitig, dass 
+\[
+|S_f(x,a) - S_f| \le C\cdot |x-a|
+\]
+ist, dann folgt aus (\ref{eq:lin})
+\begin{equation}
+\begin{split}
+|f(x)-l(x)| &= |f(x)-(S_f(x-a)+f(a))| \\
+&= |f(x)-f(a) -S_f\cdot (x-a)| \\
+&= \left| \frac{f(x)-f(a)}{x-a} -S_f \right| \cdot |x-a| \\
+&= \left| S_f(x,a) -S_f \right| \cdot |x-a| \\
+&\le C\cdot |x-a| \cdot |x-a| \\
+&= C\cdot |x-a|^2
+\end{split}
+\end{equation}
+
+Wir nennen den Grenzwert der Sehnen $S_f$ die Ableitung von $f$ am Punkt $a$ und schreiben diesen als $f'(a)$. Somit ist
+\[
+|f(x)-f(a) -f'(a)\cdot (x-a)| \le C\cdot |x-a|^2
+\]
 
 
 

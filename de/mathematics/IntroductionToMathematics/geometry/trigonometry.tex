@@ -1,0 +1,101 @@
+
+\chapter{Trigonometrie}
+
+\section{Grundlegende Begriffe}
+
+Die Trigonometrie beschäftigt sich in erster Linie mit Dreiecken in der Ebene. Wie in Zeichnung \ref{fig:triangle} dargestellt, bezeichnen wir die Eckpunkte eines Dreiecks zunächst mit großen Buchstaben $A,B,C$. Die einem Punkt gegenüber befindliche Gerade bezeichnen wir analog dem gegenüberliegenden Punkt mit den Kleinbuchstaben $a,b,c$. 
+
+\begin{figure}\label{fig:triangle}
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,x=2.0cm,y=2.0cm]
+    \clip(-1,-0.25) rectangle (5.25,3);
+    \draw (0,0) coordinate (A);
+    \draw (5,0) coordinate (B);
+    \draw (3.2,2.4) coordinate (C);
+    \draw (A)--(B)--(C)--(A);
+    \filldraw  (A) circle (1.5pt) node[left] {$A$};
+    \filldraw  (B) circle (1.5pt) node[right] {$B$};
+    \filldraw  (C) circle (1.5pt) node[above] {$C$};
+    \draw [shift={(A)},color=colWin,fill=colWin,fill opacity=0.1] (0,0) -- (0:0.5)
+        arc (0:36.8699:0.5) -- cycle;
+    \draw [shift={(B)},color=colWin,fill=colWin,fill opacity=0.1] (0,0) -- (126.8699:0.5)
+        arc (126.8699:180:0.5) -- cycle;
+%    \draw [shift={(C)},color=colWin,fill=colWin,fill opacity=0.1] (0,0) -- (-143.1301:0.5)
+%        arc (-143.1301:-90:0.5) -- cycle;
+    \draw [shift={(C)},color=colWin,fill=colWin,fill opacity=0.1] (0,0) -- (-143.1301:0.5)
+        arc (-143.1301:-53.1301:0.5) -- cycle;
+    \draw [color=black] (0.35,0.1) node {$\alpha$};
+    \draw [color=black] (4.64,0.15) node {$\beta$};
+    \draw [color=black] (3.15,2.05) node {$\gamma$};
+    \draw (4.1,1.2) node[rotate=-53.1301, above] {$a$};
+    \draw (1.6,1.2) node[rotate=36.8698,above] {$b$};
+    \draw (2.5,0) node[below] {$c$};
+\end{tikzpicture}
+\caption[Dreieck]{Dreieck}
+\end{center}
+\end{figure}
+
+Den Punkten anliegende Winkel bezeichnen wir mit den Griechischen Buchstaben $\alpha, \beta, \gamma$ in den Ecken des Dreiecks $A,B,C$.
+
+Es sei im Folgenden $\gamma=90^\circ$. Das Dreieck wird dann als \textsl{rechtwinklig} bezeichnet. In diesem Fall bezeichnet man $c$ als die \textsl{Hypotenuse}\index{Hypotenuse}. Für den Winkel $\alpha$ ist $b$ die \textsl{Ankathete}\index{Ankathete} und $a$ die \textsl{Gegenkathete}\index{Gegenkathete}. Für $\beta$ drehen sich die Bezeichnungen um.
+
+Ist nun $c=1$, kann man $c$ mit dem Radius des Einheitskreises im $\mathbb{R}^2$ identifizieren. Der rechte Winkel des Dreiecks liegt dann auf der $x$-Achse, wie in Abbildung \ref{fig:circle} zu sehen\footnote{Diese Zeichnung basiert auf einem Beispiel aus Till Tantau's ausgezeichneter Dokumentation zu seiner \LaTeX \ Bibliothek Ti$kZ$ }.
+
+
+\begin{figure}\label{fig:circle}
+\begin{center}
+\begin{tikzpicture}
+[scale=3,line cap=round,
+% Styles
+axes/.style=,
+important line/.style={very thick},
+information text/.style={rounded corners,fill=red!10,inner sep=1ex}]
+% Local definitions
+\def\costhirty{0.8660256}
+\draw (0,0) circle (1cm);
+\begin{scope}[axes]
+\draw[->] (-1.5,0) -- (1.5,0) node[right] {$x$} coordinate(x axis);
+\draw[->] (0,-1.5) -- (0,1.5) node[above] {$y$} coordinate(y axis);
+\foreach \x/\xtext in {-1, -.5/-\frac{1}{2}, 1}
+\draw[xshift=\x cm] (0pt,1pt) -- (0pt,-1pt) node[below,fill=white] {$\xtext$};
+\foreach \y/\ytext in {-1, -.5/-\frac{1}{2}, .5/\frac{1}{2}, 1}
+\draw[yshift=\y cm] (1pt,0pt) -- (-1pt,0pt) node[left,fill=white] {$\ytext$};
+\end{scope}
+\filldraw[fill=black!20] (0,0) -- (3mm,0pt) arc(0:30:3mm);
+\draw (15:2mm) node[black] {$\alpha$};
+\draw[important line,black]
+(30:1cm) -- node[left=1pt,fill=white] {$\sin \alpha$} (30:1cm |- x axis);
+\draw[important line,black]
+(30:1cm |- x axis) -- node[below=2pt,fill=white] {$\cos \alpha$} (0,0);
+\path [name path=upward line] (1,0) -- (1,1);
+\path [name path=sloped line] (0,0) -- (30:1.5cm);
+\draw [name intersections={of=upward line and sloped line, by=t}]
+[very thick,black] (1,0) -- node [right=1pt,fill=white]
+{$\displaystyle \tan \alpha \color{black}=
+\frac{{\sin \alpha}}{\cos \alpha}$} (t);
+\draw (0,0) -- (t);
+\draw [very thick] (0,0) -- (\costhirty,0);
+\end{tikzpicture}
+\caption[Zusammenhang trigonometrischer Begriffe]{Darstellung des Zusammenhangs trigonometrischer Begriffe}
+\end{center}
+\end{figure}
+
+Die Gegenkathete zu $\alpha$ wird als \textsl{Sinus} zum Winkel $\alpha$ bezeichnet, während die Ankathete \textsl{Cosinus} zum Winkel $\alpha$ genannt wird. Sinus und Cosinus können als Funktionen des Winkels verstanden werden. Dabei ist es üblich den Winkel nicht in Grad anzugeben, sondern im Bogenmaß, d.h. der Bogenlänge zwischen $x$-Achse und der Strecke, die der Winkel $\alpha$ öffnet. Wie wir schon wissen, ist der gesamte Umfang des Kreises
+\[
+U_\circ  = 2\pi r
+\]
+
+Für den Einheitskreis ($r=1$) bedeutet dies, dass der Umfang gerade $2\pi$ lang ist. Somit sind der Sinus und Cosinus Funktionen vom Interval $\lbrack 0 , 2\pi \rbrack$ in die reellen Zahlen. Auf der anderen Seite können die An- und Gegenkatheten eines Dreiecks dessen Hypotenuse gerade die Länge 1 hat, niemals größer als 1 werden. Aber wie in Abbildung \ref{fig:circle} zu sehen, kann der Cosinus negativ werden, nämlich dann, wenn $\frac{\pi}{2} < \alpha < \frac{3\pi}{2}$. Der Sinus ist dagegen negativ, wenn $\pi < \alpha < 2\pi$. Die beiden Funktionen haben also recht beschränkte Definitions- und Bildbereiche:
+
+\begin{equation}
+\begin{split}
+\sin &: \lbrack 0 , 2\pi \rbrack \longrightarrow \lbrack -1 , 1 \rbrack \\
+\cos &: \lbrack 0 , 2\pi \rbrack \longrightarrow \lbrack -1 , 1 \rbrack
+\end{split}
+\end{equation}
+
+Des Weiteren gibt es noch das Verhältnis von Sinus zu Cosinus. Dies wird \textsl{Tangens} genannt. Der Tangens befindet sich außerhalb des Kreises und wird daher auch nicht von ihm beschränkt. 
+
+\begin{equation*}
+\tan : \lbrack 0 , 2\pi \rbrack \longrightarrow \mathbb{R}
+\end{equation*}
