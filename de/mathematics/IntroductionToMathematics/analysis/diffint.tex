@@ -83,14 +83,16 @@ f(a)
 \end{pmatrix}
 \]
 Es ist nicht verwunderlich, dass wir uns für den Grenzwert $\lim\limits_{x\rightarrow a} S_f(x,a)$ interessieren. Denn dieser sollte die Tangente im Punkt $a$ sein und damit die beste Wahl für die Steigung $s$ der Funktion $l$. Nennen wir 
-\[
+\begin{equation}\label{eq:slim}
 \lim\limits_{x\rightarrow a} S_f(x,a) = S_f
-\]
+\end{equation}
 und fordern gleichzeitig, dass 
 \[
 |S_f(x,a) - S_f| \le C\cdot |x-a|
 \]
-ist, dann folgt aus (\ref{eq:lin})
+ist. Dies ist nichts ungewöhnliches. Wir sagen damit lediglich, dass $|S_f(x,a) - S_f| \rightarrow 0$ für $x\rightarrow a$. Und das haben wir ja durch (\ref{eq:slim}) schon vorausgesetzt.
+
+Dann folgt aus (\ref{eq:lin})
 \begin{equation}
 \begin{split}
 |f(x)-l(x)| &= |f(x)-(S_f(x-a)+f(a))| \\
@@ -106,8 +108,11 @@ Wir nennen den Grenzwert der Sehnen $S_f$ die Ableitung von $f$ am Punkt $a$ und
 \[
 |f(x)-f(a) -f'(a)\cdot (x-a)| \le C\cdot |x-a|^2
 \]
+Der Sehengrenzwert wird auch als \textsl{Tangente} bezeichnet. 
 
+\subsection{Rechenregeln}
 
+Die Ableitung von verknüpften Funktionen unterliegt Rechenregeln, die wir hier nachweisen wollen. 
 
 
 \chapter{Integralrechnung}
