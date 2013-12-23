@@ -591,9 +591,7 @@ TODO
 \section{Der $\mathbb{R}^3$}
 
 Betrachten wir den dreidimensionalen reellen Vektorraum. Speziell für den dreidimensionalen Fall können wir eine Operation definieren, die einem Produkt auf dem Vektorraum entspricht. Wir nennen es das \textsl{Kreuzprodukt} oder \textsl{äußeres Produkt}. 
-\begin{equation*}
-\times : \mathbb{R}^3 \times \mathbb{R}^3 \longrightarrow \mathbb{R}^3
-\end{equation*}
+
 Es seien $u,v\in \mathbb{R}^3$
 \begin{equation*}
 \begin{pmatrix}
@@ -608,6 +606,30 @@ u_1\cdot v_2-u_2\cdot v_1
 \end{pmatrix}
 \end{equation*}
 
+\begin{definition}
+Der Vektorraum zusammen mit diesem Produkt wird eine \textsl{Algebra}\index{Algebra} genannt.
+\end{definition}
+
+Der $\mathbb{R}^3$ zusammen mit dem Kreuzprodukt bildet eine sehr einfache \textsl{Lie-Algebra}\footnote{benannt nach dem norwegischen Mathematiker \textbf{Marius Sophus Lie}, *17. Dezember 1842 in Nordfjordeid; \ding{61}18. Februar 1899 in Kristiania (Oslo)}. Eine Lie-Algebra findet in der Differentialgeometrie und der physikalischen Mathemtik Anwendung. Sie ist definiert durch:
+
+\begin{definition}
+Eine \textsl{Lie-Algebra} ist ein Vektorraum $V$ zusammen mit der Verknüpfung \textsl{Lie-Klammer}
+\[
+\lbrack .,. \rbrack : V \times V \longrightarrow V
+\]
+die folgenden Bedingungen genügt:
+\begin{enumerate}
+\item Bilinearität: $\lbrack ax+by,z\rbrack = a\lbrack x,z\rbrack+b\lbrack y,z\rbrack$, sowie $\lbrack z, ax+by\rbrack = a\lbrack z,x\rbrack+b\lbrack z,y\rbrack$
+\item Jacobi-Identität: $\lbrack x, \lbrack y,z\rbrack\rbrack + \lbrack y, \lbrack z,x\rbrack\rbrack +\lbrack z, \lbrack x,y \rbrack\rbrack = 0$
+\item $\lbrack x,x \rbrack = 0$
+\end{enumerate}
+\end{definition}
+
+Der Nachweis, dass das Kreuzprodukt auf dem $\mathbb{R}^3$ eine Lie-Klammer ist
+\[
+\lbrack u,v \rbrack = u \times v
+\]
+wird in den Aufgaben geführt. 
 
 \section{Aufgaben}
 
@@ -618,4 +640,11 @@ Weise nach, dass der $\mathbb{R}^{m\times n}$ ein Vektorraum ist.
 
 \end{prob}
 
+\begin{prob}
+\label{lie}
+Weise nach, dass das Kreuzprodukt auf dem $\mathbb{R}^3$ eine Lie-Klammer ist:
+\[
+\lbrack u,v \rbrack = u \times v
+\]
+\end{prob}
 

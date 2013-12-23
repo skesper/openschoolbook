@@ -84,39 +84,40 @@
 \indexentry{Raum, metrisch}{62}
 \indexentry{Raum, normiert}{63}
 \indexentry{Raum, metrisch}{63}
-\indexentry{Dreieck, Pascal}{66}
-\indexentry{Dreieck, Yang-Hui}{66}
-\indexentry{Pascal, Blaise}{66}
-\indexentry{Monom}{67}
-\indexentry{Polynom}{67}
-\indexentry{Leitkoeffizient}{67}
-\indexentry{Rang, Polynom}{67}
-\indexentry{normiert}{67}
-\indexentry{monisch}{67}
-\indexentry{Banach Raum}{79}
-\indexentry{Banach, Stefan}{79}
-\indexentry{monoton steigend}{80}
-\indexentry{monoton fallend}{80}
-\indexentry{Monotonie}{80}
-\indexentry{Schranke, obere}{80}
-\indexentry{Supremum}{80}
-\indexentry{Schranke, untere}{80}
-\indexentry{Infimum}{80}
-\indexentry{konstante Folge}{80}
-\indexentry{alternierend}{80}
-\indexentry{Null-Folge}{80}
-\indexentry{konvergent}{80}
-\indexentry{Grenzwert}{80}
-\indexentry{Cauchy-Folge}{81}
-\indexentry{Limes}{81}
-\indexentry{lim}{81}
-\indexentry{vollst\IeC {\"a}ndig}{81}
-\indexentry{Vollst\IeC {\"a}ndigkeitsaxiom}{81}
-\indexentry{Axiom}{81}
-\indexentry{Partialsumme}{82}
-\indexentry{Reihe}{82}
-\indexentry{stetig}{83}
-\indexentry{Folgenstetigkeit}{83}
-\indexentry{$\delta$-$\epsilon$-stetig}{83}
-\indexentry{Lemma von B\IeC {\'e}zout}{97}
-\indexentry{Lemma von Euklid}{98}
+\indexentry{Algebra}{64}
+\indexentry{Dreieck, Pascal}{68}
+\indexentry{Dreieck, Yang-Hui}{68}
+\indexentry{Pascal, Blaise}{68}
+\indexentry{Monom}{69}
+\indexentry{Polynom}{69}
+\indexentry{Leitkoeffizient}{69}
+\indexentry{Rang, Polynom}{69}
+\indexentry{normiert}{69}
+\indexentry{monisch}{69}
+\indexentry{Banach Raum}{81}
+\indexentry{Banach, Stefan}{81}
+\indexentry{monoton steigend}{82}
+\indexentry{monoton fallend}{82}
+\indexentry{Monotonie}{82}
+\indexentry{Schranke, obere}{82}
+\indexentry{Supremum}{82}
+\indexentry{Schranke, untere}{82}
+\indexentry{Infimum}{82}
+\indexentry{konstante Folge}{82}
+\indexentry{alternierend}{82}
+\indexentry{Null-Folge}{82}
+\indexentry{konvergent}{82}
+\indexentry{Grenzwert}{82}
+\indexentry{Cauchy-Folge}{83}
+\indexentry{Limes}{83}
+\indexentry{lim}{83}
+\indexentry{vollst\IeC {\"a}ndig}{83}
+\indexentry{Vollst\IeC {\"a}ndigkeitsaxiom}{83}
+\indexentry{Axiom}{83}
+\indexentry{Partialsumme}{84}
+\indexentry{Reihe}{84}
+\indexentry{stetig}{85}
+\indexentry{Folgenstetigkeit}{85}
+\indexentry{$\delta$-$\epsilon$-stetig}{85}
+\indexentry{Lemma von B\IeC {\'e}zout}{101}
+\indexentry{Lemma von Euklid}{102}

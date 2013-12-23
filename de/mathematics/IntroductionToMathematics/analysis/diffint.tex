@@ -49,11 +49,14 @@ Es ist also immer eine gute Idee, rein formal zu argumentieren. Sobald man sich 
 
 \subsection{Linearisierung}
 
-Unser Begriff von der Steigung ist direkt an das Verständnis gebunden, dass die Steigung einer Funktion an einem gewissen Punkt direkte Information darüber gibt, wie sich die Funktion in der Nähe dieses Punktes verhält. Der Fehler zwischen der Funktion und einer linearen Annäherung sollte also kontrollierbar sein durch den Abstand zum Punkt, an dem wir die Steigung kennen. Wir definieren eine lineare Funktion, die im Punkt $a$ den Funktionswert von $f$ besitzt und eine Steigung $s$:
+Unser Begriff von der Steigung ist direkt an das Verständnis gebunden, dass die Steigung einer Funktion an einem gewissen Punkt direkte Information darüber gibt, wie sich die Funktion in der Nähe dieses Punktes verhält. Der Fehler zwischen der Funktion und einer linearen Annäherung sollte also kontrollierbar sein durch den Abstand zum Punkt, an dem wir die Steigung kennen. Wir definieren eine lineare Funktion, die im Punkt $a$ den Funktionswert von $f$  und eine Steigung $s$ besitzt über
 \[
 l(x) = s\cdot (x-a)+f(a)
 \]
-Dann ist der Abstand von $f$ zu $l$:
+Dabei gehen wir davon aus, dass diese Annäherung "`in der Nähe"' von $a$ überhaupt sinnvoll ist. Das heißt, im Folgenden ist immer $|x-a|<1$.
+
+Wir nehmen an, dass $s$ ein "`Kandidat"' für die Ableitung ist. Wir versuchen also $s$ möglichst gut zu wählen. 
+Der Abstand von $f$ zu $l$ ist:
 \begin{equation}\label{eq:lin}
 \begin{split}
 |f(x)-l(x)| &= |f(x)-(s(x-a)+f(a))| \\
@@ -65,33 +68,27 @@ Dann ist der Abstand von $f$ zu $l$:
 \end{split}
 \end{equation}
 
-Das ist schon ein recht gutes Ergebnis. Es besagt, dass die Funktion $f$ und die \textbf{lineare} Funktion $l$ sich nicht schlimmer als ein Vielfaches des Abstandes von $|x-a|$ verhalten. Und das haben wir ohne ernsthaften Aufwand unter Ausnutzung der Lipschitz-Stetigkeit und Einsatz der Dreiecks-Ungleichung erfahren.
+Das ist schon ein recht gutes Ergebnis. Es besagt, dass die Funktion $f$ und die \textbf{lineare} Funktion $l$ sich nicht weiter von einander entfernen, als ein Vielfaches des Abstandes von $|x-a|$. Und das haben wir ohne ernsthaften Aufwand unter Ausnutzung der Lipschitz-Stetigkeit und Einsatz der Dreiecks-Ungleichung erfahren. Auf der anderen Seite besagt Ungleichung (\ref{eq:lin}) aber auch das Folgende, wenn man in Zeile zwei $|x-a|$ ausklammert und auf beiden Seiten kürzt, dann erhält man
+\begin{equation}\label{eq:const}
+\left| \frac{f(x)-f(a)}{x-a} -s \right| \le K_1
+\end{equation}
+Da die Steigung $s$ an der Stelle $a$ unser Kandidat für die Ableitung ist, hätten wir das Problem, dass wir nicht garantieren könnten, dass die Sehne sich je an die Steigung annähert, denn mit dieser Abschätzung können wir nur sagen, dass der Abstand kleiner als eine Konstante sein muss. Sich also gegebenenfalls überhaupt nicht annähert.
+
 
 Betrachten wir die Sehne von $f$
 \begin{equation*}
 S_f(x,a) = \frac{f(x)-f(a)}{x-a}
 \end{equation*}
-Eine Sehne schneidet den Graphen der Funktion $f$ in mindestens zwei Punkten, nämlich
-\[
-\begin{pmatrix}
-x\\
-f(x)
-\end{pmatrix} \text{ und }
-\begin{pmatrix}
-a\\
-f(a)
-\end{pmatrix}
-\]
-Es ist nicht verwunderlich, dass wir uns für den Grenzwert $\lim\limits_{x\rightarrow a} S_f(x,a)$ interessieren. Denn dieser sollte die Tangente im Punkt $a$ sein und damit die beste Wahl für die Steigung $s$ der Funktion $l$. Nennen wir 
+
+Es ist nicht verwunderlich, dass wir uns für den Grenzwert $\lim\limits_{x\rightarrow a} S_f(x,a)$ interessieren. Denn dieser sollte die Steigung im Punkt $a$ sein und damit die beste Wahl für die Ableitung von $f$ in $a$. Nennen wir 
 \begin{equation}\label{eq:slim}
 \lim\limits_{x\rightarrow a} S_f(x,a) = S_f
 \end{equation}
-und fordern gleichzeitig, dass 
+wenn wir fordern, dass $f$ $\epsilon$-$\delta$-stetig ist, liefert und das Lemma \ref{lem:stetig}: 
 \[
 |S_f(x,a) - S_f| \le C\cdot |x-a|
 \]
-ist. Dies ist nichts ungewöhnliches. Wir sagen damit lediglich, dass $|S_f(x,a) - S_f| \rightarrow 0$ für $x\rightarrow a$. Und das haben wir ja durch (\ref{eq:slim}) schon vorausgesetzt.
-
+Das sollte uns nicht überraschen, wir verschärfen damit nur (\ref{eq:const}) und setzen um, dass $|S_f(x,a) - S_f| \rightarrow 0$ für $x\rightarrow a$, was ja durch (\ref{eq:slim}) schon dargelegt wurde.
 Dann folgt aus (\ref{eq:lin})
 \begin{equation}
 \begin{split}
@@ -104,11 +101,51 @@ Dann folgt aus (\ref{eq:lin})
 \end{split}
 \end{equation}
 
-Wir nennen den Grenzwert der Sehnen $S_f$ die Ableitung von $f$ am Punkt $a$ und schreiben diesen als $f'(a)$. Somit ist
+\begin{definition}\label{def:diff}
+Wir nennen den Grenzwert der Sehnen $S_f$ die \textsl{Ableitung} von $f$ am Punkt $a$ und schreiben diesen als $f'(a)$. Der Sehengrenzwert wird auch als \textsl{Tangente} bezeichnet. 
+\end{definition}
+
+\bigskip
+
+Fassen wir zusammen: Durch die Überlegung, dass die Sehnensteigung von $f$ sich unserem Kandidaten für die Ableitung annähern soll, wenn $x$ sich immer weiter an $a$ annähert, gibt uns Lemma \ref{lem:stetig} die Ungleichung
+\[
+\left| \frac{f(x)-f(a)}{x-a} - f'(a) \right| \le C \cdot |x-a|
+\]
+durch Multiplikation von $|x-a|$ auf beiden Seiten erhalten wir:
 \[
 |f(x)-f(a) -f'(a)\cdot (x-a)| \le C\cdot |x-a|^2
 \]
-Der Sehengrenzwert wird auch als \textsl{Tangente} bezeichnet. 
+Im Vergleich zu (\ref{eq:lin}) ist dies eine substantielle Verbesserung, denn für $|x-a|<1$ ist $|x-a|^2\ll 1$. Das bedeutet, dass in einer kleinen Umgebung von $a$ der Abstand zwischen der Funktion $f(x)$ und der linearen Annäherung $f'(a)\cdot (x-a)+f(a)$ sehr klein ist.
+
+Nachdem wir auf diese umständliche Art eine Begründung für die Definition \ref{def:diff} formulierten, müssen wir nun noch nachweisen, dass diese auch eindeutig ist. 
+
+\begin{lemma}
+Die Ableitung einer Funktion $f$ an der Stelle $a$ ist eindeutig. 
+\end{lemma}
+\begin{proof}
+Es sei vorausgesetzt, dass $s_1$ und $s_2$ verschiedene Steigungen von $f$ im Punkt $a$ sind. So würde in einer kleinen Umgebung von $a$ gelten:
+\begin{equation*}
+\begin{split}
+|f(x)-f(a) -s_1\cdot (x-a)| &\le C_1\cdot |x-a|^2 \\
+|f(x)-f(a) -s_2\cdot (x-a)| &\le C_2\cdot |x-a|^2
+\end{split}
+\end{equation*}
+Wir subtrahieren diese Ungleichungen voneinander
+\begin{equation}
+\begin{split}
+|f(x)-f(a) -s_1\cdot (x-a)|-|f(x)-f(a) -s_2\cdot (x-a)| &\le C_1\cdot |x-a|^2-C_2\cdot |x-a|^2 \\
+|f(x)-f(a) -s_1\cdot (x-a)-f(x)-f(a) -s_2\cdot (x-a)| &\le (C_1+C_2)\cdot |x-a|^2 \\
+|(s_1+s_2)\cdot (x-a)| &\le (C_1+C_2)\cdot |x-a|^2 \\
+|s_1+s_2| &\le (C_1+C_2)\cdot |x-a|
+\end{split}
+\end{equation}
+(Da $C_1,C_2 >0$, ist $C_1-C_2$ immer kleiner als $C_1+C_2$). Die rechte Seite wird in der Nähe von $a$ so klein, wie wir nur wollen, während die linke Seite der Ungleichung einen konstanten Wert besitzt. Daher ist die Ungleichung falsch, wenn 
+\[
+|x-a| < \left| \frac{s_1+s_2}{C_1+C_2} \right|
+\]
+Was im Widerspruch zur Voraussetzung steht, dass $s_1\ne s_2$, daher müssen diese gleich sein.
+\qed
+\end{proof}
 
 \subsection{Rechenregeln}
 

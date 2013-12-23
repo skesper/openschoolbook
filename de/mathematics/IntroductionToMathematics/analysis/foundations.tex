@@ -144,7 +144,23 @@ $f$ ist genau dann in $a$ \textsl{stetig}, wenn es zu jedem $\epsilon>0$ ein $\d
 
 Wir hatten bisher versucht, mehrere Definitionen für einen Begriff zu vermeiden. Allerdings passiert es, dass die Stetigkeitseigenschaft in unterschiedlichen Zusammenhängen ausgenutzt werden muss. Daher ist es zuweilen auch notwendig, unterschiedliche Definitionen heranzuziehen, um in einem Beweis die Stetigkeit prägnant auszunutzen. Stetigkeit ist noch auf weitere Arten definierbar: Z.B. im topologischen Sinne, dass unter stetigen Abbildungen die Urbilder offener Mengen wieder offene Mengen sind. Aber das würde an dieser Stelle zu weit führen.
 
-
+\begin{lemma}\label{lem:stetig}
+Sei $f$ eine $\epsilon$-$\delta$-stetige Funktion und $(a_n) \rightarrow a$ eine konvergente Folge mit Grenzwert $a$. Dann gilt
+\[
+|f(a_n)-f(a)| \le C\cdot |a_n -a|
+\]
+\end{lemma}
+\begin{proof}
+Der Beweis ist sehr einfach. Wir wählen für ein beliebiges $n$, dass $\epsilon = C\cdot |a_n -a|$ ist. Dann gibt es zu diesem aufgrund der Stetigkeit immer ein $\delta_\epsilon$, sodass aus $|a_n-a|<\delta_\epsilon$ folgt:
+\[
+|f(a_n)-f(a)| < \epsilon = C\cdot |a_n -a|
+\]
+also auch
+\[
+|f(a_n)-f(a)| \le C\cdot |a_n -a|
+\]
+\qed
+\end{proof}
 
 
 
