@@ -80,7 +80,7 @@ Betrachten wir die Sehne von $f$
 S_f(x,a) = \frac{f(x)-f(a)}{x-a}
 \end{equation*}
 
-Es ist nicht verwunderlich, dass wir uns für den Grenzwert $\lim\limits_{x\rightarrow a} S_f(x,a)$ interessieren. Denn dieser sollte die Steigung im Punkt $a$ sein und damit die beste Wahl für die Ableitung von $f$ in $a$. Nennen wir 
+Es ist nicht verwunderlich, dass wir uns für den Grenzwert $\lim\limits_{x\rightarrow a} S_f(x,a)$ interessieren. Denn dieser sollte die Steigung im Punkt $a$ sein und damit die beste Wahl für die Ableitung von $f$ in $a$. Damit der Grenzwert existiert, brauchen wir an dieser Stelle die Vollständigkeit nach Definition \ref{def:voll}. Nennen wir 
 \begin{equation}\label{eq:slim}
 \lim\limits_{x\rightarrow a} S_f(x,a) = S_f
 \end{equation}
@@ -111,7 +111,7 @@ Fassen wir zusammen: Durch die Überlegung, dass die Sehnensteigung von $f$ sich
 \[
 \left| \frac{f(x)-f(a)}{x-a} - f'(a) \right| \le C \cdot |x-a|
 \]
-durch Multiplikation von $|x-a|$ auf beiden Seiten erhalten wir:
+Dabei implizieren wir, dass die Annäherung $x\rightarrow a$ mittels einer Cauchy-Folge erreicht wird. Durch Multiplikation von $|x-a|$ auf beiden Seiten erhalten wir:
 \[
 |f(x)-f(a) -f'(a)\cdot (x-a)| \le C\cdot |x-a|^2
 \]

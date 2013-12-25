@@ -61,7 +61,7 @@ Gleichzeitig tilgen\footnote{Tilgung = Rückzahlung} wir den Gesamtbetrag mit un
 
 Die Berechnung dazu sieht folgendermaßen aus, es sei $p=\frac{8}{12}\% $, $q = 1+\frac{p}{100}$ und $t$ unsere Tilgung. Dann entspricht der Restbetrag unseres Kredits $K_i$ in Monat $i$ nach beginn der Rückzahlung der folgenden Berechnung:
 \[
-K_i = \dots ((((((K-t)\cdot q)-t)\cdot q)-t)\cdot q) \dots
+K_i = \dots (((K-t)\cdot q-t)\cdot q-t)\cdot q \dots
 \]
 Die Punkte bedeuten, dass wir die Operation $(. -t)\cdot q$ genau $i$-Mal durchführen müssen.
 
@@ -75,6 +75,7 @@ und so weiter.
 
 Der sogenannte Tilgungsplan, also die Aufstellung aller Restbeträge für jeden der 24 Monate, ist in der folgenden Tabelle dargestellt:
 
+\begin{center}
 \begin{tabular}{C{4cm}C{4cm}}
 \hline
 \textbf{Monat} & \textbf{Restbetrag} \\
@@ -105,12 +106,13 @@ Der sogenannte Tilgungsplan, also die Aufstellung aller Restbeträge für jeden 
 24&	 121,10 \currency  \\
 \hline
 \end{tabular}
+\end{center}
 
 \bigskip
 
 \noindent Die Restrate beträgt nicht mehr die vollen \currency 220,-, sondern nur noch \currency 121,10. 
 
-Weil der monatliche Betrag, den wir abbezahlen immer konstant ist -- bis auf den letzten Monat --, die Zinsen aber abnehmen, da der verzinste Betrag abnimmt, erhöht sich der Betrag, den wir zurückzahlen in jedem Monat. 
+Weil der monatliche Betrag, den wir abbezahlen immer konstant ist -- bis auf den letzten Monat --, die Zinsen aber abnehmen, da der verzinste Betrag abnimmt, erhöht sich der Betrag, den wir zurückzahlen in jedem Monat. Es ist üblich, die Rückzahlung konstant zu halten. Es wäre unpraktisch, die Rate monatlich anzupassen, da der Kunde dann nie genau wüsste, wie viel er zu überweisen hätte (ungeachtet der Tatsache, dass Kreditraten im allgemeinen automatisch abgebucht werden).
 
 
 
