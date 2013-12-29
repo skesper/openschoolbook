@@ -177,20 +177,37 @@ Das Kommutativgesetz gilt nicht:
 \[ 64 = 4^3 \ne 3^4 = 81 \]
 
 
-\section{Irrationale Zahlen}
+\section{Reelle und irrationale Zahlen}\label{chap:realbegin}
 
-TODO
+Die reellen Zahlen sind -- zusammen mit den komplexen Zahlen -- mit die gebräuchlichsten Zahlenkörper in der Mathematik. Die über diesen Körpern gebildeten, dreidimensionalen Vektorräume entsprechen in direkter Weise unserer räumlichen Vorstellung (Euklidischer Raum). 
 
+Auch wenn es seit Euklid (etwa 300 v. Chr.) ein Verständnis für die reellen Zahlen im Sinne eines "`Kontinuums"' gibt, wurde eine erste, formale Konstruktion der reellen Zahlen zum ersten Mal durch Karl Weierstraß\footnote{\textbf{Karl Theodor Wilhelm Weierstraß}, *31. Oktober 1815 in Ostenfelde; \ding{61}19. Februar 1897 in Berlin} dargelegt. Die verschiedenen Konstruktionsarten der reellen Zahlen darzulegen, würde weit über das Ziel hinaus gehen, ein Buch für Schüler zu schreiben. Daher können wir nur versuchen, argumentativ ein Gefühl für die reellen Zahlen zu entwickeln. 
+\begin{quote}
+Zu je zwei reellen Zahlen, egal wie nahe sie beieinander liegen, gibt es immer eine dritte dazwischen.
+\end{quote}
+Dieser Satz ist leicht daher gesagt, stellt aber eine sehr zentrale Erkenntnis im Zusammenhang mit den reellen Zahlen dar, denn dies gilt für keine andere Zahlenmenge, die wir bisher kennen gelernt haben.
 
-\subsection{Vollständigkeit}
+Die rationalen Zahlen waren schon "`ziemlich"' vollständig in dem Sinne, dass wir immer zu je zwei Zahlen aus $\mathbb{Q}$ folgendes tun können: Seien $a=\frac{a_z}{a_n}$ und $b=\frac{b_z}{b_n}$ rationale Zahlen. Dann kann immer die Zahl $c$ gefunden werden mit
+\[
+c = \frac{a_z\cdot b_n + a_n\cdot b_z}{2\cdot a_n\cdot b_n}
+\]
+$c$ liegt damit immer zwischen den Zahlen $a$ und $b$. Da $a_z,a_n,b_z$ und $b_n$ natürliche Zahlen sind, ist der Zähler und Nenner von $c$ jeweils wieder eine natürliche Zahl und deshalb ist $c\in \mathbb{Q}$. 
 
-TODO
+Es gibt allerdings Zahlen, die nicht durch einen Bruch dargestellt werden können, egal wie groß die Zahlen in Zähler und Nenner sind. Trotzdem bleibt immer ein Unterschied. Beispiele sind das Verhältnis eines Kreises zu seinem Durchmesser. Diese Zahl wird mit $\pi$ abgekürzt. Genauso wie der Durchmesser eines Quadrates mit Kantenlänge 1, dies ist die $\sqrt{2}$. Keine solche Zahl kann mit Brüchen "`genau genug"' angenähert werden und diese sind nicht in den rationalen Zahlen enthalten. Solche Zahlen werden irrational genannt
 
-$\mathbb{R}, e, \pi, \dots $
+Die Vereinigung aller irrationalen Zahlen mit den rationalen Zahlen gelten als die reellen Zahlen und werden mit dem Symbol $\mathbb{R}$ bezeichnet.
+
+Im Anhang \ref{chap:realfinal} werden die reellen Zahlen genauer eingeführt. 
 
 \section{Intervalle}
 
-TODO
+\begin{definition}
+Teilmengen der reellen Zahlen, die einen zusammenhängenden Bereich abdecken, werden auch als \textsl{Intervalle} bezeichnet. Sie haben eine obere und eine untere Grenze. Alles, was dazwischen liegt, gehört zu dieser Teilmenge. Sei $a<b$, dann wird mit
+\[
+\lbrack a,b \rbrack
+\]
+die Menge aller Zahlen $x$ bezeichnet, für die gilt $a\le x\le b$
+\end{definition}
 
 \section{Betrag und Vorzeichen}
 
