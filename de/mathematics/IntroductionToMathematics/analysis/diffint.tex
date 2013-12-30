@@ -14,7 +14,7 @@ Eine ähnlich bekannte Situation betrifft die Beschleunigung. Werden wir in die 
 
 \subsection{Dehnungsbeschränktheit}
 
-\begin{definition}
+\begin{definition}\label{def:lipschitz}
 Eine Funktion $f : A \subseteq \mathbb{R} \longrightarrow \mathbb{R}$ heißt \textsl{dehnungsbeschränkt}, wenn es zu beliebigen Werten $x,y\in A$ eine Konstante $K$ gibt, so dass
 \[
 \left\vert f(x)-f(y)  \right\vert \le K\cdot \vert x-y \vert
@@ -111,7 +111,7 @@ Fassen wir zusammen: Durch die Überlegung, dass die Sehnensteigung von $f$ sich
 \[
 \left| \frac{f(x)-f(a)}{x-a} - f'(a) \right| \le C \cdot |x-a|
 \]
-Dabei implizieren wir, dass die Annäherung $x\rightarrow a$ mittels einer Cauchy-Folge erreicht wird. Durch Multiplikation von $|x-a|$ auf beiden Seiten erhalten wir:
+Dabei implizieren wir, dass die Annäherung $x\rightarrow a$ mittels einer Folge erreicht wird. Durch Multiplikation von $|x-a|$ auf beiden Seiten erhalten wir:
 \[
 |f(x)-f(a) -f'(a)\cdot (x-a)| \le C\cdot |x-a|^2
 \]
