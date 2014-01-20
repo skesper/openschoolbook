@@ -1,4 +1,5 @@
-\documentclass[graybox,envcountchap,sectrefs,deutsch]{openschoolbook}
+\documentclass[]{memoir}
+%\documentclass[graybox,envcountchap,sectrefs,deutsch]{openschoolbook}
 
 \usepackage[utf8]{inputenc}
 \usepackage{mathptmx}
@@ -28,6 +29,7 @@
 \usetikzlibrary{calc}
 \usetikzlibrary{intersections}
 
+
 % Farben für Konstruktionen
 \definecolor{colPkt}{rgb}{0,0,0} % für gegebene Punkte
 \definecolor{colPktKon}{rgb}{0,0,0} % für konstruierte Punkte
@@ -39,6 +41,18 @@
 
 \usepackage{amssymb}
 \usepackage{amsmath}
+\usepackage{amsthm}
+
+\usepackage{fouriernc}
+
+\newtheorem{definition}{Definition}
+\newtheorem{prob}{Problem}
+\newtheorem{claim}{Behauptung}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{remark}{Bemerkung}
+\newtheorem{sol}{Lösung}
+
 
 \def\currency{\officialeuro} % de
 %\def\currency{\$} % us
@@ -46,27 +60,39 @@
 
 \makeindex
 
-\author{Stephan Kesper}
-\title{Einführung in die Mathematik}
-\subtitle{Zum Selbststudium oder als Grundlage für den Unterricht}
-
-
-\smartqed
 
 \begin{document}
-
-\maketitle
-
 \frontmatter
+
+% --------------- TITLE PAGE
+\thispagestyle{empty}
+\begin{flushright}
+{\Large Dipl.-Math. Stephan Kesper}
+\vskip 3cm
+{\Huge Einführung in die Mathematik}
+\vskip 1cm
+{\Large \textsl{Zum Selbststudium oder als Grundlage für den Unterricht}}
+\vskip 5cm
+\today
+\vfill
+\includegraphics{../../../License/by-nc-sa.png}
+\end{flushright}
+% --------------- TITLE PAGE
+\newpage
+
 
 \include{./preface}
 
 \tableofcontents
 
+\newpage
+
 \listoffigures
 
 
 \mainmatter
+
+\chapterstyle{veelo}
 
 \include{./remarks}
 
