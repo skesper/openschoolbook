@@ -263,11 +263,11 @@ Als \textsl{Vorzeichen} wird entweder das $+$ oder das $-$ bezeichnet, das vor e
 Spätestens hier sollte es dem Lernenden klar sein, dass die Subtraktion identisch ist mit der Addition bei umgekehrtem Vorzeichen.
 \[ 3-2 = 3+(-1)\cdot 2 = 3+(-2) \]
 
-\begin{quote}
+\begin{fancyquotes}
 Eine Randbemerkung: Im Grunde wird hier das Kommutativgesetz der Addition angewendet, denn
 \[ 3-2 = 3+(-1)\cdot 2 = (-1)\cdot 2+3 = -2+3 \]
 Demnach ist $-(2-3) = -2+3$, dies wird in den Aufgaben nachgewiesen.
-\end{quote}
+\end{fancyquotes}
 
 Wie wir schon bei der Multiplikation gesehen haben, ist die Division mit 10 ebenfalls besonders einfach. Im Gegensatz zur Multiplikation werden anhängende Nullen einfach weggenommen:
 
@@ -304,7 +304,57 @@ so ist zuerst die Klammer auszurechnen 3+5=8, multipliziert mit 2 ergibt 16. Nun
 
 \section{Primzahlen}
 
-TODO
+Betrachten wir die Zahl 12. Sie ist -- das hatten wir bereits gesehen -- durch 4 und durch 3 teilbar, denn wir wissen, dass $3\cdot 4 = 12$ ist. Und wir wissen, dass die 2 die 4 teilt. Aber wir kennen keine Zahl, die die 3 teilt. Wie sieht es mit der 5 aus? Und wie mit der 11?
+
+Offensichtlich gibt es Zahlen, die Teiler haben und Zahlen, die nicht teilbar sind. Nun könnte man sich fragen, ob dies unter Umständen daran liegt, dass wir sehr kleine Zahlen betrachten? Sind größere Zahlen leichter durch andere Zahlen teilbar? 
+
+Die Antwort auf diese Frage ist nicht leicht zu geben. Und für sehr große Zahlen gibt es immer noch Geheimnisse zu entdecken. Fakt ist aber: Egal wie groß die Zahlen werden, es gibt immer noch dazwischen welche, die durch keine der vorherigen Zahlen teilbar sind. Daher die folgende Definition:
+
+\begin{definition}
+Zahlen, die nur durch 1 oder sich selbst teilbar sind, nennen wir \textsl{Primzahlen}\index{Primzahl}. Tabelle \ref{tab:primes} zeigt die Primzahlen $p$ mit $1 < p < 1000$.
+\end{definition}
+
+
+\begin{table}
+%\centering
+\begin{tabular}{ccccccccccccc}
+2 & 3 & 5 & 7 & 11 & 13 & 17 & 19 & 23 & 29 & 31 & 37 &  \\
+41 & 43 & 47 & 53 & 59 & 61 & 67 & 71 & 73 & 79 & 83 & 89 &  \\
+97 & 101 & 103 & 107 & 109 & 113 & 127 & 131 & 137 & 139 & 149 & 151 &  \\
+157 & 163 & 167 & 173 & 179 & 181 & 191 & 193 & 197 & 199 & 211 & 223 &  \\
+227 & 229 & 233 & 239 & 241 & 251 & 257 & 263 & 269 & 271 & 277 & 281 &  \\
+283 & 293 & 307 & 311 & 313 & 317 & 331 & 337 & 347 & 349 & 353 & 359 &  \\
+367 & 373 & 379 & 383 & 389 & 397 & 401 & 409 & 419 & 421 & 431 & 433 &  \\
+439 & 443 & 449 & 457 & 461 & 463 & 467 & 479 & 487 & 491 & 499 & 503 &  \\
+509 & 521 & 523 & 541 & 547 & 557 & 563 & 569 & 571 & 577 & 587 & 593 &  \\
+599 & 601 & 607 & 613 & 617 & 619 & 631 & 641 & 643 & 647 & 653 & 659 &  \\
+661 & 673 & 677 & 683 & 691 & 701 & 709 & 719 & 727 & 733 & 739 & 743 &  \\
+751 & 757 & 761 & 769 & 773 & 787 & 797 & 809 & 811 & 821 & 823 & 827 &  \\
+829 & 839 & 853 & 857 & 859 & 863 & 877 & 881 & 883 & 887 & 907 & 911 &  \\
+919 & 929 & 937 & 941 & 947 & 953 & 967 & 971 & 977 & 983 & 991 & 997 
+\end{tabular}
+\caption{Die Primzahlen zwischen 1 und 1000}\label{tab:primes}
+\end{table}
+
+Besonders zu beachten ist, dass die zwei eine Sonderrolle hat: Sie ist die einzige gerade Primzahl. Das liegt daran, dass alle geraden Zahlen durch zwei teilbar sind, aber alleine die zwei nur noch einen einzigen weiteren Teiler hat, nämlich die 1, als einzige kleinere Zahl.
+
+Die Menge der Primzahlen liegt in den natürlichen Zahlen $\mathbb{N}$. Die Frage, die wir uns stellen sollten ist: Gibt es eine größte Primzahl? Oder anders formuliert: Gibt es unendlich viele Primzahlen? Diese Frage beantworten wir im Anhang in Kapitel \ref{chap:proofprime}.
+
+Das besondere an den Primzahlen ist, dass wir diejenigen Zahlen, die keine Primzahlen sind, durch das Produkt von Primzahlen darstellen können. Und das wiederum ist so besonders, weil dieses Produkt eindeutig ist. Das heißt, jede natürliche Zahl kann eindeutig in ein Produkt von Primzahlen zerlegt werden.
+
+\begin{definition}
+Die Zerlegung einer Zahl in das Produkt von Primzahlen heißt \textsl{Primzahlzerlegung}\index{Primzahlzerlegung}.
+\end{definition}
+
+Ebenfalls im Anhang werden wir mit Lemma \ref{lem:prim} den Beweis kennenlernen, dass Primzahlzerlegungen für jede natürliche Zahl $>1$ existieren und eindeutig sind. Solche Primzahlzerlegungen sind in erster Linie für Mathematiker interessant, auf der anderen Seite hat jeder schon einmal einen Internet Browser mit dem \texttt{https}-Protokoll Benutzt. Also zum Beispiel \texttt{https://www.google.de}. Die Basis für dieses verschlüsselte Protokoll ist der sogenannte RSA-Algorithmus. Benannt nach seinen Erfindern Rivest, Shamir und Adleman\footnote{\textbf{Ronald Linn Rivest}, *1947 in Schenectady, New York. \textbf{Adi Shamir}, *6. Juli 1952 in Tel-Aviv. \textbf{Leonard Adleman}, *31. Dezember 1945 in San Francisco}. Die Sicherheit dieses Algorithmus wird dadurch garantiert, dass es selbst mit den größten und leistungsfähigsten Computern sehr, sehr lange dauert, die Primzahlzerlegung einer Zahl zu berechnen, die größer ist als eine 1 mit 300 Nullen im Falle eines 1024 Bit Schlüssels, bzw. eine 1 mit über 600 Nullen im Falle eines 2048 Bit Schlüssels.
+
+Sehen wir uns einige Beispiele an: 
+
+\begin{align*}
+2\cdot 2\cdot 3 &= 12 & 3\cdot 7 &= 21 & 2\cdot 3\cdot 5\cdot 7 &= 210 \\
+11\cdot 13\cdot 17\cdot 19 &= 46189 & 2\cdot 2\cdot 2 &= 8 & 7\cdot 7\cdot 7 &= 343
+\end{align*}
+Wie wir sehen, kommen in Primzahlzerlegungen die Primzahlen nicht notwendigerweise einfach vor. Primzahlen können beliebig oft in Zerlegungen vorkommen.
 
 \section{Aufgaben}
 
