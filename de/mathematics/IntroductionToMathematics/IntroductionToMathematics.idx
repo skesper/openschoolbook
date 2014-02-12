@@ -5,16 +5,16 @@
 \indexentry{Gr\IeC {\"o}\IeC {\ss }er als $>$}{9}
 \indexentry{Kleiner oder gleich $\le$}{9}
 \indexentry{Gr\IeC {\"o}\IeC {\ss }er oder gleich $\ge$}{9}
-\indexentry{Multiplikation}{9}
+\indexentry{Multiplikation}{10}
 \indexentry{Addition}{10}
 \indexentry{Null "`0"'}{10}
 \indexentry{Invariante}{10}
 \indexentry{Assoziativgesetz}{12}
 \indexentry{Kommutativgesetz}{12}
-\indexentry{Distributivgesetz}{12}
+\indexentry{Distributivgesetz}{13}
 \indexentry{Subtraktion}{13}
 \indexentry{Division}{14}
-\indexentry{Primzahl}{16}
+\indexentry{Primzahl}{17}
 \indexentry{Primzahlzerlegung}{17}
 \indexentry{Division mit Rest}{19}
 \indexentry{Bruch}{20}
@@ -24,102 +24,102 @@
 \indexentry{Grundzahl}{24}
 \indexentry{Hochzahl}{24}
 \indexentry{Exponent}{24}
-\indexentry{$i = \sqrt{-1}$}{28}
-\indexentry{Cardano, Gerolamo}{29}
-\indexentry{Unendlich $\infty$}{29}
-\indexentry{abz\IeC {\"a}hlbar}{31}
-\indexentry{abz\IeC {\"a}hlbar unendlich}{31}
-\indexentry{Kartoffel-Paradoxon}{37}
-\indexentry{Pythagoras}{43}
-\indexentry{Summe $\Sigma$}{45}
-\indexentry{Produkt $\Pi$}{45}
-\indexentry{Quantor}{45}
-\indexentry{F\IeC {\"u}r alle}{45}
-\indexentry{Es gibt, es existiert}{46}
-\indexentry{Junktor}{46}
-\indexentry{Menge}{46}
-\indexentry{Teilmenge}{47}
-\indexentry{Leere Menge}{47}
-\indexentry{Vereinigungsmenge}{47}
-\indexentry{Schnittmenge}{47}
-\indexentry{Abbildung}{48}
-\indexentry{Verkn\IeC {\"u}pfung}{48}
-\indexentry{assoziativ}{48}
-\indexentry{kommutativ}{48}
-\indexentry{Neutrales Element}{48}
-\indexentry{Monoid}{49}
-\indexentry{Linksinverse}{49}
-\indexentry{Rechtsinverse}{49}
-\indexentry{Inverse}{49}
-\indexentry{Gruppe}{49}
-\indexentry{Gruppe, abelsch}{49}
-\indexentry{Ring}{49}
-\indexentry{Ring, kommutativer}{49}
-\indexentry{K\IeC {\"o}rper}{49}
-\indexentry{Vektorraum}{51}
-\indexentry{Vektorraum}{51}
-\indexentry{Unabh\IeC {\"a}ngigkeit, linear}{53}
-\indexentry{Dimension}{54}
-\indexentry{Matrix}{56}
-\indexentry{injektiv}{58}
-\indexentry{surjektiv}{58}
-\indexentry{bijektiv}{58}
-\indexentry{umkehrbar eindeutig}{58}
-\indexentry{Homomorphismus}{59}
-\indexentry{Vektorraumhomomorphismus}{59}
-\indexentry{Endomorphismus}{59}
-\indexentry{Isomorphismus}{59}
-\indexentry{Automorphismus}{59}
-\indexentry{Linearform}{59}
-\indexentry{orthogonal}{60}
-\indexentry{positiv definit}{60}
-\indexentry{positiv semidefinit}{60}
-\indexentry{negativ definit}{61}
-\indexentry{negativ semidefinit}{61}
-\indexentry{Norm}{61}
-\indexentry{Raum, normiert}{61}
-\indexentry{Norm, euklidische}{61}
-\indexentry{Norm, induziert}{61}
-\indexentry{Skalarproduktraum}{61}
-\indexentry{Raum mit Skalarprodukt}{61}
-\indexentry{Metrik}{62}
-\indexentry{Raum, metrisch}{62}
+\indexentry{$i = \sqrt{-1}$}{30}
+\indexentry{Cardano, Gerolamo}{31}
+\indexentry{Unendlich $\infty$}{31}
+\indexentry{abz\IeC {\"a}hlbar}{33}
+\indexentry{abz\IeC {\"a}hlbar unendlich}{33}
+\indexentry{Kartoffel-Paradoxon}{39}
+\indexentry{Pythagoras}{45}
+\indexentry{Summe $\Sigma$}{47}
+\indexentry{Produkt $\Pi$}{47}
+\indexentry{Quantor}{47}
+\indexentry{F\IeC {\"u}r alle}{48}
+\indexentry{Es gibt, es existiert}{48}
+\indexentry{Junktor}{48}
+\indexentry{Menge}{48}
+\indexentry{Teilmenge}{49}
+\indexentry{Leere Menge}{49}
+\indexentry{Vereinigungsmenge}{50}
+\indexentry{Schnittmenge}{50}
+\indexentry{Abbildung}{50}
+\indexentry{Verkn\IeC {\"u}pfung}{50}
+\indexentry{assoziativ}{51}
+\indexentry{kommutativ}{51}
+\indexentry{Neutrales Element}{51}
+\indexentry{Monoid}{51}
+\indexentry{Linksinverse}{51}
+\indexentry{Rechtsinverse}{51}
+\indexentry{Inverse}{51}
+\indexentry{Gruppe}{51}
+\indexentry{Gruppe, abelsch}{51}
+\indexentry{Ring}{52}
+\indexentry{Ring, kommutativer}{52}
+\indexentry{K\IeC {\"o}rper}{52}
+\indexentry{Vektorraum}{53}
+\indexentry{Vektorraum}{53}
+\indexentry{Unabh\IeC {\"a}ngigkeit, linear}{55}
+\indexentry{Dimension}{56}
+\indexentry{Matrix}{58}
+\indexentry{injektiv}{60}
+\indexentry{surjektiv}{60}
+\indexentry{bijektiv}{61}
+\indexentry{umkehrbar eindeutig}{61}
+\indexentry{Homomorphismus}{61}
+\indexentry{Vektorraumhomomorphismus}{61}
+\indexentry{Endomorphismus}{61}
+\indexentry{Isomorphismus}{61}
+\indexentry{Automorphismus}{61}
+\indexentry{Linearform}{61}
+\indexentry{orthogonal}{62}
+\indexentry{positiv definit}{63}
+\indexentry{positiv semidefinit}{63}
+\indexentry{negativ definit}{63}
+\indexentry{negativ semidefinit}{63}
+\indexentry{Norm}{63}
 \indexentry{Raum, normiert}{63}
-\indexentry{Raum, metrisch}{63}
-\indexentry{Algebra}{63}
-\indexentry{Dreieck, Pascal}{66}
-\indexentry{Dreieck, Yang-Hui}{66}
-\indexentry{Pascal, Blaise}{66}
-\indexentry{Monom}{67}
-\indexentry{Polynom}{67}
-\indexentry{Leitkoeffizient}{67}
-\indexentry{Rang, Polynom}{67}
-\indexentry{normiert}{67}
-\indexentry{monisch}{67}
-\indexentry{Banach Raum}{79}
-\indexentry{Banach, Stefan}{79}
-\indexentry{monoton steigend}{80}
-\indexentry{monoton fallend}{80}
-\indexentry{Monotonie}{80}
-\indexentry{Schranke, obere}{80}
-\indexentry{Supremum}{80}
-\indexentry{Schranke, untere}{80}
-\indexentry{Infimum}{80}
-\indexentry{konstante Folge}{80}
-\indexentry{alternierend}{80}
-\indexentry{Null-Folge}{80}
-\indexentry{konvergent}{80}
-\indexentry{Grenzwert}{80}
-\indexentry{Cauchy-Folge}{81}
-\indexentry{Limes}{81}
-\indexentry{lim}{81}
-\indexentry{vollst\IeC {\"a}ndig}{81}
-\indexentry{Vollst\IeC {\"a}ndigkeitsaxiom}{81}
-\indexentry{Axiom}{81}
-\indexentry{Partialsumme}{82}
-\indexentry{Reihe}{82}
-\indexentry{stetig}{83}
-\indexentry{Folgenstetigkeit}{83}
-\indexentry{$\delta$-$\epsilon$-stetig}{83}
-\indexentry{Lemma von B\IeC {\'e}zout}{99}
-\indexentry{Lemma von Euklid}{100}
+\indexentry{Norm, euklidische}{64}
+\indexentry{Norm, induziert}{64}
+\indexentry{Skalarproduktraum}{64}
+\indexentry{Raum mit Skalarprodukt}{64}
+\indexentry{Metrik}{64}
+\indexentry{Raum, metrisch}{64}
+\indexentry{Raum, normiert}{65}
+\indexentry{Raum, metrisch}{65}
+\indexentry{Algebra}{65}
+\indexentry{Dreieck, Pascal}{68}
+\indexentry{Dreieck, Yang-Hui}{68}
+\indexentry{Pascal, Blaise}{68}
+\indexentry{Monom}{69}
+\indexentry{Polynom}{69}
+\indexentry{Leitkoeffizient}{69}
+\indexentry{Rang, Polynom}{69}
+\indexentry{normiert}{69}
+\indexentry{monisch}{69}
+\indexentry{Banach Raum}{81}
+\indexentry{Banach, Stefan}{81}
+\indexentry{monoton steigend}{82}
+\indexentry{monoton fallend}{82}
+\indexentry{Monotonie}{82}
+\indexentry{Schranke, obere}{82}
+\indexentry{Supremum}{82}
+\indexentry{Schranke, untere}{82}
+\indexentry{Infimum}{82}
+\indexentry{konstante Folge}{82}
+\indexentry{alternierend}{82}
+\indexentry{Null-Folge}{82}
+\indexentry{konvergent}{82}
+\indexentry{Grenzwert}{82}
+\indexentry{Cauchy-Folge}{83}
+\indexentry{Limes}{83}
+\indexentry{lim}{83}
+\indexentry{vollst\IeC {\"a}ndig}{83}
+\indexentry{Vollst\IeC {\"a}ndigkeitsaxiom}{83}
+\indexentry{Axiom}{83}
+\indexentry{Partialsumme}{84}
+\indexentry{Reihe}{84}
+\indexentry{stetig}{85}
+\indexentry{Folgenstetigkeit}{85}
+\indexentry{$\delta$-$\epsilon$-stetig}{85}
+\indexentry{Lemma von B\IeC {\'e}zout}{101}
+\indexentry{Lemma von Euklid}{102}
