@@ -21,6 +21,9 @@
 
 \usepackage{bbding} % Hands and Point Symbols
 
+% Setze Nummerierung bis subsection fort.
+\setsecnumdepth{subsection}
+
 \usepackage{lgreek}
 
 \usepackage{color}
@@ -110,17 +113,15 @@
 
 % --------------- TITLE PAGE
 \thispagestyle{empty}
-\begin{flushright}
+\begin{center}
 {\Large Dipl.-Math. Stephan Kesper}
-\vskip 3cm
-{\Huge Einführung in die Mathematik}
-\vskip 1cm
-{\Large \textsl{Zum Selbststudium oder als Grundlage für den Unterricht}}
-\vskip 5cm
+\vskip 4cm
+{\fontsize{48}{52} \selectfont Mathematik}
+\vskip 6cm
 \today
 \vfill
 \includegraphics{../../../License/by-nc-sa.png}
-\end{flushright}
+\end{center}
 % --------------- TITLE PAGE
 \newpage
 
@@ -162,7 +163,9 @@
 
 \include{./analysis/analysis}
 \include{./analysis/foundations}
+\include{./analysis/log}
 \include{./analysis/diffint}
+\include{./analysis/diffgl}
 \include{./analysis/trigonometry}
 
 \include{./algebra/algebra}

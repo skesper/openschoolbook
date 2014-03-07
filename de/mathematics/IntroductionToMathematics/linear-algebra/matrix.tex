@@ -11,9 +11,9 @@ Sei $(K,+,\cdot )$ ein Körper und $(V,+ ,\cdot)$ eine Menge mit zwei Verknüpfu
 + : V\times V &\longrightarrow& V \\
 \cdot : K \times V &\longrightarrow& V 
 \end{eqnarray*}
-Hierbei ist zu beachten, dass die Verknüpfungen einmal auf $K$ und einmal auf $V$ definiert wurden. Man könnte hier verschiedene Zeichen zur Unterscheidung der Additionen einführen. Dies ist im allgemeinen aber unüblich, sodass hier vom Lernenden verlangt wird, den Unterschied selbst zu erkennen. Auf $V$ wird die Addition als \textsl{Vektoraddition} bezeichnet, sowie die Multiplikation als \textsl{Skalare Multiplikation}, da sie nicht zwischen zwei Vektoren, sondern einem Element des zugrunde liegenden Körpers und einem Vektor definiert ist. 
+Hierbei ist zu beachten, dass die Verknüpfungen einmal auf $K$ und einmal auf $V$ definiert wurden. Man könnte hier verschiedene Zeichen zur Unterscheidung der Additionen einführen. Dies ist im allgemeinen aber unüblich, sodass hier vom Lernenden verlangt wird, den Unterschied selbst zu erkennen. Auf $V$ wird die Addition als \emph{Vektoraddition} bezeichnet, sowie die Multiplikation als \emph{Skalare Multiplikation}, da sie nicht zwischen zwei Vektoren, sondern einem Element des zugrunde liegenden Körpers und einem Vektor definiert ist. 
 
-Man nennt $(V,+ ,\cdot)$ einen \textsl{Vektorraum}\index{Vektorraum} über dem Körper $K$, oder auch \textsl{K-Vektorraum}, wenn folgende Eigenschaften erfüllt sind:
+Man nennt $(V,+ ,\cdot)$ einen \emph{Vektorraum}\index{Vektorraum} über dem Körper $K$, oder auch \emph{K-Vektorraum}, wenn folgende Eigenschaften erfüllt sind:
 
 \noindent Es seien $u,v,w \in V$ und $a,b \in K$:
 
@@ -40,13 +40,13 @@ Zur Vertiefung der sei an dieser Stelle auf das grundlegende Werk von Egbert Bri
 \end{quote}
 
 \begin{definition}
-Ein Element eines Vektorraums wird \textsl{Vektor} genannt.
+Ein Element eines Vektorraums wird \emph{Vektor} genannt.
 \end{definition}
 
 \subsection{Linearkombination}
 
 \begin{definition}
-Eine beliebige Summe von $p$ Vektoren $v_i \in V$ mit Faktoren $a_i \in K$ wird als \textsl{Linearkombination} bezeichnet.
+Eine beliebige Summe von $p$ Vektoren $v_i \in V$ mit Faktoren $a_i \in K$ wird als \emph{Linearkombination} bezeichnet.
 \[
 l = \sum_{i=1}^{p} a_i \cdot v_i = a_1\cdot v_1 + a_2 \cdot v_2 + \dots + a_p \cdot v_p
 \]
@@ -59,7 +59,7 @@ Die Summe ist wiederum ein Vektor in $V$.
 Der Begriff der Basis ist an dieser Stelle noch nicht einführbar, ohne weitere Begriffe definiert zu haben, die aktuell von wenig Nutzen sind und den Lernenden eher verwirren. Daher beschränken wir uns aktuell nur auf eine Basis:
 
 \begin{definition}
-Als die \textsl{Standard-Basis} des $\mathbb{R}^n$ werden die Vektoren $e^i$ mit $i=1,\dots,n$ bezeichnet, deren Einträge überall null sind, bis auf den Eintrag $i$ und dieser ist 1. An der "`hoch"' Position hatten wir bisher nur Exponenten, hier ist es ein Index, das heißt, $e^i$ ist der $i$-te Basisvektor und nicht $e$ hoch $i$. Wir verwenden einen hochgestellten Index, da wir später auf die einzelnen Komponenten der Einheitsvektoren zugreifen wollen, aber dabei nicht doppelte, tiefgestellte Indizes möchten, verwenden wir den hochgestellten Index. 
+Als die \emph{Standard-Basis} des $\mathbb{R}^n$ werden die Vektoren $e^i$ mit $i=1,\dots,n$ bezeichnet, deren Einträge überall null sind, bis auf den Eintrag $i$ und dieser ist 1. An der "`hoch"' Position hatten wir bisher nur Exponenten, hier ist es ein Index, das heißt, $e^i$ ist der $i$-te Basisvektor und nicht $e$ hoch $i$. Wir verwenden einen hochgestellten Index, da wir später auf die einzelnen Komponenten der Einheitsvektoren zugreifen wollen, aber dabei nicht doppelte, tiefgestellte Indizes möchten, verwenden wir den hochgestellten Index. 
 
 \begin{equation}
 e^1 = \begin{pmatrix}
@@ -103,12 +103,12 @@ v_n
 \end{pmatrix} = \sum_{i=1}^{n} v_i \cdot e^i
 \]
 
-Bezüglich einer Basis wird auch der Begriff \textsl{Erzeugendensystem} verwendet. Die ist so zu verstehen, dass durch Linearkombinationen der Basis-Vektoren jeder andere Vektor "`erzeugt"' werden kann. Allerdings ist ein Erzeugendensystem nicht notwendigerweise aus linear unabhängigen (Erklärung folgt) Vektoren gebildet. Das bedeutet, ein Erzeugendensystem enthält gegebenenfalls mehr Vektoren als notwendig um den Vektorraum zu "`erzeugen"'. Man spricht genau dann von einer Basis, wenn man alles überflüssige aus einem Erzeugendensystem entfernt hat. Im mathematischen Sprachgebrauch: Ein minimales Erzeugendensystem ist eine Basis.
+Bezüglich einer Basis wird auch der Begriff \emph{Erzeugendensystem} verwendet. Die ist so zu verstehen, dass durch Linearkombinationen der Basis-Vektoren jeder andere Vektor "`erzeugt"' werden kann. Allerdings ist ein Erzeugendensystem nicht notwendigerweise aus linear unabhängigen (Erklärung folgt) Vektoren gebildet. Das bedeutet, ein Erzeugendensystem enthält gegebenenfalls mehr Vektoren als notwendig um den Vektorraum zu "`erzeugen"'. Man spricht genau dann von einer Basis, wenn man alles überflüssige aus einem Erzeugendensystem entfernt hat. Im mathematischen Sprachgebrauch: Ein minimales Erzeugendensystem ist eine Basis.
 
 \subsection{Lineare Unabhängigkeit}
 
 \begin{definition}
-Die \textsl{linare Unabhängigkeit} \index{Unabhängigkeit, linear} von Vektoren wird definiert durch eine Linearkombination, d.h. eine Summe von Vektoren mit konstanten Faktoren. Wenn diese Linearkombination nur dadurch zu einem Null Vektor gemacht werden kann, indem alle Faktoren zu 0 werden, dann sind die Vektoren linear unabhängig. Seien $x_i$ aus einem K-Vektorraum und $\lambda_i $ aus dem zugrunde liegenden Körper. 
+Die \emph{linare Unabhängigkeit} \index{Unabhängigkeit, linear} von Vektoren wird definiert durch eine Linearkombination, d.h. eine Summe von Vektoren mit konstanten Faktoren. Wenn diese Linearkombination nur dadurch zu einem Null Vektor gemacht werden kann, indem alle Faktoren zu 0 werden, dann sind die Vektoren linear unabhängig. Seien $x_i$ aus einem K-Vektorraum und $\lambda_i $ aus dem zugrunde liegenden Körper. 
 
 \begin{equation}\label{eq:linunabh}
 \sum_{i=1}^{n} \lambda_i x_i = 0 \quad \text{dann, und nur dann, wenn} \quad \lambda_i = 0
@@ -147,7 +147,7 @@ Per Definition der linearen Unabhängigkeit kann der dicke Pfeil nur dann die L�
 \subsection{Dimension}
 
 \begin{definition}
-Die maximale Anzahl von linear unabhängigen Basisvektoren eines Vektorraums wird \textsl{Dimension}\index{Dimension} genannt. Der $\mathbb{R}^n$ hat die Dimension $n$, da es genau $n$ Möglichkeiten gibt, Basisvektoren zu bilden, die aus $n-1$ Nullen und einer 1 bestehen.
+Die maximale Anzahl von linear unabhängigen Basisvektoren eines Vektorraums wird \emph{Dimension}\index{Dimension} genannt. Der $\mathbb{R}^n$ hat die Dimension $n$, da es genau $n$ Möglichkeiten gibt, Basisvektoren zu bilden, die aus $n-1$ Nullen und einer 1 bestehen.
 \end{definition}
 
 
@@ -171,8 +171,8 @@ Die Werte für $a_{i,j}$ und $b_{i}$ sind vorgegeben. Gesucht werden die $x_j$ W
 Gleichungssysteme werden nach der Anzahl ihrer Gleichungen in folgende Kategorien eingeteilt:
 
 \begin{description}
-\item[$m<n$] Solche Systeme bezeichnet man als \textsl{unterbestimmt}, es existieren weniger Gleichungen als Unbekannte. Die Lösung solcher Systeme ist im allgemeinen nicht eindeutig. Solche Gleichungssysteme treten in der linearen Optimierung auf. 
-\item[$m>n$] Solche Systeme bezeichnet man als \textsl{überbestimmt}, es existieren mehr Gleichungen als Unbekannte. Es ist im allgemeinen nicht möglich eine Lösung für solche Systeme anzugeben, da es möglich ist, sich widersprechende Randbedingungen in den Gleichungen zu formulieren. 
+\item[$m<n$] Solche Systeme bezeichnet man als \emph{unterbestimmt}, es existieren weniger Gleichungen als Unbekannte. Die Lösung solcher Systeme ist im allgemeinen nicht eindeutig. Solche Gleichungssysteme treten in der linearen Optimierung auf. 
+\item[$m>n$] Solche Systeme bezeichnet man als \emph{überbestimmt}, es existieren mehr Gleichungen als Unbekannte. Es ist im allgemeinen nicht möglich eine Lösung für solche Systeme anzugeben, da es möglich ist, sich widersprechende Randbedingungen in den Gleichungen zu formulieren. 
 \item[$m=n$] Auch als quadratische Gleichungssysteme bezeichnet. Sofern bestimmte Bedingungen von den $a_{i,j}$ Werten erfüllt werden, gibt es genau eine Lösung. Dies sind die Systeme, mit denen wir uns hier beschäftigen werden.
 \end{description}
 
@@ -241,7 +241,7 @@ Hier haben wir uns noch keine Gedanken darüber gemacht, was diese Spalten und T
 \subsection{Matrix}
 
 \begin{definition}
-Eine \textsl{Matrix} \index{Matrix} ist eine rechteckige Struktur von Elementen des Körpers, über dem sie gebildet werden. Hier werden im allgemeinen nur reelle Matrizen betrachtet. Somit sind diese Matrizen aus dem $\mathbb{R}^{m\times n}$:
+Eine \emph{Matrix} \index{Matrix} ist eine rechteckige Struktur von Elementen des Körpers, über dem sie gebildet werden. Hier werden im allgemeinen nur reelle Matrizen betrachtet. Somit sind diese Matrizen aus dem $\mathbb{R}^{m\times n}$:
 \end{definition}
 
 \begin{equation*}
@@ -271,7 +271,7 @@ Dabei ist zu beachten, dass $0 \in \mathbb{R}^{m\times n} = (0)_{i,j}$ die Null 
 \subsubsection{Rechenregeln}
 
 \begin{definition}
-Die Zahlen in den einzelnen Zellen der Tabelle nennt man \textsl{Einträge} oder auch \textsl{Komponenten}. Das selbe gilt für einen Vektor, der als einspaltige Matrix interpretiert werden kann.
+Die Zahlen in den einzelnen Zellen der Tabelle nennt man \emph{Einträge} oder auch \emph{Komponenten}. Das selbe gilt für einen Vektor, der als einspaltige Matrix interpretiert werden kann.
 \end{definition}
 
 Die Addition zweier Matrizen wird auf die einzelnen Einträge abgebildet. Als Abkürzung wird hier die Notation $(\dots)_{i,j}$ verwendet. Dies ist eine Darstellung des Eintrags an der $i$-ten Zeile und $j$-ten Spalte. Wenn keine Einschränkung an $i$ und $j$ gemacht werden, so gilt diese Abkürzung für jeden Eintrag der Matrix. Und somit bestimmt diese Abkürzung auch die gesamte Matrix.
@@ -372,46 +372,46 @@ TODO
 
 
 \begin{definition}
-Eine Abbildung $\phi : V \longrightarrow W$ wird als \textsl{injektiv}\index{injektiv} bezeichnet, wenn für $u,v \in V$ 
+Eine Abbildung $\phi : V \longrightarrow W$ wird als \emph{injektiv}\index{injektiv} bezeichnet, wenn für $u,v \in V$ 
 \[ u\ne v \Rightarrow \phi(u) \ne \phi(v) \]
 \end{definition}
 Umgekehrt gilt: Aus $\phi(u)=\phi(v)$ folgt, dass $u=v$ ist. 
 
 \begin{definition}
-Eine Abbildung $\phi : V \longrightarrow W$ wird als \textsl{surjektiv}\index{surjektiv} bezeichnet, wenn für alle $w\in W$ mindestens ein $v\in V$ existiert mit 
+Eine Abbildung $\phi : V \longrightarrow W$ wird als \emph{surjektiv}\index{surjektiv} bezeichnet, wenn für alle $w\in W$ mindestens ein $v\in V$ existiert mit 
 \[\phi(v) = w\]
 \end{definition}
 
 \begin{definition}
-Eine Abbildung $\phi : V \longrightarrow W$ wird als \textsl{bijektiv}\index{bijektiv} bezeichnet, wenn sie sowohl injektiv als auch surjektiv ist. 
+Eine Abbildung $\phi : V \longrightarrow W$ wird als \emph{bijektiv}\index{bijektiv} bezeichnet, wenn sie sowohl injektiv als auch surjektiv ist. 
 \end{definition}
 
-Aufgrund der Surjektivität gibt es zu $w\in W$ immer ein $v\in V$  mit $\phi(v)=w$ und dieses $v$ ist eindeutig aufgrund der Injektivität. Daher gilt eine bijektive Abbildung $\phi$ als \textsl{umkehrbar eindeutig}\index{umkehrbar eindeutig}. D.h. es gibt ein $\phi^{-1} : W \longrightarrow V$ mit $v = \phi^{-1}(w)$.
+Aufgrund der Surjektivität gibt es zu $w\in W$ immer ein $v\in V$  mit $\phi(v)=w$ und dieses $v$ ist eindeutig aufgrund der Injektivität. Daher gilt eine bijektive Abbildung $\phi$ als \emph{umkehrbar eindeutig}\index{umkehrbar eindeutig}. D.h. es gibt ein $\phi^{-1} : W \longrightarrow V$ mit $v = \phi^{-1}(w)$.
 
 \subsection{Morphismen}
 
 \begin{definition}
 
-Ein \textsl{Vektorraumhomomorphismus}\index{Homomorphismus}\index{Vektorraumhomomorphismus} -- auch verkürzt einfach Homomorphismus genannt -- von $V$ nach $W$ ist eine Abbildung $\phi : V \longrightarrow W$ mit folgenden Eigenschaften:
+Ein \emph{Vektorraumhomomorphismus}\index{Homomorphismus}\index{Vektorraumhomomorphismus} -- auch verkürzt einfach Homomorphismus genannt -- von $V$ nach $W$ ist eine Abbildung $\phi : V \longrightarrow W$ mit folgenden Eigenschaften:
 \begin{enumerate}
 \item Für alle $v,w \in V$ gilt: $\phi(v+w) = \phi(v)+\phi(w)$
 \item Für alle $a\in K$ und $v\in V$ ist $\phi(av)=a\phi(v)$
 \end{enumerate}
-Ist $V=W$, so wird $\phi : V\longrightarrow V$ als \textsl{Endomorphismus}\index{Endomorphismus} bezeichnet.
+Ist $V=W$, so wird $\phi : V\longrightarrow V$ als \emph{Endomorphismus}\index{Endomorphismus} bezeichnet.
 \end{definition}
 
 \begin{definition}
-Ist $\phi : V\longrightarrow W$ ein bijektiver Homomorphismus, so wird $\phi$ als \textsl{Isomorphismus}\index{Isomorphismus} bezeichnet.
+Ist $\phi : V\longrightarrow W$ ein bijektiver Homomorphismus, so wird $\phi$ als \emph{Isomorphismus}\index{Isomorphismus} bezeichnet.
 \end{definition}
 
 \begin{definition}
-Ist $\phi : V\longrightarrow V$ ein bijektiver Endomorphismus,  so wird $\phi$ als \textsl{Automorphismus}\index{Automorphismus} bezeichnet.
+Ist $\phi : V\longrightarrow V$ ein bijektiver Endomorphismus,  so wird $\phi$ als \emph{Automorphismus}\index{Automorphismus} bezeichnet.
 \end{definition}
 
 \subsection{Linearformen}
 
 \begin{definition}
-Eine \textsl{Linearform} \index{Linearform} ist eine lineare Abbildung von einem K-Vektorraum in seinen zugrundeliegenden Körper
+Eine \emph{Linearform} \index{Linearform} ist eine lineare Abbildung von einem K-Vektorraum in seinen zugrundeliegenden Körper
 \[
 l : V \longrightarrow K
 \]
@@ -423,7 +423,7 @@ für $v,w\in V$ und $\alpha, \beta \in K$
 \subsubsection{Bilinearformen}
 
 \begin{definition}
-Seien $V,W$ K-Vektorräume. Eine \textsl{Bilinearform} $b$ ist eine lineare Funktion
+Seien $V,W$ K-Vektorräume. Eine \emph{Bilinearform} $b$ ist eine lineare Funktion
 \[
 	b : V \times W \longrightarrow K
 \]
@@ -447,7 +447,7 @@ mit den Basisvektoren $e^i, e^j\in V$. Hat man die Matrix $B$ zur Bilinearform $
 
 
 \begin{definition}
-Eine spezielle Bilinearform $\langle .,.\rangle : V\times V \longrightarrow K$ wird \textsl{Skalarprodukt} oder auch \textsl{inneres Produkt} genannt. (Man darf dies nicht mit der Skalarmultiplikation verwechseln, also dem Produkt aus einer Zahl aus dem Körper mit einem Vektor). In reellen Vektorräumen nimmt es die folgende Form an:
+Eine spezielle Bilinearform $\langle .,.\rangle : V\times V \longrightarrow K$ wird \emph{Skalarprodukt} oder auch \emph{inneres Produkt} genannt. (Man darf dies nicht mit der Skalarmultiplikation verwechseln, also dem Produkt aus einer Zahl aus dem Körper mit einem Vektor). In reellen Vektorräumen nimmt es die folgende Form an:
 \[
 \langle u,v \rangle = \sum_{i=1}^{n} u_i\cdot v_i = u^T \cdot v = u^T I v
 \]
@@ -457,7 +457,7 @@ für $u,v \in V$ und der Identität (\ref{matrixid}) $I$.
 \begin{definition}
 Seien $u,v \in V$ und $\langle .,.\rangle$ ein Skalarprodukt auf $V$. Seien $u\ne 0$ und $v\ne 0$. Falls 
 \[ \langle u,v \rangle = \langle v,u \rangle = 0\]
-ist, so bezeichnet man $u$ und $v$ als zueinander \textsl{orthogonal}. \index{orthogonal}
+ist, so bezeichnet man $u$ und $v$ als zueinander \emph{orthogonal}. \index{orthogonal}
 \end{definition}
 
 Die Vektoren $e^i$ der Standardbasis des $\mathbb{R}^n$ sind natürlicherweise orthogonal zueinander, sehen wir uns das genauer an: Seien $e^i$ und $e^j$ Basisvektoren und $i\ne j$. Da fast alle Einträge der Vektoren null sind, bleiben nur die beiden Faktoren zu beachten, die den Wert eins haben. 
@@ -484,12 +484,12 @@ Daraus folgt, dass alle Vektoren der Standardbasis orthogonal zueinander sind.
 \begin{definition}
 Sei $b(.,.) : V\times V \longrightarrow K$ eine Bilinearform. $b(.,.)$ ist
 
-\begin{enumerate}
-\item \textsl{positiv definit}, falls $b(v,v)>0$\index{positiv definit}
-\item \textsl{positiv semidefinit}, falls $b(v,v)\ge 0$\index{positiv semidefinit}
-\item \textsl{negativ definit}, falls $b(v,v) <0$\index{negativ definit}
-\item \textsl{negativ semidefinit}, falls $b(v,v)\le 0$\index{negativ semidefinit}
-\end{enumerate}
+\begin{description}
+\item[\emph{positiv definit}] falls $b(v,v)>0$\index{positiv definit}
+\item[\emph{positiv semidefinit}] falls $b(v,v)\ge 0$\index{positiv semidefinit}
+\item[\emph{negativ definit}] falls $b(v,v) <0$\index{negativ definit}
+\item[\emph{negativ semidefinit}] falls $b(v,v)\le 0$\index{negativ semidefinit}
+\end{description}
 für alle $v\in V $
 \end{definition}
 
@@ -504,7 +504,7 @@ definiert wird. Das bedeutet, eine Bilinearform bestimmt ihre darstellende Matri
 \subsubsection{Norm und Abstände}
 
 \begin{definition}
-Eine \textsl{Norm}\index{Norm} ist eine lineare Abbildung $\Vert . \Vert : V \longrightarrow \mathbb{R}_+$, vom Vektorraum in die positiven reellen Zahlen. Dabei gelten folgende Eigenschaften:
+Eine \emph{Norm}\index{Norm} ist eine lineare Abbildung $\Vert . \Vert : V \longrightarrow \mathbb{R}_+$, vom Vektorraum in die positiven reellen Zahlen. Dabei gelten folgende Eigenschaften:
 \begin{description}
 \item[(1)] Aus $\Vert v\Vert = 0$ folgt $v=0$
 \item[(2)] $\Vert a\cdot v\Vert = \vert a\vert \cdot \Vert v\Vert$
@@ -512,23 +512,23 @@ Eine \textsl{Norm}\index{Norm} ist eine lineare Abbildung $\Vert . \Vert : V \lo
 \end{description}
 Mit $u,v\in V$, $a\in K$ und $\vert a\vert$ dem Absolutbetrag des Skalars $a$.
 \end{definition}
-Zu beachten ist, dass die Norm nicht in den zugrundeliegenden Körper abbildet. Falls $K=\mathbb{C}$, dann ist trotzdem das Ergebnis der Norm in den positiven reellen Zahlen. Ein Vektorraum, in dem eine Norm definiert ist, nennt man einen \textsl{normierten Raum}\index{Raum, normiert}, oder \textsl{normierter Vektorraum}.
+Zu beachten ist, dass die Norm nicht in den zugrundeliegenden Körper abbildet. Falls $K=\mathbb{C}$, dann ist trotzdem das Ergebnis der Norm in den positiven reellen Zahlen. Ein Vektorraum, in dem eine Norm definiert ist, nennt man einen \emph{normierten Raum}\index{Raum, normiert}, oder \emph{normierter Vektorraum}.
 
 \begin{definition}
 Sei $V$ ein reeller Vektorraum $\mathbb{R}^n$ mit einem Skalarprodukt $\langle .,.\rangle$. Die Linearform 
 \[
 \Vert u \Vert = \sqrt{\langle u,u \rangle}
 \]
-wird \textsl{euklidische Norm}\index{Norm, euklidische} oder vom Skalarprodukt \textsl{induzierte Norm}\index{Norm, induziert} genannt. Sie ist hier separat definiert, da sie in diesem Kapitel eine zentrale Rolle spielt. Die folgenden Definitionen sind ebenfalls korrekt:
+wird \emph{euklidische Norm}\index{Norm, euklidische} oder vom Skalarprodukt \emph{induzierte Norm}\index{Norm, induziert} genannt. Sie ist hier separat definiert, da sie in diesem Kapitel eine zentrale Rolle spielt. Die folgenden Definitionen sind ebenfalls korrekt:
 \begin{equation}\label{eq:2norm}
 \Vert u \Vert = \sqrt{u^T \cdot u} = \sqrt{\sum_{i=1}^{n} u_i^2}= \sqrt{\sum_{i=1}^{n} \vert u_i \vert^2}
 \end{equation}
 \end{definition}
 
-Dass die Euklidische Norm die Eigenschaften (1)-(3) erfüllt, soll in den Aufgaben nachgerechnet werden. Normen stellen ein wichtiges Werkzeug dar, denn mit ihnen können Längen von Vektoren gemessen werden. Einen Vektorraum, in dem ein Skalarprodukt definiert ist, nennt man einen \textsl{Skalarproduktraum}, aber das wird in Definition \ref{skpr} noch genauer dargelegt.\index{Skalarproduktraum}\index{Raum mit Skalarprodukt}
+Dass die Euklidische Norm die Eigenschaften (1)-(3) erfüllt, soll in den Aufgaben nachgerechnet werden. Normen stellen ein wichtiges Werkzeug dar, denn mit ihnen können Längen von Vektoren gemessen werden. Einen Vektorraum, in dem ein Skalarprodukt definiert ist, nennt man einen \emph{Skalarproduktraum}, aber das wird in Definition \ref{skpr} noch genauer dargelegt.\index{Skalarproduktraum}\index{Raum mit Skalarprodukt}
 
 \begin{definition}
-Eine Bilinearform $d : V\times V \longrightarrow \mathbb{R}_+$ heißt \textsl{Metrik}\index{Metrik}, falls folgende Eigenschaften erfüllt sind:
+Eine Bilinearform $d : V\times V \longrightarrow \mathbb{R}_+$ heißt \emph{Metrik}\index{Metrik}, falls folgende Eigenschaften erfüllt sind:
 \begin{description}
 \item[(1)] Aus $d(u,v) = 0$ folgt $u=v$
 \item[(2)] $d(u,v) = d(v,u)$, diese Eigenschaft wird auch als Symmetrie bezeichnet.
@@ -536,7 +536,7 @@ Eine Bilinearform $d : V\times V \longrightarrow \mathbb{R}_+$ heißt \textsl{Me
 \end{description}
 \end{definition}
 
-Eine Metrik wird dazu benutzt einen Abstand zwischen zwei Vektoren zu messen. Ein Vektorraum, in dem eine Metrik definiert ist, nennt man \textsl{metrischen Raum}\index{Raum, metrisch}. 
+Eine Metrik wird dazu benutzt einen Abstand zwischen zwei Vektoren zu messen. Ein Vektorraum, in dem eine Metrik definiert ist, nennt man \emph{metrischen Raum}\index{Raum, metrisch}. 
 
 \begin{definition}
 Jeder normierte Raum kann zu einem metrischen Raum gemacht werden, indem eine Metrik auf Basis der Norm definiert wird:
@@ -546,7 +546,7 @@ d(u,v) = \Vert u-v \Vert
 \end{definition}
 
 \begin{definition}
-In Anlehnung an Formel (\ref{eq:2norm}) kann allgemein eine \textsl{p-Norm} definiert werden:
+In Anlehnung an Formel (\ref{eq:2norm}) kann allgemein eine \emph{p-Norm} definiert werden:
 \[
 \Vert u \Vert_p = \left( \sum_{i=1}^{n} \vert u_i \vert^p \right)^{\frac{1}{p}}
 \]
@@ -562,7 +562,7 @@ Für $p \longrightarrow \infty$ nähert sich die Norm immer weiter an den größ
 \subsection{Dualraum}
 
 \begin{definition}
-Die Menge aller Linearformen eines K-Vektorraums werden \textsl{Dualraum} von V genannt. Der Dualraum wird meist mit einem Stern gekennzeichnet
+Die Menge aller Linearformen eines K-Vektorraums werden \emph{Dualraum} von V genannt. Der Dualraum wird meist mit einem Stern gekennzeichnet
 \[V^* \]
 \end{definition}
 
@@ -574,7 +574,7 @@ TODO: Wofür braucht man Dualräume und welche Einsichten erlangt man durch sie?
 \subsection{Skalarproduktraum}
 
 \begin{definition}\label{skpr}
-Ein \textsl{Skalarproduktraum} ist ein K-Vektorraum $(V,+,\cdot)$ zusammen mit einem Skalarprodukt $\langle .,. \rangle$.
+Ein \emph{Skalarproduktraum} ist ein K-Vektorraum $(V,+,\cdot)$ zusammen mit einem Skalarprodukt $\langle .,. \rangle$.
 \end{definition}
 
 Jeder Skalarproduktraum wird mit 
@@ -593,10 +593,10 @@ TODO
 
 \section{Der $\mathbb{R}^3$}
 
-Betrachten wir den dreidimensionalen reellen Vektorraum. Speziell für den dreidimensionalen Fall können wir eine Operation definieren, die einem Produkt auf dem Vektorraum entspricht. Wir nennen es das \textsl{Kreuzprodukt} oder \textsl{äußeres Produkt}. 
+Betrachten wir den dreidimensionalen reellen Vektorraum. Speziell für den dreidimensionalen Fall können wir eine Operation definieren, die einem Produkt auf dem Vektorraum entspricht. Wir nennen es das \emph{Kreuzprodukt} oder \emph{äußeres Produkt}. 
 
 \begin{definition}
-Das \textsl{Kreuzprodukt} ist definiert für Vektoren $u,v\in \mathbb{R}^3$, als
+Das \emph{Kreuzprodukt} ist definiert für Vektoren $u,v\in \mathbb{R}^3$, als
 \begin{equation*}
 \begin{pmatrix}
 u_1\\u_2\\u_3
@@ -612,13 +612,13 @@ u_1\cdot v_2-u_2\cdot v_1
 \end{definition}
 
 \begin{definition}
-Der Vektorraum zusammen mit diesem Produkt wird eine \textsl{Algebra}\index{Algebra} genannt.
+Der Vektorraum zusammen mit diesem Produkt wird eine \emph{Algebra}\index{Algebra} genannt.
 \end{definition}
 
-Der $\mathbb{R}^3$ zusammen mit dem Kreuzprodukt bildet eine sehr einfache \textsl{Lie-Algebra}\footnote{benannt nach dem norwegischen Mathematiker \textbf{Marius Sophus Lie}, *17. Dezember 1842 in Nordfjordeid; \ding{61}18. Februar 1899 in Kristiania (Oslo)}. Eine Lie-Algebra findet in der Differentialgeometrie und der physikalischen Mathemtik Anwendung. Sie ist definiert durch:
+Der $\mathbb{R}^3$ zusammen mit dem Kreuzprodukt bildet eine sehr einfache \emph{Lie-Algebra}\footnote{benannt nach dem norwegischen Mathematiker \textbf{Marius Sophus Lie}, *17. Dezember 1842 in Nordfjordeid; \ding{61}18. Februar 1899 in Kristiania (Oslo)}. Eine Lie-Algebra findet in der Differentialgeometrie und der physikalischen Mathemtik Anwendung. Sie ist definiert durch:
 
 \begin{definition}
-Eine \textsl{Lie-Algebra} ist ein Vektorraum $V$ zusammen mit der Verknüpfung \textsl{Lie-Klammer}
+Eine \emph{Lie-Algebra} ist ein Vektorraum $V$ zusammen mit der Verknüpfung \emph{Lie-Klammer}
 \[
 \lbrack .,. \rbrack : V \times V \longrightarrow V
 \]

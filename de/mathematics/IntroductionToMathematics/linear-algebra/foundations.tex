@@ -70,7 +70,7 @@ Sowie
 \[ \text{Produkt} = \prod_{n\in N} n  \]
 Es werden auch andere Operationen, wie z.B. die Vereinigung oder der Schnitt von Mengen auf diese Weise dargestellt. 
 \begin{definition}
-Die Schreibweise ein großes Symbol zu verwenden mit darunter, wie darüber befindlichen Einschränkungen wird \textsl{Operatorschreibweise} genannt und folgt dem Schema:
+Die Schreibweise ein großes Symbol zu verwenden mit darunter, wie darüber befindlichen Einschränkungen wird \emph{Operatorschreibweise} genannt und folgt dem Schema:
  \[ \text{Wert } = \bigbox_{\dots}^{\dots}\left( \dots \right) \]
 \end{definition}
 wobei $\bigbox$ jeder beliebige Operator sein kann und die Punkte darüber und darunter die Grenzen angeben, über die eben dieser Operator angewendet wird. Und schließlich das Argument in Klammern stellt ebenjenes dar, auf das der Operator angewandt wird. 
@@ -79,7 +79,7 @@ wobei $\bigbox$ jeder beliebige Operator sein kann und die Punkte darüber und d
 
 \subsection{Quantor}
 
-Im Folgenden werden wir zwei sogenannte \textsl{Quantoren} \index{Quantor} kennen lernen. Sie sind wichtig um Aussagen unzweideutig und in kurzer Art zu formulieren. Der erste ist $\forall$ und bedeutet "`für alle"'\index{Für alle} oder "`für jedes"'. Man benutzt ihn zum Beispiel, um Aussagen "`für alle"' Elemente einer Menge zu definieren.
+Im Folgenden werden wir zwei sogenannte \emph{Quantoren} \index{Quantor} kennen lernen. Sie sind wichtig um Aussagen unzweideutig und in kurzer Art zu formulieren. Der erste ist $\forall$ und bedeutet "`für alle"'\index{Für alle} oder "`für jedes"'. Man benutzt ihn zum Beispiel, um Aussagen "`für alle"' Elemente einer Menge zu definieren.
 
 \[ \forall x\in \mathbb{N} \]
 bedeutet für alle $x$ in den natürlichen Zahlen.
@@ -132,7 +132,7 @@ So ist zum Beispiel
 Im Folgenden seien $A$ und $B$ immer Mengen.
 
 \begin{definition}\index{Teilmenge}
-Wenn für alle $a\in A$ gilt $a\in B$, dann ist $A$ eine \textsl{Teilmenge} von $B$. Dies wird so dargestellt:
+Wenn für alle $a\in A$ gilt $a\in B$, dann ist $A$ eine \emph{Teilmenge} von $B$. Dies wird so dargestellt:
 \[
 A \subset B
 \]
@@ -143,12 +143,12 @@ Eine leere Menge wird mit $\emptyset$ oder $\{\}$ dargestellt.
 \end{definition}
 
 \begin{definition}\index{Vereinigungsmenge}
-Die Vereinigung von Mengen (auch Vereinigungsmenge genannt) wird definiert als
+Die Vereinigung von Mengen (auch \emph{Vereinigungsmenge} genannt) wird definiert als
 \[A \cup B = \{ x | x\in A \vee x\in B \}\]
 \end{definition}
 
 \begin{definition}\index{Schnittmenge}
-Die Schnittmenge wird definiert als 
+Die \emph{Schnittmenge} wird definiert als 
 \[A \cap B = \{x| x\in A \wedge x\in B \} \]
 \end{definition}
 
@@ -179,21 +179,21 @@ Im Folgenden bezeichen $X,Y$ und $Z$ immer Mengen.
 \begin{definition}
 Eine Funktion \index{Verknüpfung}
 \[ \circ : X \times X \longrightarrow X \]
-wird als Verknüpfung auf $X$ bezeichnet. Zum Beispiel sind die Operationen $+$ und $\cdot$ Verknüpfungen. 
+wird als \emph{Verknüpfung} auf $X$ bezeichnet. Zum Beispiel sind die Operationen $+$ und $\cdot$ Verknüpfungen. 
 \end{definition}
 
 \begin{definition} \index{assoziativ}
-Eine Verknüpfung wird \textsl{assoziativ} genannt, wenn gilt:
+Eine Verknüpfung wird \emph{assoziativ} genannt, wenn gilt:
 \[ a \circ (b \circ c) = (a \circ b) \circ c \]
 \end{definition}
 \begin{definition}\index{kommutativ}
-Sie wird \textsl{kommutativ} genannt, wenn gilt: 
+Sie wird \emph{kommutativ} genannt, wenn gilt: 
 \[ a \circ b = b \circ a \]
 \end{definition}
 \noindent Für alle $a,b,c \in X$
 
 \begin{definition}\index{Neutrales Element}
-Ein Element $e\in X$ wird als \textsl{neutrales Element} bezüglich einer Verknüpfung bezeichnet, wenn 
+Ein Element $e\in X$ wird als \emph{neutrales Element} bezüglich einer Verknüpfung bezeichnet, wenn 
 \[ e\circ a = a \circ e = a \]
 für alle $a\in X$ gilt.
 \end{definition}
@@ -207,33 +207,33 @@ Seien $e_1$ und $e_2$ neutrale Element bezüglich $\circ$, dann gilt:
 \end{proof}
 
 \begin{definition}\index{Monoid}
-Eine Menge $X$ mit assoziativer Verknüpfung und zugehörigem neutralem Element heißt \textsl{Monoid}.
+Eine Menge $X$ mit assoziativer Verknüpfung und zugehörigem neutralem Element heißt \emph{Monoid}.
 \end{definition}
 
 \begin{definition}
 Sei $X$ ein Monoid mit der Verknüpfung $\circ$ und zugehörigem neutralen Element $e$. Wenn gilt
 \[ a\circ b = e \]
-für $a,b \in X$, so wird $a$ das \textsl{Linksinverse}\index{Linksinverse} von $b$ genannt, sowie $b$ das \textsl{Rechtsinverse}\index{Rechtsinverse} von a. Gilt zudem
+für $a,b \in X$, so wird $a$ das \emph{Linksinverse}\index{Linksinverse} von $b$ genannt, sowie $b$ das \emph{Rechtsinverse}\index{Rechtsinverse} von a. Gilt zudem
 \[ a\circ b = b \circ a = e \]
-Dann sind $a$ und $b$ jeweils ihre \textsl{Inversen}. \index{Inverse}
+Dann sind $a$ und $b$ jeweils ihre \emph{Inversen}. \index{Inverse}
 \end{definition}
 
 \begin{definition}\index{Gruppe}
-Ist in einem Monoid jedes Element invertierbar, so nennt man dies eine \textsl{Gruppe}.
+Ist in einem Monoid jedes Element invertierbar, so nennt man dies eine \emph{Gruppe}.
 \end{definition}
 
 \begin{definition}\index{Gruppe, abelsch}
-Eine Gruppe, deren Verknüpfung kommutativ ist, nennt man eine \textsl{abelsche Gruppe}\footnote{Benannt nach dem norwegischen Mathematiker \textbf{Niels Henrik Abel}, * 5. August 1802 auf der Insel Finn\o y, Ryfylke, Norwegen; \ding{61} 6. April 1829 in Froland, Aust-Agder, Norwegen} .
+Eine Gruppe, deren Verknüpfung kommutativ ist, nennt man eine \emph{abelsche Gruppe}\footnote{Benannt nach dem norwegischen Mathematiker \textbf{Niels Henrik Abel}, * 5. August 1802 auf der Insel Finn\o y, Ryfylke, Norwegen; \ding{61} 6. April 1829 in Froland, Aust-Agder, Norwegen} .
 \end{definition}
 
 \begin{definition}\index{Ring}
-Ein \textsl{Ring} $R$ ist eine Menge mit zwei Verknüpfungen $+$ und $\cdot$. Wobei $R$ bezüglich der Addition eine abelsche Gruppe ist und bezüglich der Multiplikation ein Monoid. Des Weiteren muss das Distributivgesetz gelten
+Ein \emph{Ring} $R$ ist eine Menge mit zwei Verknüpfungen "`$+$"' und "`$\cdot$"'. Wobei $R$ bezüglich der Addition eine abelsche Gruppe ist und bezüglich der Multiplikation ein Monoid. Des Weiteren muss das Distributivgesetz gelten
 \[ a\cdot (b+c) = a\cdot b + a\cdot c \]
-für alle $a,b,c \in R$. Ist $R$ bezüglich $\cdot$ kommutativ, so ist $R$ ein \textsl{kommutativer Ring}.\index{Ring, kommutativer}
+für alle $a,b,c \in R$. Ist $R$ bezüglich "`$\cdot$"' kommutativ, so ist $R$ ein \emph{kommutativer Ring}.\index{Ring, kommutativer}
 \end{definition}
 
 \begin{definition}
-Sei $K$ ein kommutativer Ring, dessen neutrales Element bezüglich der Addition $0$ ist. Falls alle Elemente von $K\backslash \{0\}$ invertierbar sind, heißt $K$ ein \textsl{Körper}.\index{Körper}
+Sei $K$ ein kommutativer Ring, dessen neutrales Element bezüglich der Addition $0$ ist. Falls alle Elemente von $K\backslash \{0\}$ invertierbar sind, heißt $K$ ein \emph{Körper}.\index{Körper}
 \end{definition}
 
 \section{Aufgaben}

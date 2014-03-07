@@ -16,10 +16,10 @@ Die Beschleunigung verhält sich zur Geschwindigkeit, wie die Geschwindigkeit zu
 
 \section{Definitionen}
 
-\subsection{Dehnungsbeschränktheit}
+\subsection{Dehnungsbeschränktheit}\index{Dehnungsbeschränktheit}
 
 \begin{definition}\label{def:lipschitz}
-Eine Funktion $f : A \subseteq \mathbb{R} \longrightarrow \mathbb{R}$ heißt \textsl{dehnungsbeschränkt}, wenn es zu beliebigen Werten $x,y\in A$ eine Konstante $K$ gibt, so dass
+Eine Funktion $f : A \subseteq \mathbb{R} \longrightarrow \mathbb{R}$ heißt \emph{dehnungsbeschränkt}, wenn es zu beliebigen Werten $x,y\in A$ eine Konstante $K$ gibt, so dass
 \[
 \left\vert f(x)-f(y)  \right\vert \le K\cdot \vert x-y \vert
 \]
@@ -27,7 +27,7 @@ oder auch in dieser Form dargestellt:
 \[
 \left\vert \frac{f(x)-f(y)}{x-y}  \right\vert \le K
 \]
-Diese Definition ist auch als \textsl{Lipschitz-Stetigkeit}\footnote{benannt nach \textbf{Rudolf Otto Sigismund Lipschitz}, *14. Mai 1832 in Königsberg i. Pr.; \ding{61}7. Oktober 1903 in Bonn.} bekannt.
+Diese Definition ist auch als \emph{Lipschitz-Stetigkeit}\footnote{benannt nach \textbf{Rudolf Otto Sigismund Lipschitz}, *14. Mai 1832 in Königsberg i. Pr.; \ding{61}7. Oktober 1903 in Bonn.} bekannt.\index{Lipschitz-Stetigkeit}
 \end{definition}
 
 
@@ -36,7 +36,7 @@ Diese Definition ist auch als \textsl{Lipschitz-Stetigkeit}\footnote{benannt nac
 
 \subsection{Kritik an Zeichnungen}
 
-Im Folgenden werden wir öfters anschaulich argumentieren, gegebenenfalls unterstützt durch eine Zeichnung. Solche Zeichnungen benötigen etwas Interpretation. Die Funktionen, die wir in diesem Teil untersuchen werden, sofern nicht ausdrücklich anders angegeben, sind immer reellwertige Funktionen, also $f:\mathbb{R} \longrightarrow \mathbb{R}$. Ihre Funktionswerte sind eindimensional. Ein Diagramm mit $x$ und $y$-Achse ist aber eine zweidimensionale Darstellung. Was also in diesem Moment gemacht wird ist, wir wandeln die Funktion $f$ in eine \textsl{Kurve} im $\mathbb{R}^2$ um:
+Im Folgenden werden wir öfters anschaulich argumentieren, gegebenenfalls unterstützt durch eine Zeichnung. Solche Zeichnungen benötigen etwas Interpretation. Die Funktionen, die wir in diesem Teil untersuchen werden, sofern nicht ausdrücklich anders angegeben, sind immer reellwertige Funktionen, also $f:\mathbb{R} \longrightarrow \mathbb{R}$. Ihre Funktionswerte sind eindimensional. Ein Diagramm mit $x$ und $y$-Achse ist aber eine zweidimensionale Darstellung. Was also in diesem Moment gemacht wird ist, wir wandeln die Funktion $f$ in eine \emph{Kurve} im $\mathbb{R}^2$ um:
 \[
 k : \mathbb{R} \longrightarrow \mathbb{R}^2
 \]
@@ -51,7 +51,7 @@ setzen. $k$ ist eine Vektor-wertige Funktion. Wir argumentieren also auf Basis e
 
 Es ist also immer eine gute Idee, rein formal zu argumentieren. Sobald man sich eine bildliche Vorstellung von einem mathematischen Sachverhalt macht, ist man oft schon in der Situation, dass die Abbildung nicht mehr viel mit der "`mathematischen Realität"' zu tun hat. Dieser Abschnitt soll erneut eine Motivation für die Lernenden sein, auf Basis der Formalismen zu argumentieren und mit Zeichnungen vorsichtig zu sein.
 
-\subsection{Linearisierung}
+\subsection{Linearisierung}\index{Linearisierung}
 
 Unser Begriff von der Steigung ist direkt an das Verständnis gebunden, dass die Steigung einer Funktion an einem gewissen Punkt direkte Information darüber gibt, wie sich die Funktion in der Nähe dieses Punktes verhält. Der Fehler zwischen der Funktion und einer linearen Annäherung sollte also durch den Abstand zum Punkt, an dem wir die Steigung kennen, kontrollierbar sein. Wir definieren eine lineare Funktion, die im Punkt $a$ den Funktionswert von $f$  und eine Steigung $s$ besitzt über
 \[
@@ -79,7 +79,7 @@ Das ist schon ein recht gutes Ergebnis. Es besagt, dass die Funktion $f$ und die
 Da die Steigung $s$ an der Stelle $a$ unser Kandidat für die Ableitung ist, hätten wir das Problem, dass wir nicht garantieren könnten, dass die Sehne sich je an die Steigung annähert, denn mit dieser Abschätzung können wir nur sagen, dass der Abstand kleiner als eine Konstante sein muss. Sich also gegebenenfalls überhaupt nicht annähert.
 
 
-Betrachten wir die Sehne von $f$
+Betrachten wir die Sehne von $f$\index{Sehne}
 \begin{equation*}
 S_f(x,a) = \frac{f(x)-f(a)}{x-a}
 \end{equation*}
@@ -114,7 +114,7 @@ Wiederholen wir kurz unsere Erkenntnis: Wir haben versucht, den Abstand zwischen
 Dies sollte uns darin bestärken, dass $f'=S_f$ an der Stelle $a$ eine sehr gute Wahl für die Ableitung ist und definieren wie folgt:
 
 \begin{definition}\label{def:diff}
-Wir nennen den Grenzwert der Sehnen $S_f$ die \textsl{Ableitung} von $f$ am Punkt $a$ und schreiben diesen als $f'(a)$. Der Sehengrenzwert wird auch als \textsl{Tangente} bezeichnet. 
+Wir nennen den Grenzwert der Sehnen $S_f$ die \emph{Ableitung} von $f$ am Punkt $a$ und schreiben diesen als $f'(a)$. Der Sehengrenzwert wird auch als \emph{Tangente} bezeichnet. \index{Ableitung}\index{Tangente}
 \end{definition}
 
 \bigskip
@@ -158,9 +158,111 @@ Wir subtrahieren diese Ungleichungen voneinander
 was im Widerspruch zur Voraussetzung steht, dass $s_1\ne s_2$, daher müssen diese gleich sein.
 \end{proof}
 
-\subsection{Rechenregeln}
+\section{Rechenregeln}
 
-Die Ableitung von verknüpften Funktionen unterliegt Rechenregeln, die wir hier nachweisen wollen. 
+Die Ableitung von verknüpften Funktionen unterliegt Rechenregeln, die wir hier herleiten wollen. In den Aufgaben werden die einfachen Regeln für Addition nachgewiesen. Wir konzentrieren uns hier auf die komplizierteren Fälle der Multiplikation, Division von differenzierbaren Funktionen und die Kettenregel. Im Folgenden seien $f,g$ differenzierbare Funktionen und $x\in \mathbb{R}$.
+\index{Ableitungsregeln}
+
+\paragraph{Ableitung von Summen}
+\begin{equation}
+\left(f(x)+g(x) \right)' = f'(x)+ g'(x)
+\end{equation}
+
+\paragraph{Ableitung einer Skalaren Multiplikation}
+Für $c\in \mathbb{R}$ gilt
+\begin{equation}
+\left(c\cdot f(x)\right)' = c \cdot f'(x)
+\end{equation}
+
+\paragraph{Ableitung des Produktes differenzierbarer Funktionen}
+\begin{equation}
+\begin{split}
+\left(f(x) \cdot g(x) \right)' &= \lim\limits_{h\rightarrow 0} \frac{f(x+h)\cdot g(x+h)-f(x)\cdot g(x)}{h} \\
+\intertext{Wir addieren eine Null}
+&= \lim\limits_{h\rightarrow 0} \frac{f(x+h)\cdot g(x+h) -f(x+h)\cdot g(x)+f(x+h)\cdot g(x) - f(x)\cdot g(x)}{h} \\
+&= \underbrace{\left( \lim\limits_{h\rightarrow 0}f(x+h)\right)}_{=f(x)} \cdot 
+\underbrace{\lim\limits_{h\rightarrow 0} \frac{g(x+h)-g(x)}{h}}_{=g'(x)} +\underbrace{\lim\limits_{h\rightarrow 0} \frac{f(x+h)-f(x)}{h}}_{=f'(x)} \cdot g(x)\\
+&= f(x)\cdot g'(x) + f'(x)\cdot g(x)
+\end{split}
+\end{equation}
+
+\noindent Die Null wird in der Form
+\begin{equation*}
+0 = -f(x+h)\cdot g(x)+f(x+h)\cdot g(x)
+\end{equation*}
+im Zähler des Differentialquotient hinzugefügt.
+
+\begin{definition}\index{Produktregel}
+Die Ableitungsregel zum Produkt von Funktionen wird \emph{Produktregel} genannt.
+\end{definition}
+
+\paragraph{Ableitung des Quotienten differenzierbarer Funktionen}
+
+Wir definieren uns eine Hilfsfunktion 
+\begin{equation*}
+p(x) = \frac{f(x)}{g(x)}
+\end{equation*}
+Damit ist 
+\begin{equation*}
+f(x) = p(x) \cdot g(x)
+\end{equation*}
+und aus der Multiplikationsregel folgt
+\begin{equation*}
+f'(x) = p'(x)\cdot g(x)+p(x)\cdot g'(x)
+\end{equation*}
+Weiter ist
+\begin{equation}
+\begin{split}
+\left( \frac{f(x)}{g(x)} \right)' &= p'(x) = \frac{f'(x)-p(x)\cdot g'(x)}{g(x)} \\
+&= \frac{f'(x)-\frac{f(x)}{g(x)}\cdot g'(x)}{g(x)} \\
+&= \frac{f'(x)\cdot g(x)-f(x)\cdot g'(x)}{g(x)^2}
+\end{split}
+\end{equation}
+
+\begin{definition}\index{Quotientenregel}
+Die Ableitungsregel zur Division von Funktionen wird \emph{Quotientenregel} genannt.
+\end{definition}
+
+\paragraph{Ableitung von verschachtelten Funktionen}
+Erneut definieren wir uns die Hilfsfunktion
+\begin{equation*}
+p(x) = f(g(x))
+\end{equation*}
+\begin{equation}
+\begin{split}
+p'(x) &= \Big(f\big( g(x) \big)\Big)' = \lim_{h\rightarrow 0} \frac{f(g(x+h))-f(g(x))}{h}\\
+&= \lim_{h\rightarrow 0} \frac{f(g(x+h))-f(g(x))}{h} \cdot \frac{g(x+h)-g(x)}{g(x+h)-g(x)} \\
+&= \lim_{h\rightarrow 0} \frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)} \cdot \frac{g(x+h)-g(x)}{h} \\
+&= \lim_{h\rightarrow 0} \frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)} \cdot g'(x)
+\end{split}
+\end{equation}
+Hier wird zum Differentialquotient eine 1 multipliziert. Sie besteht aus dem Quotienten
+\begin{equation*}
+1=\frac{g(x+h)-g(x)}{g(x+h)-g(x)}
+\end{equation*}
+Der Trick ist in beiden Fällen der selbe: Wir fügen eine Invariante unter der Operation hinzu, die 0 bei der Addition, die 1 bei der Multiplikation.
+
+Da $g$ eine stetige Funktion ist, geht
+\begin{equation*}
+g(x+h)-g(x) \longrightarrow 0,\text{ falls } h\rightarrow 0
+\end{equation*}
+Es sei 
+\begin{equation}
+i = g(x+h)-g(x), \text{ dann ist auch } g(x+h) = g(x)+i
+\end{equation}
+damit ist
+\begin{equation}
+\lim_{h\rightarrow 0} \frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)} \cdot g'(x) = 
+\underbrace{\lim_{i\rightarrow 0} \frac{f(g(x)+i)-f(g(x))}{i}}_{=f'(g(x))} \cdot g'(x)
+\end{equation}
+und schließlich
+\begin{equation}
+\Big(f\big( g(x) \big)\Big)' = f'(g(x))\cdot g'(x)
+\end{equation}
+\begin{definition}
+Die Ableitung von ineinander verschachtelten Funktionen wird \emph{Kettenregel} genannt.
+\end{definition}
+
 
 
 \chapter{Integralrechnung}
