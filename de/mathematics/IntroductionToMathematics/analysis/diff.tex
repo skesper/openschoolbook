@@ -274,9 +274,9 @@ Beginnen wir mit einem Monom. Dieses hat einen konstanten Faktor, welcher nach F
 \begin{equation}
 \begin{split}
 (x^n)' &= \lim_{h\rightarrow 0} \frac{(x+h)^n - x^n}{h} \\
-&= \lim_{h\rightarrow 0} \frac{\sum_{i=0}^{n}\binom{n}{i} x^i \cdot h^{n-i} - x^n}{h}\\
-&= \lim_{h\rightarrow 0} \frac{\sum_{i=0}^{n-1}\binom{n}{i} x^i \cdot h^{n-i}}{h}\\
-&= n\cdot x^{n-1} + \lim_{h\rightarrow 0} \frac{\sum_{i=0}^{n-2}\binom{n}{i} x^i \cdot h^{n-i}}{h} \text{, kürze um ein $h$} \\
+&= \lim_{h\rightarrow 0} \dfrac{\sum_{i=0}^{n}\binom{n}{i} x^i \cdot h^{n-i} - x^n}{h}\\
+&= \lim_{h\rightarrow 0} \dfrac{\sum_{i=0}^{n-1}\binom{n}{i} x^i \cdot h^{n-i}}{h}\\
+&= n\cdot x^{n-1} + \lim_{h\rightarrow 0} \dfrac{\sum_{i=0}^{n-2}\binom{n}{i} x^i \cdot h^{n-i}}{h} \text{, kürze um ein $h$} \\
 &= n\cdot x^{n-1} + \underbrace{\lim_{h\rightarrow 0} \sum_{i=0}^{n-2}\binom{n}{i} x^i \cdot h^{n-i-1}}_{\rightarrow 0}\\
 &= n\cdot x^{n-1}
 \end{split}
@@ -285,7 +285,8 @@ Beginnen wir mit einem Monom. Dieses hat einen konstanten Faktor, welcher nach F
 \noindent Zur Erklärung:
 
 \begin{enumerate}
-\item In Zeile drei splitten wir die Summe in den höchsten Term $x^n$ und den Rest und subtrahieren davon $x^n$. Damit bleibt die Summe nur bis $n-1$ erhalten.
+\item In Zeile zwei haben wir die allgemeine Binomische Formel (\ref{eq:allgbinom}) verwendet, um die Klammer $(x+h)^n$ aufzulösen.
+\item In Zeile drei splitten wir die Summe in den höchsten Term $x^n$ und den Rest und subtrahieren davon $x^n$. Damit bleibt die Summe nur bis $n-1$ erhalten. Das funktioniert, weil $\binom{n}{n}=1$ ist, sowie $h^{n-i}=1$ bei $i=n$ ist. Also ist der letzte Summand (wenn $i=n$ ist) $=x^n$.
 \item In Zeile vier nehmen wir wiederum den höchsten Term der Summe und splitten so $\frac{n\cdot x^{n-1}\cdot h}{h}$ ab und kürzen um $h$. Da dies dann von $h$ unabhängig ist, kann dieser Teil aus der Grenzwertbetrachtung herausgenommen werden.
 \item In Zeile 5 haben wir alle Summanden des Zählers um ein $h$ gekürzt. Dies können wir tun, da der Summand mit dem kleinsten $h$-Faktor der folgende ist: $h^{n-i-1}$ bei $i=n-2$ maximal, sodass $h^{n-(n-2)-1}=h^{n-n+2-1}=h$ ist.
 \item Und schließlich folgern wir, dass alle Summanden, die mit einem Faktor $h$ versehen sind, zwangsläufig gegen 0 streben, wenn $h\rightarrow 0$ geht. 
@@ -308,6 +309,11 @@ Auch diesen kann man wiederum ableiten, aber es gilt
 \begin{equation*}
 p_n(x)^{(m)} = 0 \text{ für } m>n
 \end{equation*}
+
+\subsection{Logarithmus}
+
+\subsection{Exponentialfunktion}
+
 
 
 
