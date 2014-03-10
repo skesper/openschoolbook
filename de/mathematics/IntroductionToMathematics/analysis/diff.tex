@@ -164,19 +164,19 @@ Die Ableitung von verknüpften Funktionen unterliegt Rechenregeln, die wir hier 
 \index{Ableitungsregeln}
 
 \paragraph{Ableitung von Summen}
-\begin{equation}
+\begin{equation}\label{eq:diff0}
 \left(f(x)+g(x) \right)' = f'(x)+ g'(x)
 \end{equation}
 
 \paragraph{Ableitung einer Skalaren Multiplikation}
 Für $c\in \mathbb{R}$ gilt
-\begin{equation}
+\begin{equation}\label{eq:diff1}
 \left(c\cdot f(x)\right)' = c \cdot f'(x)
 \end{equation}
 
 \paragraph{Ableitung des Produktes differenzierbarer Funktionen}
 \begin{equation}
-\begin{split}
+\begin{split}\label{eq:diff2}
 \left(f(x) \cdot g(x) \right)' &= \lim\limits_{h\rightarrow 0} \frac{f(x+h)\cdot g(x+h)-f(x)\cdot g(x)}{h} \\
 \intertext{Wir addieren eine Null}
 &= \lim\limits_{h\rightarrow 0} \frac{f(x+h)\cdot g(x+h) -f(x+h)\cdot g(x)+f(x+h)\cdot g(x) - f(x)\cdot g(x)}{h} \\
@@ -211,7 +211,7 @@ und aus der Multiplikationsregel folgt
 f'(x) = p'(x)\cdot g(x)+p(x)\cdot g'(x)
 \end{equation*}
 Weiter ist
-\begin{equation}
+\begin{equation}\label{eq:diff3}
 \begin{split}
 \left( \frac{f(x)}{g(x)} \right)' &= p'(x) = \frac{f'(x)-p(x)\cdot g'(x)}{g(x)} \\
 &= \frac{f'(x)-\frac{f(x)}{g(x)}\cdot g'(x)}{g(x)} \\
@@ -263,8 +263,51 @@ und schließlich
 Die Ableitung von ineinander verschachtelten Funktionen wird \emph{Kettenregel} genannt.
 \end{definition}
 
+\section{Ableitungen einfacher Funktionen}
 
+Hier sollen noch die Ableitungen "`einfacher"' Funktionen (ohne näher zu spezifizieren, was "`einfache"' Funktionen sind)  dargestellt werden. 
 
-\chapter{Integralrechnung}
+\subsection{Monome und Polynome}
+
+Beginnen wir mit einem Monom. Dieses hat einen konstanten Faktor, welcher nach Formel (\ref{eq:diff1}) bei der Ableitung ignoriert werden kann. Bleibt zu zeigen, was unter der Ableitung mit dem Rest des Monoms geschieht. 
+
+\begin{equation}
+\begin{split}
+(x^n)' &= \lim_{h\rightarrow 0} \frac{(x+h)^n - x^n}{h} \\
+&= \lim_{h\rightarrow 0} \frac{\sum_{i=0}^{n}\binom{n}{i} x^i \cdot h^{n-i} - x^n}{h}\\
+&= \lim_{h\rightarrow 0} \frac{\sum_{i=0}^{n-1}\binom{n}{i} x^i \cdot h^{n-i}}{h}\\
+&= n\cdot x^{n-1} + \lim_{h\rightarrow 0} \frac{\sum_{i=0}^{n-2}\binom{n}{i} x^i \cdot h^{n-i}}{h} \text{, kürze um ein $h$} \\
+&= n\cdot x^{n-1} + \underbrace{\lim_{h\rightarrow 0} \sum_{i=0}^{n-2}\binom{n}{i} x^i \cdot h^{n-i-1}}_{\rightarrow 0}\\
+&= n\cdot x^{n-1}
+\end{split}
+\end{equation}
+
+\noindent Zur Erklärung:
+
+\begin{enumerate}
+\item In Zeile drei splitten wir die Summe in den höchsten Term $x^n$ und den Rest und subtrahieren davon $x^n$. Damit bleibt die Summe nur bis $n-1$ erhalten.
+\item In Zeile vier nehmen wir wiederum den höchsten Term der Summe und splitten so $\frac{n\cdot x^{n-1}\cdot h}{h}$ ab und kürzen um $h$. Da dies dann von $h$ unabhängig ist, kann dieser Teil aus der Grenzwertbetrachtung herausgenommen werden.
+\item In Zeile 5 haben wir alle Summanden des Zählers um ein $h$ gekürzt. Dies können wir tun, da der Summand mit dem kleinsten $h$-Faktor der folgende ist: $h^{n-i-1}$ bei $i=n-2$ maximal, sodass $h^{n-(n-2)-1}=h^{n-n+2-1}=h$ ist.
+\item Und schließlich folgern wir, dass alle Summanden, die mit einem Faktor $h$ versehen sind, zwangsläufig gegen 0 streben, wenn $h\rightarrow 0$ geht. 
+\end{enumerate}
+
+Zusammen mit den Definitionen in Formeln (\ref{eq:diff0}) und (\ref{eq:diff1}) ergibt sich für Polynome ($p_n$ ist wie in Formel (\ref{eq:polynom}) definiert):
+
+\begin{equation}
+\begin{split}
+p_n(x)' &= \left( \sum_{i=0}^{n} a_i \cdot x^i \right)' \\
+&= \sum_{i=1}^{n} i\cdot a_i \cdot x^{i-1}
+\end{split}
+\end{equation}
+
+Zu beachten ist, dass die Summer bei $i=1$ und nicht bei $i=0$ beginnt. Das liegt daran, dass konstante Funktionen keine Steigung besitzen (halt eben weil sie konstant sind). Daher ist ihre Ableitung 0 und sie fallen aus der Formel heraus. Die nächste Ableitung würde bei $i=2$ beginnen, und so weiter. Man kann also Polynome immer weiter ableiten, bis nach der n-ten Ableitung nur noch ein Konstanter Wert übrig bleibt:
+\begin{equation*}
+p_n(x)^{(n)} = 1\cdot 2 \cdot \dots \cdot n \cdot a_n
+\end{equation*}
+Auch diesen kann man wiederum ableiten, aber es gilt 
+\begin{equation*}
+p_n(x)^{(m)} = 0 \text{ für } m>n
+\end{equation*}
+
 
 
