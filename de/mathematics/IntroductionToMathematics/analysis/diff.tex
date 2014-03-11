@@ -31,27 +31,7 @@ Diese Definition ist auch als \emph{Lipschitz-Stetigkeit}\footnote{benannt nach 
 \end{definition}
 
 
-\section{Überlegungen}
-
-
-\subsection{Kritik an Zeichnungen}
-
-Im Folgenden werden wir öfters anschaulich argumentieren, gegebenenfalls unterstützt durch eine Zeichnung. Solche Zeichnungen benötigen etwas Interpretation. Die Funktionen, die wir in diesem Teil untersuchen werden, sofern nicht ausdrücklich anders angegeben, sind immer reellwertige Funktionen, also $f:\mathbb{R} \longrightarrow \mathbb{R}$. Ihre Funktionswerte sind eindimensional. Ein Diagramm mit $x$ und $y$-Achse ist aber eine zweidimensionale Darstellung. Was also in diesem Moment gemacht wird ist, wir wandeln die Funktion $f$ in eine \emph{Kurve} im $\mathbb{R}^2$ um:
-\[
-k : \mathbb{R} \longrightarrow \mathbb{R}^2
-\]
-indem wir 
-\[
-k(f,x) = \begin{pmatrix}
-x \\
-f(x)
-\end{pmatrix}
-\]
-setzen. $k$ ist eine Vektor-wertige Funktion. Wir argumentieren also auf Basis einer ganz anderen Funktion $k$. Man muss also vorsichtig sein und überprüfen, ob die Argumente nicht nur aufgrund der Darstellung funktionieren, oder ob sie Darstellungsunabhängig sind und wirkliche Informationen über $f$ offenlegen. 
-
-Es ist also immer eine gute Idee, rein formal zu argumentieren. Sobald man sich eine bildliche Vorstellung von einem mathematischen Sachverhalt macht, ist man oft schon in der Situation, dass die Abbildung nicht mehr viel mit der "`mathematischen Realität"' zu tun hat. Dieser Abschnitt soll erneut eine Motivation für die Lernenden sein, auf Basis der Formalismen zu argumentieren und mit Zeichnungen vorsichtig zu sein.
-
-\subsection{Linearisierung}\index{Linearisierung}
+\section{Linearisierung}\index{Linearisierung}
 
 Unser Begriff von der Steigung ist direkt an das Verständnis gebunden, dass die Steigung einer Funktion an einem gewissen Punkt direkte Information darüber gibt, wie sich die Funktion in der Nähe dieses Punktes verhält. Der Fehler zwischen der Funktion und einer linearen Annäherung sollte also durch den Abstand zum Punkt, an dem wir die Steigung kennen, kontrollierbar sein. Wir definieren eine lineare Funktion, die im Punkt $a$ den Funktionswert von $f$  und eine Steigung $s$ besitzt über
 \[
@@ -78,6 +58,7 @@ Das ist schon ein recht gutes Ergebnis. Es besagt, dass die Funktion $f$ und die
 \end{equation}
 Da die Steigung $s$ an der Stelle $a$ unser Kandidat für die Ableitung ist, hätten wir das Problem, dass wir nicht garantieren könnten, dass die Sehne sich je an die Steigung annähert, denn mit dieser Abschätzung können wir nur sagen, dass der Abstand kleiner als eine Konstante sein muss. Sich also gegebenenfalls überhaupt nicht annähert.
 
+\subsection{Differenzenquotient und Sehne}
 
 Betrachten wir die Sehne von $f$\index{Sehne}
 \begin{equation*}
@@ -88,7 +69,7 @@ Es ist nicht verwunderlich, dass wir uns für den Grenzwert $\lim\limits_{x\righ
 \begin{equation}\label{eq:slim}
 \lim\limits_{x\rightarrow a} S_f(x,a) = S_f
 \end{equation}
-wenn wir fordern, dass $f$ $\epsilon$-$\delta$-stetig ist, liefert und das Lemma \ref{lem:stetig}: 
+wenn wir fordern, dass $f$ $\epsilon$-$\delta$-stetig ist, liefert uns das Lemma \ref{lem:stetig}: 
 \[
 |S_f(x,a) - S_f| \le C\cdot |x-a|
 \]
@@ -160,19 +141,21 @@ was im Widerspruch zur Voraussetzung steht, dass $s_1\ne s_2$, daher müssen die
 
 \section{Rechenregeln}
 
-Die Ableitung von verknüpften Funktionen unterliegt Rechenregeln, die wir hier herleiten wollen. In den Aufgaben werden die einfachen Regeln für Addition nachgewiesen. Wir konzentrieren uns hier auf die komplizierteren Fälle der Multiplikation, Division von differenzierbaren Funktionen und die Kettenregel. Im Folgenden seien $f,g$ differenzierbare Funktionen und $x\in \mathbb{R}$.
+Die Ableitung von verknüpften Funktionen\footnote{"`vernünftige Funktionen"' ist ein anderer Begriff für differenzierbaren Funktionen.} unterliegt Rechenregeln, die wir hier herleiten wollen. In den Aufgaben werden die einfachen Regeln für die Addition nachgewiesen. Wir konzentrieren uns hier auf die komplizierteren Fälle der Multiplikation, Division von differenzierbaren Funktionen und die Kettenregel. Im Folgenden seien $f$ und $g$ differenzierbare Funktionen sowie $x\in \mathbb{R}$.
 \index{Ableitungsregeln}
 
 \paragraph{Ableitung von Summen}
 \begin{equation}\label{eq:diff0}
 \left(f(x)+g(x) \right)' = f'(x)+ g'(x)
 \end{equation}
+Wird in den Aufgaben nachgewiesen.
 
 \paragraph{Ableitung einer Skalaren Multiplikation}
 Für $c\in \mathbb{R}$ gilt
 \begin{equation}\label{eq:diff1}
 \left(c\cdot f(x)\right)' = c \cdot f'(x)
 \end{equation}
+Wird in den Aufgaben nachgewiesen.
 
 \paragraph{Ableitung des Produktes differenzierbarer Funktionen}
 \begin{equation}
@@ -233,6 +216,7 @@ p(x) = f(g(x))
 p'(x) &= \Big(f\big( g(x) \big)\Big)' = \lim_{h\rightarrow 0} \frac{f(g(x+h))-f(g(x))}{h}\\
 &= \lim_{h\rightarrow 0} \frac{f(g(x+h))-f(g(x))}{h} \cdot \frac{g(x+h)-g(x)}{g(x+h)-g(x)} \\
 &= \lim_{h\rightarrow 0} \frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)} \cdot \frac{g(x+h)-g(x)}{h} \\
+&= \lim_{h\rightarrow 0} \frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)} \cdot \underbrace{\lim_{h\rightarrow 0} \frac{g(x+h)-g(x)}{h}}_{=g'(x)} \\
 &= \lim_{h\rightarrow 0} \frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)} \cdot g'(x)
 \end{split}
 \end{equation}
@@ -257,7 +241,7 @@ damit ist
 \end{equation}
 und schließlich
 \begin{equation}
-\Big(f\big( g(x) \big)\Big)' = f'(g(x))\cdot g'(x)
+\Big(f\big( g(x) \big)\Big)' = f'\big( g(x)\big)\cdot g'(x)
 \end{equation}
 \begin{definition}
 Die Ableitung von ineinander verschachtelten Funktionen wird \emph{Kettenregel} genannt.
@@ -265,7 +249,7 @@ Die Ableitung von ineinander verschachtelten Funktionen wird \emph{Kettenregel} 
 
 \section{Ableitungen einfacher Funktionen}
 
-Hier sollen noch die Ableitungen "`einfacher"' Funktionen (ohne näher zu spezifizieren, was "`einfache"' Funktionen sind)  dargestellt werden. 
+Hier sollen noch die Ableitungen "`einfacher"' Funktionen (ohne näher zu spezifizieren, was "`einfache"' Funktionen sind)  dargestellt werden. Der Begriff "`einfach"' soll suggerieren, dass die Werte, wie auch die Ableitung dieser Funktionen, leicht zu berechnen sind.
 
 \subsection{Monome und Polynome}
 
@@ -292,23 +276,30 @@ Beginnen wir mit einem Monom. Dieses hat einen konstanten Faktor, welcher nach F
 \item Und schließlich folgern wir, dass alle Summanden, die mit einem Faktor $h$ versehen sind, zwangsläufig gegen 0 streben, wenn $h\rightarrow 0$ geht. 
 \end{enumerate}
 
-Zusammen mit den Definitionen in Formeln (\ref{eq:diff0}) und (\ref{eq:diff1}) ergibt sich für Polynome ($p_n$ ist wie in Formel (\ref{eq:polynom}) definiert):
+\noindent Das bedeutet, die Ableitung eines vollständigen Monoms ist wie folgt:
+\begin{equation}
+\left( a\cdot x^n \right)' = a\cdot n\cdot x^{n-1}
+\end{equation}
+
+
+Zusammen mit den Formeln (\ref{eq:diff0}) und (\ref{eq:diff1}) ergibt sich für Polynome ($p_n$ ist wie in Formel (\ref{eq:polynom}) definiert):
 
 \begin{equation}
 \begin{split}
-p_n(x)' &= \left( \sum_{i=0}^{n} a_i \cdot x^i \right)' \\
+\big( p_n(x) \big)' &= \left( \sum_{i=0}^{n} a_i \cdot x^i \right)' \\
 &= \sum_{i=1}^{n} i\cdot a_i \cdot x^{i-1}
 \end{split}
 \end{equation}
 
 Zu beachten ist, dass die Summer bei $i=1$ und nicht bei $i=0$ beginnt. Das liegt daran, dass konstante Funktionen keine Steigung besitzen (halt eben weil sie konstant sind). Daher ist ihre Ableitung 0 und sie fallen aus der Formel heraus. Die nächste Ableitung würde bei $i=2$ beginnen, und so weiter. Man kann also Polynome immer weiter ableiten, bis nach der n-ten Ableitung nur noch ein Konstanter Wert übrig bleibt:
 \begin{equation*}
-p_n(x)^{(n)} = 1\cdot 2 \cdot \dots \cdot n \cdot a_n
+\big( p_n(x)\big)^{(n)} = 1\cdot 2 \cdot \dots \cdot n \cdot a_n
 \end{equation*}
-Auch diesen kann man wiederum ableiten, aber es gilt 
+(Das $(n)$ im Exponent bedeutet, dass wir die $n$-te Ableitung bestimmen wollen). Auch diese konstante Funktion kann man wiederum ableiten und es gilt 
 \begin{equation*}
 p_n(x)^{(m)} = 0 \text{ für } m>n
 \end{equation*}
+für alle Polynome.
 
 \subsection{Logarithmus}
 
