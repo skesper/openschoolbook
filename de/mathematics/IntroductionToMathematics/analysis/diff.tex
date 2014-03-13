@@ -207,10 +207,8 @@ Die Ableitungsregel zur Division von Funktionen wird \emph{Quotientenregel} gena
 \end{definition}
 
 \paragraph{Ableitung von verschachtelten Funktionen}
-Erneut definieren wir uns die Hilfsfunktion
-\begin{equation*}
-p(x) = f(g(x))
-\end{equation*}
+Erneut definieren wir uns die Hilfsfunktion $p(x) = f(g(x))$ und mit dieser ist
+
 \begin{equation}
 \begin{split}
 p'(x) &= \Big(f\big( g(x) \big)\Big)' = \lim_{h\rightarrow 0} \frac{f(g(x+h))-f(g(x))}{h}\\
@@ -291,9 +289,9 @@ Zusammen mit den Formeln (\ref{eq:diff0}) und (\ref{eq:diff1}) ergibt sich für 
 \end{split}
 \end{equation}
 
-Zu beachten ist, dass die Summer bei $i=1$ und nicht bei $i=0$ beginnt. Das liegt daran, dass konstante Funktionen keine Steigung besitzen (halt eben weil sie konstant sind). Daher ist ihre Ableitung 0 und sie fallen aus der Formel heraus. Die nächste Ableitung würde bei $i=2$ beginnen, und so weiter. Man kann also Polynome immer weiter ableiten, bis nach der n-ten Ableitung nur noch ein Konstanter Wert übrig bleibt:
+Zu beachten ist, dass die Summer bei $i=1$ und nicht bei $i=0$ beginnt. Das liegt daran, dass konstante Funktionen keine Steigung besitzen (halt eben weil sie konstant sind). Daher ist ihre Ableitung 0 und sie fallen aus der Formel heraus. Die nächste Ableitung würde bei $i=2$ beginnen, und so weiter. Man kann also Polynome immer weiter ableiten, bis nach der n-ten Ableitung nur noch ein konstanter Wert übrig bleibt:
 \begin{equation*}
-\big( p_n(x)\big)^{(n)} = 1\cdot 2 \cdot \dots \cdot n \cdot a_n
+\big( p_n(x)\big)^{(n)} = 1\cdot 2 \cdot \dots \cdot n \cdot a_n = n! \cdot a_n
 \end{equation*}
 (Das $(n)$ im Exponent bedeutet, dass wir die $n$-te Ableitung bestimmen wollen). Auch diese konstante Funktion kann man wiederum ableiten und es gilt 
 \begin{equation*}
@@ -301,10 +299,86 @@ p_n(x)^{(m)} = 0 \text{ für } m>n
 \end{equation*}
 für alle Polynome.
 
-\subsection{Logarithmus}
 
 \subsection{Exponentialfunktion}
 
+\begin{equation}
+\begin{split}
+\big(e^x\big)' &= \lim_{h\rightarrow 0} \frac{e^{x+h}-e^x}{h} \\
+&= e^x \cdot \lim_{h\rightarrow 0} \frac{e^{h}-1}{h}
+\end{split}
+\end{equation}
+Definieren wir uns einen Hilfswert $k = e^h-1$. Nach $h$ umgeformt ergibt sich
+\begin{equation}
+h = \ln (1+k)
+\end{equation}
+Dies setzen wir ein
+\begin{equation}
+\begin{split}
+\big(e^x\big)' &= e^x\cdot \lim_{k\rightarrow 0} \frac{k}{\ln (1+k)}\\
+&= e^x\cdot \lim_{k\rightarrow 0} \frac{1}{\frac{1}{k}\cdot \ln (1+k)} \\
+&= e^x\cdot \lim_{k\rightarrow 0} \frac{1}{\ln (1+k)^{\frac{1}{k}} }
+\end{split}
+\end{equation}
+und rufen uns gleichzeitig die Definition der Exponentialfunktion in Erinnerung (\ref{eq:expk}). Diese liefert uns
+\begin{equation}
+\exp(1) = \lim_{k\rightarrow 0} (1+k)^{\frac{1}{k}} = e
+\end{equation}
+und daraus ergibt sich schließlich
+\begin{equation}
+\begin{split}
+(e^x)' &= e^x\cdot \lim_{k\rightarrow 0} \frac{1}{\ln (1+k)^{\frac{1}{k}} }= e^x\cdot \frac{1}{\ln \exp(1) } = e^x\cdot \frac{1}{\ln e } = e^x\cdot \frac{1}{1}\\
+&= e^x
+\end{split}
+\end{equation}
+
+Das bedeutet, die Exponentialfunktion ist invariant unter der Ableitung. 
 
 
+\subsection{Logarithmus}
+Die Ableitung des Logarithmus ist überraschend einfach. Zentraler Punkt ist die Anwendung der Kettenregel.  Gehen wir die folgende Formel von links beginnend durch: Wir wissen, dass die Ableitung einer linearen Funktion zu einer konstanten Funktion führt. Wir haben eine 1 und diese ist die Ableitung der linearen Funktion $f(x) = x$. Die Funktion $x$ schreiben wir komplizierter, indem wir die Exponentialfunktion und den (natürlichen) Logarithmus aufeinander anwenden. Dann nutzen wir die Kettenregel. Im vorherigen Abschnitt haben wir gesehen, dass die Exponentialfunktion invariant unter der Ableitung ist. Daher bleibt der Teil $e^{\ln x}$ erhalten und wir multiplizieren die Ableitung des Logarithmus dahinter. Letzter Term ist genau das, was uns interessiert. 
+\begin{equation}
+1 = (x)' = \big(e^{\ln(x)}\big)' = e^{\ln(x)}\cdot \big( \ln(x) \big)' = x \cdot \big( \ln(x) \big)'
+\end{equation}
+Wir dividieren beide Seiten durch $x$ und erhalten so das gewünschte Ergebnis.
+\begin{equation}
+\big( \ln(x) \big)' = \frac{1}{x}
+\end{equation}
+Wie bei den vorherigen Berechnungen auch, schreiben wir einen Ausdruck komplizierter, als es sein müsste und kommen so zum Ziel. Hier nutzen wir zwei Mal die Tatsache aus, dass
+\begin{equation*}
+x = e^{\ln(x)}
+\end{equation*}
+Bevor wir ableiten, um die Formel komplizierter zu machen und danach um sie wieder zu vereinfachen.
+
+\section{Ausblick}
+
+Im Bezug zur Differentialrechnung möchte ich noch einmal kurz auf die Lineare Algebra zurückkommen. In Definition \ref{def:homo} haben wir den Homomorphismus als lineare Abbildung auf Vektorräumen kennengelernt. 
+
+In den Ableitungsregeln (\ref{eq:diff0}) und (\ref{eq:diff1}) haben wir gelernt, dass 
+\begin{equation}
+\big(c\cdot f(x) + d\cdot g(x)\big)' = c\cdot f'(x) + d\cdot g'(x)
+\end{equation}
+ist. Also ist die Ableitung eine lineare Abbildung (=Homomorphismus) auf den differenzierbaren Funktionen. Es ist relativ einfach nachzuweisen, dass die differenzierbaren Funktionen eine Vektorraumstruktur bilden. Dies wird in Aufgabe \ref{prob:func} geschehen.
+
+Sei mit $C^n$ der Vektorraum der $n$-Mal stetig differenzierbaren Funktionen bezeichnet, also gerade diejenigen Funktionen, deren $n$-te Ableitung noch zumindest stetig ist. Wir definieren eine lineare Abbildung 
+\begin{equation}
+D : C^n \longrightarrow C^{n-1}
+\end{equation}
+Eine solche Abbildung wird \emph{Differentialoperator} erster Ordnung genannt. Das wichtigste Beispiel eines Differentialoperators und auch gleichzeitig das einzige, das wir kennen, ist die gewöhnliche Ableitung
+\begin{equation}
+D\big(f(x)\big) = \frac{d f(x)}{dx} = f'(x)
+\end{equation}
+Ein weiteres Beispiel ist der Differentialoperator der durch Multiplikation einer stetigen Funktion entsteht. Es sei $a\in C$ eine stetige Funktion. Dann kann der Differentialoperator $D$ wie folgt definiert sein:
+\begin{equation}
+D\big(f(x)\big) = a(x) \cdot \frac{d f(x)}{dx} = a(x) \cdot f'(x)
+\end{equation}
+Differentialoperatoren bieten nicht nur ein elegantes Hilfsmittel, die Ableitung in einen größeren Kontext -- nämlich als Abbildung zwischen Funktionenräumen -- zu setzen, sondern auch eine elegante Form der Definition von Differentialgleichungen, wie wir in Kapitel \ref{chap:diffgl} sehen werden. Des Weiteren ist die Operatortheorie ein fruchtbares Forschungsgebiet innerhalb der Funktionalanalysis geworden. Doch darauf einzugehen würde hier zu weit führen. 
+
+Zum Selbststudium sei auf die Bücher von Hirzebruch und Scharlau \cite{HirzebruchScharlau199101}, Heuser \cite{Heuser200611} und Alt \cite{Alt201204} hingewiesen, die -- jeweils auf ihre Art -- gute Einführungen in die Funktionalanalysis bieten.
+
+\section{Aufgaben}
+
+\begin{prob}\label{prob:func}
+Stelle die Anforderungen an die Menge der differenzierbaren Funktionen zusammen, damit nachweisbar wird, dass sie einen Vektorraum bilden.
+\end{prob}
 
