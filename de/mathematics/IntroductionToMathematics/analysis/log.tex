@@ -1,20 +1,64 @@
 
-\chapter{Logarithmus und Exponentialfunktion}
+\chapter{Exponentialrechnung und Logarithmus}
 
-TODO
+\section{Die e-Funktion}
+
+Zur Einführung möchte ich noch einmal auf die Zinsrechnung zurückkommen. Im Arithmetik Teil dieses Buches hatten wir die Verzinsung in der angewandten Mathematik kennen gelernt und die Rückzahlungsdetails eines Kreditvertrags berechnet. 
+
+Die allgemeine Form der Verzinsung wird durch die Formel gegeben:
+\begin{equation}
+K_n = K_0 (1+z)^n
+\end{equation}
+Wobei $K_0$ das Anfangskapital, $K_n$ das Endkapital und $z$ der Zinssatz ist. Betrachten wir den Spezialfall, wenn $K_0 = 1$ und $z=100\% = 1$ ist. Dann ist die jährliche Verzinsung gegeben durch
+\begin{equation}
+K_n = (1+1)^n = 2^n
+\end{equation}
+bzw. nach einem Jahr haben wir ein Gesamtkapital von
+\begin{equation}
+K_1 = (1+1)^1 = 2
+\end{equation}
+Was passiert nun, wenn wir nicht einmal pro Jahr die Verzinsung ausrechnen, sondern quartalsweise, also vier Mal im Jahr. Dann viertelt sich der Prozentsatz $z=\frac{1}{4}$, nicht verändert wird die Zeit, in der wir das Geld anlegen, nämlich ein Jahr. Also am Ende des vierten Quartals wird abgerechnet, dann ist $n=4$, also
+\begin{equation}
+K_4 = \left(1+\frac{1}{4} \right)^4 = 2,44140625
+\end{equation}
+Weiter möchten wir wissen, wie viel wir bekommen, wenn wir nicht quartalsweise, sondern monatlich verzinsen:
+\begin{equation}
+K_{12} = \left(1+\frac{1}{12} \right)^{12} = 2,613035290\dots
+\end{equation}
+oder tagesweise:
+\begin{equation}
+K_{365} = \left(1+\frac{1}{365} \right)^{365} = 2,7145674\dots
+\end{equation}
+und so weiter. Wie wir sehen, nähert sich unser Gesamtkapital einer Zahl zwischen $2,5$ und $3$. Um genau zu sein, folgender Zahl:
+\begin{equation}
+2.718281828459045235360287471352662497757247093699959574\dots
+\end{equation}
+Sie wird \emph{Eulersche Zahl}\index{Eulersche Zahl} genannt und als $e$ bezeichnet. Sie ist Grenzwert der Folge
+\begin{equation}
+e = \lim_{n\rightarrow \infty} \left( 1+\frac{1}{n} \right)^n
+\end{equation}
+
+Die Eulersche Zahl ist von großem Interesse in diversen Bereichen, mit ihr kann zum Beispiel der Radioaktive Zerfall berechnet werden, sie hat Bedeutung in der Statistik und Wahrscheinlichkeitsrechnung und ist in der Differential- und Integralrechnung von großer Bedeutung. Man kann behaupten, sie ist eine der wichtigsten Konstanten in der Mathematik.
 
 
 \begin{definition}
-Die Exponentialfunktion ist definiert durch
+Die \emph{Exponentialfunktion} oder \emph{$e$-Funktion} ist definiert durch
 
 \begin{equation}\label{eq:expn}
-\exp(x) = \lim_{n\rightarrow \infty} \left( 1+\frac{x}{n} \right)^n
+\exp(x) = \lim_{n\rightarrow \infty} \left( 1+\frac{x}{n} \right)^n = e^x
 \end{equation}
 oder alternativ
 \begin{equation}\label{eq:expk}
-\exp(x) = \lim_{k\rightarrow 0} \left( 1+x\cdot k \right)^{\frac{1}{k}}
+\exp(x) = \lim_{k\rightarrow 0} \left( 1+x\cdot k \right)^{\frac{1}{k}}= e^x
 \end{equation}
 \end{definition}
+Der Buchstabe $e$ wird auch in anderen Zusammenhängen verwendet. Wenn also unzweifelhaft die Exponentialfunktion gemeint sein soll, ist es zweckmäßig, diese mit einem eigenen Zeichen zu versehen. Daher führte man die oben angegebene $\exp()$ Schreibweise ein. Es gilt aber grundsätzlich
+\begin{equation}
+\exp(x) = e^x
+\end{equation}
+Mit $e$ der Eulerschen Zahl.
 
-Formel (\ref{eq:expk}) wird uns bei der Ableitung der Exponentialfunktion wieder begegnen.
+\HandRight\ Formel (\ref{eq:expk}) wird uns bei der Ableitung der Exponentialfunktion wieder begegnen.
+
+\section{Logarithmus}
 
