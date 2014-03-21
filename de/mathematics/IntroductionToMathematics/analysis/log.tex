@@ -40,6 +40,7 @@ e = \lim_{n\rightarrow \infty} \left( 1+\frac{1}{n} \right)^n
 
 Die Eulersche Zahl ist von großem Interesse in diversen Bereichen, mit ihr kann zum Beispiel der Radioaktive Zerfall berechnet werden, sie hat Bedeutung in der Statistik und Wahrscheinlichkeitsrechnung und ist in der Differential- und Integralrechnung von großer Bedeutung. Man kann behaupten, sie ist eine der wichtigsten Konstanten in der Mathematik.
 
+\subsection{Definition}
 
 \begin{definition}
 Die \emph{Exponentialfunktion} oder \emph{$e$-Funktion} ist definiert durch
@@ -60,5 +61,47 @@ Mit $e$ der Eulerschen Zahl.
 
 \HandRight\ Formel (\ref{eq:expk}) wird uns bei der Ableitung der Exponentialfunktion wieder begegnen.
 
+\subsection{Rechenregeln}
+
+\begin{equation}
+\begin{split}
+\exp(0) &= 1\\
+\exp(x+y) &= \exp(x)\cdot \exp(y) \\
+\exp(-x) &= \frac{1}{\exp(x)} \\
+\exp(x-y) &= \frac{\exp(x)}{\exp(y)} \\
+\exp(x\cdot y) &= \big( \exp(x) \big)^y \\
+\exp \left(\frac{x}{y} \right) &= \big( \exp(x) \big)^{-y}
+\end{split}
+\end{equation}
+
+
 \section{Logarithmus}
+
+
+
+\section{Andere Basen}
+
+Eine Exponentialfunktion kann eine beliebige Basis haben. Dass wir in den vorherigen Abschnitten $e$ verwendeten, liegt daran, dass die Exponentialfunktion zur Basis $e$ von besonderer Wichtigkeit ist. Allgemein kann man aber jede beliebige Basis verwenden:
+\begin{equation}
+f_a(x) = a^x
+\end{equation}
+und es gilt im Besonderen:
+\begin{equation}\label{eq:ax}
+a^x = e^{\ln(a^x)} = e^{x\cdot \ln(a)}
+\end{equation}
+
+Wie zur $e$-Funktion kann man zu jeder Beliebigen Exponentialfunktion eine Umkehrfunktion definieren, genauer gesagt einen Logarithmus. Es gilt also
+\begin{equation}
+\log_a (a^x) = x
+\end{equation}
+sowie
+\begin{equation*}
+\ln(x) = \ln\big( a^{\log_a(x)}\big) = \log_a(x) \cdot \ln(a)
+\end{equation*}
+damit ist
+\begin{equation}\label{eq:loga}
+\log_a(x) = \frac{\ln(x)}{\ln(a)}
+\end{equation}
+
+Man kann also jeden Logarithmus zu einer beliebigen Zahl aus einem bekannten Logarithmus berechnen. Da uns der \emph{Logarithmus naturalis} sehr bekannt ist, und die Basis $e$ ebenfalls, merken wir uns diese Erkenntnis: Wir können jeden Logarithmus zu jeder Basis aus dem \emph{Logarithmus naturalis} berechnen und verwenden dafür die Formel (\ref{eq:loga}).
 

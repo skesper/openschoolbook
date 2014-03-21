@@ -64,7 +64,7 @@
 \indexentry{injektiv}{58}
 \indexentry{surjektiv}{58}
 \indexentry{bijektiv}{58}
-\indexentry{umkehrbar eindeutig}{58}
+\indexentry{umkehrbar eindeutig}{59}
 \indexentry{Homomorphismus}{59}
 \indexentry{Vektorraumhomomorphismus}{59}
 \indexentry{Endomorphismus}{59}
@@ -72,16 +72,16 @@
 \indexentry{Automorphismus}{59}
 \indexentry{Linearform}{59}
 \indexentry{orthogonal}{60}
-\indexentry{positiv definit}{60}
-\indexentry{positiv semidefinit}{60}
+\indexentry{positiv definit}{61}
+\indexentry{positiv semidefinit}{61}
 \indexentry{negativ definit}{61}
 \indexentry{negativ semidefinit}{61}
 \indexentry{Norm}{61}
 \indexentry{Raum, normiert}{61}
 \indexentry{Norm, euklidische}{61}
 \indexentry{Norm, induziert}{61}
-\indexentry{Skalarproduktraum}{61}
-\indexentry{Raum mit Skalarprodukt}{61}
+\indexentry{Skalarproduktraum}{62}
+\indexentry{Raum mit Skalarprodukt}{62}
 \indexentry{Metrik}{62}
 \indexentry{Raum, metrisch}{62}
 \indexentry{Raum, normiert}{63}
@@ -125,14 +125,14 @@
 \indexentry{Folgenstetigkeit}{83}
 \indexentry{$\delta$-$\epsilon$-stetig}{83}
 \indexentry{Eulersche Zahl}{86}
-\indexentry{Dehnungsbeschr\IeC {\"a}nktheit}{88}
-\indexentry{Lipschitz-Stetigkeit}{88}
-\indexentry{Linearisierung}{88}
-\indexentry{Sehne}{89}
-\indexentry{Ableitung}{90}
-\indexentry{Tangente}{90}
-\indexentry{Ableitungsregeln}{91}
-\indexentry{Produktregel}{92}
-\indexentry{Quotientenregel}{92}
-\indexentry{Lemma von B\IeC {\'e}zout}{109}
-\indexentry{Lemma von Euklid}{110}
+\indexentry{Dehnungsbeschr\IeC {\"a}nktheit}{90}
+\indexentry{Lipschitz-Stetigkeit}{90}
+\indexentry{Linearisierung}{90}
+\indexentry{Sehne}{91}
+\indexentry{Ableitung}{92}
+\indexentry{Tangente}{92}
+\indexentry{Ableitungsregeln}{93}
+\indexentry{Produktregel}{94}
+\indexentry{Quotientenregel}{94}
+\indexentry{Lemma von B\IeC {\'e}zout}{113}
+\indexentry{Lemma von Euklid}{114}
