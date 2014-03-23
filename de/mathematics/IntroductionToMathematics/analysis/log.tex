@@ -1,5 +1,5 @@
 
-\chapter{Exponentialrechnung und Logarithmus}
+\chapter{Exponentialfunktion und Logarithmus}
 
 \section{Die e-Funktion}
 
@@ -81,7 +81,7 @@ Mit $e$ der Eulerschen Zahl.
 
 \section{Andere Basen}
 
-Eine Exponentialfunktion kann eine beliebige Basis haben. Dass wir in den vorherigen Abschnitten $e$ verwendeten, liegt daran, dass die Exponentialfunktion zur Basis $e$ von besonderer Wichtigkeit ist. Allgemein kann man aber jede beliebige Basis verwenden:
+Wir haben bisher die Exponentialfunktion zur Basis $e$ betrachtet. Aber das ist nicht die einzige Exponentialfunktion, die es gibt. Eine Exponentialfunktion kann jede beliebige Basis haben. Dass wir in den vorherigen Abschnitten $e$ verwendeten, liegt daran, dass die Exponentialfunktion zur Basis $e$ von besonderer Wichtigkeit ist. Nimmt man nicht $e$ als Basis, sondern eine beliebige Zahl $a\in \mathbb{R}$ spricht man von einer Exponentialfunktion zur Basis $a$:
 \begin{equation}
 f_a(x) = a^x
 \end{equation}
@@ -89,8 +89,9 @@ und es gilt im Besonderen:
 \begin{equation}\label{eq:ax}
 a^x = e^{\ln(a^x)} = e^{x\cdot \ln(a)}
 \end{equation}
+es bleibt allerdings $e$ die Basis zur $\exp()$-Funktion.
 
-Wie zur $e$-Funktion kann man zu jeder Beliebigen Exponentialfunktion eine Umkehrfunktion definieren, genauer gesagt einen Logarithmus. Es gilt also
+Wie zur $e$-Funktion kann man zu jeder beliebigen Exponentialfunktion eine Umkehrfunktion definieren, genauer gesagt einen Logarithmus. Man spricht dann vom Logarithmus zur Basis $a$ und es gilt
 \begin{equation}
 \log_a (a^x) = x
 \end{equation}
@@ -103,5 +104,10 @@ damit ist
 \log_a(x) = \frac{\ln(x)}{\ln(a)}
 \end{equation}
 
-Man kann also jeden Logarithmus zu einer beliebigen Zahl aus einem bekannten Logarithmus berechnen. Da uns der \emph{Logarithmus naturalis} sehr bekannt ist, und die Basis $e$ ebenfalls, merken wir uns diese Erkenntnis: Wir können jeden Logarithmus zu jeder Basis aus dem \emph{Logarithmus naturalis} berechnen und verwenden dafür die Formel (\ref{eq:loga}).
+Man kann also jeden Logarithmus aus dem bekannten \emph{Logarithmus naturalis} berechnen. Da uns der \emph{Logarithmus naturalis} gut bekannt ist, und die Basis $e$ ebenfalls, merken wir uns diese Erkenntnis: Wir können jeden Logarithmus zu jeder Basis aus dem \emph{Logarithmus naturalis} berechnen und verwenden dafür die Formel (\ref{eq:loga}).
+
+Gleichzeitig gilt auch die Umkehrung: Wir können den \emph{Logarithmus naturalis} aus jedem anderen Logarithmus berechnen, und es gilt:
+\begin{equation}
+\ln(x) = \frac{\log_a(x)}{\log_a(e)}
+\end{equation}
 
