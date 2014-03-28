@@ -300,11 +300,12 @@ p_n(x)^{(m)} = 0 \text{ für } m>n
 für alle Polynome.
 
 
-\subsection{Exponentialfunktion}
+\subsection{Exponentialfunktion}\label{chap:diffexp}
 
 \begin{equation}
 \begin{split}
 \big(e^x\big)' &= \lim_{h\rightarrow 0} \frac{e^{x+h}-e^x}{h} \\
+&= \lim_{h\rightarrow 0} \frac{e^{x}\cdot e^{h}-e^x}{h} \\
 &= e^x \cdot \lim_{h\rightarrow 0} \frac{e^{h}-1}{h}
 \end{split}
 \end{equation}
@@ -336,7 +337,7 @@ Das bedeutet, die Exponentialfunktion ist invariant unter der Ableitung.
 
 
 \subsection{Logarithmus}
-Die Ableitung des Logarithmus ist überraschend einfach. Zentraler Punkt ist die Anwendung der Kettenregel.  Gehen wir die folgende Formel von links beginnend durch: Wir wissen, dass die Ableitung einer linearen Funktion zu einer konstanten Funktion führt. Wir haben eine 1 und diese ist die Ableitung der linearen Funktion $f(x) = x$. Die Funktion $x$ schreiben wir komplizierter, indem wir die Exponentialfunktion und den (natürlichen) Logarithmus aufeinander anwenden. Dann nutzen wir die Kettenregel. Im vorherigen Abschnitt haben wir gesehen, dass die Exponentialfunktion invariant unter der Ableitung ist. Daher bleibt der Teil $e^{\ln x}$ erhalten und wir multiplizieren die Ableitung des Logarithmus dahinter. Letzter Term ist genau das, was uns interessiert. 
+Die Herleitung der Ableitung des Logarithmus ist überraschend einfach. Zentraler Punkt ist die Anwendung der Kettenregel.  Gehen wir die folgende Formel von links beginnend durch: Wir wissen, dass die Ableitung einer linearen Funktion zu einer konstanten Funktion führt. Wir haben eine 1 und diese ist die Ableitung der linearen Funktion $f(x) = x$. Die Funktion $x$ schreiben wir komplizierter, indem wir die Exponentialfunktion und den (natürlichen) Logarithmus aufeinander anwenden. Dann nutzen wir die Kettenregel. Im vorherigen Abschnitt haben wir gesehen, dass die Exponentialfunktion invariant unter der Ableitung ist. Daher bleibt der Teil $e^{\ln x}$ erhalten und wir multiplizieren die Ableitung des Logarithmus dahinter. Letzter Term ist genau das, was uns interessiert. 
 \begin{equation}
 1 = (x)' = \big(e^{\ln(x)}\big)' = e^{\ln(x)}\cdot \big( \ln(x) \big)' = x \cdot \big( \ln(x) \big)'
 \end{equation}
@@ -348,7 +349,7 @@ Wie bei den vorherigen Berechnungen auch, schreiben wir einen Ausdruck komplizie
 \begin{equation*}
 x = e^{\ln(x)}
 \end{equation*}
-Bevor wir ableiten, um die Formel komplizierter zu machen und danach um sie wieder zu vereinfachen.
+ist. Einmal bevor wir ableiten, um die Formel komplizierter zu machen und zum zweiten Mal danach, um sie wieder zu vereinfachen.
 
 \section{Ausblick}
 
@@ -372,7 +373,7 @@ Ein weiteres Beispiel ist der Differentialoperator der durch Multiplikation eine
 \begin{equation}
 D\big(f(x)\big) = a(x) \cdot \frac{d f(x)}{dx} = a(x) \cdot f'(x)
 \end{equation}
-Differentialoperatoren bieten nicht nur ein elegantes Hilfsmittel, die Ableitung in einen größeren Kontext -- nämlich als Abbildung zwischen Funktionenräumen -- zu setzen, sondern auch eine elegante Form der Definition von Differentialgleichungen, wie wir in Kapitel \ref{chap:diffgl} sehen werden. Des Weiteren ist die Operatortheorie ein fruchtbares Forschungsgebiet innerhalb der Funktionalanalysis geworden. Doch darauf einzugehen würde hier zu weit führen. 
+Differentialoperatoren bieten nicht nur ein elegantes Hilfsmittel, die Ableitung in einen größeren Kontext -- nämlich als Abbildung zwischen Funktionenräumen -- zu setzen, sondern auch eine praktische Form der Definition von Differentialgleichungen, wie wir in Kapitel \ref{chap:diffgl} sehen werden. Des Weiteren ist die Operatortheorie ein fruchtbares Forschungsgebiet innerhalb der Funktionalanalysis geworden. Doch darauf einzugehen würde hier zu weit führen. 
 
 Zum Selbststudium sei auf die Bücher von Hirzebruch und Scharlau \cite{HirzebruchScharlau199101}, Heuser \cite{Heuser200611} und Alt \cite{Alt201204} hingewiesen, die -- jeweils auf ihre Art -- gute Einführungen in die Funktionalanalysis bieten.
 
