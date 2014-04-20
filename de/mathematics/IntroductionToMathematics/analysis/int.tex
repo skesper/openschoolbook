@@ -1,4 +1,162 @@
 
 \chapter{Integralrechnung}
 
+Die eindimensionale Integralrechnung beschäftigt sich -- zumindest im sogenannten \emph{bestimmten} Fall -- mit der Messung von Flächeninhalten. Und zwar mit dem Maß der Fläche unter einer bestimmten Funktion. Das bedeutet, wir möchten mithilfe der Integralrechnung die Größe der Fläche bestimmen, die zwischen der $x$-Achse und einer Funktion $f(x)$ aufgespannt wird. Dafür begrenzen wir die Fläche, die uns interessiert, an der linken und rechten Seite durch ein Interval $[a,b]$. Allgemein gilt $a<b$. 
 
+Im \emph{unbestimmten} Fall analysieren wir die Menge aller Flächeninhalte, wenn die Grenzen $a$ und $b$ nicht festgelegt sind. Vorweg sei erwähnt, dass man dadurch eine Funktion definieren kann, die -- falls man ihre Funktionswerte an den Stellen $a$ und $b$ auswertet -- unmittelbare Aussagen über den Flächeninhalt unter der Funktion $f$ gibt. Diese "`Flächeninhalts"'-Funktion wird einen interessanten Zusammenhang mit der Funktion $f$ haben. Und diesen Zusammenhang bezeichnet man gemeinhin als den \emph{Hauptsatz der Integral- und Differentialrechnung}, doch dazu später.  Sehen wir uns zur Illustration Abbildung \ref{fig:int1} an:
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}[domain=0.25:2.75,scale=2]
+%\draw[step=.5cm,lightgray,very thin] (-0.4,-0.4) grid (3.1,1.4);
+\draw (-0.5,0) -- (3.1,0);
+\draw (0,-0.5) -- (0,1.5);
+
+\draw[gray,very thin](0.25,0.2474) -- (0.25,0)  node[below]{$a$} ;
+\draw[gray,very thin](2.75,0.38166) -- (2.75,0)  node[below]{$b$} ;
+
+\draw[color=black,thick]   plot[smooth] (\x,{sin(\x r)});
+
+\node at (pi/2,0.4) {Fläche $F$};
+\end{tikzpicture}
+\caption{Das bestimmte Integral}
+\label{fig:int1}
+\end{figure}
+Wir haben damit eine Fläche $F$ definiert, die an den Seiten und der Unterseite grade Ränder besitzt, aber an der Oberseite von der Funktion $f$ begrenzt wird. Wir kennen zwar die Funktion $f$, doch ist es uns nicht möglich, die Größe der Fläche unter dem Graph durch eine einfache Formel anzugeben. 
+
+\section{Riemann-Integral}
+
+Bernhard Riemann\footnote{\textbf{Georg Friedrich Bernhard Riemann} *17. September 1826 in Breselenz; \ding{61}20. Juli 1866 in Selasca} 
+
+\subsection{Intervall Zerlegung}
+
+\begin{definition}[Intervall Zerlegung]
+Zunächst wollen wir das Intervall $[a,b]$ in kleinere Teile zerlegen. Wir wählen uns dafür eine Menge von Punkten innerhalb dieses Intervalls und zwar auf folgende Weise:
+
+\begin{enumerate}
+\item Wir wählen $N+1$ Werte $x_i$ mit $0\le i \le N$.
+\item Für alle $i$ gilt $a\le x_i \le b$.
+\item Weiter sind die Ränder definiert als $x_0=a$ und $x_N=b$ und
+\item $x_i < x_{i+1}$ für alle $0\le i < N$.
+\end{enumerate}
+Forderung 2 ist im Grunde unnötig, da mit 3 und 4 dies automatisch folgt. Aber der Klarheit halber nehmen wir diese Anforderung mit auf. Weiter definieren wir uns auf diese Weise $N$ Intervalle:
+
+\begin{equation}
+I_i = [x_i,x_{i+1}], \text{ mit } i=0, \dots , N-1
+\end{equation}
+\end{definition}
+
+Eine solche Aufteilung des Intervalls $[a,b]$ in diese kleineren Intervalle $[x_i,x_{i+1}]$ nennt man eine \emph{Intervall Zerlegung}. Wir haben keine weiteren Anforderungen an die $x_i$ Werte gestellt, als dass sie in einer Reihenfolge zwischen $a$ und $b$ liegen sollen. Die Abstände zwischen diesen Werten ist aber frei wählbar. Man könnte natürlich der Einfachheit halber sie \emph{äquidistant} wählen, also in einem gleichmäßigen Abstand. Doch das hat keinen Einfluss auf die späteren Berechnungen. 
+
+\begin{definition}
+Zu jedem dieser $N$ Intervalle wählen wir uns nun auch noch eine sogenannte \emph{Stützstelle} $s_i$ mit $i=0, \dots , N-1$. Diese liegt innerhalb des zugehörigen Intervalls:
+\begin{equation}
+s_i \in [x_i,x_{i+1}]
+\end{equation}
+Eine solche Zerlegung wird mit $Z$ bezeichnet.
+\end{definition}
+
+Aber auch hier legen wir keine weiteren Anforderungen an $s_i$ fest, diese Stützstelle kann irgendwo in ihrem zugehörigen Intervall liegen.
+
+\subsection{Riemann-Summe}
+
+Zu jeder der im vorher genannten Stützstellen berechnen wir den Funktionswert von $f$  und multiplizieren ihn mit der breite des zugehörigen Intervalls.
+
+\begin{equation}
+F_i = f(s_i)\cdot (x_{i+1}-x_i)
+\end{equation}
+Die Summe über diese Werte ist eine erste Annäherung an den Flächeninhalt $F$:
+
+\begin{equation}
+\sum_{i=0}^{N-1} F_i = \sum_{i=0}^{N-1} f(s_i)\cdot (x_{i+1}-x_i) \approx F
+\end{equation}
+
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}[domain=0.25:2.75,scale=2]
+%\draw[step=.5cm,lightgray,very thin] (-0.4,-0.4) grid (3.1,1.4);
+\draw (-0.5,0) -- (3.1,0);
+\draw (0,-0.5) -- (0,1.5);
+
+\draw[black,very thin](0.25,0.2474) -- (0.25,0)  node[below]{$x_0$} ;
+\draw[black,very thin](2.75,0.38166) -- (2.75,0)  node[below]{$x_4$} ;
+
+
+\draw[black,very thin](0.25,0) -- (0.25,0.4);
+\draw[black,very thin](0.25,0.4) -- (0.5,0.4);
+\draw[black,very thin](0.5,0.4) -- (0.5,0) node[below]{$x_1$};
+\draw[gray,very thin](0.41,0) -- (0.41,0.4) node[above]{$f(s_0)$};
+
+\draw[black,very thin](0.5,0) -- (0.5,0.8);
+\draw[black,very thin](0.5,0.8) -- (1.5,0.8);
+\draw[black,very thin](1.5,0.8) -- (1.5,0) node[below]{$x_2$};
+\draw[gray,very thin](0.92,0) -- (0.92,0.8) node[above]{$f(s_1)$};
+
+\draw[black,very thin](1.5,0) -- (1.5,1);
+\draw[black,very thin](1.7,1) -- (1.7,1);
+\draw[black,very thin](1.7,1) -- (1.7,0) node[below]{$x_3$};
+\draw[gray,very thin](1.55,0) -- (1.55,1) node[above]{$f(s_2)$};
+
+\draw[black,very thin](1.7,0) -- (1.7,0.7);
+\draw[black,very thin](1.7,0.7) -- (2.75,0.7);
+\draw[black,very thin](2.75,0.7) -- (2.75,0);
+\draw[gray,very thin](2.35,0) -- (2.35,0.7) node[above]{$f(s_3)$};
+
+\draw[color=black,thick]   plot[smooth] (\x,{sin(\x r)});
+
+\end{tikzpicture}
+\caption{Riemann-Summe}
+\label{fig:int2}
+\end{figure}
+
+In Abbildung \ref{fig:int2} ist eine Riemann-Summe mit vier Intervallen dargestellt. Die Höhe der Rechtecke über den jeweiligen Intervallen bestimmt der Funktionswert an der Stützstelle $f(s_i)$, also genau den Stellen, an denen der Graph der Funktion $f$ die waagerechten Oberkanten der Rechtecke kreuzt. Es ist zu beachten, dass die Intervalle beliebig breit sein können.
+
+Wenn wir uns das rechte Intervall ansehen, erkennen wir, dass zwischen $x_3$ und $s_3$ das Rechteck zu tief ist. Der Graph von $f$ erhebt sich in einem Bogen darüber (diese Fläche nennen wir $g_l$), während zwischen $s_3$ und $x_4$ die Oberkante zu hoch liegt, $f$ schneidet hier eine Ecke des Rechtecks ab (diese Fläche nennen wir $g_r$). Der exakte Flächeninhalt unter dem Graphen von $f$ zwischen $x_3$ und $x_4$ ist also
+
+\begin{equation}
+F'_3 = f(s_3)(x_4-x_3)+g_l-g_r
+\end{equation}
+
+Damit unsere Rechtecke möglichst genau den Flächeninhalt bestimmen, müssen wir die $g_l$ und $g_r$ Werte so klein wie nur irgend möglich machen. Aber woher kommen diese Werte? Ganz klar liegt das daran, dass unsere Rechtecke ziemlich breit sind. Wären sie schmaler, wären die Flächen $g_l,g_r$ sehr klein. Der Fehler, den wir mit der Rechteck-Annäherung machen also auch kleiner. Wenn wir aber die Rechtecke kleiner, d.h. schmaler machen, dann müssen wir mehr Rechtecke nehmen, um die Strecke zwischen $a$ und $b$ mit Rechtecken aufzufüllen. Und dann hätten wir das Problem, dass wir nicht kontrollieren könnten, ob ein bestimmtes Intervall, zum Beispiel $[x_1,x_2]$ auch wirklich kleiner wird, oder ob nicht immer mehr Stützstellen außerhalb dieses Intervalls eingebaut würden. 
+
+Dies wäre eine problematische Eigenschaft der Zerlegung. Um nun zu gewährleisten, dass unsere Zerlegung auch wirklich immer feiner wird, in allen Rechtecken, definieren wir uns folgende Eigenschaft der Zerlegung:
+
+\begin{definition}
+Es sei $Z$ eine Zerlegung des Intervalls $[a,b]$. Der Wert
+\begin{equation}
+\mu (Z) = \max\left\{ x_{i}-x_{i-1} \middle| i=1,\dots ,N  \right\}
+\end{equation}
+wird als \emph{Feinheit} der Zerlegung bezeichnet.
+\end{definition}
+
+\subsection{Der Integral-Begriff}
+
+Folgende Definition geht auf Bernhard Riemann zurück:
+
+\begin{definition}
+Eine Funktion $f$ heißt über dem Intervall $[a,b]$ \emph{integrierbar}, wenn die Riemann-Summen, unabhängig von Zerlegung und gewählten Stützstellen, sich einer Zahl $A$ beliebig annähern, sofern die Zerlegungen nur fein genug gewählt wird ($\mu(Z)$). Anders ausgedrückt: Zu einer Zahl $A$ und einer Zahl $\epsilon >0$ gibt es ein $\delta >0$, sodass aus $\mu(Z)<\delta$ folgt
+\begin{equation}
+\left| \sum_{i=0}^{N-1} f(s_i)\cdot (x_{i+1}-x_i) -A \right| < \epsilon
+\end{equation}
+\end{definition}
+
+\begin{definition}
+Die Zahl $A$ (wie oben) wird das \emph{bestimmte Integral} der Funktion $f$ über dem Intervall $[a,b]$ genannt und man stellt es mit dem Integralzeichen dar:
+\begin{equation}
+A = \int_{a}^{b} f(x) dx
+\end{equation}
+Dabei ist das Integralzeichen wie eine unendliche Summe über eine Zerlegung zu verstehen, während der $dx$ Operator wie die Breite eines infinitesimal schmalen Intervalls mit dem Funktionswert $f(x)$ multipliziert wird. Dies ist also nichts anderes, als unsere Rechteck-Berechnung.
+\end{definition}
+
+Ein so definiertes Integral heißt \emph{Riemann-Integral}. Es gibt noch weitere Arten des Integralbegriffs. Eine Definition über sogenannte Ober- und Untersummen führt ebenfalls zum Riemann-Integral, während eine Definition über die Messbarkeit zum Lebesgue-Integral führt.
+
+\section{Kriterien der Integrierbarkeit}
+
+\section{Das unbestimmte Integral}
+
+\section{Der Hauptsatz der Integral- und Differentialrechnung}
+
+
+
+\section{Aufgaben}

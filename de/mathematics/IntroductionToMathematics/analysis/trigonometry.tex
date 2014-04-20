@@ -51,7 +51,23 @@ Wir haben also zwei Lösungen zu einer Differentialgleichung. Die Tatsache, dass
 \langle s,c\rangle = 0
 \end{equation}
 
-Die Namen $s$ und $c$ unserer Funktionen sind natürlich nicht zufällig so gewählt, dies sind gerade die Sinus ($s$) und Cosinus ($c$) Funktionen. 
+Die Namen $s$ und $c$ unserer Funktionen sind natürlich nicht zufällig so gewählt, dies sind gerade die Sinus ($s$) und Cosinus ($c$) Funktionen. Abbildung 
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+\draw[step=.5cm,lightgray,very thin] (-4.4,-1.4) grid (4.4,1.4);
+\draw (-4.5,0) -- (4.5,0);
+\draw (0,-1.5) -- (0,1.5);
+
+\draw[color=black]   plot[smooth] (\x,{sin(\x r)})    node[right] {$s(x) = \sin x$};
+\draw[color=black]   plot[smooth] (\x,{cos(\x r)})    node[right] {$c(x) = \cos x$};
+  
+\end{tikzpicture}
+\caption{Die Sinus und Kosinus Funktionen}
+\end{figure}
+
+ 
 
 \section{Taylor-Reihe}
 
