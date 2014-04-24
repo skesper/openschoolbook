@@ -30,7 +30,7 @@ Bernhard Riemann\footnote{\textbf{Georg Friedrich Bernhard Riemann} *17. Septemb
 
 \subsection{Intervall Zerlegung}
 
-\begin{definition}[Intervall Zerlegung]
+\begin{definition}[Intervall Zerlegung]\index{Intervall Zerlegung}\index{Zerlegung}
 Zunächst wollen wir das Intervall $[a,b]$ in kleinere Teile zerlegen. Wir wählen uns dafür eine Menge von Punkten innerhalb dieses Intervalls und zwar auf folgende Weise:
 
 \begin{enumerate}
@@ -58,7 +58,7 @@ Eine solche Zerlegung wird mit $Z$ bezeichnet.
 
 Aber auch hier legen wir keine weiteren Anforderungen an $s_i$ fest, diese Stützstelle kann irgendwo in ihrem zugehörigen Intervall liegen.
 
-\subsection{Riemann-Summe}
+\subsection{Riemann-Summe}\index{Riemann-Summe}
 
 Zu jeder der im vorher genannten Stützstellen berechnen wir den Funktionswert von $f$  und multiplizieren ihn mit der breite des zugehörigen Intervalls.
 
@@ -122,7 +122,7 @@ Damit unsere Rechtecke möglichst genau den Flächeninhalt bestimmen, müssen wi
 
 Dies wäre eine problematische Eigenschaft der Zerlegung. Um nun zu gewährleisten, dass unsere Zerlegung auch wirklich immer feiner wird, in allen Rechtecken, definieren wir uns folgende Eigenschaft der Zerlegung:
 
-\begin{definition}
+\begin{definition}\index{Feinheit einer Zerlegung}
 Es sei $Z$ eine Zerlegung des Intervalls $[a,b]$. Der Wert
 \begin{equation}
 \mu (Z) = \max\left\{ x_{i}-x_{i-1} \middle| i=1,\dots ,N  \right\}
@@ -130,12 +130,12 @@ Es sei $Z$ eine Zerlegung des Intervalls $[a,b]$. Der Wert
 wird als \emph{Feinheit} der Zerlegung bezeichnet.
 \end{definition}
 
-\subsection{Der Integral-Begriff}
+\subsection{Der Integral-Begriff}\index{Integral}
 
 Folgende Definition geht auf Bernhard Riemann zurück:
 
-\begin{definition}
-Eine Funktion $f$ heißt über dem Intervall $[a,b]$ \emph{integrierbar}, wenn die Riemann-Summen, unabhängig von Zerlegung und gewählten Stützstellen, sich einer Zahl $A$ beliebig annähern, sofern die Zerlegungen nur fein genug gewählt wird ($\mu(Z)$). Anders ausgedrückt: Zu einer Zahl $A$ und einer Zahl $\epsilon >0$ gibt es ein $\delta >0$, sodass aus $\mu(Z)<\delta$ folgt
+\begin{definition}[Riemann-Integral]\index{Riemann-Integral}
+Eine Funktion $f$ heißt über dem Intervall $[a,b]$ \emph{integrierbar}\index{integrierbar}, wenn die Riemann-Summen, unabhängig von Zerlegung und gewählten Stützstellen, sich einer Zahl $A$ beliebig annähern, sofern die Zerlegungen nur fein genug gewählt wird ($\mu(Z)$). Anders ausgedrückt: Zu einer Zahl $A$ und einer Zahl $\epsilon >0$ gibt es ein $\delta >0$, sodass aus $\mu(Z)<\delta$ folgt
 \begin{equation}
 \left| \sum_{i=0}^{N-1} f(s_i)\cdot (x_{i+1}-x_i) -A \right| < \epsilon
 \end{equation}
@@ -149,7 +149,7 @@ A = \int_{a}^{b} f(x) dx
 Dabei ist das Integralzeichen wie eine unendliche Summe über eine Zerlegung zu verstehen, während der $dx$ Operator wie die Breite eines infinitesimal schmalen Intervalls mit dem Funktionswert $f(x)$ multipliziert wird. Dies ist also nichts anderes, als unsere Rechteck-Berechnung.
 \end{definition}
 
-Ein so definiertes Integral heißt \emph{Riemann-Integral}. Es gibt noch weitere Arten des Integralbegriffs. Eine Definition über sogenannte Ober- und Untersummen führt ebenfalls zum Riemann-Integral, während eine Definition über die Messbarkeit zum Lebesgue-Integral führt.
+Neben dem \emph{Riemann-Integral} gibt es noch weitere Arten des Integralbegriffs. Eine Definition über sogenannte Ober- und Untersummen führt ebenfalls zum Riemann-Integral, während eine Definition über die Messbarkeit zum Lebesgue-Integral führt.
 
 \section{Kriterien der Integrierbarkeit}
 
