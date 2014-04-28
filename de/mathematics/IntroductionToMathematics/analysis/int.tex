@@ -30,7 +30,7 @@ Bernhard Riemann\footnote{\textbf{Georg Friedrich Bernhard Riemann} *17. Septemb
 
 \subsection{Intervall Zerlegung}
 
-\begin{definition}[Intervall Zerlegung]\index{Intervall Zerlegung}\index{Zerlegung}
+\begin{definition}[Intervall Zerlegung]\index{Intervall Zerlegung}\index{Zerlegung}\label{def:zerlegung}
 Zunächst wollen wir das Intervall $[a,b]$ in kleinere Teile zerlegen. Wir wählen uns dafür eine Menge von Punkten innerhalb dieses Intervalls und zwar auf folgende Weise:
 
 \begin{enumerate}
@@ -151,12 +151,74 @@ Dabei ist das Integralzeichen wie eine unendliche Summe über eine Zerlegung zu 
 
 Neben dem \emph{Riemann-Integral} gibt es noch weitere Arten des Integralbegriffs. Eine Definition über sogenannte Ober- und Untersummen führt ebenfalls zum Riemann-Integral, während eine Definition über die Messbarkeit zum Lebesgue-Integral führt.
 
+\section{Wichtige Integrale}
+
+\subsection{Konstante Integrale}
+
+Betrachten wir zunächst das Integral über der konstanten Funktion $f(x)=1$. Wir wählen eine Intervall Zerlegung $Z$ wie in Definition \ref{def:zerlegung} so, dass $\mu(Z)<\delta$ sowie Stützstellen wie oben. Dann haben wir folgende Summe zu betrachten:
+
+\begin{equation}
+\sum_{i=1}^{N} f(s_i)\cdot (x_{i}-x_{i-1}) = \sum_{i=1}^{N} 1\cdot (x_{i}-x_{i-1})
+\end{equation}
+denn der Funktionswert ist überall gleich $1$. Damit ist die Summe eine sogenannte Teleskop-Summe, das heißt, ihre inneren Glieder kürzen sich alle weg und es bleiben nur der erste und letzte Term übrig.
+\begin{equation}
+\begin{split}
+\sum_{i=1}^{N} (x_{i}-x_{i-1}) &=(x_1-x_0)+(x_2-x_1)+(x_3-x_2)+\dots +(x_N-x_{N-1}) \\
+&= x_N-x_{N-1}+x_{N-1}-x_{N-2}+ \dots -x_2+x_2-x_1+x_1-x_0 \\
+&= x_N-x_0\\
+&=b-a
+\end{split}
+\end{equation}
+Das gilt für alle Riemann-Summen von beliebigen Zerlegungen. Wir benutzen die Definition des Intervalls: Zu jedem $\epsilon$ gibt es ein $\delta$, sodass aus $\mu(Z)<\delta$ folgt
+\begin{equation}\label{eq:baA}
+\begin{split}
+\left| \sum_{i=0}^{N-1} (x_{i+1}-x_i) -A \right| &= \left| \sum_{i=0}^{N-1} (x_{i+1}-x_i) -A \right| \\ 
+&=\left| b-a - A \right| \\
+&< \epsilon
+\end{split}
+\end{equation}
+Wenn Gleichung (\ref{eq:baA}) korrekt ist -- für jedes beliebig kleine $\epsilon$ -- dann muss $A=b-a$ sein. Sprich:
+\begin{equation}
+\int_a^b 1 dx = (b-a)
+\end{equation}
+
 \section{Kriterien der Integrierbarkeit}
+TODO 
 
 \section{Das unbestimmte Integral}
+TODO
 
 \section{Der Hauptsatz der Integral- und Differentialrechnung}
 
+\begin{lemma}
+Es sei $f$ eine über dem Intervall $[a,b]$ (Riemann-) integrierbare Funktion. Dann gibt es Zahlen $f_{\sup}$ und $f_{\inf}$ der folgenden Art:
 
+\begin{equation}
+f_{\inf}\cdot (b-a) \le \int_{a}^{b} f(x) dx \le f_{\sup} \cdot (b-a)
+\end{equation}
+\end{lemma}
+\begin{proof}
+Der Beweis ist trivial, denn mit Auswahl des Infimums und des Supremums wird der Integrand zu einer Konstanten, die aus dem Integral herausgezogen werden kann. Denn wir wissen, dass für eine Konstante $c$ folgendes gilt:
+\begin{equation}
+\int_a^b c dx = c\cdot \int_a^b 1 dx = c\cdot \int_a^b dx = c\cdot(b-a)
+\end{equation}
+Also ist
+\begin{equation}
+\begin{split}
+\int_a^b f(x)dx &\ge \int_a^b \underbrace{\inf_{\xi \in [a,b] } f(\xi)}_{\text{konstant}} dx \\
+ &= \inf_{\xi \in [a,b] } f(\xi) \cdot (b-a) \\
+ &= f_{\inf}\cdot (b-a)
+\end{split}
+\end{equation}
+und weiter
+\begin{equation}
+\begin{split}
+\int_a^b f(x)dx &\le \int_a^b \underbrace{\sup_{\xi \in [a,b] } f(\xi)}_{\text{konstant}} dx \\
+ &= \sup_{\xi \in [a,b] } f(\xi) \cdot (b-a) \\
+ &= f_{\sup}\cdot (b-a)
+\end{split}
+\end{equation}
+somit folgt unsere Behauptung.
+\end{proof}
 
 \section{Aufgaben}
