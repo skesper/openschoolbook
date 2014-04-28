@@ -184,4 +184,34 @@ also auch
 Dies ist eine mit Folgen dargestellte Lipschitz-Stetigkeit. Siehe Definition \ref{def:lipschitz}
 \end{remark}
 
+\section{Zwischenwertsatz}
 
+Der Zwischenwertsatz ist ein elementarer Satz der Analysis. Es besagt, dass eine stetige Funktion über einem Intervall $[a,b]$ alle Zwischenwerte annimmt.
+
+\begin{satz}[Zwischenwertsatz]\label{satz:zwischen}
+Sei $f:[a,b]\longrightarrow \mathbb{R}$ eine stetige Funktion. Dann gibt es zu jedem $Z\in[f(a),f(b)]$ ein $z\in [a,b]$ mit $f(z)=Z$.
+\end{satz}
+\begin{proof}
+Ohne Beschränkung der Allgemeinheit sei $f(a)\le f(b)$. Wäre $f(b)>f(a)$, dann könnte der Beweis mit $Z\in[f(b),f(a)]$ genauso geführt werden. Wir setzen $g(x) = f(x)-Z$. Dann gilt $g(a)\le 0 \le g(b)$. Weiter definieren wir uns eine Folge von Intervallen:
+
+\begin{enumerate}
+\item $a_0 = a$ und $b_0 = b$, also $I_0 = [a_0,b_0]=[a,b]$.
+\item Wir definieren mit $c_k = \frac{a_k +b_k}{2}$ die Mitte des $k$-ten Intervalls $I_k$.
+\item Ist $g(c_k)<0$ setzen wir $I_{k+1} = [c_k,b_k]$, andern falls $I_{k+1}=[a_k,c_k]$.
+\item Wäre $g(c_k)=0$, sind wir fertig und $c_k=z$.
+\item Setze $k=k+1$ und gehe zu Punkt 2.
+\end{enumerate}
+Beachte, dass jedes Intervall $I_{k+1}$ nur noch halb so groß ist, wie $I_k$. Der Abstand zwischen $a_{k+1}$ und $b_{k+1}$ ist somit ebenfalls nur noch halb so groß wie der Abstand von $a_k$ zu $b_k$. Und für alle gilt $a_k\le b_k$. Die Folgen $a_k$ und $b_k$ haben somit einen gemeinsamen Grenzwert
+\begin{equation}
+\lim_{n\rightarrow \infty} g(a_k) =g(z)=\lim_{n\rightarrow \infty} g(b_k)
+\end{equation}
+Da $f$ stetig ist, gilt dies auch für $g$. Zusammen mit der Vollständigkeit des Intervalls $[a,b]$ folgt, dass der Grenzwert $z$ existiert und $g(z)=0$ bzw.
+\begin{equation}
+f(z)=Z
+\end{equation}
+was zu beweisen war.
+\end{proof}
+
+\begin{remark}
+Beachte, dass der Zwischenwertsatz nicht die Eindeutigkeit des Zwischenwertes voraussetzt! Zwischenwerte könnenn vielfach angenommen werden. Der Zwischenwertsatz liefert nur die Existenz, aber keinesfalls die Eindeutigkeit des Zwischenwertes.
+\end{remark}

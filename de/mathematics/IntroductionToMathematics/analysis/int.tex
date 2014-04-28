@@ -144,7 +144,7 @@ Eine Funktion $f$ heißt über dem Intervall $[a,b]$ \emph{integrierbar}\index{i
 \begin{definition}
 Die Zahl $A$ (wie oben) wird das \emph{bestimmte Integral} der Funktion $f$ über dem Intervall $[a,b]$ genannt und man stellt es mit dem Integralzeichen dar:
 \begin{equation}
-A = \int_{a}^{b} f(x) dx
+A = \int_{a}^{b} f(x) \enspace dx
 \end{equation}
 Dabei ist das Integralzeichen wie eine unendliche Summe über eine Zerlegung zu verstehen, während der $dx$ Operator wie die Breite eines infinitesimal schmalen Intervalls mit dem Funktionswert $f(x)$ multipliziert wird. Dies ist also nichts anderes, als unsere Rechteck-Berechnung.
 \end{definition}
@@ -172,15 +172,64 @@ denn der Funktionswert ist überall gleich $1$. Damit ist die Summe eine sogenan
 Das gilt für alle Riemann-Summen von beliebigen Zerlegungen. Wir benutzen die Definition des Intervalls: Zu jedem $\epsilon$ gibt es ein $\delta$, sodass aus $\mu(Z)<\delta$ folgt
 \begin{equation}\label{eq:baA}
 \begin{split}
-\left| \sum_{i=0}^{N-1} (x_{i+1}-x_i) -A \right| &= \left| \sum_{i=0}^{N-1} (x_{i+1}-x_i) -A \right| \\ 
-&=\left| b-a - A \right| \\
-&< \epsilon
+\left| \sum_{i=0}^{N-1} f(s_i)(x_{i+1}-x_i) -A \right| &= \left| \sum_{i=0}^{N-1} (x_{i+1}-x_i) -A \right| \\ 
+&=\left| b-a - A \right| < \epsilon
 \end{split}
 \end{equation}
-Wenn Gleichung (\ref{eq:baA}) korrekt ist -- für jedes beliebig kleine $\epsilon$ -- dann muss $A=b-a$ sein. Sprich:
+Wenn Gleichung (\ref{eq:baA}) korrekt ist -- d.h. für jedes beliebig kleine $\epsilon$ gilt 
 \begin{equation}
-\int_a^b 1 dx = (b-a)
+|b-a-A|<\epsilon,
 \end{equation}
+dann muss $A=b-a$ sein. Sprich:
+\begin{equation}
+\int_a^b 1 \enspace dx = (b-a)
+\end{equation}
+
+Mit dem selben Argument kann man folgern, dass für eine konstante Zahl $c\in \mathbb{R}$ gilt:
+
+\begin{equation}
+\int_a^b c \enspace dx = c\cdot(b-a)
+\end{equation}
+denn wir können den Faktor $c$ aus der Summe ausklammern:
+\begin{equation}
+\begin{split}
+\left| \sum_{i=0}^{N-1} f(s_i)(x_{i+1}-x_i) -A \right| &= \left| \sum_{i=0}^{N-1} c\cdot (x_{i+1}-x_i) -A \right| \\ 
+&=\left| c\cdot \sum_{i=0}^{N-1} (x_{i+1}-x_i) -A \right|\\
+&=\left| c\cdot (b-a) -A \right| < \epsilon
+\end{split}
+\end{equation}
+
+\subsection{Lineare Integrale}
+
+Betrachten wir hier nun $f(x) = c\cdot x$ mit $c\in \mathbb{R}$ einem konstanten Wert. 
+
+\begin{equation}
+\begin{split}
+\left| \sum_{i=0}^{N-1} f(s_i)(x_{i+1}-x_i) -A \right| &= \left| \sum_{i=0}^{N-1} c\cdot s_i \cdot (x_{i+1}-x_i) -A \right| \\ 
+&=\left|  c\cdot \sum_{i=0}^{N-1}s_i \cdot (x_{i+1}-x_i) -A \right|
+\end{split}
+\end{equation}
+Die Stützstellen sind so gewählt, dass
+\begin{equation}
+x_i \le s_i \le x_{i+1}
+\end{equation}
+Bei linearen Funktionen ist die Wahl der Stützstelle $s_i = \frac{1}{2}(x_{i+1}+x_i)$ ideal, weil dann der Fehler über der Funktion und der Fehler unter der Funktion sich genau ausgleichen. Dies setzen wir ein und wenden die dritte Binomische Formel (\ref{eq:binom3}) an:
+\begin{equation}
+\begin{split}
+\left|  c\cdot \sum_{i=0}^{N-1}s_i \cdot (x_{i+1}-x_i) -A \right| &= \left|  c\cdot \sum_{i=0}^{N-1} \frac{1}{2}(x_{i+1}+x_i) \cdot (x_{i+1}-x_i) -A \right|\\
+&=\left|  c\cdot \frac{1}{2} \cdot \sum_{i=0}^{N-1} (x_{i+1}^2-x_i^2) -A \right|\\
+&=\left|  c\cdot \frac{1}{2} \cdot (b^2-a^2) -A \right|
+\end{split}
+\end{equation}
+Und auch hier gilt wieder, dass sich der letztlich konstante Ausdruck nur dann kleiner eines beliebigen $\epsilon$ machen lässt, wenn gilt
+\begin{equation}
+A = c\cdot \frac{1}{2} \cdot (b^2-a^2)
+\end{equation}
+und somit
+\begin{equation}
+\int_a^b c\cdot x \enspace dx = c\cdot \frac{1}{2} \cdot (b^2-a^2)
+\end{equation}
+
 
 \section{Kriterien der Integrierbarkeit}
 TODO 
@@ -188,24 +237,24 @@ TODO
 \section{Das unbestimmte Integral}
 TODO
 
-\section{Der Hauptsatz der Integral- und Differentialrechnung}
+\section{Der Hauptsatz der Differential- und Integralrechnung}
 
-\begin{lemma}
+\begin{satz}\label{satz:mittel}
 Es sei $f$ eine über dem Intervall $[a,b]$ (Riemann-) integrierbare Funktion. Dann gibt es Zahlen $f_{\sup}$ und $f_{\inf}$ der folgenden Art:
 
 \begin{equation}
-f_{\inf}\cdot (b-a) \le \int_{a}^{b} f(x) dx \le f_{\sup} \cdot (b-a)
+f_{\inf}\cdot (b-a) \le \int_{a}^{b} f(x) \enspace dx \le f_{\sup} \cdot (b-a)
 \end{equation}
-\end{lemma}
+\end{satz}
 \begin{proof}
 Der Beweis ist trivial, denn mit Auswahl des Infimums und des Supremums wird der Integrand zu einer Konstanten, die aus dem Integral herausgezogen werden kann. Denn wir wissen, dass für eine Konstante $c$ folgendes gilt:
 \begin{equation}
-\int_a^b c dx = c\cdot \int_a^b 1 dx = c\cdot \int_a^b dx = c\cdot(b-a)
+\int_a^b c \enspace dx = c\cdot \int_a^b 1 \enspace dx = c\cdot \int_a^b dx = c\cdot(b-a)
 \end{equation}
 Also ist
 \begin{equation}
 \begin{split}
-\int_a^b f(x)dx &\ge \int_a^b \underbrace{\inf_{\xi \in [a,b] } f(\xi)}_{\text{konstant}} dx \\
+\int_a^b f(x)\enspace dx &\ge \int_a^b \underbrace{\inf_{\xi \in [a,b] } f(\xi)}_{\text{konstant}} \enspace dx \\
  &= \inf_{\xi \in [a,b] } f(\xi) \cdot (b-a) \\
  &= f_{\inf}\cdot (b-a)
 \end{split}
@@ -213,12 +262,74 @@ Also ist
 und weiter
 \begin{equation}
 \begin{split}
-\int_a^b f(x)dx &\le \int_a^b \underbrace{\sup_{\xi \in [a,b] } f(\xi)}_{\text{konstant}} dx \\
+\int_a^b f(x)\enspace dx &\le \int_a^b \underbrace{\sup_{\xi \in [a,b] } f(\xi)}_{\text{konstant}} \enspace dx \\
  &= \sup_{\xi \in [a,b] } f(\xi) \cdot (b-a) \\
  &= f_{\sup}\cdot (b-a)
 \end{split}
 \end{equation}
 somit folgt unsere Behauptung.
 \end{proof}
+
+Bevor wir zum eigentlichen Beweis des Hauptsatzes kommen, brauchen wir noch einen weiteren Satz:
+
+\begin{satz}[Mittelwertsatz der Integralrechnung]
+Es sei $f$ eine integrierbare Funktion über dem Interval $[a,b]$. Dann gibt es ein $\xi \in [a,b]$, sodass 
+\begin{equation}
+\int_a^b f(x) \enspace dx = f(\xi) \cdot (b-a)
+\end{equation}
+\end{satz}
+\begin{proof}
+Im vorher gehenden Satz \ref{satz:mittel} hatten wir gesehen, dass für $f$ gilt
+\begin{equation}
+f_{\inf}\cdot (b-a) \le \int_{a}^{b} f(x) \enspace dx \le f_{\sup} \cdot (b-a)
+\end{equation}
+Es gibt also ein $\eta \in [f_{\inf},f_{\sup}]$, sodass 
+\begin{equation}
+\int_{a}^{b} f(x) \enspace dx = \eta \cdot (b-a)
+\end{equation}
+Aus dem Zwischenwertsatz (\ref{satz:zwischen}) folgt daraus dann, dass es ein $\xi \in [a,b]$ gibt mit 
+\begin{equation}
+f(\xi) = \eta
+\end{equation}
+Und somit folgt die Behauptung
+\begin{equation}
+\int_a^b f(x) \enspace dx = f(\xi) \cdot (b-a)
+\end{equation}
+\end{proof}
+
+\begin{satz}[Hauptsatz der Differential- und Integralrechnung]
+Es sei $f$ eine stetige und (Riemann-) integrierbare Funktion über dem Intervall $[a,b]$. Weiter ist eine \emph{Integralfunktion} (oder auch \emph{Stammfunktion}) auf dem Intervall definiert
+\begin{equation}
+F(z) = \int_{z_0}^z f(x) \enspace dx + c
+\end{equation}
+für alle $z_0 \in [a,b]$ und einer beliebigen Konstante $c\in \mathbb{R}$. Dann sind folgende Aussagen richtig:
+
+\begin{enumerate}
+\item $F(z)$ ist differenzierbar und es gilt $F'(z) = f(z)$.
+\item Für das bestimmte Integral gilt \begin{equation}
+\int_a^b f(x) \enspace dx = F(b)-F(a)
+\end{equation}
+\end{enumerate}
+\end{satz}
+\begin{proof}
+Zunächst betrachten wir den Differenzenquotienten von $F$
+\begin{equation}
+\begin{split}
+\lim_{h\rightarrow 0} \frac{F(z+h)-F(z)}{h} &= \lim_{h\rightarrow 0} \frac{\int_{z_0}^{z+h} f(x)\enspace dx+c - \int_{z_0}^{z} f(x)\enspace dx-c}{h} \\
+&= \lim_{h\rightarrow 0}\frac{1}{h} \int_{z}^{z+h} f(x)\enspace dx \\
+&= \lim_{h\rightarrow 0}\frac{1}{h} f(\xi)\cdot (z+h-z)\enspace dx, \text{ mit dem Mittelwertsatz} \\
+&= f(x), \text{ da }\xi \rightarrow x\text{, für }h\rightarrow 0
+\end{split}
+\end{equation}
+Das bedeutet, die Ableitung von $F$ existiert und ist gerade $F'(z)=f(z)$. Der zweite Teil des Beweises wird durch einfaches Einsetzen erreicht. Wir definieren $z_0 = a$. Dann ist $F(a)=c$ und
+\begin{equation*}
+F(b) = \int_a^b f(x) \enspace dx +c
+\end{equation*}
+daher ist
+\begin{equation}
+\int_a^b f(x) \enspace dx = F(b)-F(a)
+\end{equation}
+\end{proof}
+
 
 \section{Aufgaben}
