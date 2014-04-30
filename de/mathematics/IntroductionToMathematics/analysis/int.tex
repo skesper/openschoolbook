@@ -164,19 +164,19 @@ denn der Funktionswert ist überall gleich $1$. Damit ist die Summe eine sogenan
 \begin{equation}
 \begin{split}
 \sum_{i=1}^{N} (x_{i}-x_{i-1}) &=(x_1-x_0)+(x_2-x_1)+(x_3-x_2)+\dots +(x_N-x_{N-1}) \\
-&= x_N-x_{N-1}+x_{N-1}-x_{N-2}+ \dots -x_2+x_2-x_1+x_1-x_0 \\
+&= x_N\underbrace{-x_{N-1}+x_{N-1}}_{=0} \underbrace{-x_{N-2}+x_{N-2}}_{=0}+ \dots \underbrace{-x_2+x_2}_{=0} \underbrace{-x_1+x_1}_{=0}-x_0 \\
 &= x_N-x_0\\
 &=b-a
 \end{split}
 \end{equation}
-Das gilt für alle Riemann-Summen von beliebigen Zerlegungen. Wir benutzen die Definition des Intervalls: Zu jedem $\epsilon$ gibt es ein $\delta$, sodass aus $\mu(Z)<\delta$ folgt
+Das gilt für alle beliebigen Zerlegungen. Wir benutzen die Definition des Intervalls: Zu jedem $\epsilon$ gibt es ein $\delta$, sodass aus $\mu(Z)<\delta$ folgt
 \begin{equation}\label{eq:baA}
 \begin{split}
 \left| \sum_{i=0}^{N-1} f(s_i)(x_{i+1}-x_i) -A \right| &= \left| \sum_{i=0}^{N-1} (x_{i+1}-x_i) -A \right| \\ 
 &=\left| b-a - A \right| < \epsilon
 \end{split}
 \end{equation}
-Wenn Gleichung (\ref{eq:baA}) korrekt ist -- d.h. für jedes beliebig kleine $\epsilon$ gilt 
+Wenn Ungleichung (\ref{eq:baA}) korrekt ist -- d.h. für jedes beliebig kleine $\epsilon$ gilt 
 \begin{equation}
 |b-a-A|<\epsilon,
 \end{equation}
@@ -213,15 +213,15 @@ Die Stützstellen sind so gewählt, dass
 \begin{equation}
 x_i \le s_i \le x_{i+1}
 \end{equation}
-Bei linearen Funktionen ist die Wahl der Stützstelle $s_i = \frac{1}{2}(x_{i+1}+x_i)$ ideal, weil dann der Fehler über der Funktion und der Fehler unter der Funktion sich genau ausgleichen. Dies setzen wir ein und wenden die dritte Binomische Formel (\ref{eq:binom3}) an:
+Bei linearen Funktionen gibt es eine besondere Wahl für die Stützstellen. Und zwar genau in der Mitte des Intervalls: $s_i = \frac{1}{2}(x_{i+1}+x_i)$. Dann gleichen sich die Fehler ober- und unterhalb der Funktion aus. Es ist zwar richtig, dass wir beliebige Stützstellen zulassen wollen, aber in diesem Fall können wir direkt mit dem korrekten Integral auf den Intervallen arbeiten, was und die Sache erheblich erleichtert. Wir verwenden die Stützstellen in der Mitte des Intervalls und wenden die dritte Binomische Formel (\ref{eq:binom3}) an:
 \begin{equation}
 \begin{split}
 \left|  c\cdot \sum_{i=0}^{N-1}s_i \cdot (x_{i+1}-x_i) -A \right| &= \left|  c\cdot \sum_{i=0}^{N-1} \frac{1}{2}(x_{i+1}+x_i) \cdot (x_{i+1}-x_i) -A \right|\\
 &=\left|  c\cdot \frac{1}{2} \cdot \sum_{i=0}^{N-1} (x_{i+1}^2-x_i^2) -A \right|\\
-&=\left|  c\cdot \frac{1}{2} \cdot (b^2-a^2) -A \right|
+&=\left|  c\cdot \frac{1}{2} \cdot (b^2-a^2) -A \right| < \epsilon
 \end{split}
 \end{equation}
-Und auch hier gilt wieder, dass sich der letztlich konstante Ausdruck nur dann kleiner eines beliebigen $\epsilon$ machen lässt, wenn gilt
+Und auch hier gilt wieder, dass sich der letzte konstante Ausdruck nur dann kleiner als jedes beliebige $\epsilon$ machen lässt, wenn gilt
 \begin{equation}
 A = c\cdot \frac{1}{2} \cdot (b^2-a^2)
 \end{equation}
@@ -239,8 +239,10 @@ TODO
 
 \section{Der Hauptsatz der Differential- und Integralrechnung}
 
+Bevor wir zum eigentlichen Hauptsatz kommen, brauchen wir zwei Zwischenergebnisse. Zum einen untersuchen wir die Möglichkeit, das Integral durch obere und untere Schranken der Funktion $f$ abzuschätzen. Und weiter werden wir den Mittelwertsatz kennen lernen, der uns die Möglichkeit eröffnet, das Integral einer Funktion durch einen speziellen Funktionswert darzustellen. 
+
 \begin{satz}\label{satz:mittel}
-Es sei $f$ eine über dem Intervall $[a,b]$ (Riemann-) integrierbare Funktion. Dann gibt es Zahlen $f_{\sup}$ und $f_{\inf}$ der folgenden Art:
+Es sei $f$ eine über dem Intervall $[a,b]$ (Riemann-) integrierbare Funktion. Dann gibt es Zahlen $f_{\sup}, f_{\inf} \in \mathbb{R}$ der folgenden Art:
 
 \begin{equation}
 f_{\inf}\cdot (b-a) \le \int_{a}^{b} f(x) \enspace dx \le f_{\sup} \cdot (b-a)
@@ -270,7 +272,6 @@ und weiter
 somit folgt unsere Behauptung.
 \end{proof}
 
-Bevor wir zum eigentlichen Beweis des Hauptsatzes kommen, brauchen wir noch einen weiteren Satz:
 
 \begin{satz}[Mittelwertsatz der Integralrechnung]
 Es sei $f$ eine integrierbare Funktion über dem Interval $[a,b]$. Dann gibt es ein $\xi \in [a,b]$, sodass 
@@ -318,10 +319,10 @@ Zunächst betrachten wir den Differenzenquotienten von $F$
 \lim_{h\rightarrow 0} \frac{F(z+h)-F(z)}{h} &= \lim_{h\rightarrow 0} \frac{\int_{z_0}^{z+h} f(x)\enspace dx+c - \int_{z_0}^{z} f(x)\enspace dx-c}{h} \\
 &= \lim_{h\rightarrow 0}\frac{1}{h} \int_{z}^{z+h} f(x)\enspace dx \\
 &= \lim_{h\rightarrow 0}\frac{1}{h} f(\xi)\cdot (z+h-z)\enspace dx, \text{ mit dem Mittelwertsatz} \\
-&= f(x), \text{ da }\xi \rightarrow x\text{, für }h\rightarrow 0
+&= f(z), \text{ da }\xi \rightarrow z\text{, für }h\rightarrow 0
 \end{split}
 \end{equation}
-Das bedeutet, die Ableitung von $F$ existiert und ist gerade $F'(z)=f(z)$. Der zweite Teil des Beweises wird durch einfaches Einsetzen erreicht. Wir definieren $z_0 = a$. Dann ist $F(a)=c$ und
+Das bedeutet, die Ableitung von $F$ existiert und ist gerade $F'(z)=f(z)$. Der zweite Teil des Beweises wird durch einfaches Einsetzen erreicht. Wir setzen $z_0 = a$. Dann ist $F(a)=c$ und
 \begin{equation*}
 F(b) = \int_a^b f(x) \enspace dx +c
 \end{equation*}
