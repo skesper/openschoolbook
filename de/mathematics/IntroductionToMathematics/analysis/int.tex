@@ -46,7 +46,7 @@ I_i = [x_{i-1},x_{i}], \text{ mit } i=1, \dots , N
 \end{equation}
 \end{definition}
 
-Eine solche Aufteilung des Intervalls $[a,b]$ in diese kleineren Intervalle $[x_i,x_{i+1}]$ nennt man eine \emph{Intervall Zerlegung}. Wir haben keine weiteren Anforderungen an die $x_i$ Werte gestellt, als dass sie in einer Reihenfolge zwischen $a$ und $b$ liegen sollen. Die Abstände zwischen diesen Werten ist aber frei wählbar. Man könnte natürlich der Einfachheit halber sie \emph{äquidistant} wählen, also in einem gleichmäßigen Abstand. Doch das hat keinen Einfluss auf die späteren Berechnungen. 
+Eine solche Aufteilung des Intervalls $[a,b]$ in diese kleineren Intervalle $[x_{i-1},x_i]$ nennt man eine \emph{Intervall Zerlegung}. Wir haben keine weiteren Anforderungen an die $x_i$ Werte gestellt, als dass sie in einer Reihenfolge zwischen $a$ und $b$ liegen sollen. Die Abstände zwischen diesen Werten ist aber frei wählbar. Man könnte natürlich der Einfachheit halber sie \emph{äquidistant} wählen, also in einem gleichmäßigen Abstand. Doch das hat keinen Einfluss auf die späteren Berechnungen. 
 
 \begin{definition}
 Zu jedem dieser $N$ Intervalle wählen wir uns nun auch noch eine sogenannte \emph{Stützstelle} $s_i$ mit $i=1, \dots , N$. Diese liegt innerhalb des zugehörigen Intervalls:
@@ -60,7 +60,7 @@ Aber auch hier legen wir keine weiteren Anforderungen an $s_i$ fest, diese Stüt
 
 \subsection{Riemann-Summe}\index{Riemann-Summe}
 
-Zu jeder der im vorher genannten Stützstellen berechnen wir den Funktionswert von $f$  und multiplizieren ihn mit der breite des zugehörigen Intervalls.
+Zu jeder der im vorher genannten Stützstellen berechnen wir den Funktionswert von $f$  und multiplizieren ihn mit der Breite des zugehörigen Intervalls.
 
 \begin{equation}
 F_i = f(s_i)\cdot (x_{i}-x_{i-1})
@@ -146,7 +146,7 @@ Die Zahl $A$ (wie oben) wird das \emph{bestimmte Integral} der Funktion $f$ übe
 \begin{equation}
 A = \int_{a}^{b} f(x) \enspace dx
 \end{equation}
-Dabei ist das Integralzeichen wie eine unendliche Summe über eine Zerlegung zu verstehen, während der $dx$ Operator wie die Breite eines infinitesimal schmalen Intervalls mit dem Funktionswert $f(x)$ multipliziert wird. Dies ist also nichts anderes, als unsere Rechteck-Berechnung.
+Dabei ist das Integralzeichen wie eine unendliche Summe über eine Zerlegung zu verstehen, während der $dx$ Operator wie die Breite eines infinitesimal schmalen Intervalls mit dem Funktionswert $f(x)$ multipliziert wird. Dies ist also im Grunde nichts anderes, als unsere Rechteck-Berechnung.
 \end{definition}
 
 Neben dem \emph{Riemann-Integral} gibt es noch weitere Arten des Integralbegriffs. Eine Definition über sogenannte Ober- und Untersummen führt ebenfalls zum Riemann-Integral, während eine Definition über die Messbarkeit zum Lebesgue-Integral führt.
@@ -232,10 +232,14 @@ und somit
 
 
 \section{Kriterien der Integrierbarkeit}
-TODO 
+\begin{TODO}
+\end{TODO}
+ 
 
 \section{Das unbestimmte Integral}
-TODO
+\begin{TODO}
+\end{TODO}
+
 
 \section{Hauptsatz der Differential- und Integralrechnung}
 
@@ -269,7 +273,11 @@ und weiter
  &= f_{\sup}\cdot (b-a)
 \end{split}
 \end{equation}
-somit folgt unsere Behauptung.
+somit folgt unsere Behauptung. 
+\begin{TODO}
+Monotonie!
+\end{TODO}
+
 \end{proof}
 
 
@@ -303,7 +311,7 @@ Es sei $f$ eine stetige und (Riemann-) integrierbare Funktion über dem Interval
 \begin{equation}
 F(z_0,z) = \int_{z_0}^z f(x) \enspace dx + c
 \end{equation}
-für alle $z_0 \in [a,b]$ und einer beliebigen Konstante $c\in \mathbb{R}$. Dann sind folgende Aussagen richtig:
+für alle $z_0 \in [a,b]$ und einer beliebigen (endlichen) Konstante $c\in \mathbb{R}$, $|c|<\infty$. Dann sind folgende Aussagen richtig:
 
 \begin{enumerate}
 \item $F(z_0,z)$ ist differenzierbar und es gilt $F'(z_0,z) = f(z)$.
@@ -334,7 +342,9 @@ daher ist
 
 \section{Stammfunktion}
 
-TODO
+\begin{TODO}
+\end{TODO}
+
 
 \section{Anwendungen}
 
@@ -346,6 +356,7 @@ Ein Integral berechnet, wie wir gelernt haben, den Flächeninhalt unter einer Fu
 V_{\text{rot}}(f,a,b) = \int_a^b \pi f(x)^2 \enspace dx=  \pi \int_a^b f(x)^2 \enspace dx
 \end{equation}
 
-TODO
+\begin{TODO}
+\end{TODO}
 
 \section{Aufgaben}
