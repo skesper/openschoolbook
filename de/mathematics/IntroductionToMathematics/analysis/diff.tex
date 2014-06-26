@@ -141,7 +141,7 @@ was im Widerspruch zur Voraussetzung steht, dass $s_1\ne s_2$, daher müssen die
 
 \section{Rechenregeln}
 
-Die Ableitung von vernünftigen Funktionen\footnote{"`vernünftige Funktionen"' ist ein anderer Begriff für differenzierbaren Funktionen.} unterliegt Rechenregeln, die wir hier herleiten wollen. In den Aufgaben werden die einfachen Regeln für die Addition nachgewiesen. Wir konzentrieren uns hier auf die komplizierteren Fälle der Multiplikation, Division von differenzierbaren Funktionen und die Kettenregel. Im Folgenden seien $f$ und $g$ differenzierbare Funktionen sowie $x\in \mathbb{R}$.
+Die Ableitung von differenzierbaren Funktionen unterliegt Rechenregeln, die wir hier herleiten wollen. In den Aufgaben werden die einfachen Regeln für die Addition nachgewiesen. Wir konzentrieren uns hier auf die komplizierteren Fälle der Multiplikation, Division von differenzierbaren Funktionen und die Kettenregel. Im Folgenden seien $f$ und $g$ differenzierbare Funktionen sowie $x\in \mathbb{R}$.
 \index{Ableitungsregeln}
 
 \paragraph{Ableitung von Summen}
@@ -222,7 +222,7 @@ Hier wird zum Differentialquotient eine 1 multipliziert. Sie besteht aus dem Quo
 \begin{equation*}
 1=\frac{g(x+h)-g(x)}{g(x+h)-g(x)}
 \end{equation*}
-Der Trick ist in beiden Fällen der selbe: Wir fügen eine Invariante unter der Operation hinzu, die 0 bei der Addition, die 1 bei der Multiplikation.
+Der Trick ist der selbe, wie bei der Produktregel. Wir fügen eine Invariante unter der gewünschten Operation hinzu: Die 0 bei der Addition bzw. die 1 bei der Multiplikation.
 
 Da $g$ eine stetige Funktion ist, geht
 \begin{equation*}
@@ -247,7 +247,11 @@ Die Ableitung von ineinander verschachtelten Funktionen wird \emph{Kettenregel} 
 
 \section{Ableitungen einfacher Funktionen}
 
-Hier sollen noch die Ableitungen "`einfacher"' Funktionen (ohne näher zu spezifizieren, was "`einfache"' Funktionen sind)  dargestellt werden. Der Begriff "`einfach"' soll suggerieren, dass die Werte, wie auch die Ableitung dieser Funktionen, leicht zu berechnen sind.
+Die Ableitungen "`einfacher"' Funktionen (ohne näher zu spezifizieren, was "`einfache"' Funktionen sind)  soll hier berechnet werden. Nur in bestimmten Fällen lassen sich die vorher definierten Ableitungsregeln verwenden. Im Allgemeinen gilt für jede Funktion $f$, deren Ableitung berechnet werden soll, dass der Differenzenquotient aufgestellt werden muss:
+
+\begin{equation}
+f'(x) = \lim\limits_{h\rightarrow 0} \frac{f(x+h) - f(x)}{h}
+\end{equation}
 
 \subsection{Monome und Polynome}
 
@@ -299,6 +303,20 @@ p_n(x)^{(m)} = 0 \text{ für } m>n
 \end{equation*}
 für alle Polynome.
 
+Wie vorher beschrieben, haben wir hier nicht die Ableitungsregeln verwendet. Man kann in diesem Fall alternativ die Produktregel wiederholt anwenden, indem man $f(x)=x$ und $g(x) = x^{n-1}$ definiert:
+
+\begin{equation}
+\begin{split}
+(x^n)' &= x' \cdot x^{n-1} + x \cdot (x^{n-1})' \\
+&= x^{n-1}+x \cdot \left( x'\cdot x^{n-2} + x\cdot (x^{n-2})' \right) \\
+&= 2\cdot x^{n-1} + x^2 \cdot (x^{n-2})' \\
+&\vdots \\
+&= (n-1)\cdot x^{n-1} + x^{n-1}\cdot (x)' \\
+&= n\cdot x^{n-1}
+\end{split}
+\end{equation}
+
+Welcher Nachweis einem besser gefällt, ist Geschmackssache. Unabhängig vom Weg kommt glücklicherweise bei beiden das selbe Ergebnis heraus. 
 
 \subsection{Exponentialfunktion}\label{chap:diffexp}
 
